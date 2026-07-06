@@ -1,0 +1,74 @@
+{
+  "title": "Finite Certificate Theorem for U(2,3), N = 400000",
+  "claim_type": "finite_computational_certificate",
+  "boundary": "This proves/checks the finite certificate metrics only. It does not prove the infinite U(2,3) hidden-clock conjecture.",
+  "seed": [
+    2,
+    3
+  ],
+  "N": 400000,
+  "train_count": 100000,
+  "test_count": 400000,
+  "alpha": 1.1650128738912948,
+  "bins": 720,
+  "wall_fraction": 0.1,
+  "values_file": "data/ulam_2_3_values_400000.bin",
+  "values_sha256": "df4240b637f6a5b745d9a2f95f0125dcc2dae84face7224e60c337938c39f4ac",
+  "saturated_counts_file": "data/ulam_2_3_counts_saturated_400000.bin",
+  "saturated_counts_sha256": "37c995da2e57c88b852364d74215db874f1e4d57714635a201a2b0441ca9c0c9",
+  "representation_depth_sha256": "8da19a50aba70a1b48f7f37b563698dbc43c12d5dc2a246c80a78b2a3d462ea6",
+  "reported_metrics": {
+    "rejection_auc": 0.9903690250501925,
+    "accepted_rate_inside_wall": 0.0,
+    "accepted_rate_outside_wall": 0.0999479604286035,
+    "future_mean_depth_wall_ratio": 3.5853721203291506,
+    "future_crowded_density_wall_ratio": 1.5123291453539225,
+    "future_candidate_count": 3335073,
+    "future_reachable_count": 2618239,
+    "future_accepted_count": 300000,
+    "future_rejected_count": 2318239,
+    "wall_center_gap_deg": 0.5
+  },
+  "random_alpha_summary": {
+    "future_rejection_auc": {
+      "mean": 0.500097398660641,
+      "max": 0.5007554063371665,
+      "min": 0.49944197033179066,
+      "std": 0.00043870239448537396
+    },
+    "future_mean_depth_wall_ratio": {
+      "mean": 0.9993870297258394,
+      "max": 1.000618405198894,
+      "min": 0.9943733804086453,
+      "std": 0.001563024478179505
+    },
+    "future_crowded_density_wall_ratio": {
+      "mean": 0.9997896809436162,
+      "max": 1.0019469317567524,
+      "min": 0.9962290279030805,
+      "std": 0.0010924611259929896
+    },
+    "wall_center_gap_deg": {
+      "mean": 105.03125,
+      "max": 179.0,
+      "min": 10.5,
+      "std": 55.997619578313326
+    }
+  },
+  "finite_theorem_statement": "Given the certified first 400000 terms of U(2,3), exact representation-depth counts computed from that finite prefix, alpha, 720 phase bins, and a top-10% wall learned only from candidates up to the 100000th accepted term, the held-out candidate region through the 400000th accepted term satisfies the reported rejection-wall metrics.",
+  "proof_ladder": {
+    "level_4A": "Certified finite result: verify prefix, counts, wall bins, labels, and metrics.",
+    "level_4B": "Conditional theorem: given this finite prefix/wall definition, prove the reported finite claim mechanically.",
+    "level_4C": "General conjecture: state persistent hidden-clock/collision-wall behavior for U(2,3).",
+    "level_4D": "Real theorem: derive hidden clock and persistent wall from the Ulam rule."
+  },
+  "infinite_conjecture": "There exists a real alpha near the certified value and a phase arc A such that, as U(2,3) grows, candidate integers landing in A have persistently elevated representation depth and are therefore rejected by the unique-sum rule at a rate far above candidates outside A.",
+  "proof_obligations_for_infinite_conjecture": [
+    "Show U(2,3) has enough regularity or asymptotic density to support phase analysis.",
+    "Show representation depth is not phase-uniform at the recovered alpha.",
+    "Show the high-depth region persists under growth.",
+    "Show accepted terms are excluded from that region because depth exceeds one.",
+    "Derive or constrain alpha from the seed rule rather than empirical search."
+  ],
+  "created_at_unix": 1783367959
+}

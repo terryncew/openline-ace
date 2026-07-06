@@ -1,0 +1,13 @@
+{
+  "claim": "ACE Discovery Loop v0 artifact created.",
+  "action": "create_discovery_contract",
+  "result": "support",
+  "timestamp": 1783366740,
+  "files": {
+    "ACE_DISCOVERY_LOOP_v0.md": "a83706127843673d1edc678d91445e0e793413ac58edffb9609927b948a62dd3",
+    "ace_config_v0.json": "6a3f103cb277f3285fc95ca824c19cb197839404395ff7e16ce988ef612b306d",
+    "ACE_PROMOTION_CHECKLIST.md": "6ff110925bc8c1e496b355d9e0e099d7477a4b1e0922124165160e190e72454b"
+  },
+  "boundary": "This artifact defines a discovery discipline; it does not claim theorem-proving capability.",
+  "receipt_hash": "c561b41a662d7d02fa0f22ab1f0c7dde39dadd009006834afb3b00731eb78e4c"
+}

@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# C build outputs
+*.o
+
+# OS/editor
+.DS_Store
+.vscode/

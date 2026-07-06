@@ -1,0 +1,75 @@
+{
+  "project": "openline_ace_v0",
+  "name": "Audited Conjecture Engine",
+  "core_rule": "ACE discovers candidates, attacks them, and turns survivors into proof-ready claims.",
+  "roles": {
+    "explorer": {
+      "purpose": "Find candidate structure.",
+      "outputs": [
+        "candidate invariant",
+        "raw evidence",
+        "search settings",
+        "parameter choices",
+        "initial receipt"
+      ]
+    },
+    "auditor": {
+      "purpose": "Break candidates before promotion.",
+      "required_controls": [
+        "random_controls",
+        "nearby_parameter_controls",
+        "detuning_checks",
+        "window_shifts",
+        "shape_invariance",
+        "heldout_prediction",
+        "mirror_cases",
+        "adversarial_baselines"
+      ]
+    },
+    "formalizer": {
+      "purpose": "Convert survivors into proof-ready claims.",
+      "outputs": [
+        "ledger_entry",
+        "conjecture_file",
+        "proof_readiness_report",
+        "certificate_manifest"
+      ]
+    }
+  },
+  "reference_backend": {
+    "domain": "greedy_unique_sum_sequences",
+    "adapter": "ulam_unique_sum",
+    "promotion_targets": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "review_targets": [
+      [
+        1,
+        4
+      ]
+    ],
+    "benchmark_target": [
+      1,
+      2
+    ]
+  },
+  "promotion_levels": {
+    "0_observation": "Pattern seen, no promotion.",
+    "1_candidate": "Survives basic controls.",
+    "2_strong_candidate": "Survives controls, window shifts, and held-out prediction.",
+    "3_proof_ready_claim": "Has definitions, finite evidence, falsifiers, proof obligations, and formalization plan.",
+    "4_formal_result": "Machine-checked or mathematically proven theorem/certified finite claim."
+  },
+  "never_skip_levels": true
+}
