@@ -1,0 +1,7 @@
+{
+  "policy_authority": "NONE",
+  "profile": "openline.ace.cross-substrate-conformance-receipt.v1",
+  "result_sha256": "0bc0d7aea42b8cbf712c585da093a670a90d82315f03684da8a68221f49184e1",
+  "runtime_permission": "NONE",
+  "status": "CROSS_SUBSTRATE_CONFORMANCE_PASS"
+}
