@@ -1,0 +1,113 @@
+{
+  "proposals": [
+    {
+      "active_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["stale-result"],
+      "proposal_digest": "a059af1a46bcb35a94ac7d696667abf8bf22704069732408e9bf6833f041ee2f",
+      "proposal_id": "d-a7",
+      "sham_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "split": "development"
+    },
+    {
+      "active_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["wrong-pass-cache"],
+      "proposal_digest": "79f990975010d7e0437ce75f291b648a6bad4bdb45fe48f7939430b1794577d5",
+      "proposal_id": "d-c3",
+      "sham_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "split": "development"
+    },
+    {
+      "active_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["submit-block"],
+      "proposal_digest": "c3495f6b883d28f7c793bc50fbc2e51b5508db88ff6aba8c20ca4f5cbff26e66",
+      "proposal_id": "d-f1",
+      "sham_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "split": "development"
+    },
+    {
+      "active_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["submit-rewrite"],
+      "proposal_digest": "45fb5df6ea713b8a7a5725fd154d378bd8e9e83796d446b48abdfff43a496a10",
+      "proposal_id": "d-h8",
+      "sham_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "split": "development"
+    },
+    {
+      "active_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["surface-case"],
+      "proposal_digest": "e57c010f8ad59d8d2b2eb4a5c8ee9763b74f057b1993502c8b940133e1dd25d1",
+      "proposal_id": "d-k4",
+      "sham_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "split": "development"
+    },
+    {
+      "active_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["metadata-sort"],
+      "proposal_digest": "d4522a9e4d0eb951c6feb3c96303adbd11096770e82ea499e1fb9d424e476fea",
+      "proposal_id": "d-m2",
+      "sham_energy": {"field_mutations": 1, "hook_calls": 1, "payload_bucket": 64, "synthetic_delay": 0},
+      "split": "development"
+    },
+    {
+      "active_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["delayed-result", "role-rename"],
+      "proposal_digest": "c05acce63379095aa5500b7356e8efc62c5cd48b444d80ed93f3fb5967be5f66",
+      "proposal_id": "e-17",
+      "sham_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "split": "evaluation"
+    },
+    {
+      "active_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["forged-lineage", "field-order"],
+      "proposal_digest": "931385d6174e1e2b2546b140b1ccc04f901d5f86fbee5ddb99cdf622c07e03c4",
+      "proposal_id": "e-29",
+      "sham_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "split": "evaluation"
+    },
+    {
+      "active_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["submit-shadow", "role-rename"],
+      "proposal_digest": "ed5354400bcb1d43d795fa5a4fbb376acdf30950fbb390eb4bb35d059e73ae28",
+      "proposal_id": "e-43",
+      "sham_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "split": "evaluation"
+    },
+    {
+      "active_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["submit-timeout", "payload-padding"],
+      "proposal_digest": "4eee3274ddb4130646d57c744a7d2cdfd39bcab645cb6f096338b1dd806d60ea",
+      "proposal_id": "e-61",
+      "sham_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "split": "evaluation"
+    },
+    {
+      "active_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["role-rename", "payload-padding"],
+      "proposal_digest": "8f2f360b768861d7b379be5d4cc00eb11579b98aa7ed7ab3ac5fe69d5f98cc03",
+      "proposal_id": "e-73",
+      "sham_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "split": "evaluation"
+    },
+    {
+      "active_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "candidate_clause": "Successful submission requires fresh test evidence bound to the current patch hash.",
+      "layers": ["field-order", "payload-padding"],
+      "proposal_digest": "9ac71c257a0d84f1637adba2f432a17ac4d6f834433a19b6041039c134dda136",
+      "proposal_id": "e-89",
+      "sham_energy": {"field_mutations": 2, "hook_calls": 2, "payload_bucket": 128, "synthetic_delay": 0},
+      "split": "evaluation"
+    }
+  ],
+  "schema": "rcdl.untrusted-proposal-set/0.6"
+}

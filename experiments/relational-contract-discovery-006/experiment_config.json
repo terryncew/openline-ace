@@ -1,0 +1,28 @@
+{
+  "agent_implementations": {
+    "development": ["direct-v1"],
+    "evaluation": ["ledger-v2", "queue-v2"]
+  },
+  "authority": "NONE",
+  "budgets": {
+    "queries_per_case": 3,
+    "symbolic": 3,
+    "learned": 3
+  },
+  "clause_id": "fresh-test-evidence-bound-to-current-patch",
+  "experiment_id": "relational-contract-discovery-006",
+  "freeze_date": "2026-08-21",
+  "heldout_tasks": 16,
+  "policies": ["symbolic-rcdl", "learned-signature-baseline"],
+  "protocol": [
+    "freeze-before-evaluation",
+    "original-verifier-only",
+    "matched-sham-required",
+    "restoration-required",
+    "held-out-mechanisms",
+    "held-out-agents",
+    "equal-intervention-budget"
+  ],
+  "schema": "rcdl.envharness-heldout-config/0.6",
+  "symbolic_advantage_margin_ppm": 100000
+}

@@ -1,0 +1,1 @@
+{"compileall":"PASS","deterministic_replay":"PASS","fixture_boundary":"PASS","isolated_copy":"PASS","manifest_projection":"PASS","policy_boundary":"PASS","randomized_probe":{"comparisons":4992,"mismatches":0,"samples":384,"seed":6006,"status":"PASS"},"schema":"rcdl.release-check/0.6","unit_tests":{"status":"PASS","test_count":43},"upstream_boundary":"PASS","verdict":"PASS"}
