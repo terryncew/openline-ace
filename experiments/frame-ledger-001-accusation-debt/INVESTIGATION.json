@@ -1,0 +1,73 @@
+{
+  "investigation_id": "fl-001-accusation-debt",
+  "title": "Frame Ledger 001 \u2014 Accusation Debt / Revocation Leakage",
+  "question": "When evidence is held fixed, can a refuted or explicitly withdrawn accusation continue to affect receiver standing or action, and can defensive tone create additional penalty?",
+  "initial_hypothesis": "A false accusation may retain operational influence after refutation or explicit withdrawal, and defensive tone may create additional standing loss despite adding no factual evidence.",
+  "sources": [
+    {
+      "source_id": "s1",
+      "title": "Continued influence of false accusations in forming impressions of political candidates",
+      "locator": "doi:10.1093/pnasnexus/pgae490",
+      "primary": true,
+      "standing": "active",
+      "notes": "Two large online experiments; second was preregistered. Supports bounded continued-influence effect after corrected political accusations."
+    },
+    {
+      "source_id": "s2",
+      "title": "Anger Damns the Innocent",
+      "locator": "doi:10.1177/0956797621994770",
+      "primary": true,
+      "standing": "active",
+      "notes": "Six studies. Angry responses were treated as cues of guilt although false accusation elicited more anger."
+    },
+    {
+      "source_id": "s3",
+      "title": "Do False Allegations Persist? Retracted Misinformation Does Not Continue to Influence Explicit Person Impressions",
+      "locator": "doi:10.1016/j.jarmac.2020.08.003",
+      "primary": true,
+      "standing": "active",
+      "notes": "Counterexample: retracted allegation did not persist in explicit person impressions in tested paradigm."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "c1",
+      "text": "Corrected false accusations can leave a residual negative effect on judgments in at least some political-candidate contexts.",
+      "status": "supported",
+      "source_ids": [
+        "s1"
+      ],
+      "uncertainty": "Bounded to the tested paradigms; not universal.",
+      "depends_on": [],
+      "alternatives": []
+    },
+    {
+      "claim_id": "c2",
+      "text": "An angry denial can be treated as a cue of guilt even though false accusation itself can produce more anger than accurate accusation.",
+      "status": "supported",
+      "source_ids": [
+        "s2"
+      ],
+      "uncertainty": "Supports defensive-tone recursion narrowly, not every form of defense.",
+      "depends_on": [],
+      "alternatives": []
+    },
+    {
+      "claim_id": "c3",
+      "text": "The published record does not support a universal law that false accusations permanently damage person impressions.",
+      "status": "supported",
+      "source_ids": [
+        "s3"
+      ],
+      "uncertainty": "Context appears to matter; the experiment is therefore designed as a bounded receiver test.",
+      "depends_on": [],
+      "alternatives": []
+    }
+  ],
+  "objections": [],
+  "discovery_delta": "UNRUN. v0.2.0 hardens the design with a matched nuisance arm, order control, explicit revocation arm, neutral subject identifiers, and fail-closed replicate validation.",
+  "result_summary": "No empirical result. This package defines a preregistered receiver experiment and synthetic scorer fixture only.",
+  "disposition": "candidate",
+  "disposition_reason": "UNRUN experiment package; no empirical promotion is claimed.",
+  "reopened_from_hash": ""
+}

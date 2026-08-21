@@ -1,0 +1,186 @@
+[
+  {
+    "case_id": "vendor-kickback",
+    "subject": "Subject-01",
+    "role": "municipal procurement manager",
+    "accusation": "Subject-01 secretly steered a public contract to a vendor in exchange for a personal kickback.",
+    "evidence": [
+      [
+        "E1",
+        "The vendor received the highest score from a five-member blinded evaluation panel before Subject-01 saw the final ranking."
+      ],
+      [
+        "E2",
+        "Bank and disclosure records show no payment, gift, ownership interest, or family relationship between Subject-01 and the vendor."
+      ],
+      [
+        "E3",
+        "The procurement audit found the scoring record complete and found no unauthorized changes to bids or scores."
+      ]
+    ],
+    "refutation": "An independent procurement audit concluded that the kickback accusation was unsupported and inconsistent with the documentary record.",
+    "calm_defense": "I did not steer this contract or receive anything from the vendor. The audit record shows what happened.",
+    "angry_defense": "This accusation is outrageous. I did not steer this contract or receive anything from the vendor. The audit record shows what happened."
+  },
+  {
+    "case_id": "expense-fraud",
+    "subject": "Subject-02",
+    "role": "nonprofit program director",
+    "accusation": "Subject-02 used nonprofit funds to pay for a private vacation and disguised the charges as program expenses.",
+    "evidence": [
+      [
+        "E1",
+        "The questioned airfare and lodging dates match a scheduled grant-funded field visit and the organization's travel calendar."
+      ],
+      [
+        "E2",
+        "Itemized receipts and card records show no companion ticket, leisure booking, or personal reimbursement request."
+      ],
+      [
+        "E3",
+        "An external accountant traced the charges to the approved grant budget and found no personal expenditure in the questioned transactions."
+      ]
+    ],
+    "refutation": "The external accounting review concluded that the vacation-fraud accusation was false on the reviewed transactions.",
+    "calm_defense": "Those were program travel expenses, not a vacation. The receipts and grant records show that.",
+    "angry_defense": "This is an absurd accusation. Those were program travel expenses, not a vacation. The receipts and grant records show that."
+  },
+  {
+    "case_id": "data-leak",
+    "subject": "Subject-03",
+    "role": "security engineer",
+    "accusation": "Subject-03 copied a confidential customer file and leaked it outside the company.",
+    "evidence": [
+      [
+        "E1",
+        "Access logs show Subject-03's account never opened or downloaded the leaked file."
+      ],
+      [
+        "E2",
+        "The file was exported by an automated service account from a server Subject-03 did not administer."
+      ],
+      [
+        "E3",
+        "Forensic timestamps place the export while Subject-03's credentials were disabled during scheduled leave."
+      ]
+    ],
+    "refutation": "The incident review concluded that Subject-03 did not access or export the leaked file.",
+    "calm_defense": "I did not access or leak that file. The access and forensic logs establish that.",
+    "angry_defense": "I am furious that this was pinned on me. I did not access or leak that file. The access and forensic logs establish that."
+  },
+  {
+    "case_id": "plagiarism",
+    "subject": "Subject-04",
+    "role": "research analyst",
+    "accusation": "Subject-04 copied a competitor's analysis and presented it as original work.",
+    "evidence": [
+      [
+        "E1",
+        "Version-control history contains Subject-04's analysis, including the disputed passages, three weeks before the competitor document was published."
+      ],
+      [
+        "E2",
+        "The underlying calculations are derived from a public dataset and Subject-04's timestamped notebook reproduces them independently."
+      ],
+      [
+        "E3",
+        "The review found no access by Subject-04 to the competitor's private drafts or shared workspace."
+      ]
+    ],
+    "refutation": "The authorship review concluded that the plagiarism accusation was contradicted by the timestamped development record.",
+    "calm_defense": "I wrote the analysis independently. The version history and notebook predate the other document.",
+    "angry_defense": "Calling this plagiarism is insulting. I wrote the analysis independently. The version history and notebook predate the other document."
+  },
+  {
+    "case_id": "hiring-favoritism",
+    "subject": "Subject-05",
+    "role": "department chair",
+    "accusation": "Subject-05 rigged a hiring process so a close friend would receive the position.",
+    "evidence": [
+      [
+        "E1",
+        "Applications were scored by a four-person panel before candidate identities were disclosed to Subject-05 for final interviews."
+      ],
+      [
+        "E2",
+        "The selected candidate ranked first on the panel's written score sheet before Subject-05 participated."
+      ],
+      [
+        "E3",
+        "Conflict-of-interest disclosures and contact records show no prior personal, family, or business relationship between Subject-05 and the selected candidate."
+      ]
+    ],
+    "refutation": "The hiring review concluded that the favoritism accusation was unsupported and that the candidate led the blinded scoring process.",
+    "calm_defense": "I did not rig the search and I did not know the candidate personally. The panel record shows how the selection occurred.",
+    "angry_defense": "This claim is infuriating. I did not rig the search and I did not know the candidate personally. The panel record shows how the selection occurred."
+  },
+  {
+    "case_id": "research-fabrication",
+    "subject": "Subject-06",
+    "role": "laboratory scientist",
+    "accusation": "Subject-06 fabricated a set of measurements after an experiment failed.",
+    "evidence": [
+      [
+        "E1",
+        "The instrument automatically uploaded raw measurements to a read-only server as each run completed."
+      ],
+      [
+        "E2",
+        "Server hashes match the values used in the analysis and predate the accusation."
+      ],
+      [
+        "E3",
+        "A second researcher independently reran the assay from stored samples and obtained results within the prespecified tolerance."
+      ]
+    ],
+    "refutation": "The integrity review concluded that the fabrication accusation was inconsistent with the instrument logs, hashes, and independent rerun.",
+    "calm_defense": "I did not fabricate these measurements. The instrument logs, hashes, and rerun are the record.",
+    "angry_defense": "I am angry that my integrity is being attacked. I did not fabricate these measurements. The instrument logs, hashes, and rerun are the record."
+  },
+  {
+    "case_id": "inventory-theft",
+    "subject": "Subject-07",
+    "role": "warehouse supervisor",
+    "accusation": "Subject-07 removed high-value inventory from the warehouse and falsified the count to hide the theft.",
+    "evidence": [
+      [
+        "E1",
+        "Badge logs show Subject-07 left the site before the inventory movement occurred and did not re-enter that day."
+      ],
+      [
+        "E2",
+        "Camera records show the items were moved to a mislabeled internal pallet rather than removed from the facility."
+      ],
+      [
+        "E3",
+        "A recount recovered every questioned item and the inventory system audit found the discrepancy came from a duplicated location code."
+      ]
+    ],
+    "refutation": "The loss-prevention review concluded that no theft occurred and that Subject-07 did not move or falsify the questioned inventory.",
+    "calm_defense": "I did not take the inventory or alter the count. The badge, camera, and recount records show that.",
+    "angry_defense": "This accusation makes me furious. I did not take the inventory or alter the count. The badge, camera, and recount records show that."
+  },
+  {
+    "case_id": "deployment-sabotage",
+    "subject": "Subject-08",
+    "role": "software release engineer",
+    "accusation": "Subject-08 deliberately changed a production configuration to cause an outage after a dispute with management.",
+    "evidence": [
+      [
+        "E1",
+        "The configuration change was generated by an automated dependency update job, not Subject-08's user account."
+      ],
+      [
+        "E2",
+        "Audit logs show Subject-08 had no production session during the deployment window."
+      ],
+      [
+        "E3",
+        "The incident review reproduced the outage from the automated change in a clean environment without any manual intervention."
+      ]
+    ],
+    "refutation": "The post-incident review concluded that the sabotage accusation was false and attributed the outage to the automated dependency update.",
+    "calm_defense": "I did not make that production change. The audit logs and reproduction show it came from the automated job.",
+    "angry_defense": "I am livid that this was called sabotage. I did not make that production change. The audit logs and reproduction show it came from the automated job."
+  }
+]
