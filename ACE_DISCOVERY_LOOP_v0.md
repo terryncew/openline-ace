@@ -174,6 +174,26 @@ Any ACE backend must support:
 - random/control baselines
 - clear falsifiers
 
+## Experimental Backend: Relational Contract Discovery
+
+This backend fills the rule-discovery seam between trace capture and
+enforcement.
+
+- OpenTelemetry supplies normalized execution evidence.
+- The Explorer proposes clauses from a bounded grammar.
+- The Auditor runs a targeted intervention and an energy-matched sham.
+- An independent behavioral oracle decides whether breaking the clause changes
+  the declared external behavior.
+- A fail-closed projection may carry surviving local standing to Receipt Gate
+  and Claim Graph, but it cannot grant policy authority to itself.
+
+The first calibration uses a deterministic Raft micro-harness and a pinned copy
+of Ongaro's official TLA+ specification. Identity pinning is not model
+execution: until a TLC mutant campaign or machine-checked refinement mapping
+exists, the backend cannot promote beyond Level 1.
+
+Path: `experiments/relational-contract-discovery-001/`
+
 For the Ulam backend:
 
 - 100k exploratory pass
