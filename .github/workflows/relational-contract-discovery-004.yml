@@ -1,0 +1,53 @@
+name: relational-contract-discovery-004
+
+on:
+  push:
+    paths:
+      - "experiments/relational-contract-discovery-001/**"
+      - "experiments/relational-contract-discovery-003/**"
+      - "experiments/relational-contract-discovery-004/**"
+      - ".github/workflows/relational-contract-discovery-004.yml"
+  pull_request:
+    paths:
+      - "experiments/relational-contract-discovery-001/**"
+      - "experiments/relational-contract-discovery-003/**"
+      - "experiments/relational-contract-discovery-004/**"
+      - ".github/workflows/relational-contract-discovery-004.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  learned-relational-pressure-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: experiments/relational-contract-discovery-004
+    env:
+      PYTHONPATH: ../relational-contract-discovery-001:.
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and adversarial tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen sources corpus and runtime boundary
+        run: python -m rcdl004 verify-bindings
+      - name: Regenerate frozen corpus
+        run: PYTHONPATH=../relational-contract-discovery-001:../relational-contract-discovery-003:. python scripts/freeze_corpus.py --check
+      - name: Run fresh learned pressure test
+        run: python -m rcdl004 run --output pressure-test-out
+      - name: Verify fresh outputs
+        run: |
+          python -m rcdl004 verify-manifest pressure-test-out/pressure-test-manifest.json
+          python -m rcdl004 verify-projection pressure-test-out/contract-projection.json
+      - name: Randomized nuisance probe
+        run: python scripts/randomized_probe.py --samples 64
+
