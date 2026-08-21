@@ -13,8 +13,11 @@ bounded rules from execution traces, attacks them with targeted interventions
 and matched shams, and lets an independent oracle decide what survives. Its
 first calibration is Raft. Its second calibration reuses the frozen Raft-era
 engine unchanged in a deterministic planner -> implementer -> tester ->
-reviewer repair workflow and adds a bounded recovery claim. Both remain ACE
-Level 1 and cannot authorize live actions.
+reviewer repair workflow and adds a bounded recovery claim. Later pressure
+tests found learned predictive parity (RCDL-004) and learned causal-utility
+parity when historical intervention signatures were action-complete
+(RCDL-005). All RCDL experiments remain ACE Level 1 and cannot authorize live
+actions.
 
 ## Current benchmark
 
@@ -42,6 +45,9 @@ certificates/
 experiments/
   relational-contract-discovery-001/
   relational-contract-discovery-002/
+  relational-contract-discovery-003/
+  relational-contract-discovery-004/
+  relational-contract-discovery-005/
 ```
 
 ## Verify the U(2,3) finite certificate
@@ -90,6 +96,26 @@ python3 -m unittest discover -s tests -v
 python3 -m rcdl003 verify-bindings
 python3 -m rcdl003 verify-evidence
 python3 -m rcdl003 run --output replication-out --trials 8
+```
+
+Run the learned predictive pressure test:
+
+```bash
+cd experiments/relational-contract-discovery-004
+export PYTHONPATH="../relational-contract-discovery-001:."
+python3 -m unittest discover -s tests -v
+python3 -m rcdl004 verify-evidence
+python3 -m rcdl004 run --output pressure-test-out
+```
+
+Run the equal-budget causal-utility tournament:
+
+```bash
+cd experiments/relational-contract-discovery-005
+export PYTHONPATH="."
+python3 -m unittest discover -s tests -v
+python3 -m rcdl005 verify-evidence
+python3 -m rcdl005 run --output causal-utility-out
 ```
 
 ## Core line
