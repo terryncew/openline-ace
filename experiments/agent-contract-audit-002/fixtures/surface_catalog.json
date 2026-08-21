@@ -1,0 +1,26 @@
+{
+  "protocol": "openline.agent-contract-audit.surface-catalog.v1",
+  "surfaces": [
+    {
+      "surface_id": "ticket.token_freshness",
+      "public_description": "Whether the ticket value presented to the agent is bound to the current task state.",
+      "active_op": "ticket_token_stale",
+      "sham_op": "padding_substitute",
+      "restoration_op": "ticket_token_current"
+    },
+    {
+      "surface_id": "ticket.audit_marker_presence",
+      "public_description": "Whether the stable audit-marker field is present with its baseline semantic value.",
+      "active_op": "audit_marker_neutralize",
+      "sham_op": "padding_substitute",
+      "restoration_op": "audit_marker_restore"
+    },
+    {
+      "surface_id": "ticket.padding_presence",
+      "public_description": "Whether the stable padding field is present with its baseline semantic value.",
+      "active_op": "padding_neutralize",
+      "sham_op": "audit_marker_substitute",
+      "restoration_op": "padding_restore"
+    }
+  ]
+}
