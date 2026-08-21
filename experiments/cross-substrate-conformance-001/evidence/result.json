@@ -1,0 +1,487 @@
+{
+  "base_commit": "630919721a6d27b62f7397ec891e1027ede44831",
+  "candidate_count": 6,
+  "claim_boundary": [
+    "Conformance demonstration only; not external discovery evidence.",
+    "Control specimen is simulation only; no physical robotics claim.",
+    "Distributed specimen is a deterministic safety model; not a production cluster.",
+    "No universal mechanism or cross-domain law is claimed.",
+    "No policy authority or runtime permission is created."
+  ],
+  "policy_authority": "NONE",
+  "profile": "openline.ace.cross-substrate-conformance.v1",
+  "records": [
+    {
+      "active": {
+        "arm": "active",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-old0"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 1,
+          "payload_units": 1
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": false
+      },
+      "baseline": {
+        "arm": "baseline",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "candidate": {
+        "candidate_id": "fresh-test-binding",
+        "family": "freshness_provenance",
+        "text": "Test evidence must be bound to the current patch."
+      },
+      "grade": {
+        "active_success": false,
+        "baseline_success": true,
+        "candidate_id": "fresh-test-binding",
+        "nuisance_matched": true,
+        "reason": "ACTIVE_BREAK_SHAM_SURVIVES_RESTORATION_RECOVERS",
+        "restoration_success": true,
+        "sham_success": true,
+        "standing": "SUPPORTED"
+      },
+      "restoration": {
+        "arm": "restoration",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "sham": {
+        "arm": "sham",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 1,
+          "payload_units": 1
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "substrate_class": "agent_software_workflow",
+      "substrate_id": "agent-handoff"
+    },
+    {
+      "active": {
+        "arm": "active",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 1,
+          "payload_units": 1
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "baseline": {
+        "arm": "baseline",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "candidate": {
+        "candidate_id": "planning-marker",
+        "family": "observational_ritual",
+        "text": "A planning marker must be present before submission."
+      },
+      "grade": {
+        "active_success": true,
+        "baseline_success": true,
+        "candidate_id": "planning-marker",
+        "nuisance_matched": true,
+        "reason": "TARGETED_BREAK_HAS_NO_BEHAVIORAL_EFFECT",
+        "restoration_success": true,
+        "sham_success": true,
+        "standing": "REJECTED_RITUAL"
+      },
+      "restoration": {
+        "arm": "restoration",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "sham": {
+        "arm": "sham",
+        "details": {
+          "current_patch": "commit-9f2a",
+          "test_commit": "commit-9f2a"
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 1,
+          "payload_units": 1
+        },
+        "oracle": "deterministic_patch_verifier",
+        "success": true
+      },
+      "substrate_class": "agent_software_workflow",
+      "substrate_id": "agent-handoff"
+    },
+    {
+      "active": {
+        "arm": "active",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 1
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": false
+      },
+      "baseline": {
+        "arm": "baseline",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "candidate": {
+        "candidate_id": "majority-before-commit",
+        "family": "quorum_safety",
+        "text": "An entry may be committed only after replication to a majority."
+      },
+      "grade": {
+        "active_success": false,
+        "baseline_success": true,
+        "candidate_id": "majority-before-commit",
+        "nuisance_matched": true,
+        "reason": "ACTIVE_BREAK_SHAM_SURVIVES_RESTORATION_RECOVERS",
+        "restoration_success": true,
+        "sham_success": true,
+        "standing": "SUPPORTED"
+      },
+      "restoration": {
+        "arm": "restoration",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "sham": {
+        "arm": "sham",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "substrate_class": "distributed_system",
+      "substrate_id": "replicated-log"
+    },
+    {
+      "active": {
+        "arm": "active",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "baseline": {
+        "arm": "baseline",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "candidate": {
+        "candidate_id": "leader-audit-marker",
+        "family": "observational_ritual",
+        "text": "The leader must emit an audit marker before commit."
+      },
+      "grade": {
+        "active_success": true,
+        "baseline_success": true,
+        "candidate_id": "leader-audit-marker",
+        "nuisance_matched": true,
+        "reason": "TARGETED_BREAK_HAS_NO_BEHAVIORAL_EFFECT",
+        "restoration_success": true,
+        "sham_success": true,
+        "standing": "REJECTED_RITUAL"
+      },
+      "restoration": {
+        "arm": "restoration",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "sham": {
+        "arm": "sham",
+        "details": {
+          "cluster_size": 3,
+          "majority_required": 2,
+          "replica_count": 2
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "replicated_log_safety_oracle",
+        "success": true
+      },
+      "substrate_class": "distributed_system",
+      "substrate_id": "replicated-log"
+    },
+    {
+      "active": {
+        "arm": "active",
+        "details": {
+          "final_abs_state_micros": 31557758,
+          "peak_abs_state_micros": 31557758,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": false
+      },
+      "baseline": {
+        "arm": "baseline",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "candidate": {
+        "candidate_id": "fresh-sensor-feedback",
+        "family": "sensor_freshness",
+        "text": "Control output must depend on the current sensor state."
+      },
+      "grade": {
+        "active_success": false,
+        "baseline_success": true,
+        "candidate_id": "fresh-sensor-feedback",
+        "nuisance_matched": true,
+        "reason": "ACTIVE_BREAK_SHAM_SURVIVES_RESTORATION_RECOVERS",
+        "restoration_success": true,
+        "sham_success": true,
+        "standing": "SUPPORTED"
+      },
+      "restoration": {
+        "arm": "restoration",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "sham": {
+        "arm": "sham",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "substrate_class": "control_simulation",
+      "substrate_id": "unstable-feedback-sim"
+    },
+    {
+      "active": {
+        "arm": "active",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "baseline": {
+        "arm": "baseline",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "candidate": {
+        "candidate_id": "telemetry-marker",
+        "family": "observational_ritual",
+        "text": "A telemetry marker must be emitted before each control update."
+      },
+      "grade": {
+        "active_success": true,
+        "baseline_success": true,
+        "candidate_id": "telemetry-marker",
+        "nuisance_matched": true,
+        "reason": "TARGETED_BREAK_HAS_NO_BEHAVIORAL_EFFECT",
+        "restoration_success": true,
+        "sham_success": true,
+        "standing": "REJECTED_RITUAL"
+      },
+      "restoration": {
+        "arm": "restoration",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 0,
+          "mutated_fields": 0,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "sham": {
+        "arm": "sham",
+        "details": {
+          "final_abs_state_micros": 14,
+          "peak_abs_state_micros": 1000000,
+          "simulation_only": true
+        },
+        "nuisance": {
+          "delayed_ticks": 1,
+          "mutated_fields": 1,
+          "payload_units": 0
+        },
+        "oracle": "simulated_stability_envelope",
+        "success": true
+      },
+      "substrate_class": "control_simulation",
+      "substrate_id": "unstable-feedback-sim"
+    }
+  ],
+  "ritual_rejected_count": 3,
+  "runtime_permission": "NONE",
+  "scientific_claim": "One frozen active/sham/restoration grader separates planted load-bearing dependencies from perfect observational rituals across three heterogeneous conformance fixtures.",
+  "status": "CROSS_SUBSTRATE_CONFORMANCE_PASS",
+  "supported_count": 3,
+  "undecidable_count": 0
+}

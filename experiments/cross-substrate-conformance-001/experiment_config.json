@@ -1,0 +1,18 @@
+{
+  "base_commit": "630919721a6d27b62f7397ec891e1027ede44831",
+  "experiment": "cross-substrate-conformance-001",
+  "expected": {"rejected_ritual": 3, "supported": 3, "undecidable": 0},
+  "policy_authority": "NONE",
+  "protocol": {
+    "arms": ["baseline", "active", "sham", "restoration"],
+    "matched_nuisance_required": true,
+    "restoration_required_for_support": true,
+    "standing_rule": "single_substrate_blind_grader"
+  },
+  "runtime_permission": "NONE",
+  "substrates": [
+    {"class": "agent_software_workflow", "id": "agent-handoff"},
+    {"class": "distributed_system", "id": "replicated-log"},
+    {"class": "control_simulation", "id": "unstable-feedback-sim", "physical_claim": false}
+  ]
+}
