@@ -1,0 +1,16 @@
+{
+  "experiment": "agent-contract-audit-001",
+  "authority": "NONE",
+  "policy": {
+    "min_pairs": 64,
+    "effect_margin": 0.2,
+    "equivalence_band": 0.08,
+    "sham_failure_ceiling": 0.2,
+    "baseline_success_floor": 0.75,
+    "bootstrap_samples": 5000,
+    "bootstrap_alpha": 0.05
+  },
+  "conformance_pairs_per_candidate": 96,
+  "blind_external_lane": "UNRUN",
+  "promotion": "No scientific promotion from conformance fixture."
+}
