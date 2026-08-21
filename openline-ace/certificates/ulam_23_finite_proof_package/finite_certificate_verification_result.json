@@ -1,0 +1,68 @@
+{
+  "verdict": "finite_certificate_verified",
+  "checks": {
+    "rejection_auc": {
+      "computed": 0.9903690250501925,
+      "reported": 0.9903690250501925,
+      "tolerance": 5e-06,
+      "ok": true
+    },
+    "accepted_rate_inside_wall": {
+      "computed": 0.0,
+      "reported": 0.0,
+      "tolerance": 5e-08,
+      "ok": true
+    },
+    "accepted_rate_outside_wall": {
+      "computed": 0.0999479604286035,
+      "reported": 0.0999479604286035,
+      "tolerance": 5e-06,
+      "ok": true
+    },
+    "future_mean_depth_wall_ratio": {
+      "computed": 3.5853721203291506,
+      "reported": 3.5853721203291506,
+      "tolerance": 5e-05,
+      "ok": true
+    },
+    "future_crowded_density_wall_ratio": {
+      "computed": 1.5123291453539225,
+      "reported": 1.5123291453539225,
+      "tolerance": 5e-05,
+      "ok": true
+    },
+    "wall_center_gap_deg": {
+      "computed": 0.5,
+      "reported": 0.5,
+      "tolerance": 1e-09,
+      "ok": true
+    },
+    "future_candidate_count": {
+      "computed": 3335073,
+      "reported": 3335073,
+      "tolerance": 0,
+      "ok": true
+    },
+    "future_reachable_count": {
+      "computed": 2618239,
+      "reported": 2618239,
+      "tolerance": 0,
+      "ok": true
+    },
+    "future_accepted_count": {
+      "computed": 300000,
+      "reported": 300000,
+      "tolerance": 0,
+      "ok": true
+    },
+    "future_rejected_count": {
+      "computed": 2318239,
+      "reported": 2318239,
+      "tolerance": 0,
+      "ok": true
+    }
+  },
+  "wall_bin_count": 72,
+  "wall_bins_sha256": "83c99146cd5488a511667c86f557eb3fad7620aaf895e7331ece1f01c4e0164a",
+  "boundary": "Finite metrics verified; infinite conjecture not proven."
+}

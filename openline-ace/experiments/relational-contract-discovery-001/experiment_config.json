@@ -1,0 +1,53 @@
+{
+  "schema": "openline.ace.experiment/0.1",
+  "id": "relational-contract-discovery-001",
+  "backend_role": "earned_rule_discovery",
+  "ace_level": "1_CANDIDATE",
+  "status": "CALIBRATION_ONLY",
+  "input": {
+    "primary_interface": "opentelemetry_json",
+    "calibration_source": "deterministic_raft_micro_harness",
+    "normalized_schema": "rcdl.trace/0.1"
+  },
+  "explorer": {
+    "candidate_source": "finite_domain_hypothesis_space",
+    "grammar": "rcdl.clause/0.1",
+    "self_certification": false,
+    "oracle_labels_visible": false,
+    "spurious_observational_controls": 1
+  },
+  "auditor": {
+    "arms": [
+      "targeted_guard_bypass",
+      "energy_matched_sham"
+    ],
+    "required_controls": [
+      "baseline_support",
+      "external_safety_oracle",
+      "oracle_label_exclusion",
+      "spurious_control_rejection",
+      "nuisance_invariance",
+      "held_out_seeds",
+      "inclusion_minimal_family"
+    ]
+  },
+  "formalizer": {
+    "outputs": [
+      "contract-manifest.json",
+      "contract-projection.json",
+      "summary.json",
+      "experiment-receipt.json",
+      "evidence-index.json"
+    ]
+  },
+  "downstream": {
+    "receipt_gate_authorization": "NONE",
+    "claim_graph_standing": "LOCAL_CALIBRATION_ONLY"
+  },
+  "promotion_blockers": [
+    "No TLC mutant campaign",
+    "No machine-checked refinement mapping",
+    "No second Raft implementation",
+    "No learned-agent transport"
+  ]
+}

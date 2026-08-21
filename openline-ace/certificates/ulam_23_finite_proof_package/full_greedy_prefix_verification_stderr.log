@@ -1,0 +1,7 @@
+verified_terms=50000 elapsed_cpu=0.66
+verified_terms=100000 elapsed_cpu=2.78
+verified_terms=150000 elapsed_cpu=6.11
+verified_terms=200000 elapsed_cpu=10.68
+verified_terms=250000 elapsed_cpu=15.28
+verified_terms=300000 elapsed_cpu=18.63
+verified_terms=350000 elapsed_cpu=20.59
