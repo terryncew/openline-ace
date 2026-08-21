@@ -1,0 +1,26 @@
+{
+  "schema": "rcdl.clause/0.1",
+  "id": "workflow.recovery_requires_fresh_observation",
+  "kind": "progress",
+  "description": "A detected failure is followed by a fresh workspace observation for the same recovery cycle within three logical steps.",
+  "trigger": {
+    "event": "failure_detected"
+  },
+  "require": {
+    "op": "eventually_within",
+    "event": "workspace_observation",
+    "joins": {
+      "task_id": "task_id",
+      "cycle": "cycle"
+    },
+    "where": {"fresh": true},
+    "horizon": 3,
+    "assumptions": ["recovery_available"]
+  },
+  "intervention": {
+    "hook": "recovery_observation_guard",
+    "active": "bypass_guard",
+    "sham": "metadata_noop",
+    "energy": 1
+  }
+}

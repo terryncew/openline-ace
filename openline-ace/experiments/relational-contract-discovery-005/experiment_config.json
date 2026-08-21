@@ -1,0 +1,61 @@
+{
+  "schema": "rcdl.causal-utility-protocol/0.5",
+  "experiment_id": "relational-contract-discovery-005",
+  "working_name": "Budgeted Causal Utility Tournament",
+  "freeze": {
+    "date": "2026-08-21",
+    "status": "INTERNAL_PRE_EVIDENCE_FREEZE",
+    "external_preregistration": false,
+    "same_builder": true,
+    "post_result_policy_tuning_allowed": false
+  },
+  "question": "Does symbolic RCDL retain causal selection, recovery, or explanation utility over a learned intervention-signature policy under equal information and action budgets?",
+  "information_boundary": {
+    "historical_contexts": 9,
+    "historical_actions_per_context": 10,
+    "historical_signatures_action_complete": true,
+    "final_scenario_ids_available_to_policies": false,
+    "hypothesis_ids_available_to_learned_policy": false,
+    "observable_class_labels_available_to_learned_policy": false,
+    "one_historical_context_per_candidate_mechanism": true,
+    "official_oracle_available_to_policies": false
+  },
+  "action_boundary": {
+    "relations": 4,
+    "active_actions": 10,
+    "maximum_break_set_size": 2,
+    "matched_sham_per_active_action": true,
+    "online_budget": 4
+  },
+  "final_audit": {
+    "scenarios": 256,
+    "observable_classes": 8,
+    "scenarios_per_class": 32,
+    "implementations": ["ledger", "queue"],
+    "policy_implementation_runs": 1024,
+    "development_contexts_excluded": true
+  },
+  "primary_endpoint": "exact behavioral contract recovery within four active interventions",
+  "secondary_endpoints": [
+    "queries to identification",
+    "correct non-identifiability",
+    "immediate and eventual recovery",
+    "transport across implementations",
+    "nuisance-stable normalized explanations",
+    "zero matched-sham failures"
+  ],
+  "verdicts": [
+    "RCDL_STRICT_UTILITY_WIN",
+    "LEARNED_STRICT_UTILITY_WIN",
+    "CAUSAL_UTILITY_PARITY",
+    "MIXED_CAUSAL_UTILITY",
+    "INVALID_TOURNAMENT"
+  ],
+  "stop_rule": "If the learned policy reaches causal-utility parity, reject unique RCDL causal utility in this bounded regime and require a genuinely held-out mechanism or independent replication before expanding to LLM workflows.",
+  "authority": {
+    "ace_level": "1_CANDIDATE",
+    "promotion_authorized": false,
+    "receipt_gate_authority": "NONE"
+  }
+}
+

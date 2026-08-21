@@ -1,0 +1,25 @@
+{
+  "claim": "U(2,3) finite proof package created.",
+  "action": "package_finite_certificate",
+  "result": "support",
+  "boundary": "Finite certificate package only; infinite hidden-clock conjecture remains unproven.",
+  "timestamp": 1783367959,
+  "files": {
+    "ULAM_23_FINITE_PROOF_PACKAGE.md": "b51aab98db873d7cde92a57cf090162c6d10b665d3b6e2af1f5552722cbc4d7a",
+    "finite_certificate_u23_400k.json": "0e78b6e363b5de6a3da346b43e76ca9b108240add320b432d8f7af71ce24e865",
+    "verify_finite_certificate_u23_400k.py": "feace810d15a39d043a45162b9ea6d6a9406d573721ebe06c92ff36bc24612d0",
+    "data/ulam_2_3_values_400000.bin": "df4240b637f6a5b745d9a2f95f0125dcc2dae84face7224e60c337938c39f4ac",
+    "finite_certificate_verification_result.json": "ab75eb7f21642712a24a636f3418124600c601f16d4e032348c0b103458e3e08",
+    "verify_ulam23_prefix_full.c": "b08116acb5d6847493e189872bc9f73ed0ce81c20261bd221f72074c1d30c7e3",
+    "verify_ulam23_prefix_full": "4c13dc8365ef4c637835e1c0e041b43b66158a2fac839ad004b7548f962d8d2d",
+    "full_greedy_prefix_verification_result.json": "4b0c2e1c19838a7f9489de1d55f6b1dda1dfd92eb901e5738f34fc64783e0920",
+    "full_greedy_prefix_verification_stderr.log": "f3e83fe52690297778486757fd7d144c343df50811216deab2faea874e25ff06",
+    "README.md": "e2642ce46451d946b4f640c894f57edbf67c33002c7a2ae14a01cfbe7b7bb2d9"
+  },
+  "receipt_hash": "dcfac2c5d6ec8c2006fa3242c1886f80fa9c3952c95d139ff1c53df79f6ef030",
+  "verified_fast_mode": true,
+  "verification_boundary": "Fast mode verifies hashes, representation-depth hash, and metrics; full greedy prefix-rule check remains available but was not run here.",
+  "full_greedy_prefix_verified": true,
+  "full_greedy_prefix_boundary": "Finite prefix/counts verification only; infinite theorem remains open.",
+  "updated_at_unix": 1783368958
+}

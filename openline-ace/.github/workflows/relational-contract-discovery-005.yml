@@ -1,0 +1,57 @@
+name: relational-contract-discovery-005
+
+on:
+  push:
+    paths:
+      - "experiments/relational-contract-discovery-005/**"
+      - ".github/workflows/relational-contract-discovery-005.yml"
+      - "README.md"
+  pull_request:
+    paths:
+      - "experiments/relational-contract-discovery-005/**"
+      - ".github/workflows/relational-contract-discovery-005.yml"
+      - "README.md"
+
+permissions:
+  contents: read
+
+jobs:
+  budgeted-causal-utility-tournament:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: experiments/relational-contract-discovery-005
+    env:
+      PYTHONPATH: .
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and adversarial tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen protocol boundaries
+        run: |
+          python -m rcdl005 verify-domain
+          python -m rcdl005 verify-policy-boundary
+          python -m rcdl005 verify-oracle
+          python scripts/freeze_history.py --check
+      - name: Recompute causal utility tournament
+        run: python -m rcdl005 run --output causal-utility-out
+      - name: Verify recomputed handoff
+        run: |
+          python -m rcdl005 verify-manifest causal-utility-out/causal-utility-manifest.json
+          python -m rcdl005 verify-projection causal-utility-out/verified-handoff-projection.json
+      - name: Randomized nuisance probe
+        run: python scripts/randomized_probe.py --samples 512
+      - name: Full isolated release check
+        run: python scripts/release_check.py --samples 512 --output /tmp/rcdl005-release-check.json
+      - name: Verify frozen evidence
+        run: python -m rcdl005 verify-evidence
+

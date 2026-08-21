@@ -1,0 +1,12 @@
+{
+  "verdict": "full_greedy_prefix_verified",
+  "seed": [2,3],
+  "N": 400000,
+  "last_value": 4449166,
+  "counts_len": 4449167,
+  "counts_mismatches": 0,
+  "values_fnv1a64": "23f64bf7016feb8f",
+  "counts_fnv1a64": "47d709b8b4d2c097",
+  "elapsed_cpu_seconds": 21.270000,
+  "boundary": "This verifies the finite greedy U(2,3) prefix and saturated counts through N=400000; it does not prove the infinite hidden-clock theorem."
+}
