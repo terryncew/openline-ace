@@ -38,9 +38,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Unit and adversarial tests
         run: python -m unittest discover -s tests -v
-      - name: Verify frozen sources corpus and runtime boundary
-        run: python -m rcdl004 verify-bindings
-      - name: Regenerate frozen corpus
+      - name: Verify frozen sources evidence and runtime boundary
+        run: |
+          python -m rcdl004 verify-bindings
+          python -m rcdl004 verify-evidence
+      - name: Regenerate canonical frozen corpus payload
         run: PYTHONPATH=../relational-contract-discovery-001:../relational-contract-discovery-003:. python scripts/freeze_corpus.py --check
       - name: Run fresh learned pressure test
         run: python -m rcdl004 run --output pressure-test-out
@@ -50,4 +52,3 @@ jobs:
           python -m rcdl004 verify-projection pressure-test-out/contract-projection.json
       - name: Randomized nuisance probe
         run: python scripts/randomized_probe.py --samples 64
-

@@ -67,13 +67,17 @@ cd experiments/relational-contract-discovery-004
 export PYTHONPATH=../relational-contract-discovery-001:.
 python -m unittest discover -s tests -v
 python -m rcdl004 verify-bindings
+python -m rcdl004 verify-evidence
 python -m rcdl004 run --output pressure-test-out
 python -m rcdl004 verify-manifest pressure-test-out/pressure-test-manifest.json
 python -m rcdl004 verify-projection pressure-test-out/contract-projection.json
 ```
 
 Corpus regeneration is an explicit provenance check and is the only step that
-imports the RCDL-003 generator:
+imports the RCDL-003 generator. It compares the decompressed canonical JSONL
+payload because Python/zlib versions may encode the same payload into different
+valid gzip byte streams. The manifest separately binds the exact committed
+gzip bytes, so container tampering still fails verification:
 
 ```bash
 PYTHONPATH=../relational-contract-discovery-001:../relational-contract-discovery-003:. \
@@ -84,4 +88,3 @@ PYTHONPATH=../relational-contract-discovery-001:../relational-contract-discovery
 
 The projection is evidence-only. Receipt Gate may attach it but may not use it
 as policy input. Authorization remains `NONE`.
-

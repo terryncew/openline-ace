@@ -132,6 +132,35 @@ def build() -> tuple[bytes, dict[str, Any]]:
     return compressed, manifest
 
 
+def _verify_frozen_artifacts(
+    generated_compressed: bytes,
+    generated_manifest: dict[str, Any],
+    committed_compressed: bytes,
+    committed_manifest: bytes,
+) -> None:
+    """Verify canonical content without treating a gzip encoding as canonical.
+
+    Python and zlib releases may emit different valid DEFLATE streams for the
+    same input.  The reproducibility boundary is therefore the decompressed
+    canonical JSONL payload.  The manifest still binds the exact committed
+    gzip bytes, so container tampering remains detectable.
+    """
+
+    try:
+        generated_payload = gzip.decompress(generated_compressed)
+        committed_payload = gzip.decompress(committed_compressed)
+    except (EOFError, OSError) as exc:
+        raise SystemExit("frozen corpus is not a valid gzip stream") from exc
+    if committed_payload != generated_payload:
+        raise SystemExit("frozen corpus payload differs from canonical regeneration")
+
+    expected_manifest = dict(generated_manifest)
+    expected_manifest["compressed_sha256"] = _sha256(committed_compressed)
+    expected_manifest_payload = canonical_json(expected_manifest) + b"\n"
+    if committed_manifest != expected_manifest_payload:
+        raise SystemExit("frozen corpus manifest differs from canonical regeneration")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
@@ -139,10 +168,14 @@ def main() -> int:
     compressed, manifest = build()
     manifest_payload = canonical_json(manifest) + b"\n"
     if args.check:
-        if not CORPUS.is_file() or CORPUS.read_bytes() != compressed:
-            raise SystemExit("frozen corpus differs from deterministic regeneration")
-        if not MANIFEST.is_file() or MANIFEST.read_bytes() != manifest_payload:
-            raise SystemExit("frozen corpus manifest differs from regeneration")
+        if not CORPUS.is_file() or not MANIFEST.is_file():
+            raise SystemExit("frozen corpus or manifest is missing")
+        _verify_frozen_artifacts(
+            compressed,
+            manifest,
+            CORPUS.read_bytes(),
+            MANIFEST.read_bytes(),
+        )
         print(canonical_json({"verified": True, "rows": manifest["row_count"], "payload_sha256": manifest["payload_sha256"]}).decode())
         return 0
     CORPUS.parent.mkdir(parents=True, exist_ok=True)
