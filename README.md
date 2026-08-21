@@ -81,6 +81,17 @@ python3 -m rcdl002 verify-evidence
 python3 -m rcdl002 calibrate --output calibration-out --trials 8
 ```
 
+Run the independent-code-path replication and baseline tournament:
+
+```bash
+cd experiments/relational-contract-discovery-003
+export PYTHONPATH="../relational-contract-discovery-001:."
+python3 -m unittest discover -s tests -v
+python3 -m rcdl003 verify-bindings
+python3 -m rcdl003 verify-evidence
+python3 -m rcdl003 run --output replication-out --trials 8
+```
+
 ## Core line
 
 ACE does not automate certainty.
