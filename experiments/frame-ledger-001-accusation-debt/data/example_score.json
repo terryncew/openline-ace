@@ -1,0 +1,129 @@
+{
+  "cross_receiver": {
+    "accusation_action_escalation": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "accusation_debt_risk": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "accusation_debt_standing": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "accusation_specific_risk_vs_nuisance": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "defense_action_escalation": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "defense_penalty_risk": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "defense_penalty_standing": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "order_sensitivity_risk": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "revocation_action_escalation": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "revocation_leakage_risk": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    },
+    "revocation_leakage_standing": {
+      "by_receiver": {
+        "synthetic-receiver": 0.0
+      },
+      "max": 0.0,
+      "min": 0.0,
+      "range": 0.0
+    }
+  },
+  "receivers": {
+    "synthetic-receiver": {
+      "complete_cases": [
+        "data-leak",
+        "deployment-sabotage",
+        "expense-fraud",
+        "hiring-favoritism",
+        "inventory-theft",
+        "plagiarism",
+        "research-fabrication",
+        "vendor-kickback"
+      ],
+      "effects": {
+        "accusation_action_escalation": 0.0,
+        "accusation_debt_risk": 0.0,
+        "accusation_debt_standing": 0.0,
+        "accusation_specific_risk_vs_nuisance": 0.0,
+        "defense_action_escalation": 0.0,
+        "defense_penalty_risk": 0.0,
+        "defense_penalty_standing": 0.0,
+        "order_sensitivity_risk": 0.0,
+        "revocation_action_escalation": 0.0,
+        "revocation_leakage_risk": 0.0,
+        "revocation_leakage_standing": 0.0
+      },
+      "evidence_contamination_rate": {
+        "accusation_refuted": 0.0,
+        "accusation_refuted_evidence_first": 0.0,
+        "angry_defense": 0.0,
+        "calm_defense": 0.0,
+        "control": 0.0,
+        "explicit_revocation": 0.0,
+        "matched_nuisance": 0.0
+      },
+      "n_complete_cases": 8
+    }
+  }
+}
