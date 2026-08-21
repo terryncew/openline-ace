@@ -1,0 +1,24 @@
+{
+  "schema": "rcdl.clause/0.1",
+  "id": "workflow.review_inspects_current_patch",
+  "kind": "order",
+  "description": "An approval follows reviewer inspection of the same task and patch hash.",
+  "trigger": {
+    "event": "review_decision",
+    "where": {"approved": true}
+  },
+  "require": {
+    "op": "exists_before",
+    "event": "review_inspection",
+    "joins": {
+      "task_id": "task_id",
+      "patch_hash": "patch_hash"
+    }
+  },
+  "intervention": {
+    "hook": "review_patch_guard",
+    "active": "bypass_guard",
+    "sham": "metadata_noop",
+    "energy": 1
+  }
+}
