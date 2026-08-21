@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_id": "example-fresh-evidence-binding",
+    "text": "submission may rely on test evidence only when the evidence is bound to the current artifact",
+    "scope": "example/live-adapter-template",
+    "source": {
+      "type": "external-llm-proposer",
+      "id": "UNRUN",
+      "authority": "NONE"
+    },
+    "relation": {
+      "kind": "freshness_provenance",
+      "from": "test_evidence",
+      "to": "current_artifact"
+    },
+    "interventions": {
+      "active": {
+        "op": "bind_test_evidence_to_prior_artifact",
+        "target": "test_evidence",
+        "parameters": {}
+      },
+      "sham": {
+        "op": "mutate_unrelated_context_same_budget",
+        "target": "unrelated_context",
+        "parameters": {
+          "match": [
+            "position",
+            "token_bucket",
+            "latency_bucket"
+          ]
+        }
+      },
+      "restoration": {
+        "op": "regenerate_test_evidence_for_current_artifact",
+        "target": "test_evidence",
+        "parameters": {}
+      }
+    }
+  }
+]
