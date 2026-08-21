@@ -1,0 +1,26 @@
+{
+  "schema": "rcdl.clause/0.1",
+  "id": "workflow.approval_requires_passing_tests",
+  "kind": "guard",
+  "description": "An approval follows a passing required-suite result for the same task and patch hash.",
+  "trigger": {
+    "event": "review_decision",
+    "where": {"approved": true}
+  },
+  "require": {
+    "op": "exists_before",
+    "event": "test_result",
+    "joins": {
+      "task_id": "task_id",
+      "suite": "suite",
+      "patch_hash": "patch_hash"
+    },
+    "where": {"passed": true}
+  },
+  "intervention": {
+    "hook": "approval_test_guard",
+    "active": "bypass_guard",
+    "sham": "metadata_noop",
+    "energy": 1
+  }
+}

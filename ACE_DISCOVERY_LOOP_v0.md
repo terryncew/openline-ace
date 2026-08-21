@@ -194,6 +194,16 @@ exists, the backend cannot promote beyond Level 1.
 
 Path: `experiments/relational-contract-discovery-001/`
 
+The second calibration reuses the RCDL 0.1 parser, evaluator, miner, nuisance
+transforms, reducer, trace model, canonical serializer, and OTLP adapter without
+modification. It applies them to a deterministic repair workflow, rejects one
+planted observational rule, recovers one inclusion-minimal four-clause family,
+and tests fresh-observation recovery within three logical steps. This is local
+cross-domain transport, not evidence for an independent implementation or an
+LLM workflow.
+
+Path: `experiments/relational-contract-discovery-002/`
+
 For the Ulam backend:
 
 - 100k exploratory pass
