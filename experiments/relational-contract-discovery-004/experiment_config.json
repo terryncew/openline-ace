@@ -1,0 +1,47 @@
+{
+  "schema": "openline.ace.experiment/0.1",
+  "id": "relational-contract-discovery-004",
+  "backend_role": "learned_relational_baseline_pressure_test",
+  "ace_level": "1_CANDIDATE",
+  "status": "VALID_UNFAVORABLE_RESULT",
+  "frozen_inputs": {
+    "engine": "../relational-contract-discovery-001",
+    "source_experiment": "../relational-contract-discovery-003",
+    "corpus": "references/frozen-learning-corpus.jsonl.gz",
+    "modification_allowed": false
+  },
+  "question": "Can generic learned sequence or graph relations match the frozen RCDL contract predictor?",
+  "final_result": {
+    "scientific_verdict": "LEARNED_PARITY",
+    "rcdl_balanced_accuracy_ppm": 1000000,
+    "best_learned_balanced_accuracy_ppm": 1000000,
+    "test_examples": 1024,
+    "claim_effect": "PREDICTIVE_SUPERIORITY_FALSIFIED_WITHIN_TOURNAMENT"
+  },
+  "models": [
+    "relational_sequence_tree",
+    "wl_event_graph_tree",
+    "combined_relational_margin_model",
+    "task_bag_relational_tree",
+    "task_bag_relational_rule_set"
+  ],
+  "development_boundary": {
+    "observed_development_seeds_excluded": true,
+    "fresh_final_audit_seeds": true,
+    "same_builder": true,
+    "independent_developer_or_lab": false,
+    "stochastic_samples": false
+  },
+  "downstream": {
+    "receipt_gate_authorization": "NONE",
+    "claim_graph_standing": "PREDICTIVE_SUPERIORITY_REJECTED_IN_BOUNDED_TOURNAMENT"
+  },
+  "remaining_falsifiers": [
+    "Independent prospective replication",
+    "Neural sequence or graph models with external tuning",
+    "Intervention-efficiency comparison",
+    "Stochastic LLM workflow transport",
+    "Token timing and semantic-shock matched shams"
+  ]
+}
+
