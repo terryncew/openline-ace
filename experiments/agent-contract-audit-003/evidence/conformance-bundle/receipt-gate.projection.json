@@ -1,0 +1,13 @@
+{
+  "candidate_id": "fresh-ticket-binding",
+  "commit_authorization": null,
+  "evidence_only": true,
+  "evidence_type": "causal_contract_standing",
+  "policy_authority": "NONE",
+  "profile": "openline.contract-standing.receipt-gate-evidence.v1",
+  "receiver_reverification_required": true,
+  "requested_disposition": null,
+  "runtime_permission": "NONE",
+  "source_results_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "standing_receipt_hash": "6389fba19a9fcfe8a81cd5ce8dc41d331eb95d58400567e196ed63e7e6720f4c"
+}

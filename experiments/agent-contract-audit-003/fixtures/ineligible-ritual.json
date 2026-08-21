@@ -1,0 +1,37 @@
+{
+  "candidate": {
+    "candidate_id": "audit-marker-ritual",
+    "scope": {
+      "boundary": "dispatch",
+      "workflow": "ticket-relay"
+    },
+    "text": "Dispatch must use the current ticket value observed after the latest ticket mutation."
+  },
+  "grade": {
+    "active_minus_sham_failure_delta": {
+      "ci_high": 0.921875,
+      "ci_low": 0.703125,
+      "mean": 0.828125
+    },
+    "baseline_success_rate": 0.96875,
+    "pairs": 64,
+    "restoration_minus_active_success_delta": {
+      "ci_high": 0.90625,
+      "ci_low": 0.6875,
+      "mean": 0.8125
+    },
+    "sham_failure_rate": 0.015625,
+    "standing": "REJECTED_RITUAL"
+  },
+  "independent_verification": {
+    "status": "PASS"
+  },
+  "independent_verification_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "policy_authority": "NONE",
+  "pre_intervention_seal_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "protocol": "openline.agent-contract-audit.external-result.v1",
+  "results_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "run_id": "fixture-ritual",
+  "run_status": "BLIND_EXTERNAL_RUN_COMPLETED",
+  "source_experiment": "agent-contract-audit-002"
+}

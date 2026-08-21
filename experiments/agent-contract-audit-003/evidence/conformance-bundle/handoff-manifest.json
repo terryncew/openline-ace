@@ -1,0 +1,25 @@
+{
+  "files": {
+    "claim-graph.projection.json": {
+      "sha256": "679ce09bf8ff5b8f354352e12c6dde9800f2a3d3aafaf91f9b8703b5b4dfe6ac",
+      "size": 672
+    },
+    "contract-standing.disclosure.json": {
+      "sha256": "590e433a244d793813c3bbb48fd575a39f607fe6c7d9fbb5ee915a412d29c13e",
+      "size": 1139
+    },
+    "contract-standing.receipt.json": {
+      "sha256": "0c8f1e0045baddd3219c39cc2a125e7ae7731bb8e8b24dc85d49f03c720b00bb",
+      "size": 1129
+    },
+    "receipt-gate.projection.json": {
+      "sha256": "c957c552be2a55770dd2ab17794a90e354ab57b1334ed032ce7cf4044d1c465a",
+      "size": 546
+    }
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.contract-standing-handoff.manifest.v1",
+  "runtime_permission": "NONE",
+  "source_packet_hash_profile": "json-sort-keys-compact-utf8-v1",
+  "source_packet_sha256": "d47c3fde9b61e8dc873dac735e7af4513324efe96106167c652b531f0cd2f0ca"
+}
