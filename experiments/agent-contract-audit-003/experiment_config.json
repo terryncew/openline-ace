@@ -1,0 +1,10 @@
+{
+  "experiment": "agent-contract-audit-003",
+  "base_commit": "387d882581a98872f61ead95788c7a064edcd196",
+  "minimum_pairs": 64,
+  "source_status_required": "BLIND_EXTERNAL_RUN_COMPLETED",
+  "standing_required": "SUPPORTED",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "scientific_status": "MECHANICS_ONLY_NOT_EXTERNAL_AGENT_EVIDENCE"
+}

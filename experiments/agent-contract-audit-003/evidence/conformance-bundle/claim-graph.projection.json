@@ -1,0 +1,17 @@
+{
+  "candidate_relation": {
+    "admission_status": "UNADMITTED",
+    "relation_id": "contract:fresh-ticket-binding",
+    "relation_text": "Dispatch must use the current ticket value observed after the latest ticket mutation.",
+    "scope": {
+      "boundary": "dispatch",
+      "workflow": "ticket-relay"
+    },
+    "source_receipt_hash": "6389fba19a9fcfe8a81cd5ce8dc41d331eb95d58400567e196ed63e7e6720f4c",
+    "standing": "SUPPORTED"
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.contract-standing.claim-graph-projection.v1",
+  "projection_hash_basis": "8be8d025ccbf7fc4b6c47c10c81a4a9c760ee7683a382cbacc2d34a07bf3df58",
+  "receiver_policy_required": true
+}

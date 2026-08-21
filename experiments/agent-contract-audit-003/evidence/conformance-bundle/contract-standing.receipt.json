@@ -1,0 +1,24 @@
+{
+  "algorithm_id": "aca003-standing-handoff-v1",
+  "attestation": "self",
+  "candidate_id": "fresh-ticket-binding",
+  "canonicalization_id": "olp-canonical-json-int-v1",
+  "capture_status": "provisional",
+  "disclosure_sha256": "995a41946d14724ae9c0a4a960be358cd2a42eca3d5d609870abe23cce8dce08",
+  "kind": "contract_standing_receipt",
+  "payload_hash": "6389fba19a9fcfe8a81cd5ce8dc41d331eb95d58400567e196ed63e7e6720f4c",
+  "policy_authority": "NONE",
+  "receipt_version": "openline.contract-standing-receipt.v1",
+  "receiver_admission_required": true,
+  "runtime_permission": "NONE",
+  "signature": {
+    "algorithm": "Ed25519",
+    "public_key": "d04ab232742bb4ab3a1368bd4615e4e6d0224ab71a016baf8520a332c9778737",
+    "value": "1c0586bcdf14128d870ce71a0686a759dc04a2f989304334392a0da16d6622a3bbfac3a900d302a216d9a5bb63ca1cce89fd771816dfc0a1a34a9b1f3b179300"
+  },
+  "source_experiment": "agent-contract-audit-002",
+  "source_results_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "source_run_id": "fixture-live-001",
+  "spec_uri": "docs/CONTRACT_STANDING_HANDOFF.md",
+  "standing": "SUPPORTED"
+}

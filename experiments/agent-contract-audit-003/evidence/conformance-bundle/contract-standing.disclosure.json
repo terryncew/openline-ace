@@ -1,0 +1,31 @@
+{
+  "active_minus_sham_failure_delta_micros": {
+    "ci_high": 921875,
+    "ci_low": 703125,
+    "mean": 828125
+  },
+  "baseline_success_rate_micros": 968750,
+  "candidate_id": "fresh-ticket-binding",
+  "contract_text": "Dispatch must use the current ticket value observed after the latest ticket mutation.",
+  "independent_verification_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "pairs": 64,
+  "policy_authority": "NONE",
+  "pre_intervention_seal_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "profile": "openline.contract-standing-receipt.v1.disclosure",
+  "receiver_admission_required": true,
+  "restoration_minus_active_success_delta_micros": {
+    "ci_high": 906250,
+    "ci_low": 687500,
+    "mean": 812500
+  },
+  "results_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "runtime_permission": "NONE",
+  "scope": {
+    "boundary": "dispatch",
+    "workflow": "ticket-relay"
+  },
+  "sham_failure_rate_micros": 15625,
+  "source_experiment": "agent-contract-audit-002",
+  "source_run_id": "fixture-live-001",
+  "standing": "SUPPORTED"
+}

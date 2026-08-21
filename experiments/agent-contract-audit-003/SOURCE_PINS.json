@@ -1,0 +1,10 @@
+{
+  "base_repo": "terryncew/openline-ace",
+  "base_commit": "387d882581a98872f61ead95788c7a064edcd196",
+  "wire_canon": {
+    "repo": "terryncew/olp-wire-canon",
+    "spec_blob_sha": "943b110f0f7bc3c1122bd465923f2291a5d9b020",
+    "canonicalization_id": "olp-canonical-json-int-v1"
+  },
+  "authority": "NONE"
+}

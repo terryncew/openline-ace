@@ -1,0 +1,140 @@
+{
+  "base_commit": "387d882581a98872f61ead95788c7a064edcd196",
+  "file_count": 33,
+  "files": {
+    ".github/workflows/agent-contract-audit-003.yml": {
+      "sha256": "ab67a1e05f4c075a6ecc0d2b0aaefb0248f08ccf051ed1835bfb8e50bc96c08a",
+      "size": 718
+    },
+    "experiments/agent-contract-audit-003/CLAIM_BOUNDARY.md": {
+      "sha256": "fad3d441221bd864bf277d16077a8dfe400c07286d1c119dd4a88174e1b72647",
+      "size": 327
+    },
+    "experiments/agent-contract-audit-003/README.md": {
+      "sha256": "bdbda9b528b19bd0ec3019bb694d6c852a905b1cf4bf84cf7b4f45436e464224",
+      "size": 870
+    },
+    "experiments/agent-contract-audit-003/SOURCE_PINS.json": {
+      "sha256": "ac86ab3927da7ccf7bc2323bbbeeef77271d3e9dc1aa4a7cb452bff8172f5959",
+      "size": 311
+    },
+    "experiments/agent-contract-audit-003/aca003/__init__.py": {
+      "sha256": "ff220c3f4c139f67ef4fb70d016d350fd9d8520a7c56c337e45e089e4f4d6c6e",
+      "size": 78
+    },
+    "experiments/agent-contract-audit-003/aca003/__main__.py": {
+      "sha256": "8ab4d2f8fbbee1c942c4bc08d069d7a65875d6a10244d8d74ef08139fef53ac8",
+      "size": 960
+    },
+    "experiments/agent-contract-audit-003/aca003/__pycache__/__init__.cpython-313.pyc": {
+      "sha256": "fbe107faefeb1d534e43868f74dea2aa0d4fb8bd46990b45e18a21c65ae33c92",
+      "size": 259
+    },
+    "experiments/agent-contract-audit-003/aca003/__pycache__/bundle.cpython-313.pyc": {
+      "sha256": "7558cf0fb45678e5b261ef2fc95b49d7de4a10bfb6e53ff51f26b10d886e0252",
+      "size": 2290
+    },
+    "experiments/agent-contract-audit-003/aca003/__pycache__/canonical.cpython-313.pyc": {
+      "sha256": "afb25264fd3a7b701ab6ec9fa1e20b49d63a70b93e8c5e801bf6a59c09ff5399",
+      "size": 4071
+    },
+    "experiments/agent-contract-audit-003/aca003/__pycache__/model.cpython-313.pyc": {
+      "sha256": "de96dd1c0f5ac5a010ab6b38e1f1de03c205e94e2ed2d28a0ecf155035367e02",
+      "size": 3685
+    },
+    "experiments/agent-contract-audit-003/aca003/__pycache__/projections.cpython-313.pyc": {
+      "sha256": "674ca56cc709f9fea3a455aa6875975eaafe67a7cd26b8e2dbd7956aa0ea188b",
+      "size": 1595
+    },
+    "experiments/agent-contract-audit-003/aca003/__pycache__/receipt.cpython-313.pyc": {
+      "sha256": "4dcbd9a28fb953a3757f34789540c86761e42c0f2bd851bb45e6dedd7eb55c87",
+      "size": 6370
+    },
+    "experiments/agent-contract-audit-003/aca003/bundle.py": {
+      "sha256": "18b778963bd2e5d76b4786f120b7ddeee134be6b0f81fe9010997099decedbb5",
+      "size": 1652
+    },
+    "experiments/agent-contract-audit-003/aca003/canonical.py": {
+      "sha256": "0a6138dfce9a26f00c9a120b5696b72f067017a8ca2fe70fa391f51fd6c21aa8",
+      "size": 1806
+    },
+    "experiments/agent-contract-audit-003/aca003/model.py": {
+      "sha256": "8eddd456c99e2881f1b452129299f9e7d368732d0bad1d6be64949b490a4f168",
+      "size": 1969
+    },
+    "experiments/agent-contract-audit-003/aca003/projections.py": {
+      "sha256": "2600bb1f69766f24f88f826c95d6dc57ce58e71610450d629d41fb098e2e3812",
+      "size": 1494
+    },
+    "experiments/agent-contract-audit-003/aca003/receipt.py": {
+      "sha256": "00a8efb114cbe7b943fe65efea02b1316d03ded36054814254c3231d76f445a6",
+      "size": 4448
+    },
+    "experiments/agent-contract-audit-003/docs/CONTRACT_STANDING_HANDOFF.md": {
+      "sha256": "197e9276c54ae17ed02cb9786261503ed6385bdf4609e56c8c20a9800c144c23",
+      "size": 1040
+    },
+    "experiments/agent-contract-audit-003/evidence/conformance-bundle/claim-graph.projection.json": {
+      "sha256": "679ce09bf8ff5b8f354352e12c6dde9800f2a3d3aafaf91f9b8703b5b4dfe6ac",
+      "size": 672
+    },
+    "experiments/agent-contract-audit-003/evidence/conformance-bundle/contract-standing.disclosure.json": {
+      "sha256": "590e433a244d793813c3bbb48fd575a39f607fe6c7d9fbb5ee915a412d29c13e",
+      "size": 1139
+    },
+    "experiments/agent-contract-audit-003/evidence/conformance-bundle/contract-standing.receipt.json": {
+      "sha256": "0c8f1e0045baddd3219c39cc2a125e7ae7731bb8e8b24dc85d49f03c720b00bb",
+      "size": 1129
+    },
+    "experiments/agent-contract-audit-003/evidence/conformance-bundle/handoff-manifest.json": {
+      "sha256": "e9e2141843783300a6f60342477aca6a1e935d29b426a62ba4464def461ef2fd",
+      "size": 901
+    },
+    "experiments/agent-contract-audit-003/evidence/conformance-bundle/receipt-gate.projection.json": {
+      "sha256": "c957c552be2a55770dd2ab17794a90e354ab57b1334ed032ce7cf4044d1c465a",
+      "size": 546
+    },
+    "experiments/agent-contract-audit-003/experiment_config.json": {
+      "sha256": "dee0c91db4465a4ed2dd09af0ed7a79371fe9b5992b18a36d2f8c7927769a521",
+      "size": 358
+    },
+    "experiments/agent-contract-audit-003/fixtures/eligible-supported.json": {
+      "sha256": "19b63d407e89079d6770957af16cac87677fc48f19c29248b4eb82bc5fb2d855",
+      "size": 1220
+    },
+    "experiments/agent-contract-audit-003/fixtures/ineligible-conformance.json": {
+      "sha256": "d2eed336f85a47adfacdc8bf6c0c9bde624cddf02b7a247890bb86da5eb19e23",
+      "size": 1240
+    },
+    "experiments/agent-contract-audit-003/fixtures/ineligible-ritual.json": {
+      "sha256": "1372fdbd6df5d5628255e37a8938b8e62abdf3832769af1c3e3b147636181ca1",
+      "size": 1223
+    },
+    "experiments/agent-contract-audit-003/pyproject.toml": {
+      "sha256": "8c69a07026a598299f5e64cb1899d5c7903b832d4c32329c6bd798c0fe8bf828",
+      "size": 271
+    },
+    "experiments/agent-contract-audit-003/scripts/build_conformance.py": {
+      "sha256": "41b431deda8bcced68b608dad50e024ab3f4328e00c57859a9259d411124f3d7",
+      "size": 382
+    },
+    "experiments/agent-contract-audit-003/scripts/release_check.py": {
+      "sha256": "9c42570fe76bc9ac69c6f50e3b13ed65ad3c3ea146186e434585964a2d36572a",
+      "size": 512
+    },
+    "experiments/agent-contract-audit-003/scripts/verify_bundle_independent.py": {
+      "sha256": "88f6dafd8e762b56cc61d335871142a40ad366a29b779823a6a11fdafe52bcb1",
+      "size": 2367
+    },
+    "experiments/agent-contract-audit-003/tests/__pycache__/test_aca003.cpython-313.pyc": {
+      "sha256": "959bdcd02f56ecc31d857b63639a5a97887c460de7db4a71a48d99d4325ab0e8",
+      "size": 7331
+    },
+    "experiments/agent-contract-audit-003/tests/test_aca003.py": {
+      "sha256": "5ffba73606182a5f213aacad76437020f7c7c12a2122080cdd4e5c45804aef42",
+      "size": 3080
+    }
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.agent-contract-audit-003.release-manifest.v1"
+}
