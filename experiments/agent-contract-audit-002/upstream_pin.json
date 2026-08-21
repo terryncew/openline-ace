@@ -1,0 +1,9 @@
+{
+  "source": "experiments/agent-contract-audit-001/aca001",
+  "base_commit": "b0c93bb2f751025b0e8b804ee26700e0c2ad2a9e",
+  "git_blob_sha1": {
+    "audit.py": "4027a106b605d1370e80563a795d479e141727c8",
+    "model.py": "671f6d1d84f024e6a1f9efcd28690327b406e51a",
+    "stats.py": "97daa25513b42c3e09e7fc8f352c8a707e4b210c"
+  }
+}

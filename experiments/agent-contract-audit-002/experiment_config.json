@@ -1,0 +1,24 @@
+{
+  "experiment": "agent-contract-audit-002",
+  "title": "Blind External Stochastic Contract Audit",
+  "authority": "NONE",
+  "base_commit": "b0c93bb2f751025b0e8b804ee26700e0c2ad2a9e",
+  "frozen_a001_policy": {
+    "min_pairs": 64,
+    "effect_margin": 0.20,
+    "equivalence_band": 0.08,
+    "sham_failure_ceiling": 0.20,
+    "baseline_success_floor": 0.75,
+    "bootstrap_samples": 5000,
+    "bootstrap_alpha": 0.05
+  },
+  "live_claim_requires": [
+    "external_llm_provider",
+    "blind_proposer_packet_sealed_before_interventions",
+    "deterministic_surface_compiler",
+    "original_external_verifier",
+    "independent_result_replay",
+    "at_least_one_supported_dependency",
+    "at_least_one_rejected_ritual"
+  ]
+}

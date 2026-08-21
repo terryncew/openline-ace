@@ -1,0 +1,180 @@
+{
+  "authority": "NONE",
+  "base_commit": "b0c93bb2f751025b0e8b804ee26700e0c2ad2a9e",
+  "experiment": "agent-contract-audit-002",
+  "files": {
+    "LIVE_RUN_STATUS.json": {
+      "sha256": "ef8378554f06705a0769174b3ec0ca24f496f30d7b91c5c2436648ab21663db6",
+      "size": 185
+    },
+    "README.md": {
+      "sha256": "77f58cc05b654769c92c93df1ec984148cd553b7eb7220fef0a7d48b6fde588a",
+      "size": 2977
+    },
+    "RELEASE.md": {
+      "sha256": "f7aaf1972b2b10767c849199e32956086321a0eff1ccf414a533102198d54fc2",
+      "size": 472
+    },
+    "aca002/__init__.py": {
+      "sha256": "e9c103667c4cc75d39eb93b963b6196a3369df040670af9a3339275340ff11c9",
+      "size": 64
+    },
+    "aca002/__main__.py": {
+      "sha256": "16c972bb146c73583c1149dbc44857b5fa12cf7be7e1c414e3c1d7942bc35c52",
+      "size": 1539
+    },
+    "aca002/blind.py": {
+      "sha256": "802bcd8258ffe6f5a3743481f83660ad9d1905d7fb8e7f33a39b52e341597546",
+      "size": 2162
+    },
+    "aca002/canonical.py": {
+      "sha256": "26911030bd3e5fa91b37ae2eef2591e3e818c6aac319d07df7d22e82d1ab7ed4",
+      "size": 721
+    },
+    "aca002/compiler.py": {
+      "sha256": "74fb6d271d8cab7ddf4ee051eef3cfb6a53f963a39340cd1090562d4704a036d",
+      "size": 1318
+    },
+    "aca002/evidence.py": {
+      "sha256": "68d7ad43a865a7eee4e3a85a8d1423f64050db7a20588d5f3e684bae9b111f61",
+      "size": 5748
+    },
+    "aca002/fixture.py": {
+      "sha256": "96dd580fed4e394a8ae1136a5447dfad50275076586076d93f2c165326553f0c",
+      "size": 1588
+    },
+    "aca002/grade.py": {
+      "sha256": "a969aba3ad28fa8af2191021a26714724bff1df1528be05ae1d596c30f0b4349",
+      "size": 1432
+    },
+    "aca002/ingest.py": {
+      "sha256": "39369e7ce06cf008bde15cd19e83eecc0c49bcbfb3ef9c65322ac350c2b41d15",
+      "size": 2423
+    },
+    "aca002/live.py": {
+      "sha256": "9584146d2201e8ea87439b02ce0047ab8510aa5cd74c801b7906d8e66633c278",
+      "size": 3060
+    },
+    "aca002/live_pipeline.py": {
+      "sha256": "47611958e0c26f714a2f4f0dbcba492d9a1c63fcb316a8cc53fe2876fe525093",
+      "size": 7506
+    },
+    "aca002/manifests.py": {
+      "sha256": "52c2b39fed10a87694fb2c43107d3c2d63e1165bbcf7d06a94c0701b792fefd7",
+      "size": 1245
+    },
+    "aca002/pin.py": {
+      "sha256": "53af647ea360c8773ce6650e7b1599683e4e106951eacbf106c334bc47f70d5e",
+      "size": 1501
+    },
+    "aca002/replay.py": {
+      "sha256": "807383c0db58d0636773fff4ddae4610179eeade5e5d226d6108a78058891e71",
+      "size": 921
+    },
+    "aca002/schedule.py": {
+      "sha256": "619d604c9a34a53431b3a03c34f5adec61df36097174958f9ce27d08c2235036",
+      "size": 1448
+    },
+    "aca002/schemas.py": {
+      "sha256": "c9bbe836d203287f105796de88fa6848f7f57fdab1ad99a32c45793b59584aa5",
+      "size": 2065
+    },
+    "aca002/task.py": {
+      "sha256": "41bf93ff3c5e95273c1b0a9dc57ca24a09b935e7e074ccce124b70d2b89ecb41",
+      "size": 1285
+    },
+    "adapters/openai_agents_runner.py": {
+      "sha256": "b3b03582ef7c58012134a8b6dec5c390620b86193c8abba13cb4183eff469e95",
+      "size": 904
+    },
+    "docs/AUDIT_DASHBOARD.md": {
+      "sha256": "d2b2bef78cfc2d48418be6d2bdc99f73a0aa8807d04843030a67b75d1aae2ad1",
+      "size": 612
+    },
+    "docs/AUDIT_HANDOFF.md": {
+      "sha256": "4fb16711a6cb140d802aa0d32ed53940e07ec6dec851613aeb7e81210b4abe56",
+      "size": 644
+    },
+    "docs/NOTEBOOKLM_SOURCE.md": {
+      "sha256": "3f9cd26034ce627cf6895463a3e0c9e273340532c76ee892556c007e5fea21d4",
+      "size": 1942
+    },
+    "docs/PROTOCOL.md": {
+      "sha256": "88b842776a19aa6c950b2cb960f4ebbef89d9bd4b13217e988c3e8840b6ce0bd",
+      "size": 3506
+    },
+    "docs/STACK_POSITION.md": {
+      "sha256": "05e5459ad48fd90bdce42f3e60fb71a8fef5d7093e7c9566e8f6774c3c42a8f8",
+      "size": 974
+    },
+    "evidence/candidates.json": {
+      "sha256": "309826b64cb6e11ce11e2c9656201d2fec0a90872bd97c349f49ce4beda3fc70",
+      "size": 1088
+    },
+    "evidence/evidence-index.json": {
+      "sha256": "d07054eb08a92ee76b93d6bd1770e90ccf972f1af829770b5640259ab61483e1",
+      "size": 892
+    },
+    "evidence/experiment-receipt.json": {
+      "sha256": "39da65e01bd18819fa8e27c4b01573c5e43bd9da612bc1af7d0d58d011f3566e",
+      "size": 295
+    },
+    "evidence/grade.json": {
+      "sha256": "86ba6f759fbd5696622c1ea991f606fdaf472af7acf3c8300897977e982dd902",
+      "size": 1442
+    },
+    "evidence/independent-replay.json": {
+      "sha256": "02f99ebe198a6ad4ec87e06416e9de8fe5901872e5956dc8a7f67916fb78e1dd",
+      "size": 45
+    },
+    "evidence/protocol-manifest.json": {
+      "sha256": "28bd4d61bda465cc9c7406d27491e7df7ec7b1ab53af868abdf18589587eb6f0",
+      "size": 699
+    },
+    "evidence/results.jsonl": {
+      "sha256": "7bcd1baf83f3ba239a220c292ec8b9b5f11b1ecba6b800ae831b0dbecb36ffb1",
+      "size": 298176
+    },
+    "evidence/verdict.json": {
+      "sha256": "a4fe0d69b7616826ded75e4814a86a882ebfd46f66cddc0389e693c247c5204a",
+      "size": 348
+    },
+    "evidence/verified-handoff-projection.json": {
+      "sha256": "812b118121811892df8fbb7dd77775a82877d2fa04cf7dd0f0e92378345ddb00",
+      "size": 303
+    },
+    "experiment_config.json": {
+      "sha256": "647dc81b888076fe92dc212de4891beaf4ab11a3e2c2ad465bb07ed7f3b7c915",
+      "size": 723
+    },
+    "fixtures/surface_catalog.json": {
+      "sha256": "401fe46742633b92a71e01fa6d4fe6759077bcb92d70403237a04daa340524f2",
+      "size": 997
+    },
+    "fixtures/tasks.json": {
+      "sha256": "af1fa580f977e7ebfde9d49e97d4c8b74857679fb903abb3db2ab61186f95977",
+      "size": 1636
+    },
+    "scripts/randomized_protocol_probe.py": {
+      "sha256": "672f4859ab964c11ef5fe697b232a30ee094bd73454265899746331ac31d5a14",
+      "size": 1727
+    },
+    "scripts/release_check.py": {
+      "sha256": "7f00f45fe8e5914e5b07d1fa9986965c430cd8ec5bf21dbb8c4bad50daf9877b",
+      "size": 1098
+    },
+    "scripts/verify_external_results.py": {
+      "sha256": "9cb0b528424281f627234dc2b8ac321fdd79d1590c30f4e83b04afea7aca4719",
+      "size": 1456
+    },
+    "tests/test_protocol.py": {
+      "sha256": "f182f5a6571c2bbafd220a684d309a17268d4da707f3d5ca779135dac3d1e076",
+      "size": 5471
+    },
+    "upstream_pin.json": {
+      "sha256": "c0a968e88478af46636705116c238af5c9ffdd5fc9a9c0eb7e4c0fbcb930fd57",
+      "size": 328
+    }
+  },
+  "schema": "openline.ace.release-manifest.v1"
+}

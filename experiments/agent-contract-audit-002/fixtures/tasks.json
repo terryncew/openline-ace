@@ -1,0 +1,62 @@
+{
+  "protocol": "openline.agent-contract-audit.task-set.v1",
+  "tasks": [
+    {
+      "audit_marker": "AUDIT-ALPHA1",
+      "current_token": "R7K2-M4Q9-X1",
+      "padding": "PAD___ALPHA1",
+      "stale_token": "R7K2-M4Q8-X1",
+      "task_id": "ticket-01"
+    },
+    {
+      "audit_marker": "AUDIT-BRAVO2",
+      "current_token": "V3P8-J6N1-Y2",
+      "padding": "PAD___BRAVO2",
+      "stale_token": "V3P8-J6N0-Y2",
+      "task_id": "ticket-02"
+    },
+    {
+      "audit_marker": "AUDIT-CHARL3",
+      "current_token": "C9T5-X2L7-Z3",
+      "padding": "PAD___CHARL3",
+      "stale_token": "C9T5-X2L6-Z3",
+      "task_id": "ticket-03"
+    },
+    {
+      "audit_marker": "AUDIT-DELTA4",
+      "current_token": "H4W1-S8D6-A4",
+      "padding": "PAD___DELTA4",
+      "stale_token": "H4W1-S8D5-A4",
+      "task_id": "ticket-04"
+    },
+    {
+      "audit_marker": "AUDIT-ECHO_5",
+      "current_token": "M6B3-Q9F2-B5",
+      "padding": "PAD___ECHO_5",
+      "stale_token": "M6B3-Q9F1-B5",
+      "task_id": "ticket-05"
+    },
+    {
+      "audit_marker": "AUDIT-FOXT_6",
+      "current_token": "Y2G7-K5R4-C6",
+      "padding": "PAD___FOXT_6",
+      "stale_token": "Y2G7-K5R3-C6",
+      "task_id": "ticket-06"
+    },
+    {
+      "audit_marker": "AUDIT-GOLF_7",
+      "current_token": "N8L4-P1Z5-D7",
+      "padding": "PAD___GOLF_7",
+      "stale_token": "N8L4-P1Z4-D7",
+      "task_id": "ticket-07"
+    },
+    {
+      "audit_marker": "AUDIT-HOTL_8",
+      "current_token": "D5S9-V3C8-E8",
+      "padding": "PAD___HOTL_8",
+      "stale_token": "D5S9-V3C7-E8",
+      "task_id": "ticket-08"
+    }
+  ],
+  "verifier_id": "aca002-token-verifier-v1"
+}

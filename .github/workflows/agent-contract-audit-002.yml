@@ -1,0 +1,52 @@
+name: agent-contract-audit-002
+
+on:
+  push:
+    paths:
+      - "experiments/agent-contract-audit-002/**"
+      - ".github/workflows/agent-contract-audit-002.yml"
+  pull_request:
+    paths:
+      - "experiments/agent-contract-audit-002/**"
+      - ".github/workflows/agent-contract-audit-002.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  protocol-conformance:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: experiments/agent-contract-audit-002
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and hostile tests
+        env:
+          PYTHONPATH: ../agent-contract-audit-001:.
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen A-001 standing engine
+        env:
+          PYTHONPATH: ../agent-contract-audit-001:.
+        run: python -m aca002 verify-a001
+      - name: Verify checked protocol evidence
+        env:
+          PYTHONPATH: ../agent-contract-audit-001:.
+        run: python -m aca002 verify-evidence
+      - name: Randomized protocol probe
+        env:
+          PYTHONPATH: ../agent-contract-audit-001:.
+        run: python scripts/randomized_protocol_probe.py
+      - name: Independent verifier replay
+        run: python scripts/verify_external_results.py evidence/results.jsonl --tasks fixtures/tasks.json
+      - name: Release closure
+        run: python scripts/release_check.py
