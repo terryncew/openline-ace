@@ -64,6 +64,17 @@
       2
     ]
   },
+  "experimental_backends": [
+    {
+      "id": "relational-contract-discovery-001",
+      "path": "experiments/relational-contract-discovery-001",
+      "role": "earned_rule_discovery",
+      "domain": "distributed_consensus",
+      "calibration": "raft_micro_harness",
+      "status": "1_CANDIDATE",
+      "promotion_authorized": false
+    }
+  ],
   "promotion_levels": {
     "0_observation": "Pattern seen, no promotion.",
     "1_candidate": "Survives basic controls.",

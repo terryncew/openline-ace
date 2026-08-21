@@ -8,6 +8,12 @@ ACE exists because AI-assisted discovery has a dangerous failure mode: **a wrong
 
 The first reference backend is the Ulam Clock Atlas. In the initial Ulam audit, an apparent moving pattern turned out to be a mistuned clock. The corrected frame exposed a collision wall, and the U(2,3) seed has now been promoted to a verified finite computational claim.
 
+The second backend is experimental: Relational Contract Discovery proposes
+bounded rules from execution traces, attacks them with targeted interventions
+and matched shams, and lets an independent oracle decide what survives. Its
+first calibration is Raft. It remains ACE Level 1 and cannot authorize live
+actions.
+
 ## Current benchmark
 
 `certificates/ulam_23_finite_proof_package/` contains the U(2,3) 400k finite proof package.
@@ -31,6 +37,8 @@ benchmarks/
   ulam_23_400k_promotion/
 certificates/
   ulam_23_finite_proof_package/
+experiments/
+  relational-contract-discovery-001/
 ```
 
 ## Verify the U(2,3) finite certificate
@@ -48,6 +56,15 @@ Full greedy prefix-rule verification:
 cd certificates/ulam_23_finite_proof_package
 gcc -O3 verify_ulam23_prefix_full.c -o verify_ulam23_prefix_full
 ./verify_ulam23_prefix_full
+```
+
+## Run the relational-contract calibration
+
+```bash
+cd experiments/relational-contract-discovery-001
+python3 -m unittest discover -s tests -v
+python3 -m rcdl verify-evidence
+python3 -m rcdl calibrate --output calibration-out --trials 8
 ```
 
 ## Core line
