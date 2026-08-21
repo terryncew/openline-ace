@@ -1,0 +1,13 @@
+{
+  "authority": "NONE",
+  "budget": 4,
+  "development_fault_families": 7,
+  "evaluation_families": 10,
+  "evaluation_identities_per_family": 16,
+  "evaluation_policies": ["symbolic", "learned"],
+  "evaluation_adapters": ["ledger-v3", "queue-v3"],
+  "primary_endpoint": "exact standing accuracy under pre-adjudication probe selection",
+  "secondary_endpoint": "total counted probes",
+  "symbolic_efficiency_margin": 0.20,
+  "policy_authority": "NONE"
+}

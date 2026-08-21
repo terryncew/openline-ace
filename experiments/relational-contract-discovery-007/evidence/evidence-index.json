@@ -1,0 +1,18 @@
+{
+  "evaluation-results.jsonl": {
+    "sha256": "fe269fe8efb6f0313b3f5833588938dcd6e5b238307d8c01abd2c372f4461d48",
+    "size": 158848
+  },
+  "experiment-receipt.json": {
+    "sha256": "fcb19263be0535834e2b3836a7c231e39d53cfd2306237246f232729e8b16f14",
+    "size": 363
+  },
+  "pre-adjudication-manifest.json": {
+    "sha256": "ac2c8adf79335c71319262c1567be3e561101370925988d5bc27c297841be3c5",
+    "size": 1268
+  },
+  "verified-handoff-projection.json": {
+    "sha256": "b91d02b628e4d05047a411eb2e943916dcc7e72b753496b1b4499961567c2c16",
+    "size": 352
+  }
+}

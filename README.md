@@ -16,8 +16,14 @@ engine unchanged in a deterministic planner -> implementer -> tester ->
 reviewer repair workflow and adds a bounded recovery claim. Later pressure
 tests found learned predictive parity (RCDL-004) and learned causal-utility
 parity when historical intervention signatures were action-complete
-(RCDL-005). All RCDL experiments remain ACE Level 1 and cannot authorize live
-actions.
+(RCDL-005). RCDL-006 uses the pinned EnvHarness core to hold out entire
+mechanism compositions and distinguishes verifier-relevant failures from rules
+manufactured by wrappers; the symbolic and learned policies remain tied.
+RCDL-007 removes post-adjudication features and makes both policies choose
+causal probes from the same opaque intervention surface under the same budget;
+the symbolic and learned policies again tie on both accuracy and query cost.
+The synthetic unique-advantage claim is therefore retired. All RCDL experiments
+remain ACE Level 1 and cannot authorize live actions.
 
 ## Current benchmark
 
@@ -48,6 +54,8 @@ experiments/
   relational-contract-discovery-003/
   relational-contract-discovery-004/
   relational-contract-discovery-005/
+  relational-contract-discovery-006/
+  relational-contract-discovery-007/
 ```
 
 ## Verify the U(2,3) finite certificate
@@ -116,6 +124,30 @@ export PYTHONPATH="."
 python3 -m unittest discover -s tests -v
 python3 -m rcdl005 verify-evidence
 python3 -m rcdl005 run --output causal-utility-out
+```
+
+Run the EnvHarness held-out mechanism test:
+
+```bash
+git clone https://github.com/google-research/envharness _upstream/envharness
+git -C _upstream/envharness checkout fab7d57441f06b75c73a900e04561d4d7600f361
+cd experiments/relational-contract-discovery-006
+export PYTHONPATH="../../_upstream/envharness:."
+python3 -m unittest discover -s tests -v
+python3 -m rcdl006 verify-upstream
+python3 -m rcdl006 verify-evidence
+python3 -m rcdl006 run --output heldout-mechanism-out
+```
+
+Run the pre-adjudication causal-search test:
+
+```bash
+cd experiments/relational-contract-discovery-007
+export PYTHONPATH="."
+python3 -m unittest discover -s tests -v
+python3 -m rcdl007 verify-evidence
+python3 -m rcdl007 run --output pre-adjudication-out
+python3 scripts/randomized_probe.py --samples 4096
 ```
 
 ## Core line

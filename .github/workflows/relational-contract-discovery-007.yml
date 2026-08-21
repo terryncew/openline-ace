@@ -1,0 +1,44 @@
+name: relational-contract-discovery-007
+
+on:
+  push:
+    paths:
+      - "experiments/relational-contract-discovery-007/**"
+      - ".github/workflows/relational-contract-discovery-007.yml"
+      - "README.md"
+  pull_request:
+    paths:
+      - "experiments/relational-contract-discovery-007/**"
+      - ".github/workflows/relational-contract-discovery-007.yml"
+      - "README.md"
+
+permissions:
+  contents: read
+
+jobs:
+  pre-adjudication-causal-search:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: experiments/relational-contract-discovery-007
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and adversarial tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen evidence
+        run: python -m rcdl007 verify-evidence
+      - name: Recompute pre-adjudication tournament
+        run: python -m rcdl007 run --output "$RUNNER_TEMP/rcdl007-pre-adjudication"
+      - name: Randomized nuisance probe
+        run: python scripts/randomized_probe.py --samples 4096
+      - name: Isolated release check
+        run: python scripts/release_check.py

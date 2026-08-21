@@ -1,0 +1,47 @@
+{
+  "authority": "NONE",
+  "budget": 4,
+  "claim_effect": "UNIQUE_PRE_ADJUDICATION_UTILITY_NOT_FOUND",
+  "evaluation_families": 10,
+  "identities_per_family": 16,
+  "metrics": {
+    "learned": {
+      "accuracy_ppm": 1000000,
+      "correct": 320,
+      "max_queries": 2,
+      "mean_queries": 1.7,
+      "query_total": 544,
+      "records": 320
+    },
+    "symbolic": {
+      "accuracy_ppm": 1000000,
+      "correct": 320,
+      "max_queries": 2,
+      "mean_queries": 1.7,
+      "query_total": 544,
+      "records": 320
+    }
+  },
+  "policy_boundary": {
+    "budget": 4,
+    "forbidden_eval_inputs": [
+      "artifact_valid",
+      "fault set",
+      "standing label",
+      "recovery horizon",
+      "relation names",
+      "verdict-derived features"
+    ],
+    "learned_history": "action-complete development response signatures with training standings",
+    "policy_authority": "NONE",
+    "shared_probe_selector": "deterministic minimax partition",
+    "shared_public_inputs": [
+      "passive RawObservation",
+      "opaque probe IDs",
+      "RawObservation returned by selected probes"
+    ]
+  },
+  "results_sha256": "fe269fe8efb6f0313b3f5833588938dcd6e5b238307d8c01abd2c372f4461d48",
+  "transport_failures": 0,
+  "verdict": "PRE_ADJUDICATION_CAUSAL_PARITY"
+}
