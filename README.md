@@ -92,22 +92,6 @@ python3 -m rcdl003 verify-evidence
 python3 -m rcdl003 run --output replication-out --trials 8
 ```
 
-Run the learned relational baseline pressure test:
-
-```bash
-cd experiments/relational-contract-discovery-004
-export PYTHONPATH="../relational-contract-discovery-001:."
-python3 -m unittest discover -s tests -v
-python3 -m rcdl004 verify-bindings
-python3 -m rcdl004 run --output pressure-test-out
-python3 -m rcdl004 verify-manifest pressure-test-out/pressure-test-manifest.json
-```
-
-RCDL-004 records a valid unfavorable result: a learned relational rule set
-reaches exact predictive parity with the frozen RCDL family on 1,024 final-audit
-traces. Predictive uniqueness is rejected within that tournament; causal
-legibility remains a separate unproved claim.
-
 ## Core line
 
 ACE does not automate certainty.
