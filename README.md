@@ -11,8 +11,10 @@ The first reference backend is the Ulam Clock Atlas. In the initial Ulam audit, 
 The second backend is experimental: Relational Contract Discovery proposes
 bounded rules from execution traces, attacks them with targeted interventions
 and matched shams, and lets an independent oracle decide what survives. Its
-first calibration is Raft. It remains ACE Level 1 and cannot authorize live
-actions.
+first calibration is Raft. Its second calibration reuses the frozen Raft-era
+engine unchanged in a deterministic planner -> implementer -> tester ->
+reviewer repair workflow and adds a bounded recovery claim. Both remain ACE
+Level 1 and cannot authorize live actions.
 
 ## Current benchmark
 
@@ -39,6 +41,7 @@ certificates/
   ulam_23_finite_proof_package/
 experiments/
   relational-contract-discovery-001/
+  relational-contract-discovery-002/
 ```
 
 ## Verify the U(2,3) finite certificate
@@ -65,6 +68,17 @@ cd experiments/relational-contract-discovery-001
 python3 -m unittest discover -s tests -v
 python3 -m rcdl verify-evidence
 python3 -m rcdl calibrate --output calibration-out --trials 8
+```
+
+Run the frozen-engine workflow transport:
+
+```bash
+cd experiments/relational-contract-discovery-002
+export PYTHONPATH="../relational-contract-discovery-001:."
+python3 -m unittest discover -s tests -v
+python3 -m rcdl002 verify-engine
+python3 -m rcdl002 verify-evidence
+python3 -m rcdl002 calibrate --output calibration-out --trials 8
 ```
 
 ## Core line
