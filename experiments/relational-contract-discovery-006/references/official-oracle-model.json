@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {"proposal_id": "d-a7", "standing": "SUPPORTED_NATIVE"},
+    {"proposal_id": "d-c3", "standing": "SUPPORTED_NATIVE"},
+    {"proposal_id": "d-f1", "standing": "REJECTED_IMPOSED"},
+    {"proposal_id": "d-h8", "standing": "REJECTED_IMPOSED"},
+    {"proposal_id": "d-k4", "standing": "REJECTED_NUISANCE"},
+    {"proposal_id": "d-m2", "standing": "REJECTED_NUISANCE"},
+    {"proposal_id": "e-17", "standing": "SUPPORTED_NATIVE"},
+    {"proposal_id": "e-29", "standing": "SUPPORTED_NATIVE"},
+    {"proposal_id": "e-43", "standing": "REJECTED_IMPOSED"},
+    {"proposal_id": "e-61", "standing": "REJECTED_IMPOSED"},
+    {"proposal_id": "e-73", "standing": "REJECTED_NUISANCE"},
+    {"proposal_id": "e-89", "standing": "REJECTED_NUISANCE"}
+  ],
+  "oracle": "original-code-repair-verifier",
+  "schema": "rcdl.official-oracle-model/0.6"
+}

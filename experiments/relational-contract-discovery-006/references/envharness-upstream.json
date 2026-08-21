@@ -1,0 +1,14 @@
+{
+  "commit": "fab7d57441f06b75c73a900e04561d4d7600f361",
+  "license": "Apache-2.0",
+  "license_sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+  "repository": "https://github.com/google-research/envharness",
+  "schema": "rcdl.envharness-upstream/0.6",
+  "source_sha256": {
+    "envharness/core/actionable_env.py": "23b001e39532ea3f49998fc93d93a32c0ca4c0f0a18d34334dd56ead1c127092",
+    "envharness/core/envharness.py": "5e02eb02dca10d99233620179e1c3de4daf47bc28520410eed7c6104132d4782",
+    "envharness/core/types.py": "34e5280efb41d951d46515b157887ffb5615d1ecfb5f6ef28f0fd0ea3135a9a9",
+    "envharness/harnesses/rules.py": "ee7a7df6659ceb9d648cf933e451ccee4fb3ba172c2dc5d74d234d4a03649f6f",
+    "envharness/harnesses/setup.py": "eca9376e475715a22b2d485c812d350058e9ed3a421d577a72dee84794bf1e6e"
+  }
+}
