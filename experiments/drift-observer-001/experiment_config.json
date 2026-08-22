@@ -1,0 +1,29 @@
+{
+  "authoritative_shape": "per_dimension_vector",
+  "base_commit": "04b814bf5140a4fcaee781efbb25d5db2320adfc",
+  "baseline": {
+    "half_life_required": true,
+    "immutable_during_observation": true,
+    "standing_required": true,
+    "successful_reverification": "mint_successor_with_parent_link"
+  },
+  "delta_hol_semantics": "dependency-aware verified-reference displacement",
+  "display_scalar_authoritative": false,
+  "experiment": "drift-observer-001",
+  "impact_dispositions": [
+    "REOPEN",
+    "RETAIN",
+    "ACE_RECOMMENDED"
+  ],
+  "mandatory_control_dimensions": [
+    "reference_receipt",
+    "policy_hash",
+    "action_binding",
+    "evidence_bundle_hash",
+    "evidence_epoch",
+    "witness_id",
+    "witness_version"
+  ],
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE"
+}

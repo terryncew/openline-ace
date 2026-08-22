@@ -1,0 +1,28 @@
+name: Drift Observer 001
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify Drift Observer 001
+        working-directory: experiments/drift-observer-001
+        run: |
+          python -m unittest discover -s tests -v
+          python -m drift_observer
+          python scripts/verify_evidence.py
+          python scripts/release_check.py

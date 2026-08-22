@@ -1,0 +1,77 @@
+{
+  "base_commit": "04b814bf5140a4fcaee781efbb25d5db2320adfc",
+  "file_count": 17,
+  "files": {
+    ".github/workflows/drift-observer-001.yml": {
+      "sha256": "27d3135c71ad1ba462ec357a04c35c81ac874fbafc0d94c04e5f39a2576192da",
+      "size": 663
+    },
+    "experiments/drift-observer-001/CLAIM_BOUNDARY.md": {
+      "sha256": "15386b49328891308cacc2250d82cc13a90cbf12f868245161cb87119e973e5d",
+      "size": 721
+    },
+    "experiments/drift-observer-001/README.md": {
+      "sha256": "cfc4760b9fcd0cb8c9e75a917d2ef35df17ed8a140f120dffbff0c3d3467f138",
+      "size": 3021
+    },
+    "experiments/drift-observer-001/docs/DELTA_HOL_SPEC.md": {
+      "sha256": "f8cac6bffa1d2fa07f64bf8626e32cdf2847f1b8aa9160fbf2dbc91347232550",
+      "size": 1971
+    },
+    "experiments/drift-observer-001/docs/MICROSOFT_CONVERGENCE.md": {
+      "sha256": "fc04fc384ff7041de42243ee2bd625d1090219932c36dbe9e69fe1fd9df40738",
+      "size": 1236
+    },
+    "experiments/drift-observer-001/drift_observer/__init__.py": {
+      "sha256": "fb95687af2658958843ac60c312b3c7f8f76eb202a1625d9fa2fa26ef9b9590d",
+      "size": 112
+    },
+    "experiments/drift-observer-001/drift_observer/__main__.py": {
+      "sha256": "3a2e7a9fe91a0baea011e632ed134aef2729bbc735547ed00c07183381f854a4",
+      "size": 992
+    },
+    "experiments/drift-observer-001/drift_observer/baseline.py": {
+      "sha256": "289ba97a18ab9b522d9be684a883336cd12fc436ae1a8d9e96d9a99456add097",
+      "size": 1714
+    },
+    "experiments/drift-observer-001/drift_observer/canonical.py": {
+      "sha256": "e9f30cd8e26b957e1f9e1b348c0a1a5192b228a019039b31568bc567f6e0b334",
+      "size": 397
+    },
+    "experiments/drift-observer-001/drift_observer/fixture.py": {
+      "sha256": "526662e7f41a64f863e189fde8345e1019bf71143e88860ed3d6ca80008fd4dd",
+      "size": 5344
+    },
+    "experiments/drift-observer-001/drift_observer/model.py": {
+      "sha256": "9fe02e6ec02293d0c2ff64c4394b2fb68a54740d1cb43809069f6ac72d35cadb",
+      "size": 3187
+    },
+    "experiments/drift-observer-001/drift_observer/observer.py": {
+      "sha256": "8847a94759223616a8a0a43f0fd7e58b3c9df50e62cd74515716d297b62bcba2",
+      "size": 9813
+    },
+    "experiments/drift-observer-001/evidence/result.json": {
+      "sha256": "3c8d790537385b043e7459cf463cfeb8eeb10f941b894de6da8f5acc07c0f138",
+      "size": 30253
+    },
+    "experiments/drift-observer-001/experiment_config.json": {
+      "sha256": "2eb0100577ffe80f4cc8a7d2a37e7fa89744473d8085c71f181ec53a2bcbe840",
+      "size": 803
+    },
+    "experiments/drift-observer-001/scripts/release_check.py": {
+      "sha256": "0ea626b67d0b929ef599047520ea84b00b5c0ec166468499933592b406853358",
+      "size": 842
+    },
+    "experiments/drift-observer-001/scripts/verify_evidence.py": {
+      "sha256": "9a3f80d9300f19e58cb101030274aa96a1a506ad58cdf4451231dfd38001d4df",
+      "size": 1424
+    },
+    "experiments/drift-observer-001/tests/test_drift_observer.py": {
+      "sha256": "ca23e59a71c1accdc11206c7065bf6c81df3468b3aa8d3584dbe5b31916a4aba",
+      "size": 7815
+    }
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.ace.drift-observer-001.release-manifest.v1",
+  "target_repository": "terryncew/openline-ace"
+}

@@ -1,0 +1,1062 @@
+{
+  "base_commit": "04b814bf5140a4fcaee781efbb25d5db2320adfc",
+  "baseline": {
+    "max_age_seconds": 3600,
+    "receipt_id": "sv-1e4bffeba9944d17bcd67301",
+    "verified_at": "2026-08-21T18:00:00Z"
+  },
+  "delta_hol_definition": "dependency-aware verified-reference displacement",
+  "display_scalar_authoritative": false,
+  "mandatory_control_dimensions": [
+    "reference_receipt",
+    "policy_hash",
+    "action_binding",
+    "evidence_bundle_hash",
+    "evidence_epoch",
+    "witness_id",
+    "witness_version"
+  ],
+  "policy_authority": "NONE",
+  "profile": "openline.drift-observer-001.fixture-result.v1",
+  "runtime_permission": "NONE",
+  "scenarios": {
+    "baseline_expired": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_EXPIRED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_EXPIRED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_EXPIRED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_EXPIRED"
+        }
+      ],
+      "crossed_dimensions": [
+        "baseline_receipt"
+      ],
+      "delta_hol": [],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 1000000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "BASELINE_REVERIFY_REQUIRED"
+    },
+    "baseline_revoked": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_SUPPORT_REVOKED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_SUPPORT_REVOKED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_SUPPORT_REVOKED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [
+            "baseline_receipt"
+          ],
+          "disposition": "REOPEN",
+          "reason": "BASELINE_SUPPORT_REVOKED"
+        }
+      ],
+      "crossed_dimensions": [
+        "baseline_receipt"
+      ],
+      "delta_hol": [],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 1000000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "BASELINE_REVERIFY_REQUIRED"
+    },
+    "patch_rebind": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [
+            "action_binding",
+            "code_hash",
+            "evidence_bundle_hash",
+            "evidence_epoch"
+          ],
+          "disposition": "REOPEN",
+          "reason": "EXPLICIT_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        }
+      ],
+      "crossed_dimensions": [
+        "action_binding",
+        "code_hash",
+        "evidence_bundle_hash",
+        "evidence_epoch"
+      ],
+      "delta_hol": [
+        {
+          "crossed": false,
+          "current_value": "sv-1e4bffeba9944d17bcd67301",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "reference_receipt",
+          "plane": "control",
+          "reference_value": "sv-1e4bffeba9944d17bcd67301",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "policy-v1",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "policy_hash",
+          "plane": "control",
+          "reference_value": "policy-v1",
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": "commit-B",
+          "distance_micros": 1000000,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "action_binding",
+          "plane": "control",
+          "reference_value": "commit-A",
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": "evidence-B",
+          "distance_micros": 1000000,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_bundle_hash",
+          "plane": "control",
+          "reference_value": "evidence-A",
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": 8,
+          "distance_micros": 1000000,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_epoch",
+          "plane": "control",
+          "reference_value": 7,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "verifier",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_id",
+          "plane": "control",
+          "reference_value": "verifier",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 3,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_version",
+          "plane": "control",
+          "reference_value": 3,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "docs-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "readme_hash",
+          "plane": "domain",
+          "reference_value": "docs-A",
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": "code-B",
+          "distance_micros": 1000000,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "code_hash",
+          "plane": "domain",
+          "reference_value": "code-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 10000,
+          "distance_micros": 0,
+          "epsilon_micros": 200000,
+          "missing": false,
+          "name": "sensor_bias_micros",
+          "plane": "domain",
+          "reference_value": 10000,
+          "saturated": false
+        }
+      ],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 1000000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "DISPLACEMENT_DETECTED"
+    },
+    "readme_only": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [
+            "readme_hash"
+          ],
+          "disposition": "REOPEN",
+          "reason": "EXPLICIT_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        }
+      ],
+      "crossed_dimensions": [
+        "readme_hash"
+      ],
+      "delta_hol": [
+        {
+          "crossed": false,
+          "current_value": "sv-1e4bffeba9944d17bcd67301",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "reference_receipt",
+          "plane": "control",
+          "reference_value": "sv-1e4bffeba9944d17bcd67301",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "policy-v1",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "policy_hash",
+          "plane": "control",
+          "reference_value": "policy-v1",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "commit-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "action_binding",
+          "plane": "control",
+          "reference_value": "commit-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "evidence-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_bundle_hash",
+          "plane": "control",
+          "reference_value": "evidence-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 7,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_epoch",
+          "plane": "control",
+          "reference_value": 7,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "verifier",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_id",
+          "plane": "control",
+          "reference_value": "verifier",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 3,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_version",
+          "plane": "control",
+          "reference_value": 3,
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": "docs-B",
+          "distance_micros": 1000000,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "readme_hash",
+          "plane": "domain",
+          "reference_value": "docs-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "code-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "code_hash",
+          "plane": "domain",
+          "reference_value": "code-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 10000,
+          "distance_micros": 0,
+          "epsilon_micros": 200000,
+          "missing": false,
+          "name": "sensor_bias_micros",
+          "plane": "domain",
+          "reference_value": 10000,
+          "saturated": false
+        }
+      ],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 1000000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "DISPLACEMENT_DETECTED"
+    },
+    "sensor_large": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [
+            "sensor_bias_micros"
+          ],
+          "disposition": "REOPEN",
+          "reason": "EXPLICIT_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [
+            "sensor_bias_micros"
+          ],
+          "disposition": "ACE_RECOMMENDED",
+          "reason": "CANDIDATE_DEPENDENCY_DISPLACED"
+        }
+      ],
+      "crossed_dimensions": [
+        "sensor_bias_micros"
+      ],
+      "delta_hol": [
+        {
+          "crossed": false,
+          "current_value": "sv-1e4bffeba9944d17bcd67301",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "reference_receipt",
+          "plane": "control",
+          "reference_value": "sv-1e4bffeba9944d17bcd67301",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "policy-v1",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "policy_hash",
+          "plane": "control",
+          "reference_value": "policy-v1",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "commit-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "action_binding",
+          "plane": "control",
+          "reference_value": "commit-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "evidence-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_bundle_hash",
+          "plane": "control",
+          "reference_value": "evidence-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 7,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_epoch",
+          "plane": "control",
+          "reference_value": 7,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "verifier",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_id",
+          "plane": "control",
+          "reference_value": "verifier",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 3,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_version",
+          "plane": "control",
+          "reference_value": 3,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "docs-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "readme_hash",
+          "plane": "domain",
+          "reference_value": "docs-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "code-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "code_hash",
+          "plane": "domain",
+          "reference_value": "code-A",
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": 250000,
+          "distance_micros": 1000000,
+          "epsilon_micros": 200000,
+          "missing": false,
+          "name": "sensor_bias_micros",
+          "plane": "domain",
+          "reference_value": 10000,
+          "saturated": true
+        }
+      ],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 1000000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [
+        "sensor_bias_micros"
+      ],
+      "status": "DISPLACEMENT_DETECTED"
+    },
+    "sensor_small": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        }
+      ],
+      "crossed_dimensions": [],
+      "delta_hol": [
+        {
+          "crossed": false,
+          "current_value": "sv-1e4bffeba9944d17bcd67301",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "reference_receipt",
+          "plane": "control",
+          "reference_value": "sv-1e4bffeba9944d17bcd67301",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "policy-v1",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "policy_hash",
+          "plane": "control",
+          "reference_value": "policy-v1",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "commit-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "action_binding",
+          "plane": "control",
+          "reference_value": "commit-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "evidence-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_bundle_hash",
+          "plane": "control",
+          "reference_value": "evidence-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 7,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_epoch",
+          "plane": "control",
+          "reference_value": 7,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "verifier",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_id",
+          "plane": "control",
+          "reference_value": "verifier",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 3,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_version",
+          "plane": "control",
+          "reference_value": 3,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "docs-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "readme_hash",
+          "plane": "domain",
+          "reference_value": "docs-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "code-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "code_hash",
+          "plane": "domain",
+          "reference_value": "code-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 15000,
+          "distance_micros": 50000,
+          "epsilon_micros": 200000,
+          "missing": false,
+          "name": "sensor_bias_micros",
+          "plane": "domain",
+          "reference_value": 10000,
+          "saturated": false
+        }
+      ],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 50000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "WITHIN_DECLARED_ENVELOPE"
+    },
+    "unchanged": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        }
+      ],
+      "crossed_dimensions": [],
+      "delta_hol": [
+        {
+          "crossed": false,
+          "current_value": "sv-1e4bffeba9944d17bcd67301",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "reference_receipt",
+          "plane": "control",
+          "reference_value": "sv-1e4bffeba9944d17bcd67301",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "policy-v1",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "policy_hash",
+          "plane": "control",
+          "reference_value": "policy-v1",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "commit-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "action_binding",
+          "plane": "control",
+          "reference_value": "commit-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "evidence-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_bundle_hash",
+          "plane": "control",
+          "reference_value": "evidence-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 7,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_epoch",
+          "plane": "control",
+          "reference_value": 7,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "verifier",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_id",
+          "plane": "control",
+          "reference_value": "verifier",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 3,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_version",
+          "plane": "control",
+          "reference_value": 3,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "docs-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "readme_hash",
+          "plane": "domain",
+          "reference_value": "docs-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "code-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "code_hash",
+          "plane": "domain",
+          "reference_value": "code-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 10000,
+          "distance_micros": 0,
+          "epsilon_micros": 200000,
+          "missing": false,
+          "name": "sensor_bias_micros",
+          "plane": "domain",
+          "reference_value": 10000,
+          "saturated": false
+        }
+      ],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 0
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "WITHIN_DECLARED_ENVELOPE"
+    },
+    "witness_upgrade": {
+      "baseline_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+      "claim_impacts": [
+        {
+          "claim_id": "merge-current-patch",
+          "dimensions": [
+            "witness_version"
+          ],
+          "disposition": "REOPEN",
+          "reason": "EXPLICIT_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "docs-reviewed",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "control-stable",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        },
+        {
+          "claim_id": "telemetry-safe",
+          "dimensions": [],
+          "disposition": "RETAIN",
+          "reason": "NO_DECLARED_DEPENDENCY_DISPLACED"
+        }
+      ],
+      "crossed_dimensions": [
+        "witness_version"
+      ],
+      "delta_hol": [
+        {
+          "crossed": false,
+          "current_value": "sv-1e4bffeba9944d17bcd67301",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "reference_receipt",
+          "plane": "control",
+          "reference_value": "sv-1e4bffeba9944d17bcd67301",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "policy-v1",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "policy_hash",
+          "plane": "control",
+          "reference_value": "policy-v1",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "commit-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "action_binding",
+          "plane": "control",
+          "reference_value": "commit-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "evidence-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_bundle_hash",
+          "plane": "control",
+          "reference_value": "evidence-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 7,
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "evidence_epoch",
+          "plane": "control",
+          "reference_value": 7,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "verifier",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_id",
+          "plane": "control",
+          "reference_value": "verifier",
+          "saturated": false
+        },
+        {
+          "crossed": true,
+          "current_value": 4,
+          "distance_micros": 1000000,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "witness_version",
+          "plane": "control",
+          "reference_value": 3,
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "docs-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "readme_hash",
+          "plane": "domain",
+          "reference_value": "docs-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": "code-A",
+          "distance_micros": 0,
+          "epsilon_micros": 0,
+          "missing": false,
+          "name": "code_hash",
+          "plane": "domain",
+          "reference_value": "code-A",
+          "saturated": false
+        },
+        {
+          "crossed": false,
+          "current_value": 10000,
+          "distance_micros": 0,
+          "epsilon_micros": 200000,
+          "missing": false,
+          "name": "sensor_bias_micros",
+          "plane": "domain",
+          "reference_value": 10000,
+          "saturated": false
+        }
+      ],
+      "display_scalar": {
+        "aggregation": "max_component_for_display_only",
+        "authoritative": false,
+        "value_micros": 1000000
+      },
+      "policy_authority": "NONE",
+      "runtime_permission": "NONE",
+      "saturated_dimensions": [],
+      "status": "DISPLACEMENT_DETECTED"
+    }
+  },
+  "status": "VERIFIED_CONTINUITY_CONFORMANCE_PASS",
+  "successor_baseline": {
+    "parent_receipt_id": "sv-1e4bffeba9944d17bcd67301",
+    "receipt_id": "sv-fa75e9be43b769f0bcbf8ca6",
+    "verified_at": "2026-08-21T18:12:00Z"
+  }
+}
