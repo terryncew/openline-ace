@@ -1,0 +1,11 @@
+{
+  "repo": "terryncew/openline-ace",
+  "base_commit": "e5d195db70790c1923ae69907dd55a43845b070e",
+  "branch": "feat/rca001-unitree-external-run",
+  "commit_message": "feat(ace): add pinned Unitree G1 external RCA-001 run",
+  "unitree_rl_gym_pin": "276801e46c5d433564f24658bac64f254b7d2d4b",
+  "frozen_thresholds_changed": false,
+  "current_status": "EXTERNAL_RUN_READY_UNRUN",
+  "next_earned_verdict": "SIMULATED_PHYSICAL_SEPARATION",
+  "policy_authority": "NONE"
+}

@@ -1,0 +1,14 @@
+{
+  "profile": "openline.rca001.external-pins.v1",
+  "openline_ace_base": "e5d195db70790c1923ae69907dd55a43845b070e",
+  "unitree_rl_gym": {
+    "repo": "unitreerobotics/unitree_rl_gym",
+    "commit": "276801e46c5d433564f24658bac64f254b7d2d4b",
+    "g1_config": "deploy/deploy_mujoco/configs/g1.yaml",
+    "g1_policy": "deploy/pre_train/g1/motion.pt",
+    "g1_scene": "resources/robots/g1_description/scene.xml",
+    "role": "official Unitree G1 pretrained locomotion policy + MuJoCo Sim2Sim substrate"
+  },
+  "frozen_rca001_thresholds_changed": false,
+  "policy_authority": "NONE"
+}
