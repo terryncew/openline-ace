@@ -1,0 +1,29 @@
+{
+  "checkpoint": {
+    "require_pr_open_at_checkpoint": true,
+    "rule": "24_hours_after_first_approval"
+  },
+  "experiment_id": "RTA-002",
+  "feature_window": "events_at_or_before_checkpoint_only",
+  "outcome": {
+    "name": "later_review_standing_failure",
+    "note": "This is a review-standing failure proxy, not a claim that the pull request or code was unsafe.",
+    "positive_if_after_checkpoint": [
+      "review_state_CHANGES_REQUESTED",
+      "review_state_DISMISSED"
+    ]
+  },
+  "policy_authority": "NONE",
+  "schema": "openline.ace.rta002.source.v1",
+  "source": {
+    "max_prs": 80,
+    "order": "asc",
+    "provider": "github_rest_api",
+    "query_window": {
+      "merged_from": "2026-01-01T00:00:00Z",
+      "merged_through": "2026-03-31T23:59:59Z"
+    },
+    "repository": "kubernetes/kubernetes",
+    "sort": "created"
+  }
+}

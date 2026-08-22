@@ -1,0 +1,57 @@
+{
+  "allowed_verdicts": [
+    "PREDICTIVE_ADVANTAGE_CANDIDATE",
+    "NO_PREDICTIVE_ADVANTAGE",
+    "DATA_INSUFFICIENT"
+  ],
+  "experiment_id": "RTA-002",
+  "feature_definitions": {
+    "age_since_last_verification": "min(1, hours_since_latest_APPROVED_review_at_checkpoint / 168)",
+    "contradiction_rate": "CHANGES_REQUESTED reviews / decisive reviews at_or_before_checkpoint",
+    "dependency_churn": "min(1, commits_after_first_decisive_review_before_checkpoint / 4)",
+    "support_withdrawal_rate": "DISMISSED reviews / decisive reviews at_or_before_checkpoint"
+  },
+  "forbidden": [
+    "post_outcome_threshold_change",
+    "feature_redefinition_after_external_fetch",
+    "standing_has_a_universal_half_life",
+    "github_review_proxy_equals_general_standing_failure",
+    "predictive_advantage_grants_execution_authority"
+  ],
+  "inherits_rta001": {
+    "baseline_features": [
+      "age_since_last_verification"
+    ],
+    "candidate_features": [
+      "age_since_last_verification",
+      "regime_transition"
+    ],
+    "promotion_margins": {
+      "balanced_accuracy_delta_min": 0.05,
+      "brier_improvement_min": 0.02
+    },
+    "regime_rule": {
+      "minimum_dimensions_crossed": 2
+    },
+    "signal_dimensions": {
+      "contradiction_rate": {
+        "direction": "gte",
+        "threshold": 0.3
+      },
+      "dependency_churn": {
+        "direction": "gte",
+        "threshold": 0.55
+      },
+      "support_withdrawal_rate": {
+        "direction": "gte",
+        "threshold": 0.25
+      }
+    }
+  },
+  "minimum_eligible_cases": 40,
+  "minimum_heldout_cases": 20,
+  "minimum_positive_outcomes_heldout": 5,
+  "policy_authority": "NONE",
+  "schema": "openline.ace.rta002.preregistration.v1",
+  "split_rule": "chronological eligible cases: first half calibration-shadow, second half heldout; no tuning permitted on either half"
+}
