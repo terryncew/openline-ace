@@ -1,0 +1,25 @@
+{
+  "profile": "openline.ace.hsr001.fhir-positive-control.v1",
+  "fhir_version": "R4",
+  "changed": "Observation/potassium-415122",
+  "resources": [
+    {
+      "resourceType": "Observation",
+      "id": "potassium-415122",
+      "status": "corrected",
+      "code": {"text": "Potassium"}
+    },
+    {
+      "resourceType": "MedicationRequest",
+      "id": "potassium-replacement-dependent",
+      "status": "active",
+      "reasonReference": [{"reference": "Observation/potassium-415122"}]
+    },
+    {
+      "resourceType": "MedicationRequest",
+      "id": "unrelated-independent-medication",
+      "status": "active",
+      "reasonReference": [{"reference": "Condition/unrelated-condition"}]
+    }
+  ]
+}

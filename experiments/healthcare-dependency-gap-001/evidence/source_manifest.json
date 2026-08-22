@@ -1,0 +1,36 @@
+{
+  "profile": "openline.ace.hsr001.source-manifest.v1",
+  "sources": [
+    {
+      "id": "mimic-demo",
+      "title": "MIMIC-IV Clinical Database Demo v2.2",
+      "publisher": "PhysioNet",
+      "doi": "10.13026/dp1f-ex47",
+      "url": "https://www.physionet.org/content/mimic-iv-demo/2.2/",
+      "facts_used": ["openly available 100-patient deidentified demo", "ODbL-1.0 license", "schema matches MIMIC-IV v2.2"]
+    },
+    {
+      "id": "mimic-labevents",
+      "url": "https://www.physionet.org/content/mimic-iv-demo/2.2/hosp/labevents.csv.gz",
+      "facts_used": ["labevents schema", "selected real potassium row labevent_id 415122"]
+    },
+    {
+      "id": "mimic-emar",
+      "url": "https://www.physionet.org/content/mimic-iv-demo/2.2/hosp/emar.csv.gz",
+      "facts_used": ["emar schema", "selected same-hospitalization potassium chloride administration rows"]
+    },
+    {
+      "id": "mimic-d-labitems",
+      "url": "https://www.physionet.org/content/mimic-iv-demo/2.2/hosp/d_labitems.csv.gz",
+      "facts_used": ["itemid 50971 is Potassium, Blood, Chemistry"]
+    },
+    {
+      "id": "fhir-r4-medicationrequest",
+      "title": "FHIR R4 MedicationRequest",
+      "publisher": "HL7",
+      "url": "https://www.hl7.org/fhir/R4/medicationrequest.html",
+      "facts_used": ["reasonReference can reference Condition or Observation and represents support for why a prescription is written"]
+    }
+  ],
+  "retrieved_utc_date": "2026-08-22"
+}

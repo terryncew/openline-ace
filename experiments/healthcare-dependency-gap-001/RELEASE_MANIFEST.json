@@ -1,0 +1,23 @@
+{
+  "base_commit": "ea4d8884bb06d012c5b34bbf0b13390567499b8b",
+  "files": [
+    "CLAIM_BOUNDARY.md",
+    "LICENSE_DATA.md",
+    "README.md",
+    "RELEASE_MANIFEST.json",
+    "evidence/result.json",
+    "evidence/source_manifest.json",
+    "experiment_config.json",
+    "fixtures/fhir_positive_control.json",
+    "fixtures/mimic_iv_demo_2_2_excerpt.json",
+    "hsr001/__init__.py",
+    "hsr001/audit.py",
+    "scripts/release_check.py",
+    "scripts/run_audit.py",
+    "scripts/verify_evidence.py",
+    "tests/test_audit.py"
+  ],
+  "policy_authority": "NONE",
+  "profile": "openline.ace.hsr001.release-manifest.v1",
+  "runtime_permission": "NONE"
+}

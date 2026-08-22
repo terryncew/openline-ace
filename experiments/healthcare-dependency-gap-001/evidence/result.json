@@ -1,0 +1,27 @@
+{
+  "disposition": "REAL_DATA_DEPENDENCY_COVERAGE_INSUFFICIENT",
+  "experiment": "healthcare-dependency-gap-001",
+  "external_arm": {
+    "explicit_dependents": [],
+    "perturbation": "synthetic_hypothetical_correction",
+    "record_type": "real_deidentified",
+    "rejected_heuristics": [
+      "same_hospitalization",
+      "temporal_proximity",
+      "name_similarity"
+    ],
+    "status": "DEPENDENCY_COVERAGE_INSUFFICIENT"
+  },
+  "external_dataset": "MIMIC-IV Clinical Database Demo v2.2",
+  "implication": "Do not silently retain healthcare decisions when required derivation edges are absent. Dependency maps must be explicitly supplied or independently established before selective reopening.",
+  "policy_authority": "NONE",
+  "positive_control": {
+    "explicit_dependents": [
+      "potassium-replacement-dependent"
+    ],
+    "record_type": "synthetic_fhir_r4",
+    "status": "SELECTIVE_REOPENING_CAPABILITY_PASS"
+  },
+  "profile": "openline.ace.healthcare-dependency-gap.result.v1",
+  "runtime_permission": "NONE"
+}
