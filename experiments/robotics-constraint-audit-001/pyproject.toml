@@ -1,0 +1,6 @@
+[project]
+name="openline-robotics-constraint-audit-001"
+version="0.1.0"
+requires-python=">=3.11"
+[tool.setuptools]
+packages=["rca001"]

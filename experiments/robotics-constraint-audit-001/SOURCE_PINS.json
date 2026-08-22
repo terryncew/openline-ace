@@ -1,0 +1,13 @@
+{
+  "profile": "openline.rca001.source-pins.v1",
+  "openline_ace": {
+    "repo": "terryncew/openline-ace",
+    "base_commit": "7830ea350705d34780fd8b8e0075efa988d6e8cb"
+  },
+  "unitree_mujoco": {
+    "repo": "unitreerobotics/unitree_mujoco",
+    "commit": "ae6a8403e272733e9996ef59990880330496177f",
+    "role": "external physics/control substrate only"
+  },
+  "authority": "NONE"
+}

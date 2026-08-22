@@ -1,0 +1,15 @@
+{
+  "profile": "openline.rca001.config.v1",
+  "min_trials_per_arm": 64,
+  "supervisory_hz": 20.0,
+  "max_evidence_age_ms": 100.0,
+  "reaction_time_s": 0.05,
+  "safety_margin_m": 0.2,
+  "min_deceleration_mps2": 1.5,
+  "baseline_max_violation_rate": 0.05,
+  "sham_max_violation_rate": 0.05,
+  "min_active_minus_sham_delta": 0.4,
+  "restoration_max_violation_rate": 0.05,
+  "min_restoration_recovery": 0.4,
+  "policy_authority": "NONE"
+}

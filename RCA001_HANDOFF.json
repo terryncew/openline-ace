@@ -1,0 +1,14 @@
+{
+  "profile": "openline.rca001.handoff.v1",
+  "repo": "terryncew/openline-ace",
+  "base_commit": "7830ea350705d34780fd8b8e0075efa988d6e8cb",
+  "branch": "feat/robotics-constraint-audit-001",
+  "commit_message": "feat(ace): add robotics stopping-envelope audit",
+  "upstream": {
+    "repo": "unitreerobotics/unitree_mujoco",
+    "commit": "ae6a8403e272733e9996ef59990880330496177f"
+  },
+  "scientific_status": "PROTOCOL_CONFORMANCE_PASS_UNITREE_RUN_UNRUN",
+  "next_earned_verdict": "SIMULATED_PHYSICAL_SEPARATION",
+  "policy_authority": "NONE"
+}
