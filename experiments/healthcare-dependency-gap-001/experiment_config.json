@@ -1,0 +1,16 @@
+{
+  "experiment": "healthcare-dependency-gap-001",
+  "base_commit": "ea4d8884bb06d012c5b34bbf0b13390567499b8b",
+  "external_dataset": "MIMIC-IV Clinical Database Demo v2.2",
+  "external_dataset_doi": "10.13026/dp1f-ex47",
+  "external_arm": "real_deidentified_record_synthetic_correction",
+  "positive_control": "synthetic_fhir_r4_explicit_reason_reference",
+  "required_behavior": {
+    "explicit_dependency": "selectively_reopen",
+    "missing_dependency": "DEPENDENCY_COVERAGE_INSUFFICIENT",
+    "same_encounter_only": "insufficient",
+    "temporal_proximity_only": "insufficient"
+  },
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE"
+}

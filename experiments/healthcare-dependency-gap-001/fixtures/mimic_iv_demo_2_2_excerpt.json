@@ -1,0 +1,79 @@
+{
+  "profile": "openline.ace.hsr001.mimic-excerpt.v1",
+  "source": {
+    "dataset": "MIMIC-IV Clinical Database Demo",
+    "version": "2.2",
+    "doi": "10.13026/dp1f-ex47",
+    "license": "ODbL-1.0",
+    "labevents_url": "https://www.physionet.org/content/mimic-iv-demo/2.2/hosp/labevents.csv.gz",
+    "emar_url": "https://www.physionet.org/content/mimic-iv-demo/2.2/hosp/emar.csv.gz",
+    "d_labitems_url": "https://www.physionet.org/content/mimic-iv-demo/2.2/hosp/d_labitems.csv.gz"
+  },
+  "labevents_schema": [
+    "labevent_id", "subject_id", "hadm_id", "specimen_id", "itemid",
+    "order_provider_id", "charttime", "storetime", "value", "valuenum",
+    "valueuom", "ref_range_lower", "ref_range_upper", "flag", "priority", "comments"
+  ],
+  "emar_schema": [
+    "subject_id", "hadm_id", "emar_id", "emar_seq", "poe_id", "pharmacy_id",
+    "enter_provider_id", "charttime", "medication", "event_txt", "scheduletime", "storetime"
+  ],
+  "lab_dictionary": {
+    "itemid": 50971,
+    "label": "Potassium",
+    "fluid": "Blood",
+    "category": "Chemistry"
+  },
+  "selected_lab": {
+    "labevent_id": 415122,
+    "subject_id": 10035631,
+    "hadm_id": 21476294,
+    "specimen_id": 46409357,
+    "itemid": 50971,
+    "charttime": "2115-11-24 00:00:00",
+    "storetime": "2115-11-24 01:32:00",
+    "value": "3.7",
+    "valuenum": 3.7,
+    "valueuom": "mEq/L",
+    "ref_range_lower": 3.3,
+    "ref_range_upper": 5.1,
+    "priority": "STAT"
+  },
+  "same_hospitalization_medication_administrations": [
+    {
+      "subject_id": 10035631,
+      "hadm_id": 21476294,
+      "emar_id": "10035631-475",
+      "emar_seq": 475,
+      "poe_id": "10035631-1035",
+      "pharmacy_id": 79139588,
+      "charttime": "2115-11-23 02:15:00",
+      "medication": "Potassium Chloride Replacement (Critical Care and Oncology)"
+    },
+    {
+      "subject_id": 10035631,
+      "hadm_id": 21476294,
+      "emar_id": "10035631-512",
+      "emar_seq": 512,
+      "poe_id": "10035631-1035",
+      "pharmacy_id": 79139588,
+      "charttime": "2115-11-25 05:30:00",
+      "medication": "Potassium Chloride Replacement (Critical Care and Oncology)"
+    },
+    {
+      "subject_id": 10035631,
+      "hadm_id": 21476294,
+      "emar_id": "10035631-524",
+      "emar_seq": 524,
+      "poe_id": "10035631-1035",
+      "pharmacy_id": 79139588,
+      "charttime": "2115-11-25 15:35:00",
+      "medication": "Potassium Chloride Replacement (Critical Care and Oncology)"
+    }
+  ],
+  "perturbation": {
+    "type": "hypothetical_correction",
+    "changed_record": "labevent:415122",
+    "asserted_real_world_correction": false
+  }
+}
