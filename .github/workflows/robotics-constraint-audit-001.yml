@@ -1,0 +1,38 @@
+name: Robotics Constraint Audit 001
+on:
+  pull_request:
+    paths: ["experiments/robotics-constraint-audit-001/**", ".github/workflows/robotics-constraint-audit-001.yml"]
+  push:
+    branches: [main]
+    paths: ["experiments/robotics-constraint-audit-001/**", ".github/workflows/robotics-constraint-audit-001.yml"]
+permissions:
+  contents: read
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11","3.12","3.13"]
+    defaults:
+      run:
+        working-directory: experiments/robotics-constraint-audit-001
+    steps:
+      - uses: actions/checkout@v7
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@v7
+        with: {python-version: "${{ matrix.python-version }}"}
+      - run: python -m unittest discover -s tests -v
+      - run: python -m rca001 conformance --out "$RUNNER_TEMP/rca001"
+      - run: python scripts/verify_conformance_independent.py "$RUNNER_TEMP/rca001/results.jsonl"
+      - run: python scripts/release_check.py
+  verify-unitree-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with: {persist-credentials: false}
+      - run: |
+          git clone https://github.com/unitreerobotics/unitree_mujoco.git _upstream/unitree_mujoco
+          git -C _upstream/unitree_mujoco checkout ae6a8403e272733e9996ef59990880330496177f
+      - working-directory: experiments/robotics-constraint-audit-001
+        run: python scripts/verify_unitree_pin.py ../../_upstream/unitree_mujoco
