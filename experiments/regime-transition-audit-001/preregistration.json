@@ -1,0 +1,56 @@
+{
+  "baseline_features": [
+    "age_since_last_verification"
+  ],
+  "candidate_features": [
+    "age_since_last_verification",
+    "regime_transition"
+  ],
+  "experiment_id": "RTA-001",
+  "external_empirical_standing_requires": [
+    "external_or_naturally_occurring_time_series",
+    "features_and_thresholds_frozen_before_outcomes",
+    "same_freshness_baseline",
+    "heldout_evaluation",
+    "no_post_outcome_retuning"
+  ],
+  "forbidden_claims": [
+    "standing_has_a_universal_half_life",
+    "regime_transition_is_a_universal_mechanism",
+    "predictive_signal_grants_policy_authority",
+    "synthetic_fixture_proves_external_predictive_value"
+  ],
+  "frozen_before_external_outcomes": true,
+  "minimum_heldout_cases": 20,
+  "policy_authority": "NONE",
+  "primary_metrics": [
+    "balanced_accuracy",
+    "brier_score",
+    "positive_predictive_value"
+  ],
+  "promotion_margins": {
+    "balanced_accuracy_delta_min": 0.05,
+    "brier_improvement_min": 0.02
+  },
+  "regime_rule": {
+    "minimum_dimensions_crossed": 2
+  },
+  "schema": "openline.ace.rta001.preregistration.v1",
+  "signal_dimensions": {
+    "contradiction_rate": {
+      "direction": "gte",
+      "threshold": 0.3
+    },
+    "dependency_churn": {
+      "direction": "gte",
+      "threshold": 0.55
+    },
+    "support_withdrawal_rate": {
+      "direction": "gte",
+      "threshold": 0.25
+    }
+  },
+  "split_rule": "case_id parity: even calibration, odd heldout",
+  "status_before_run": "CONCEPT_ONLY_UNTESTED",
+  "synthetic_fixture_max_standing": "PROTOCOL_CONFORMANCE_PASS_EXTERNAL_UNRUN"
+}

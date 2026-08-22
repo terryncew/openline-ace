@@ -1,0 +1,29 @@
+name: ACE Regime Transition Audit 001
+
+on:
+  pull_request:
+    paths:
+      - "experiments/regime-transition-audit-001/**"
+      - ".github/workflows/ace-regime-transition-audit-001.yml"
+  push:
+    branches: [main]
+    paths:
+      - "experiments/regime-transition-audit-001/**"
+      - ".github/workflows/ace-regime-transition-audit-001.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  rta001:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Verify RTA-001
+        working-directory: experiments/regime-transition-audit-001
+        run: python scripts/release_check.py
