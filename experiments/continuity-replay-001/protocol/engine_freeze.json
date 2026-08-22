@@ -1,0 +1,16 @@
+{
+  "base_commit": "4cb35b72653b11625da265fd9d5f93b125e1e5e5",
+  "engine_bundle_sha256": "1a2804a5a9f71bea523f82b9b2ce2f73ccce1f4ab4e15df38e2907676091f1e2",
+  "engine_files": {
+    "__init__.py": "50ec2355e9496dde4ed8d71083f91f4e65bf03c7997f9cf3778aa229a9ac9d9d",
+    "baselines.py": "e0a8968714d96fa2d29716ce5f17e12469798efd140ef14de28036f1e7340583",
+    "engine.py": "bca6bea6500a374291785bbd6b54eff93a4d181c0608522adaf787be7a4a18e0",
+    "metrics.py": "ee632993d2955afdeedaad18dd5ef1ce7e2a84b892840a084d5cb764fdfc9b5a",
+    "model.py": "bbe4864d08b13b7b352988f227488b77e165eaa011acb8727619dbb26820b898",
+    "replay.py": "95ce934da3cbdfb7f99f34ae0b98d0be75de0a4004992a1b3ad2a3d6950b4763"
+  },
+  "frozen_before_heldout_oracle": true,
+  "learned_parameters": 0,
+  "profile": "openline.ace.continuity-replay.engine-freeze.v1",
+  "tuned_thresholds": 0
+}

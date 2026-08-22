@@ -1,0 +1,188 @@
+{
+  "cases": [
+    {
+      "base_commit": "2ef3fc2ceae2733bc0408fbf1a6f2e6757a4be89",
+      "case_id": "microsoft-agent-governance-toolkit-pr-2946",
+      "graph": {
+        "claims": [
+          "agt-integration-source-reviewed",
+          "agt-session-policy-pinned",
+          "agt-policy-gate-consistent",
+          "agt-execution-gates-use-pinned-policy",
+          "agt-evaluator-source-reviewed",
+          "agt-scoped-evaluation-fail-closed",
+          "agt-malformed-governance-denies",
+          "agt-readme-reviewed",
+          "agt-installation-guidance-current",
+          "agt-tool-provenance-doc-current"
+        ],
+        "edges": [
+          [
+            "agent-governance-python/agent-os/src/agent_os/integrations/base.py",
+            "agt-integration-source-reviewed"
+          ],
+          [
+            "agt-integration-source-reviewed",
+            "agt-session-policy-pinned"
+          ],
+          [
+            "agt-session-policy-pinned",
+            "agt-policy-gate-consistent"
+          ],
+          [
+            "agt-session-policy-pinned",
+            "agt-execution-gates-use-pinned-policy"
+          ],
+          [
+            "agent-governance-python/agent-os/src/agent_os/policies/evaluator.py",
+            "agt-evaluator-source-reviewed"
+          ],
+          [
+            "agt-evaluator-source-reviewed",
+            "agt-scoped-evaluation-fail-closed"
+          ],
+          [
+            "agt-scoped-evaluation-fail-closed",
+            "agt-malformed-governance-denies"
+          ],
+          [
+            "README.md",
+            "agt-readme-reviewed"
+          ],
+          [
+            "agt-readme-reviewed",
+            "agt-installation-guidance-current"
+          ],
+          [
+            "agt-readme-reviewed",
+            "agt-tool-provenance-doc-current"
+          ]
+        ]
+      },
+      "head_commit": "2ffe7075dd5a9f81c9d7f39f751dc112632451f1",
+      "observed_changed_paths": [
+        "agent-governance-python/agent-os/src/agent_os/integrations/base.py",
+        "agent-governance-python/agent-os/src/agent_os/policies/evaluator.py",
+        "agent-governance-python/agent-os/tests/test_base_cedar_integration.py",
+        "agent-governance-python/agent-os/tests/test_folder_governance.py",
+        "agent-governance-python/agent-os/tests/test_session_pinning_and_aliases.py",
+        "docs/security/audits/2026-06-10-policy-pinning-failclosed.md"
+      ],
+      "pull_request": 2946,
+      "repository": "microsoft/agent-governance-toolkit",
+      "source_url": "https://github.com/microsoft/agent-governance-toolkit/pull/2946",
+      "tracked_blob_states": {
+        "README.md": {
+          "base_blob": "c5702bdda83b400becf2d5f760fd2b071aff5377",
+          "head_blob": "c5702bdda83b400becf2d5f760fd2b071aff5377"
+        },
+        "agent-governance-python/agent-os/src/agent_os/integrations/base.py": {
+          "base_blob": "1e7f2747f5bfcab80eddb14088483990c01bdffc",
+          "head_blob": "fe359f9d80f9e188db24788e6be0a50acfa0ac45"
+        },
+        "agent-governance-python/agent-os/src/agent_os/policies/evaluator.py": {
+          "base_blob": "51cb23d24fa1aed29e2579081de1f2d6b55df45e",
+          "head_blob": "92206b1f5b1a04bb86e904cae4c30ae69fcacdd2"
+        }
+      }
+    },
+    {
+      "base_commit": "15ef06434c81523b1b24db2d52a17caf31edecf1",
+      "case_id": "vercel-portless-pr-375",
+      "graph": {
+        "claims": [
+          "portless-package-manifest-reviewed",
+          "portless-release-version-current",
+          "portless-changelog-reviewed",
+          "portless-release-notes-current",
+          "portless-docs-changelog-reviewed",
+          "portless-docs-release-note-current",
+          "portless-release-admission",
+          "portless-npm-publish-intent",
+          "portless-readme-reviewed",
+          "portless-quickstart-contract"
+        ],
+        "edges": [
+          [
+            "packages/portless/package.json",
+            "portless-package-manifest-reviewed"
+          ],
+          [
+            "portless-package-manifest-reviewed",
+            "portless-release-version-current"
+          ],
+          [
+            "CHANGELOG.md",
+            "portless-changelog-reviewed"
+          ],
+          [
+            "portless-changelog-reviewed",
+            "portless-release-notes-current"
+          ],
+          [
+            "apps/docs/src/app/changelog/page.mdx",
+            "portless-docs-changelog-reviewed"
+          ],
+          [
+            "portless-docs-changelog-reviewed",
+            "portless-docs-release-note-current"
+          ],
+          [
+            "portless-release-version-current",
+            "portless-release-admission"
+          ],
+          [
+            "portless-release-notes-current",
+            "portless-release-admission"
+          ],
+          [
+            "portless-docs-release-note-current",
+            "portless-release-admission"
+          ],
+          [
+            "portless-release-admission",
+            "portless-npm-publish-intent"
+          ],
+          [
+            "README.md",
+            "portless-readme-reviewed"
+          ],
+          [
+            "portless-readme-reviewed",
+            "portless-quickstart-contract"
+          ]
+        ]
+      },
+      "head_commit": "bd8371642392139b264d8eed950aa7197d1d94b7",
+      "observed_changed_paths": [
+        "CHANGELOG.md",
+        "apps/docs/src/app/changelog/page.mdx",
+        "packages/portless/package.json"
+      ],
+      "pull_request": 375,
+      "repository": "vercel-labs/portless",
+      "source_url": "https://github.com/vercel-labs/portless/pull/375",
+      "tracked_blob_states": {
+        "CHANGELOG.md": {
+          "base_blob": "f44f615d28afa42609018fe1c2ce07543eb766f7",
+          "head_blob": "3884addaa6abb91d785fc69b5598cbab84d31bea"
+        },
+        "README.md": {
+          "base_blob": "8b1f8c5a71a3d8c61ff07450ee3f2f0723db7ccd",
+          "head_blob": "8b1f8c5a71a3d8c61ff07450ee3f2f0723db7ccd"
+        },
+        "apps/docs/src/app/changelog/page.mdx": {
+          "base_blob": "b32f70f4ada650c42cf8479d00dd29737ddb53c1",
+          "head_blob": "1fe67b597de3228fb6ad63c912e3cff45f95915a"
+        },
+        "packages/portless/package.json": {
+          "base_blob": "a409c00a2d0453cae27824ce2590a322840d3606",
+          "head_blob": "8c9779377f5da3951585890a05b5abf170052d45"
+        }
+      }
+    }
+  ],
+  "engine_bundle_sha256": "1a2804a5a9f71bea523f82b9b2ce2f73ccce1f4ab4e15df38e2907676091f1e2",
+  "profile": "openline.ace.continuity-replay.heldout-corpus.v1",
+  "selection_rule": "Two external public repositories independently examined before Continuity Replay 001; each transition is a merged PR with immutable base/head commits."
+}

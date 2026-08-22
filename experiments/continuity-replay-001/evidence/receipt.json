@@ -1,0 +1,7 @@
+{
+  "policy_authority": "NONE",
+  "profile": "openline.ace.continuity-replay.receipt.v1",
+  "result_sha256": "f26b988e789203cd46d90ce405aa248e344526c16a30655ad6db4b5ceefae276",
+  "runtime_permission": "NONE",
+  "status": "SELECTIVE_REOPENING_HELDOUT_PASS"
+}
