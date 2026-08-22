@@ -1,0 +1,43 @@
+name: ACE Regime Transition Audit 003
+
+on:
+  pull_request:
+    paths:
+      - "experiments/regime-transition-audit-003/**"
+      - ".github/workflows/ace-regime-transition-audit-003.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rta003:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        working-directory: experiments/regime-transition-audit-003
+        run: python -m unittest discover -s tests -v
+      - name: Run frozen external test
+        working-directory: experiments/regime-transition-audit-003
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/run_external.py
+      - name: Verify result independently
+        working-directory: experiments/regime-transition-audit-003
+        run: python scripts/verify_result.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: rta003-external-evidence
+          path: |
+            experiments/regime-transition-audit-003/external_raw.json
+            experiments/regime-transition-audit-003/external_cases.jsonl
+            experiments/regime-transition-audit-003/external_result.json
+            experiments/regime-transition-audit-003/source_manifest.json
+            experiments/regime-transition-audit-003/preregistration.json
+          if-no-files-found: error
