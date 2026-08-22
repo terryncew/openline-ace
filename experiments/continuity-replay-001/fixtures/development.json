@@ -1,0 +1,31 @@
+{
+  "case_id": "synthetic-development-only",
+  "graph": {
+    "claims": [
+      "claim-a",
+      "claim-a-child",
+      "claim-b"
+    ],
+    "edges": [
+      [
+        "artifact/a",
+        "claim-a"
+      ],
+      [
+        "claim-a",
+        "claim-a-child"
+      ],
+      [
+        "artifact/b",
+        "claim-b"
+      ]
+    ]
+  },
+  "observed_changed_paths": [
+    "artifact/a"
+  ],
+  "warranted": [
+    "claim-a",
+    "claim-a-child"
+  ]
+}

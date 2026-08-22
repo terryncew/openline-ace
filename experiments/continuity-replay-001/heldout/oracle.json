@@ -1,0 +1,41 @@
+{
+  "cases": {
+    "microsoft-agent-governance-toolkit-pr-2946": {
+      "basis": "frozen baseline support manifests plus historical Git blob changes",
+      "warranted_reopenings": [
+        "agt-evaluator-source-reviewed",
+        "agt-execution-gates-use-pinned-policy",
+        "agt-integration-source-reviewed",
+        "agt-malformed-governance-denies",
+        "agt-policy-gate-consistent",
+        "agt-scoped-evaluation-fail-closed",
+        "agt-session-policy-pinned"
+      ],
+      "warranted_retentions": [
+        "agt-installation-guidance-current",
+        "agt-readme-reviewed",
+        "agt-tool-provenance-doc-current"
+      ]
+    },
+    "vercel-portless-pr-375": {
+      "basis": "frozen baseline support manifests plus historical Git blob changes",
+      "warranted_reopenings": [
+        "portless-changelog-reviewed",
+        "portless-docs-changelog-reviewed",
+        "portless-docs-release-note-current",
+        "portless-npm-publish-intent",
+        "portless-package-manifest-reviewed",
+        "portless-release-admission",
+        "portless-release-notes-current",
+        "portless-release-version-current"
+      ],
+      "warranted_retentions": [
+        "portless-quickstart-contract",
+        "portless-readme-reviewed"
+      ]
+    }
+  },
+  "corpus_sha256": "a0cd2475205ad2cd85eb1431474714b39b44da94f85b3c7ecb0a1d1f926749a5",
+  "engine_bundle_sha256": "1a2804a5a9f71bea523f82b9b2ce2f73ccce1f4ab4e15df38e2907676091f1e2",
+  "profile": "openline.ace.continuity-replay.heldout-oracle.v1"
+}

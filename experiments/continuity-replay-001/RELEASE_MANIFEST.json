@@ -1,0 +1,101 @@
+{
+  "base_commit": "4cb35b72653b11625da265fd9d5f93b125e1e5e5",
+  "file_count": 23,
+  "files": {
+    ".github/workflows/ace-continuity-replay-001.yml": {
+      "sha256": "c081154e80944f364de1efe32c4352b82795ff332102b449bea7b48733d25ac4",
+      "size": 550
+    },
+    "experiments/continuity-replay-001/CLAIM_BOUNDARY.md": {
+      "sha256": "d49e1f9f8d861d82fea1c2911b20eb62af2b975efe34673e6620d6df85ca2807",
+      "size": 730
+    },
+    "experiments/continuity-replay-001/README.md": {
+      "sha256": "10b46f66820d5a3a447125f0f14aa58cbcd328301e4652673dfedc8dce6a8f9c",
+      "size": 1592
+    },
+    "experiments/continuity-replay-001/continuity_replay/__init__.py": {
+      "sha256": "50ec2355e9496dde4ed8d71083f91f4e65bf03c7997f9cf3778aa229a9ac9d9d",
+      "size": 46
+    },
+    "experiments/continuity-replay-001/continuity_replay/baselines.py": {
+      "sha256": "e0a8968714d96fa2d29716ce5f17e12469798efd140ef14de28036f1e7340583",
+      "size": 611
+    },
+    "experiments/continuity-replay-001/continuity_replay/engine.py": {
+      "sha256": "bca6bea6500a374291785bbd6b54eff93a4d181c0608522adaf787be7a4a18e0",
+      "size": 908
+    },
+    "experiments/continuity-replay-001/continuity_replay/metrics.py": {
+      "sha256": "ee632993d2955afdeedaad18dd5ef1ce7e2a84b892840a084d5cb764fdfc9b5a",
+      "size": 804
+    },
+    "experiments/continuity-replay-001/continuity_replay/model.py": {
+      "sha256": "bbe4864d08b13b7b352988f227488b77e165eaa011acb8727619dbb26820b898",
+      "size": 861
+    },
+    "experiments/continuity-replay-001/continuity_replay/replay.py": {
+      "sha256": "95ce934da3cbdfb7f99f34ae0b98d0be75de0a4004992a1b3ad2a3d6950b4763",
+      "size": 881
+    },
+    "experiments/continuity-replay-001/docs/METHOD.md": {
+      "sha256": "2189661a5d1419cc7d2c62deea2a8c1029f0ddde238a1b5f0c98648fa311c5d7",
+      "size": 912
+    },
+    "experiments/continuity-replay-001/evidence/receipt.json": {
+      "sha256": "ace6cfa01d1b096981aa88b1060a4dd08fc405f17efad1e51ea77b7cedf3241e",
+      "size": 258
+    },
+    "experiments/continuity-replay-001/evidence/result.json": {
+      "sha256": "e0a01e2d83b147390b366c6b338be455b23afb5b582871cfc4f9486258b992a9",
+      "size": 6973
+    },
+    "experiments/continuity-replay-001/experiment_config.json": {
+      "sha256": "b984dc5a8c9188fcf75625127d0890f7851a6975813bbc30dc2c807ca148e5ae",
+      "size": 653
+    },
+    "experiments/continuity-replay-001/fixtures/development.json": {
+      "sha256": "e6717ad4b47f5b11b167603deafec5afe7775236ce2ddbc0c120286b33c67032",
+      "size": 446
+    },
+    "experiments/continuity-replay-001/heldout/corpus.json": {
+      "sha256": "7503e9eac1243115cb02ccb8346938a893478bc67369a70d658e40b0fac37355",
+      "size": 6701
+    },
+    "experiments/continuity-replay-001/heldout/oracle.json": {
+      "sha256": "dfcab4d7cb5fe1207488848c46c2a0e361558b38202500843988ee20a43af523",
+      "size": 1521
+    },
+    "experiments/continuity-replay-001/protocol/engine_freeze.json": {
+      "sha256": "b63105a2e5dd0916c20c4eba251b0b2308741cf56b4ed66e1d8dbd4ff9746ede",
+      "size": 853
+    },
+    "experiments/continuity-replay-001/scripts/evaluate_heldout.py": {
+      "sha256": "a26bf818b704e7ac638ff40e7ff641579e5ab5f071e6e865b311b76c467a3580",
+      "size": 3633
+    },
+    "experiments/continuity-replay-001/scripts/release_check.py": {
+      "sha256": "7eb1df74b098eaaeb4b3259bf90d3363ee1e9b6444dcd5f1fcbf7cfe4122cf22",
+      "size": 1102
+    },
+    "experiments/continuity-replay-001/scripts/verify_evidence.py": {
+      "sha256": "c53316e6bffeeb9308f92c50104925f20bba91652c01548194b1ed300f0d3c09",
+      "size": 1014
+    },
+    "experiments/continuity-replay-001/scripts/verify_no_leakage.py": {
+      "sha256": "53de5cb37d6ba836266b632350f8ba522ea185fdaf0b89dab64284dc42d0569b",
+      "size": 1636
+    },
+    "experiments/continuity-replay-001/tests/test_engine.py": {
+      "sha256": "717a34ae5d1c52c01b28a5181d538abd2da3801f1a9ea983da23eed687e731ae",
+      "size": 2053
+    },
+    "experiments/continuity-replay-001/tests/test_no_leakage.py": {
+      "sha256": "f1d4c5337aa65059aa96660faf5b093d06d34eb469e6f5e9cd9b322242da75b2",
+      "size": 1383
+    }
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.ace.continuity-replay-001.release-manifest.v1",
+  "target_repository": "terryncew/openline-ace"
+}

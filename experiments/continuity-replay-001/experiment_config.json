@@ -1,0 +1,18 @@
+{
+  "base_commit": "4cb35b72653b11625da265fd9d5f93b125e1e5e5",
+  "baselines": [
+    "global_invalidation",
+    "flat_latest_state"
+  ],
+  "engine_bundle_sha256": "1a2804a5a9f71bea523f82b9b2ce2f73ccce1f4ab4e15df38e2907676091f1e2",
+  "experiment": "continuity-replay-001",
+  "heldout_case_count": 2,
+  "heldout_corpus_sha256": "a0cd2475205ad2cd85eb1431474714b39b44da94f85b3c7ecb0a1d1f926749a5",
+  "heldout_oracle_sha256": "e4b81ef21109115e7775182a6ae8531cc82283794d336c3bdd79092cad09b8ea",
+  "heldout_repositories": [
+    "microsoft/agent-governance-toolkit",
+    "vercel-labs/portless"
+  ],
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE"
+}
