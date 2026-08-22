@@ -1,0 +1,90 @@
+{
+  "case_id": "verra-vcs-2372-boeing-q1-2024",
+  "case_type": "external_policy_replay",
+  "claim_boundary": [
+    "This is an external-policy replay over a receiver-declared dependency graph.",
+    "It does not prove automatic dependency discovery or graph completeness.",
+    "Reopening a downstream corporate-use claim means reverify; it does not mean the claim was false.",
+    "The Verra registry/QCR policy is the standing oracle for this replay, not a universal carbon-market rule.",
+    "Policy authority and runtime permission remain NONE."
+  ],
+  "methods": {
+    "flat_registry": {
+      "metrics": {
+        "excess_reviews": 0,
+        "f1": 0.5,
+        "missed_reopenings": 2,
+        "precision": 1.0,
+        "recall": 0.333333,
+        "review_count": 1,
+        "true_reopenings": 1
+      },
+      "reopened": [
+        "project-2372-credited-quantity-standing"
+      ],
+      "retained": [
+        "boeing-offset-use-standing",
+        "environmental-integrity-standing",
+        "registry-status-standing",
+        "retirement-event-standing",
+        "vcu-serial-identity-standing"
+      ]
+    },
+    "global_invalidation": {
+      "metrics": {
+        "excess_reviews": 3,
+        "f1": 0.666667,
+        "missed_reopenings": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "review_count": 6,
+        "true_reopenings": 3
+      },
+      "reopened": [
+        "boeing-offset-use-standing",
+        "environmental-integrity-standing",
+        "project-2372-credited-quantity-standing",
+        "registry-status-standing",
+        "retirement-event-standing",
+        "vcu-serial-identity-standing"
+      ],
+      "retained": []
+    },
+    "selective_reverification": {
+      "metrics": {
+        "excess_reviews": 0,
+        "f1": 1.0,
+        "missed_reopenings": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "review_count": 3,
+        "true_reopenings": 3
+      },
+      "reopened": [
+        "boeing-offset-use-standing",
+        "environmental-integrity-standing",
+        "project-2372-credited-quantity-standing"
+      ],
+      "retained": [
+        "registry-status-standing",
+        "retirement-event-standing",
+        "vcu-serial-identity-standing"
+      ]
+    }
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.ace.ccr001.result.v1",
+  "recovery": {
+    "does_not_automatically_decide": [
+      "boeing-offset-use-standing"
+    ],
+    "event": "artifact:compensation-processed",
+    "interpretation": "Verra says environmental integrity is considered restored if all excess credits are replaced; corporate-reporting disposition remains receiver-owned.",
+    "restores_under_external_rule": [
+      "environmental-integrity-standing"
+    ]
+  },
+  "review_reduction_vs_global": 0.5,
+  "runtime_permission": "NONE",
+  "status": "EXTERNAL_POLICY_REPLAY_PASS"
+}

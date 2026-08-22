@@ -1,0 +1,31 @@
+{
+  "profile": "openline.ace.ccr001.oracle.v1",
+  "case_id": "verra-vcs-2372-boeing-q1-2024",
+  "scored_claims": [
+    "project-2372-credited-quantity-standing",
+    "vcu-serial-identity-standing",
+    "retirement-event-standing",
+    "registry-status-standing",
+    "environmental-integrity-standing",
+    "boeing-offset-use-standing"
+  ],
+  "required_reopenings": [
+    "project-2372-credited-quantity-standing",
+    "environmental-integrity-standing",
+    "boeing-offset-use-standing"
+  ],
+  "required_retained": [
+    "vcu-serial-identity-standing",
+    "retirement-event-standing",
+    "registry-status-standing"
+  ],
+  "rationale": {
+    "project-2372-credited-quantity-standing": "Verra published a revised project quantity.",
+    "environmental-integrity-standing": "Verra's own QCR framework treats excess issuance as requiring compensation/restoration.",
+    "boeing-offset-use-standing": "The downstream use inherits environmental standing and Verra directs holders to consider corporate-reporting ramifications; reopening means review, not invalidation.",
+    "vcu-serial-identity-standing": "The serial identity record is not erased by the quantity correction.",
+    "retirement-event-standing": "Verra says transferred/retired units remain valid in the registry.",
+    "registry-status-standing": "Verra says active and retired VCUs already transferred/retired keep registry validity."
+  },
+  "authority_boundary": "This oracle expresses the documented registry/QCR policy used for this replay. It is not a legal, accounting, climate-science, or regulatory judgment."
+}

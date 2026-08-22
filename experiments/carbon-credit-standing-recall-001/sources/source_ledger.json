@@ -1,0 +1,61 @@
+{
+  "profile": "openline.ace.ccr001.source-ledger.v1",
+  "as_of": "2026-08-22",
+  "sources": [
+    {
+      "source_id": "boeing-cdp-2024",
+      "publisher": "Boeing",
+      "title": "CDP Climate and Water Security Response",
+      "url": "https://www.boeing.com/content/dam/boeing/boeingdotcom/principles/environment/pdf/Boeing-CDP-Climate-And-Water-Recurity-Response.pdf",
+      "locator": "PDF pages 231-232, CDP field 7.79.1.14",
+      "facts": [
+        "The response lists VCS project 2372 serial ranges among credits retired in Q1 2024 on behalf of Boeing.",
+        "Boeing says the retirements were used toward its Scope 1 and Scope 2 net-zero target, with offsets beyond that target applied to 2023 business-travel emissions.",
+        "The response states no adjustments had been issued for those credits as of its 7/2024 reporting date."
+      ],
+      "project_2372_serial_ranges": [
+        "14667-616545390-616546389-VCS-VCU-1289-VER-MW-3-2372-01012022-28022022-0",
+        "15242-669315943-669338238-VCS-VCU-1289-VER-MW-3-2372-01032022-15092022-0",
+        "15242-669545385-669567680-VCS-VCU-1289-VER-MW-3-2372-01032022-15092022-0",
+        "15242-669515943-669545384-VCS-VCU-1289-VER-MW-3-2372-01032022-15092022-0"
+      ],
+      "project_2372_retired_vcu_count_from_ranges": 75034
+    },
+    {
+      "source_id": "verra-cquest-review-2024-10-17",
+      "publisher": "Verra",
+      "title": "Verra Cancels 5 Million Overissued Credits Linked to C-Quest Capital",
+      "url": "https://verra.org/verra-cancels-5-million-overissued-credits-linked-to-c-quest-capital/",
+      "published": "2024-10-17",
+      "facts": [
+        "Verra completed QCRs for 22 C-Quest cookstove projects.",
+        "Across the completed reviews, Verra determined that 5,004,915 VCUs had been issued in excess and processed cancellation of 5,004,915 VCUs.",
+        "For project 2372, Verra reported 4,444,642 VCUs issued, 2,409,500 revised emission reductions, and 2,035,142 VCUs compensated."
+      ]
+    },
+    {
+      "source_id": "verra-qcr-faq-current",
+      "publisher": "Verra",
+      "title": "FAQs for Quality Control Reviews",
+      "url": "https://verra.org/programs/faqs-quality-control-reviews/",
+      "as_of": "2026-08-22",
+      "facts": [
+        "Credits issued before a QCR that were transferred/sold to another holder, retired, or canceled are not changed in registry status by the QCR and remain valid in the Verra Registry.",
+        "If a QCR finds excess issuance, Verra requires replacement/compensation by the responsible project proponent or authorized representative in applicable circumstances.",
+        "If all excess credits are replaced, Verra says the environmental integrity of all issuances to the project is considered restored.",
+        "Verra encourages holders to consider the ramifications of a QCR in light of relevant corporate reporting standards and best practice."
+      ]
+    },
+    {
+      "source_id": "verra-vcu-overview-current",
+      "publisher": "Verra",
+      "title": "Verified Carbon Units (VCUs)",
+      "url": "https://verra.org/programs/verified-carbon-standard/verified-carbon-units-vcus/",
+      "as_of": "2026-08-22",
+      "facts": [
+        "VCUs are uniquely numbered.",
+        "VCU issuance and retirement records are publicly available on the Verra Registry."
+      ]
+    }
+  ]
+}

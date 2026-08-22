@@ -1,0 +1,89 @@
+{
+  "profile": "openline.ace.ccr001.case.v1",
+  "case_id": "verra-vcs-2372-boeing-q1-2024",
+  "case_type": "external_policy_replay",
+  "changed_artifacts": [
+    "artifact:project-2372-quantification-basis"
+  ],
+  "claims": [
+    "project-2372-credited-quantity-standing",
+    "vcu-serial-identity-standing",
+    "retirement-event-standing",
+    "registry-status-standing",
+    "environmental-integrity-standing",
+    "boeing-offset-use-standing"
+  ],
+  "edges": [
+    [
+      "artifact:project-2372-quantification-basis",
+      "project-2372-credited-quantity-standing"
+    ],
+    [
+      "project-2372-credited-quantity-standing",
+      "environmental-integrity-standing"
+    ],
+    [
+      "environmental-integrity-standing",
+      "boeing-offset-use-standing"
+    ],
+    [
+      "artifact:vcu-serial-record",
+      "vcu-serial-identity-standing"
+    ],
+    [
+      "vcu-serial-identity-standing",
+      "retirement-event-standing"
+    ],
+    [
+      "artifact:retirement-record",
+      "retirement-event-standing"
+    ],
+    [
+      "retirement-event-standing",
+      "registry-status-standing"
+    ],
+    [
+      "registry-status-standing",
+      "boeing-offset-use-standing"
+    ]
+  ],
+  "source_bindings": {
+    "artifact:project-2372-quantification-basis": [
+      "verra-cquest-review-2024-10-17"
+    ],
+    "artifact:vcu-serial-record": [
+      "boeing-cdp-2024",
+      "verra-vcu-overview-current"
+    ],
+    "artifact:retirement-record": [
+      "boeing-cdp-2024",
+      "verra-qcr-faq-current"
+    ]
+  },
+  "recovery_event": {
+    "artifact": "artifact:compensation-processed",
+    "source_id": "verra-cquest-review-2024-10-17",
+    "external_rule_source_id": "verra-qcr-faq-current",
+    "restores": [
+      "environmental-integrity-standing"
+    ],
+    "does_not_automatically_decide": [
+      "boeing-offset-use-standing"
+    ]
+  },
+  "notes": [
+    "The graph is receiver-declared and frozen for this replay.",
+    "The replay tests propagation given the declaration; it does not discover dependencies."
+  ],
+  "observed_retirement": {
+    "source_id": "boeing-cdp-2024",
+    "serial_ranges": [
+      "14667-616545390-616546389-VCS-VCU-1289-VER-MW-3-2372-01012022-28022022-0",
+      "15242-669315943-669338238-VCS-VCU-1289-VER-MW-3-2372-01032022-15092022-0",
+      "15242-669545385-669567680-VCS-VCU-1289-VER-MW-3-2372-01032022-15092022-0",
+      "15242-669515943-669545384-VCS-VCU-1289-VER-MW-3-2372-01032022-15092022-0"
+    ],
+    "vcu_count_from_inclusive_ranges": 75034,
+    "reported_retirement_period": "Q1 2024"
+  }
+}
