@@ -1,0 +1,9 @@
+{
+  "repository": "terryncew/openline-ace",
+  "base_commit": "2e59c3bfb234535b32737d70dc57395ab5fe9758",
+  "branch": "feat/developmental-memory-audit-001",
+  "commit_message": "feat(ace): add developmental memory causal audit",
+  "source_doi": "10.1038/s41586-026-10877-x",
+  "scientific_status": "PROTOCOL_CONFORMANCE_PASS_WETLAB_UNRUN",
+  "policy_authority": "NONE"
+}
