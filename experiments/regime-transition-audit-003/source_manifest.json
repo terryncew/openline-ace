@@ -1,0 +1,26 @@
+{
+  "checkpoint_rule": "24_hours_after_first_APPROVED_review",
+  "experiment_id": "RTA-003",
+  "max_prs_per_repository": 100,
+  "outcome": {
+    "name": "later_review_standing_failure",
+    "positive_if_after_checkpoint": [
+      "CHANGES_REQUESTED",
+      "DISMISSED"
+    ]
+  },
+  "policy_authority": "NONE",
+  "query_window": {
+    "merged_from": "2025-01-01T00:00:00Z",
+    "merged_through": "2025-12-31T23:59:59Z"
+  },
+  "repositories": [
+    "kubernetes/kubernetes",
+    "microsoft/vscode",
+    "rust-lang/rust",
+    "golang/go"
+  ],
+  "require_pr_open_at_checkpoint": true,
+  "schema": "openline.ace.rta003.source.v1",
+  "selection": "earliest merged PRs returned by GitHub search ordered by created asc"
+}

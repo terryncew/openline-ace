@@ -1,0 +1,41 @@
+{
+  "allowed_verdicts": [
+    "PREDICTIVE_ADVANTAGE_CANDIDATE",
+    "NO_PREDICTIVE_ADVANTAGE",
+    "DATA_INSUFFICIENT"
+  ],
+  "baseline": "freshness_probability = clip(0.15 + 0.70 * age_since_last_verification)",
+  "candidate": "same freshness term plus frozen RTA-001 regime event",
+  "cross_repo_requirement": "candidate must clear aggregate margins and must not lose balanced accuracy to freshness by more than 0.02 in any repository with >=20 heldout cases",
+  "experiment_id": "RTA-003",
+  "feature_definitions": {
+    "age_since_last_verification": "min(1, hours_since_latest_APPROVED_review_at_checkpoint / 168)",
+    "contradiction_rate": "CHANGES_REQUESTED reviews / decisive reviews at_or_before_checkpoint",
+    "dependency_churn": "min(1, commits_after_first_decisive_review_before_checkpoint / 4)",
+    "support_withdrawal_rate": "DISMISSED reviews / decisive reviews at_or_before_checkpoint"
+  },
+  "heldout_rule": "within each repository sort eligible cases by checkpoint then PR number; odd-ranked cases are heldout, even-ranked cases are calibration-shadow",
+  "inherits_frozen_rta001": {
+    "balanced_accuracy_delta_min": 0.05,
+    "brier_improvement_min": 0.02,
+    "minimum_dimensions_crossed": 2,
+    "signal_dimensions": {
+      "contradiction_rate": {
+        "threshold": 0.3
+      },
+      "dependency_churn": {
+        "threshold": 0.55
+      },
+      "support_withdrawal_rate": {
+        "threshold": 0.25
+      }
+    }
+  },
+  "minimum_eligible_cases_total": 120,
+  "minimum_heldout_cases_total": 60,
+  "minimum_positive_outcomes_heldout": 12,
+  "minimum_repositories_with_20_eligible_cases": 2,
+  "policy_authority": "NONE",
+  "schema": "openline.ace.rta003.preregistration.v1",
+  "terminal_rule": "No source-window expansion, repository substitution, threshold change, or feature redefinition after external outcomes are fetched."
+}
