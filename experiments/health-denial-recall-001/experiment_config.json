@@ -1,0 +1,15 @@
+{
+  "case_id": "dmhc-cigna-23-262",
+  "patient_specific_advice": "NONE",
+  "policies": [
+    "flat_process_update",
+    "global_reopen",
+    "selective_denial_recall"
+  ],
+  "policy_authority": "NONE",
+  "profile": "openline.ace.health-denial-recall.config.v1",
+  "runtime_permission": "NONE",
+  "target_denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+  "window_end": "2023-06-11",
+  "window_start": "2021-06-11"
+}

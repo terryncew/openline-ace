@@ -1,0 +1,74 @@
+{
+  "case_id": "dmhc-cigna-23-262",
+  "facts": [
+    {
+      "fact_id": "process-variance",
+      "statement": "DMHC found that Cigna's targeted retrospective medical-necessity review process for a subset of services did not comply with filed UM-11.",
+      "support": [
+        "dmhc-letter-23-262",
+        "dmhc-action-record-23-262"
+      ]
+    },
+    {
+      "fact_id": "review-window",
+      "statement": "The CAP requires re-review of claims for the targeted Services denied for lack of medical necessity with dates of service from 2021-06-11 through 2023-06-11, inclusive.",
+      "support": [
+        "dmhc-letter-23-262"
+      ]
+    },
+    {
+      "fact_id": "eiu-exclusion",
+      "statement": "The CAP permits exclusion of claims for Services designated by the relevant Coverage Policy as always experimental, investigational, or unproven.",
+      "support": [
+        "dmhc-letter-23-262"
+      ]
+    },
+    {
+      "fact_id": "resolved-exclusion",
+      "statement": "The CAP permits exclusion of claims later adjusted and paid in full, including later reversals through grievance, provider appeal, or independent medical review.",
+      "support": [
+        "dmhc-letter-23-262"
+      ]
+    },
+    {
+      "fact_id": "covid-exclusion",
+      "statement": "The CAP permits exclusion of the specified non-diagnostic COVID testing claims.",
+      "support": [
+        "dmhc-letter-23-262"
+      ]
+    },
+    {
+      "fact_id": "policy-refile",
+      "statement": "The CAP requires Cigna to revise and re-file UM-11 and review policies implicated by those revisions.",
+      "support": [
+        "dmhc-letter-23-262",
+        "dmhc-press-2025-10-08"
+      ]
+    }
+  ],
+  "profile": "openline.ace.health-denial-recall.source-facts.v1",
+  "source_note": "Structured paraphrases of public DMHC sources. This file is not a byte-for-byte copy of the source PDF.",
+  "sources": [
+    {
+      "authority": "California Department of Managed Health Care",
+      "date": "2025-10-07",
+      "source_id": "dmhc-letter-23-262",
+      "title": "Letter of Agreement \u2014 Enforcement Matter 23-262",
+      "url": "https://wpso.dmhc.ca.gov/enfactions/docs/4925/1759934963434.pdf"
+    },
+    {
+      "authority": "California Department of Managed Health Care",
+      "date": "2025-10-07",
+      "source_id": "dmhc-action-record-23-262",
+      "title": "Enforcement Action \u2014 Cigna HealthCare of California, Inc.",
+      "url": "https://wpso.dmhc.ca.gov/enfactions/actiondisplay.aspx?ActionKey=4925&LinkKey=9053"
+    },
+    {
+      "authority": "California Department of Managed Health Care",
+      "date": "2025-10-08",
+      "source_id": "dmhc-press-2025-10-08",
+      "title": "DMHC fines Cigna $500,000 for improperly reviewing and denying health care claims payments",
+      "url": "https://www.dmhc.ca.gov/Resources/Newsroom/PressReleases/October8%2C2025.aspx"
+    }
+  ]
+}

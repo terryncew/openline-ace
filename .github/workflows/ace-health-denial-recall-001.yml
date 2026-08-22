@@ -1,0 +1,26 @@
+name: ACE Health Denial Recall 001
+
+on:
+  push:
+    paths:
+      - "experiments/health-denial-recall-001/**"
+      - ".github/workflows/ace-health-denial-recall-001.yml"
+  pull_request:
+    paths:
+      - "experiments/health-denial-recall-001/**"
+      - ".github/workflows/ace-health-denial-recall-001.yml"
+
+jobs:
+  hdr001:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run HDR-001
+        run: python experiments/health-denial-recall-001/scripts/release_check.py
