@@ -1,0 +1,80 @@
+name: RCA-001 Unitree G1 External Run
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "experiments/robotics-constraint-audit-001/EXTERNAL_RUN_PINS.json"
+      - "experiments/robotics-constraint-audit-001/docs/EXTERNAL_RUN_ADDENDUM.md"
+      - "experiments/robotics-constraint-audit-001/scripts/run_unitree_g1_external.py"
+      - "experiments/robotics-constraint-audit-001/scripts/grade_unitree_external.py"
+      - "experiments/robotics-constraint-audit-001/scripts/verify_unitree_external_independent.py"
+      - "experiments/robotics-constraint-audit-001/tests/test_external_grade.py"
+      - ".github/workflows/robotics-constraint-audit-001-unitree-run.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  external-unitree-g1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      MUJOCO_GL: egl
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Test external grader
+        working-directory: experiments/robotics-constraint-audit-001
+        run: python -m unittest tests/test_external_grade.py -v
+      - name: Clone pinned Unitree RL Gym
+        run: |
+          git clone https://github.com/unitreerobotics/unitree_rl_gym.git _upstream/unitree_rl_gym
+          git -C _upstream/unitree_rl_gym checkout 276801e46c5d433564f24658bac64f254b7d2d4b
+          test "$(git -C _upstream/unitree_rl_gym rev-parse HEAD)" = "276801e46c5d433564f24658bac64f254b7d2d4b"
+      - name: Verify pinned G1 assets
+        run: |
+          test -f _upstream/unitree_rl_gym/deploy/pre_train/g1/motion.pt
+          test -f _upstream/unitree_rl_gym/deploy/deploy_mujoco/configs/g1.yaml
+          test -f _upstream/unitree_rl_gym/resources/robots/g1_description/scene.xml
+      - name: Install headless simulation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install "mujoco==3.3.6" "numpy<3" pyyaml torch
+      - name: Run frozen 4-arm G1 experiment
+        working-directory: experiments/robotics-constraint-audit-001
+        run: |
+          mkdir -p "$RUNNER_TEMP/rca001-unitree"
+          python scripts/run_unitree_g1_external.py \
+            --upstream ../../_upstream/unitree_rl_gym \
+            --trials 64 \
+            --duration 6.0 \
+            --out "$RUNNER_TEMP/rca001-unitree/results.jsonl"
+      - name: Grade frozen result
+        working-directory: experiments/robotics-constraint-audit-001
+        run: |
+          python scripts/grade_unitree_external.py \
+            "$RUNNER_TEMP/rca001-unitree/results.jsonl" \
+            --out "$RUNNER_TEMP/rca001-unitree/grade.json" | tee "$RUNNER_TEMP/rca001-unitree/grade.stdout"
+      - name: Independent replay
+        working-directory: experiments/robotics-constraint-audit-001
+        run: |
+          python scripts/verify_unitree_external_independent.py \
+            "$RUNNER_TEMP/rca001-unitree/results.jsonl" | tee "$RUNNER_TEMP/rca001-unitree/independent.json"
+      - name: Publish summary
+        run: |
+          echo '## RCA-001 Unitree G1 External Run' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat "$RUNNER_TEMP/rca001-unitree/grade.json" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rca001-unitree-g1-external
+          path: |
+            ${{ runner.temp }}/rca001-unitree/results.jsonl
+            ${{ runner.temp }}/rca001-unitree/grade.json
+            ${{ runner.temp }}/rca001-unitree/independent.json
