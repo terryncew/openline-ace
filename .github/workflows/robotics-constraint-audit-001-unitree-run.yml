@@ -19,8 +19,6 @@ jobs:
   external-unitree-g1:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    env:
-      MUJOCO_GL: egl
     steps:
       - uses: actions/checkout@v7
         with:
@@ -41,30 +39,25 @@ jobs:
           test -f _upstream/unitree_rl_gym/deploy/pre_train/g1/motion.pt
           test -f _upstream/unitree_rl_gym/deploy/deploy_mujoco/configs/g1.yaml
           test -f _upstream/unitree_rl_gym/resources/robots/g1_description/scene.xml
-      - name: Install headless simulation dependencies
+      - name: Install simulation dependencies
         run: |
           python -m pip install --upgrade pip
           pip install "mujoco==3.3.6" "numpy<3" pyyaml torch
+      - name: Verify MuJoCo imports without a rendering backend
+        run: python -c "import mujoco; print(mujoco.__version__)"
       - name: Run frozen 4-arm G1 experiment
         working-directory: experiments/robotics-constraint-audit-001
         run: |
           mkdir -p "$RUNNER_TEMP/rca001-unitree"
-          python scripts/run_unitree_g1_external.py \
-            --upstream ../../_upstream/unitree_rl_gym \
-            --trials 64 \
-            --duration 6.0 \
-            --out "$RUNNER_TEMP/rca001-unitree/results.jsonl"
+          python scripts/run_unitree_g1_external.py             --upstream ../../_upstream/unitree_rl_gym             --trials 64             --duration 6.0             --out "$RUNNER_TEMP/rca001-unitree/results.jsonl"
       - name: Grade frozen result
         working-directory: experiments/robotics-constraint-audit-001
         run: |
-          python scripts/grade_unitree_external.py \
-            "$RUNNER_TEMP/rca001-unitree/results.jsonl" \
-            --out "$RUNNER_TEMP/rca001-unitree/grade.json" | tee "$RUNNER_TEMP/rca001-unitree/grade.stdout"
+          python scripts/grade_unitree_external.py             "$RUNNER_TEMP/rca001-unitree/results.jsonl"             --out "$RUNNER_TEMP/rca001-unitree/grade.json" | tee "$RUNNER_TEMP/rca001-unitree/grade.stdout"
       - name: Independent replay
         working-directory: experiments/robotics-constraint-audit-001
         run: |
-          python scripts/verify_unitree_external_independent.py \
-            "$RUNNER_TEMP/rca001-unitree/results.jsonl" | tee "$RUNNER_TEMP/rca001-unitree/independent.json"
+          python scripts/verify_unitree_external_independent.py             "$RUNNER_TEMP/rca001-unitree/results.jsonl" | tee "$RUNNER_TEMP/rca001-unitree/independent.json"
       - name: Publish summary
         run: |
           echo '## RCA-001 Unitree G1 External Run' >> "$GITHUB_STEP_SUMMARY"
