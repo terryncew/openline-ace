@@ -1,0 +1,29 @@
+{
+  "profile": "openline.dma001.preregistration.v1",
+  "study_id": "REPLACE_BEFORE_LIVE_RUN",
+  "source_doi": "10.1038/s41586-026-10877-x",
+  "candidate": {
+    "candidate_id": "REPLACE",
+    "feature_class": "pre-registered molecular feature associated with developmental age",
+    "selection_rule": "must be frozen before targeted perturbation and may not use outcome labels from the intervention arms"
+  },
+  "arms": {
+    "baseline": "old progenitors under the chosen heterochronic assay without candidate perturbation",
+    "sham": "matched nuisance intervention that preserves the candidate relation",
+    "active": "specific perturbation intended to weaken or remove the candidate relation",
+    "restoration": "pre-specified reversal or rescue intended to restore the candidate relation"
+  },
+  "oracle": {
+    "independence": "blinded to candidate standing and arm hypothesis",
+    "primary_endpoint": "pre-registered fate outcome derived from donor-resolved cell identity",
+    "success_definition": "frozen before data collection"
+  },
+  "standing_thresholds": {
+    "min_replicates_per_arm": 8,
+    "min_baseline_success_rate": 0.75,
+    "min_sham_success_rate": 0.75,
+    "min_active_minus_sham_failure_delta": 0.4,
+    "min_restoration_minus_active_success_delta": 0.4
+  },
+  "authority": "NONE"
+}

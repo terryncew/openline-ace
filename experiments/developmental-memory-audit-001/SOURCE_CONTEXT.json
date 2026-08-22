@@ -1,0 +1,22 @@
+{
+  "profile": "openline.dma001.source-context.v1",
+  "source": {
+    "title": "Human brain organoids record the passage of time over multiple years",
+    "journal": "Nature",
+    "published": "2026-08-19",
+    "doi": "10.1038/s41586-026-10877-x",
+    "url": "https://www.nature.com/articles/s41586-026-10877-x"
+  },
+  "source_supported_observations": [
+    "human cortical organoids were cultured for over five years",
+    "transcriptional and methylation age tracked time in vitro",
+    "old progenitors retained developmental-age information after reaggregation",
+    "in heterochronic cultures old progenitors responded to young signals but produced later fates rapidly"
+  ],
+  "not_source_supported": [
+    "a specific molecular storage mechanism for temporal memory",
+    "subjective time perception",
+    "consciousness"
+  ],
+  "authority": "NONE"
+}
