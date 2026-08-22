@@ -1,0 +1,32 @@
+{
+  "experiment": "carbon-credit-standing-recall-001",
+  "file_count": 23,
+  "files": {
+    "CLAIM_BOUNDARY.md": "bbd6774211964f0a0d08050752b773f52e086e2f9823d55d6ec5840e89dc383d",
+    "README.md": "268a3f9dc0bf7d2818478d0579da2d35213a9cb9fc5e667184e106a5d91d4bb0",
+    "ccr/__init__.py": "d8093cd80be41acb754b503f27c11cb86b2d5558768c9df5da62f3ff4f23519d",
+    "ccr/baselines.py": "63c64e018160ad0369c6b21e27e936d0abb29842bf3c472adb4848cb8b8529be",
+    "ccr/engine.py": "3eb78ab505b2f596d2a3fdab5ba00bde4b5d57c2ffa264cbbd13e5de6ebbab47",
+    "ccr/metrics.py": "605cc73eec6da4c3508a3e0faa7e545233d9eaf9eb0b506b48689938517b6675",
+    "ccr/model.py": "00267e10d52deb98975977a62353291cc60723f81ec808b549414ae4cd1385b8",
+    "ccr/replay.py": "adf709c2cfed2e78887d0252df0687354f357216cdee6abb3b72022912f45f38",
+    "docs/INTERPRETATION.md": "ff9eed18810370b8e26e24289e822e2b618eaf5c958bf70c3373ea781ac73850",
+    "docs/WORKING_COPY_HANDOFF.md": "62945a86b05e5d91d433535031403f69efce07cd56f3279fd79070b51c1fb4fd",
+    "evidence/result.json": "d847145ea7a2ded463b6e99969fe8396c0e86bb90ccfbbc7e7846e145ba951e5",
+    "experiment_config.json": "0172312b55e60eaf7f84a94d5f70b691c9c884b10f33bcef19f4cca502b2d997",
+    "fixtures/vcs_2372_boeing_case.json": "d7ef9ca7d6e06b39f40e0705f7f03a2dad42467a89a127c3b7a9f73401193295",
+    "oracle/vcs_2372_oracle.json": "9a3b473c96dbf850d7539f69a75d6d47a9af2c84bd4e7a7f1a2cb21f36d86ba5",
+    "scripts/evaluate_case.py": "486fb72d5ebcd9af0b6f15ac96135c86f8804ffb7766bfe65100b18894e8f0a2",
+    "scripts/release_check.py": "23185a8115376731079296dcfcff445c5321a98b36fa9dfb8d9576afdc1acf1b",
+    "scripts/verify_evidence.py": "784a4147063bea60c8e3cb9c1c325ee154e686e32f99a7d0be09186f323838c0",
+    "scripts/verify_frozen_inputs.py": "dc84ed613aa28b57e2ff1c0eb8f986cb500ba4ddb6fe9d3d59e05ced03aebbee",
+    "scripts/verify_manifest.py": "3c4855e944682209f0d84995bc3d314244d5c2cfb80fe25f4d2a4e91427db2a6",
+    "scripts/verify_sources.py": "ee32fef61191eb690032e785dd371f55d371fe091e32ff1029f25a11171b2e4f",
+    "sources/source_ledger.json": "184b1e248ec5c10554f133b37d9377abcc0a9ec5e0d1bee6438294233c961483",
+    "sources/verra_cquest_completed_qcr.json": "3424217e2f3a16809ebdc6510d0dd7e890fcf5bc7039f6c37cb9a0a9b83ac527",
+    "tests/test_ccr001.py": "8dbdc11ac4598e9d1c5c37aebfc5cd5c4f1a79782a399cf226b14aaccf7c88f5"
+  },
+  "policy_authority": "NONE",
+  "profile": "openline.ace.ccr001.release-manifest.v1",
+  "runtime_permission": "NONE"
+}

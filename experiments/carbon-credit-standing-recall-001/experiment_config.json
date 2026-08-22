@@ -1,0 +1,18 @@
+{
+  "experiment": "carbon-credit-standing-recall-001",
+  "short_id": "CCR-001",
+  "base_commit": "364a9efc99c7bc4cf362ac8d3ae9eb05692356f5",
+  "case_id": "verra-vcs-2372-boeing-q1-2024",
+  "case_type": "external_policy_replay",
+  "baselines": [
+    "global_invalidation",
+    "flat_registry"
+  ],
+  "engine_bundle_sha256": "def8f8036ba182a1b0bc71fd69f40267e9c2111d99d887cbd2f49d3ef20e8c64",
+  "source_ledger_sha256": "184b1e248ec5c10554f133b37d9377abcc0a9ec5e0d1bee6438294233c961483",
+  "cohort_sha256": "3424217e2f3a16809ebdc6510d0dd7e890fcf5bc7039f6c37cb9a0a9b83ac527",
+  "case_sha256": "d7ef9ca7d6e06b39f40e0705f7f03a2dad42467a89a127c3b7a9f73401193295",
+  "oracle_sha256": "9a3b473c96dbf850d7539f69a75d6d47a9af2c84bd4e7a7f1a2cb21f36d86ba5",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE"
+}

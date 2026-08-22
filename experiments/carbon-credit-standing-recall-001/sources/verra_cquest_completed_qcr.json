@@ -1,0 +1,163 @@
+{
+  "profile": "openline.ace.ccr001.verra-cquest-completed-qcr.v1",
+  "source_id": "verra-cquest-review-2024-10-17",
+  "published": "2024-10-17",
+  "completed_project_count": 22,
+  "published_total_compensated": 5004915,
+  "rows": [
+    {
+      "project_id": 2340,
+      "original_claimed": 780281,
+      "revised": 536301,
+      "issued": 780281,
+      "compensated": 243980
+    },
+    {
+      "project_id": 2341,
+      "original_claimed": 1249487,
+      "revised": 777542,
+      "issued": 1249487,
+      "compensated": 471945
+    },
+    {
+      "project_id": 2342,
+      "original_claimed": 2803221,
+      "revised": 1495665,
+      "issued": 2803221,
+      "compensated": 1307556
+    },
+    {
+      "project_id": 2349,
+      "original_claimed": 463875,
+      "revised": 277468,
+      "issued": 463875,
+      "compensated": 186407
+    },
+    {
+      "project_id": 2351,
+      "original_claimed": 200824,
+      "revised": 178766,
+      "issued": 200824,
+      "compensated": 22058
+    },
+    {
+      "project_id": 2366,
+      "original_claimed": 1041714,
+      "revised": 937541,
+      "issued": 1041714,
+      "compensated": 104173
+    },
+    {
+      "project_id": 2371,
+      "original_claimed": 951826,
+      "revised": 813308,
+      "issued": 951836,
+      "compensated": 138528
+    },
+    {
+      "project_id": 2372,
+      "original_claimed": 4444642,
+      "revised": 2409500,
+      "issued": 4444642,
+      "compensated": 2035142
+    },
+    {
+      "project_id": 2409,
+      "original_claimed": 146182,
+      "revised": 126514,
+      "issued": 146182,
+      "compensated": 19668
+    },
+    {
+      "project_id": 2521,
+      "original_claimed": 94224,
+      "revised": 88943,
+      "issued": 94224,
+      "compensated": 5281
+    },
+    {
+      "project_id": 2522,
+      "original_claimed": 217099,
+      "revised": 187394,
+      "issued": 217099,
+      "compensated": 29705
+    },
+    {
+      "project_id": 2523,
+      "original_claimed": 206369,
+      "revised": 169874,
+      "issued": 206369,
+      "compensated": 36495
+    },
+    {
+      "project_id": 2711,
+      "original_claimed": 707458,
+      "revised": 616196,
+      "issued": 707458,
+      "compensated": 91262
+    },
+    {
+      "project_id": 2712,
+      "original_claimed": 1935244,
+      "revised": 1685599,
+      "issued": 1935244,
+      "compensated": 249645
+    },
+    {
+      "project_id": 2886,
+      "original_claimed": 73560,
+      "revised": 64070,
+      "issued": 73560,
+      "compensated": 9490
+    },
+    {
+      "project_id": 2888,
+      "original_claimed": 49437,
+      "revised": 48799,
+      "issued": 49437,
+      "compensated": 638
+    },
+    {
+      "project_id": 2890,
+      "original_claimed": 197050,
+      "revised": 194507,
+      "issued": 197050,
+      "compensated": 2543
+    },
+    {
+      "project_id": 2981,
+      "original_claimed": 133533,
+      "revised": 96092,
+      "issued": 133533,
+      "compensated": 37441
+    },
+    {
+      "project_id": 4127,
+      "original_claimed": 319130,
+      "revised": 316449,
+      "issued": 0,
+      "compensated": 0
+    },
+    {
+      "project_id": 4157,
+      "original_claimed": 129583,
+      "revised": 116625,
+      "issued": 129583,
+      "compensated": 12958
+    },
+    {
+      "project_id": 4166,
+      "original_claimed": 232311,
+      "revised": 202342,
+      "issued": 0,
+      "compensated": 0
+    },
+    {
+      "project_id": 4217,
+      "original_claimed": 761739,
+      "revised": 685565,
+      "issued": 0,
+      "compensated": 0
+    }
+  ]
+}
