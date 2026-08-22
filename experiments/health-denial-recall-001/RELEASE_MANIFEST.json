@@ -1,0 +1,21 @@
+{
+  "case_id": "dmhc-cigna-23-262",
+  "files": {
+    "CLAIM_BOUNDARY.md": "9cf747e9dcdfbf0620fa6a31c09a66e5c342621041be7ce90c0d72f45feb174a",
+    "README.md": "a3857bb07597ccc1077c5cd00cf90ce890bc7390f64523643d4d05e06e308c01",
+    "evidence/REPORT.md": "39f0c9fcd0886c66e6a70c783e22556652dd4513624ad75d80973fabad73cb61",
+    "evidence/result.json": "f7deb545c61d624102d3123e5de5765c6c031d1242a9cd630678765fb37e4a98",
+    "evidence/source_facts.json": "09a3c14b2f5597bb932038d744fc49f8bab3c9d69346e0ffc7dcd24f7ae219fc",
+    "experiment_config.json": "2bfb4579a70ca450c40a7c2153243292712a1cf89d7b7bb737e41a8e69b975ad",
+    "fixtures/claims.json": "e17261b1dd30b2ef6e69508aee3911f91f09c89972f3c75364423c6878f1f8e9",
+    "hdr001/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hdr001/recall.py": "9a142b4f66f56745f6ed22ee042a061ccbfbb6b3d2baf46c91ddae81a8c7187e",
+    "scripts/release_check.py": "5b55617bc955201428dce23e955e7410e43d8bb3aa0b033730b8dedee21f3866",
+    "scripts/run.py": "1127f9bb0c7032ff7e9e1d099a4890fd362c71405cee63f04d5a78b182ca53f0",
+    "tests/test_hdr001.py": "cca7afa9dfbe535fad52d080dfd5285b193993e8486cdfae3aaac06d3a57dc6e"
+  },
+  "patient_specific_advice": "NONE",
+  "policy_authority": "NONE",
+  "profile": "openline.ace.health-denial-recall.release-manifest.v1",
+  "runtime_permission": "NONE"
+}

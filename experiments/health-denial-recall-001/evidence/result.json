@@ -1,0 +1,73 @@
+{
+  "case_id": "dmhc-cigna-23-262",
+  "claim_boundary": [
+    "The public DMHC order supplies the process defect, recall window, and exclusion classes.",
+    "Fixture records are synthetic category records, not real claims or patients.",
+    "CAP_EXCLUDED is not a medical-validity judgment.",
+    "The experiment does not decide whether a claim should be paid or whether an appeal will succeed."
+  ],
+  "methods": {
+    "flat_process_update": {
+      "dispositions": {
+        "affected-001": "NO_REOPEN",
+        "affected-002": "NO_REOPEN",
+        "after-window": "NO_REOPEN",
+        "before-window": "NO_REOPEN",
+        "covid-excluded": "NO_REOPEN",
+        "eiu-excluded": "NO_REOPEN",
+        "other-denial-basis": "NO_REOPEN",
+        "resolved-excluded": "NO_REOPEN",
+        "unknown-service-membership": "UNDETERMINED"
+      },
+      "metrics": {
+        "excess_reopenings": 0,
+        "missed_reopenings": 2,
+        "review_count": 0,
+        "true_reopenings": 0
+      }
+    },
+    "global_reopen": {
+      "dispositions": {
+        "affected-001": "REOPEN_REQUIRED",
+        "affected-002": "REOPEN_REQUIRED",
+        "after-window": "REOPEN_REQUIRED",
+        "before-window": "REOPEN_REQUIRED",
+        "covid-excluded": "REOPEN_REQUIRED",
+        "eiu-excluded": "REOPEN_REQUIRED",
+        "other-denial-basis": "REOPEN_REQUIRED",
+        "resolved-excluded": "REOPEN_REQUIRED",
+        "unknown-service-membership": "UNDETERMINED"
+      },
+      "metrics": {
+        "excess_reopenings": 6,
+        "missed_reopenings": 0,
+        "review_count": 8,
+        "true_reopenings": 2
+      }
+    },
+    "selective_denial_recall": {
+      "dispositions": {
+        "affected-001": "REOPEN_REQUIRED",
+        "affected-002": "REOPEN_REQUIRED",
+        "after-window": "OUTSIDE_CAP_SCOPE",
+        "before-window": "OUTSIDE_CAP_SCOPE",
+        "covid-excluded": "CAP_EXCLUDED",
+        "eiu-excluded": "CAP_EXCLUDED",
+        "other-denial-basis": "OUTSIDE_CAP_SCOPE",
+        "resolved-excluded": "CAP_EXCLUDED",
+        "unknown-service-membership": "UNDETERMINED"
+      },
+      "metrics": {
+        "excess_reopenings": 0,
+        "missed_reopenings": 0,
+        "review_count": 2,
+        "true_reopenings": 2
+      }
+    }
+  },
+  "patient_specific_advice": "NONE",
+  "policy_authority": "NONE",
+  "profile": "openline.ace.health-denial-recall.result.v1",
+  "runtime_permission": "NONE",
+  "status": "EXTERNAL_REGULATORY_RECALL_PASS"
+}

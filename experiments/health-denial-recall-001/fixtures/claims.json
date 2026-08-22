@@ -1,0 +1,92 @@
+[
+  {
+    "always_eiu": false,
+    "claim_id": "affected-001",
+    "date_of_service": "2021-06-11",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "REOPEN_REQUIRED",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "affected-002",
+    "date_of_service": "2023-06-11",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "REOPEN_REQUIRED",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": true,
+    "claim_id": "eiu-excluded",
+    "date_of_service": "2022-03-04",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "CAP_EXCLUDED",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "resolved-excluded",
+    "date_of_service": "2022-07-19",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "CAP_EXCLUDED",
+    "later_adjusted_paid_or_overturned": true,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "covid-excluded",
+    "date_of_service": "2022-01-17",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "CAP_EXCLUDED",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": true,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "before-window",
+    "date_of_service": "2021-06-10",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "OUTSIDE_CAP_SCOPE",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "after-window",
+    "date_of_service": "2023-06-12",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "OUTSIDE_CAP_SCOPE",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "other-denial-basis",
+    "date_of_service": "2022-09-22",
+    "denial_basis": "OTHER",
+    "expected": "OUTSIDE_CAP_SCOPE",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "YES"
+  },
+  {
+    "always_eiu": false,
+    "claim_id": "unknown-service-membership",
+    "date_of_service": "2022-05-14",
+    "denial_basis": "LACK_OF_MEDICAL_NECESSITY",
+    "expected": "UNDETERMINED",
+    "later_adjusted_paid_or_overturned": false,
+    "non_diagnostic_covid_testing": false,
+    "targeted_service_membership": "UNKNOWN"
+  }
+]
