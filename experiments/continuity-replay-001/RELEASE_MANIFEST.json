@@ -75,8 +75,8 @@
       "size": 3633
     },
     "experiments/continuity-replay-001/scripts/release_check.py": {
-      "sha256": "0f3e711c1001f22c733a3b72f2c9c75e9ee0fe73326f0671972c7a1777acf3a8",
-      "size": 757
+      "sha256": "7eb1df74b098eaaeb4b3259bf90d3363ee1e9b6444dcd5f1fcbf7cfe4122cf22",
+      "size": 1102
     },
     "experiments/continuity-replay-001/scripts/verify_evidence.py": {
       "sha256": "c53316e6bffeeb9308f92c50104925f20bba91652c01548194b1ed300f0d3c09",
