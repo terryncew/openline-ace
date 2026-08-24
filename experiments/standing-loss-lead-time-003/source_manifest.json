@@ -1,0 +1,46 @@
+{
+  "advisory_oracle": {
+    "name": "OSV",
+    "query_batch": "https://api.osv.dev/v1/querybatch",
+    "vuln_detail": "https://api.osv.dev/v1/vulns/{id}"
+  },
+  "event_state_rule": "For each retained candidate, reconstruct the repository lockfile at the latest lockfile commit at or before advisory publication. Recompute reachability and depth. An advisory is a true standing-loss event only if OSV confirms it affects a package version reachable in that event-time graph. Otherwise it is a stale-watchlist negative control.",
+  "event_window": {
+    "from": "2025-01-01T00:00:00Z",
+    "through": "2026-06-30T23:59:59Z"
+  },
+  "max_candidate_advisories_per_source": 12,
+  "max_lockfile_commits_per_remediation": 60,
+  "policy_authority": "NONE",
+  "remediation_horizon": "2026-08-01T00:00:00Z",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld003.source-manifest.v1",
+  "selection_rule": "For each source, query OSV for every registry package@version reachable in the frozen 2025-01-01 dependency state. Fetch full records for matching IDs, retain advisories published inside the frozen event window, sort by (published,id,package,version), deduplicate by (advisory_id,package), and take the first 12. No replacement.",
+  "snapshot_rule": "latest default-branch commit at or before 2025-01-01T00:00:00Z",
+  "sources": [
+    {
+      "ecosystem": "npm",
+      "lockfile": "package-lock.json",
+      "parser": "npm_lock_v3",
+      "repo": "npm/cli"
+    },
+    {
+      "ecosystem": "PyPI",
+      "lockfile": "uv.lock",
+      "parser": "uv_lock_v1",
+      "repo": "pydantic/pydantic"
+    },
+    {
+      "ecosystem": "crates.io",
+      "lockfile": "Cargo.lock",
+      "parser": "cargo_lock",
+      "repo": "astral-sh/ruff"
+    },
+    {
+      "ecosystem": "Go",
+      "lockfile": "go.mod",
+      "parser": "go_mod",
+      "repo": "golangci/golangci-lint"
+    }
+  ]
+}

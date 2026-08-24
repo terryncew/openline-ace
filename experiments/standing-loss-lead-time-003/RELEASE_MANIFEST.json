@@ -1,0 +1,79 @@
+{
+  "base_commit": "a621c0ef18aa23068c82d856876a2e1ee9ead017",
+  "file_count": 14,
+  "files": [
+    {
+      "path": ".github/workflows/ace-standing-loss-lead-time-003.yml",
+      "sha256": "2403adf11dd99ffdcb5912794e28757715b348b33c1aae2d5f0fc5b063b8091e",
+      "size": 2152
+    },
+    {
+      "path": "SLD003_HANDOFF.json",
+      "sha256": "c879192316610a2d65269598495b0355d1c82b0f3f672ffe38110bfbd075223b",
+      "size": 522
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/CLAIM_BOUNDARY.md",
+      "sha256": "94a05e9962a3c1c93342367f32a1ccf429726207d2264540216069d800698339",
+      "size": 957
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/FREEZE.json",
+      "sha256": "a0bf934401bce5e2038b0fd2e1a66874aeb74c3de1e3aba6cf221bbee8fbf9c7",
+      "size": 640
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/README.md",
+      "sha256": "39698ab174e0d65c514e4447b0878c07d619cc5b7c136a803a5b50566e0797b9",
+      "size": 4041
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/preregistration.json",
+      "sha256": "e7b6bd8674c0898d272be3d7e1c9142057438b8f8b2d23fcc2aa923944863f7d",
+      "size": 2253
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/scripts/run_external.py",
+      "sha256": "3f7393169839b2036a475bf7c81fa8da6ad526d32533116f9fe1738162b8828c",
+      "size": 9304
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/scripts/verify_freeze.py",
+      "sha256": "8a052633bfc003840ba27c57a3700c30207af8b7160c988bf00496845d58c94a",
+      "size": 1060
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/scripts/verify_release.py",
+      "sha256": "acd4c6d5cbc530a6dff428a64563ce0e4ff65c8f7acc2956a0edc91cee71c917",
+      "size": 1442
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/scripts/verify_result.py",
+      "sha256": "462a9abb0c7aa9e71215349b9becbab212fc826ae027e802bd965c05b7c18fab",
+      "size": 1791
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/sld003/__init__.py",
+      "sha256": "2db0269cc7b8428132c7610f27bfc94d38e77cdf7d32a371fa2bb5915334e61c",
+      "size": 122
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/sld003/core.py",
+      "sha256": "1729d5f575d3394c045c3e3ea6672598cef553530414a3008657830f17fef916",
+      "size": 12002
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/source_manifest.json",
+      "sha256": "98f05159feebdff293cabdcdb3067098e29c1779192a1cc7541fbc4e4c2e7756",
+      "size": 1876
+    },
+    {
+      "path": "experiments/standing-loss-lead-time-003/tests/test_sld003.py",
+      "sha256": "fef02536f7c279b7bfa97c00fe2f6714de465f1a8d362cd85953ca9ef370dfd5",
+      "size": 5529
+    }
+  ],
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld003.release-manifest.v1"
+}
