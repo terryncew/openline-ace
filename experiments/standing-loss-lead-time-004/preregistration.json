@@ -1,0 +1,101 @@
+{
+  "anti_rescue_rule": "After any F1 scoring run, no case substitution, decision granularity change, graph-edge addition based on t3 knowledge, baseline weakening, threshold change, negative-control deletion, or verdict-rule change is permitted inside SLD-004.",
+  "bootstrap": {
+    "ci": 0.95,
+    "primary_quantity": "OpenLine decision precision minus selected primary flat comparator precision",
+    "resamples": 10000,
+    "seed": 0,
+    "unit": "case"
+  },
+  "experiment_id": "SLD-004",
+  "f0": {
+    "all_three_required": true,
+    "allowed_verdicts": [
+      "FEASIBILITY_ESTABLISHED",
+      "FEASIBILITY_NOT_ESTABLISHED",
+      "SOURCE_ACCESS_FAILED",
+      "SOURCE_BINDING_FAILED"
+    ],
+    "anti_substitution_rule": "No candidate incident may be replaced after this freeze. A future F0 completion may only add source-bound evidence to these exact three candidate packets.",
+    "candidate_ids": [
+      "xz_2024_distro_selectivity",
+      "event_stream_2018_targeted_payload",
+      "changed_files_2023_command_injection"
+    ]
+  },
+  "f1_allowed_verdicts": [
+    "SELECTIVE_STANDING_PROPAGATION_ADVANTAGE",
+    "NO_SELECTIVE_STANDING_PROPAGATION_ADVANTAGE",
+    "DATA_INSUFFICIENT",
+    "SOURCE_ACCESS_FAILED",
+    "SOURCE_BINDING_FAILED"
+  ],
+  "f1_data_sufficiency": {
+    "all_negative_control_categories_required": true,
+    "all_preselected_cases_must_be_admissible": true,
+    "minimum_affected_decisions": 10,
+    "minimum_cases": 5,
+    "minimum_decisions": 30,
+    "minimum_negative_controls": 10,
+    "minimum_negative_to_affected_ratio": 1.0,
+    "minimum_unaffected_decisions": 10
+  },
+  "f1_kill_rule": "NO_SELECTIVE_STANDING_PROPAGATION_ADVANTAGE if data are sufficient but OpenLine misses any positive criterion, including if the selected recall-equivalent flat baseline achieves precision >= 0.90 times OpenLine precision. DATA_INSUFFICIENT is separate and cannot be converted to success by dropping cases, controls, or thresholds.",
+  "f1_metrics": {
+    "available_opportunity_window_hours": "t3 - t1 on affected decisions",
+    "decision_precision": "TP/(TP+FP)",
+    "decision_recall": "TP/(TP+FN)",
+    "false_reopen_rate": "FP/(FP+TN)",
+    "retention_specificity": "TN/(TN+FP)",
+    "selective_blast_radius_reduction": "1 - OLP_false_reopen_rate / primary_flat_false_reopen_rate"
+  },
+  "f1_success_thresholds": {
+    "minimum_false_reopen_rate_reduction_vs_primary_flat": 0.5,
+    "openline_min_precision": 0.85,
+    "openline_min_recall": 0.95,
+    "primary_flat_precision_parity_ratio": 0.9,
+    "require_bootstrap_precision_difference_ci_lower_gt_zero": true,
+    "require_positive_median_opportunity_window": true
+  },
+  "hypothesis_h1": "Given the same external invalidation signal and exact affected component/version information available to a strong scanner, traversal of a source-bound directed evidence-dependency DAG can reopen affected historical decisions while retaining unaffected decisions with higher precision and lower false-revocation blast radius than strong flat joins at equivalent recall.",
+  "negative_control_categories": [
+    "out_of_path_colocation",
+    "post_fix_decision",
+    "non_invalidating_upstream_mutation",
+    "dead_or_dev_dependency",
+    "sibling_valid_decision"
+  ],
+  "null_h0": "A strong flat artifact/component-to-decision join is statistically indistinguishable from evidence-dependency DAG traversal in decision recall, precision, and false-revocation rate at the same external signal time.",
+  "phase_model": {
+    "F0": "Three frozen historical probes test whether public evidence can support admissible t0 decision DAGs and independent t3 truth. F0 does not adjudicate H1.",
+    "F1": "A separately frozen scoring cohort may adjudicate H1 only after F0 feasibility is established and before any F1 outcomes are scored."
+  },
+  "policy_authority": "NONE",
+  "primary_flat_comparator_selection": "Among artifact_component_join and repo_scope_flat_join with recall >= 0.95, choose the one with highest precision, then lowest false_reopen_rate, then lexicographic strategy name. If neither reaches recall 0.95, F1 is DATA_INSUFFICIENT rather than a manufactured OpenLine win.",
+  "primary_strategies": {
+    "artifact_component_join": "Same scanner signal and exact component/version membership for each immutable decision artifact. Reopen any active decision whose artifact contains an affected component/version. No evidence-to-claim path semantics.",
+    "openline_evidence_dag": "Reopen an active decision only when an invalidated evidence node has a directed path through the frozen evidence-dependency DAG to that decision node.",
+    "repo_scope_flat_join": "Diagnostic fallback flat join. Reopen all active decisions in a repo/workspace scope if any active artifact in that scope contains an affected component/version."
+  },
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.preregistration.v1",
+  "secondary_baselines": {
+    "any_change": "Reopen every active decision in the evaluation scope on the signal.",
+    "headline_only": "No pre-t3 reopening; waits for the later visible resolution.",
+    "ttl_freshness": "Reopen active decisions whose acceptance age at t1 is at least 30 days."
+  },
+  "terminology": {
+    "causal_discovery_claim": false,
+    "decision_definition": "A publicly timestamped acceptance/promotion state that uniquely binds an immutable artifact, build, release, or deployment configuration and for which the pre-signal public record can source-bind the evidence/dependency path claimed to justify that state.",
+    "graph_name": "declared_evidence_dependency_DAG"
+  },
+  "timeline": {
+    "lead_boundary": "This is not an OpenLine speed advantage over the scanner because every t2 strategy receives the same t1 signal.",
+    "lead_metric": "available_opportunity_window_hours = t3 - t1",
+    "t0": "decision accepted and evidence DAG source-bound using only information published no later than t1",
+    "t1": "independent external invalidation signal becomes available",
+    "t2": "logical replay propagation at the same information time as t1; operational propagation latency is not measured",
+    "t3": "later independent maintainer/distributor truth sufficient to label the historical decision affected or unaffected"
+  },
+  "title": "Selective Decision Standing Propagation"
+}

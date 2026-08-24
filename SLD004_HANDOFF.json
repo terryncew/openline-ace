@@ -1,0 +1,14 @@
+{
+  "base_commit": "b909323713f64e3ff76446304e3a74bb5cb12eea",
+  "branch": "feat/selective-decision-standing-004",
+  "commit": "feat(ace): add selective decision standing propagation audit",
+  "experiment_id": "SLD-004",
+  "merge": "feat/selective-decision-standing-004 -> main",
+  "policy_authority": "NONE",
+  "pr_title": "Add SLD-004 selective decision standing propagation audit",
+  "repository": "terryncew/openline-ace",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.handoff.v1",
+  "scientific_h1_status": "UNADJUDICATED",
+  "status": "F0_FEASIBILITY_AND_FROZEN_HARNESS"
+}

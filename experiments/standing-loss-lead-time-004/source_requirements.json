@@ -1,0 +1,23 @@
+{
+  "admissibility_rule": "Missing any required element makes the case CASE_INADMISSIBLE. No inferred edge may be backfilled from the later outcome.",
+  "policy_authority": "NONE",
+  "required_per_case": [
+    "public_t0_decision_acceptance_source",
+    "immutable_artifact_or_configuration_binding",
+    "source_bound_artifact_component_membership",
+    "source_bound_evidence_nodes_and_directed_edges_published_no_later_than_t1",
+    "independent_t1_external_signal_source",
+    "at_least_one_affected_and_one_unaffected_active_decision_in_scope",
+    "independent_t3_truth_for_every_scored_decision",
+    "negative_control_category_labels_from_frozen_taxonomy_when_applicable",
+    "no_t3_or_future_information_used_to_construct_t0_edges"
+  ],
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.source-requirements.v1",
+  "source_reference_required_fields": [
+    "locator",
+    "published_at",
+    "captured_sha256",
+    "assertion"
+  ]
+}

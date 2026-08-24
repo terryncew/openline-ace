@@ -1,0 +1,19 @@
+{
+  "base_commit": "b909323713f64e3ff76446304e3a74bb5cb12eea",
+  "candidate_packets": {
+    "changed_files_2023_command_injection": "3f0c25707ab2030494b8efd8606e3fdb17ff6c7e1123effb49169fea42e57237",
+    "event_stream_2018_targeted_payload": "663167df7d3875164f2080024ae7e71f2c2e34259b08fe5c563a80c2a739f2ef",
+    "xz_2024_distro_selectivity": "11c6a976c7fed0aa902b1a622788acfcd868575033017c985e159df69b4978bf"
+  },
+  "candidate_substitution_allowed": false,
+  "core_sha256": "08b69989a98c39229b05782f8e9bf94d9f6b309482a8c8c7442653c0e09f87a3",
+  "experiment_id": "SLD-004",
+  "feasibility_candidates_sha256": "efe1571eca672255e0eedf7a8089d7acf5212adc336ba15e02a5447da8fd61b6",
+  "freeze_stage": "F0_before_case_completion_or_F1_scoring",
+  "future_outcome_edge_backfill_allowed": false,
+  "policy_authority": "NONE",
+  "preregistration_sha256": "b360ddd6c4023c6d179b6f1deda6c28a249567afbd927627887b5563a1ca916a",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.freeze.v1",
+  "source_requirements_sha256": "aaecaab3ec21b27b5f6a06a0ed8b4f891fad7bd47e26bbe244905f0f3a9eea1e"
+}

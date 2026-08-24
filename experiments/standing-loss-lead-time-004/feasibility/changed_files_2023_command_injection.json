@@ -1,0 +1,17 @@
+{
+  "case_id": "changed_files_2023_command_injection",
+  "current_packet_status": "INCOMPLETE",
+  "incident": "GHSL-2023-271 changed-files command injection",
+  "missing_required_evidence": [
+    "source_bound_t0_decision_inventory",
+    "source_bound_pre_t1_evidence_dependency_edges_for_each_decision",
+    "independent_t3_truth_for_every_affected_and_unaffected_decision"
+  ],
+  "note": "The advisory supplies a clean vulnerability/fix timeline but not the required historical inventory of independently accepted consumer decisions and their pre-signal justification paths.",
+  "seed_sources": [
+    {
+      "assertion_scope": "coordinated disclosure, tested version, and fix timeline",
+      "locator": "https://securitylab.github.com/advisories/GHSL-2023-271_changed-files/"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": "xz_2024_distro_selectivity",
+  "current_packet_status": "INCOMPLETE",
+  "incident": "XZ Utils CVE-2024-3094",
+  "missing_required_evidence": [
+    "source_bound_t0_decision_inventory",
+    "source_bound_pre_t1_evidence_dependency_edges_for_each_decision",
+    "independent_t3_truth_for_every_affected_and_unaffected_decision"
+  ],
+  "note": "The public incident sources are useful t1/t3 material but do not by themselves establish the pre-signal decision-specific evidence DAG required by SLD-004.",
+  "seed_sources": [
+    {
+      "assertion_scope": "external signal plus public affected/unaffected product statements",
+      "locator": "https://www.redhat.com/en/blog/urgent-security-alert-fedora-40-and-rawhide-users"
+    },
+    {
+      "assertion_scope": "affected upstream versions and RHEL unaffected statement",
+      "locator": "https://access.redhat.com/security/cve/cve-2024-3094"
+    }
+  ]
+}

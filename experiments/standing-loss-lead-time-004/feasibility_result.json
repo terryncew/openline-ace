@@ -1,0 +1,47 @@
+{
+  "candidate_results": [
+    {
+      "candidate_id": "xz_2024_distro_selectivity",
+      "complete": false,
+      "missing_required_evidence": [
+        "source_bound_t0_decision_inventory",
+        "source_bound_pre_t1_evidence_dependency_edges_for_each_decision",
+        "independent_t3_truth_for_every_affected_and_unaffected_decision"
+      ],
+      "packet_status": "INCOMPLETE"
+    },
+    {
+      "candidate_id": "event_stream_2018_targeted_payload",
+      "complete": false,
+      "missing_required_evidence": [
+        "source_bound_t0_decision_inventory",
+        "source_bound_pre_t1_evidence_dependency_edges_for_each_decision",
+        "independent_t3_truth_for_every_affected_and_unaffected_decision"
+      ],
+      "packet_status": "INCOMPLETE"
+    },
+    {
+      "candidate_id": "changed_files_2023_command_injection",
+      "complete": false,
+      "missing_required_evidence": [
+        "source_bound_t0_decision_inventory",
+        "source_bound_pre_t1_evidence_dependency_edges_for_each_decision",
+        "independent_t3_truth_for_every_affected_and_unaffected_decision"
+      ],
+      "packet_status": "INCOMPLETE"
+    }
+  ],
+  "checks": {
+    "all_three_complete": false,
+    "candidate_set_exact": true,
+    "candidate_substitution_disabled": true
+  },
+  "experiment_id": "SLD-004",
+  "next_state": "DO_NOT_RUN_F1",
+  "phase": "F0",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.f0-result.v1",
+  "scientific_h1_adjudicated": false,
+  "verdict": "FEASIBILITY_NOT_ESTABLISHED"
+}

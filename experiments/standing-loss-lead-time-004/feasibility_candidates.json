@@ -1,0 +1,42 @@
+{
+  "candidate_substitution_allowed": false,
+  "candidates": [
+    {
+      "archetype": "simple_selective_product_scope",
+      "candidate_id": "xz_2024_distro_selectivity",
+      "case_packet": "feasibility/xz_2024_distro_selectivity.json",
+      "incident": "XZ Utils CVE-2024-3094",
+      "reason_selected_before_scoring": "Public reporting distinguishes affected pre-release Fedora states from explicitly unaffected RHEL product lines, making it a hard test of decision granularity and source-bound pre-event composition.",
+      "seed_source_locators": [
+        "https://www.redhat.com/en/blog/urgent-security-alert-fedora-40-and-rawhide-users",
+        "https://access.redhat.com/security/cve/cve-2024-3094"
+      ]
+    },
+    {
+      "archetype": "complex_conditional_dependency_impact",
+      "candidate_id": "event_stream_2018_targeted_payload",
+      "case_packet": "feasibility/event_stream_2018_targeted_payload.json",
+      "incident": "event-stream / flatmap-stream supply-chain compromise",
+      "reason_selected_before_scoring": "The malicious dependency was broadly distributed but publicly analyzed as conditionally targeting cryptocurrency/Copay contexts, creating a demanding test of whether component membership alone over-invalidates.",
+      "seed_source_locators": [
+        "https://github.com/dominictarr/event-stream/issues/115",
+        "https://github.com/dominictarr/event-stream/issues/116"
+      ]
+    },
+    {
+      "archetype": "negative_control_conditional_execution",
+      "candidate_id": "changed_files_2023_command_injection",
+      "case_packet": "feasibility/changed_files_2023_command_injection.json",
+      "incident": "tj-actions/changed-files command injection GHSL-2023-271",
+      "reason_selected_before_scoring": "The vulnerability has a coordinated disclosure/fix timeline but impact depends on workflow use, testing whether public history exposes enough pre-signal decision context to distinguish vulnerable from merely co-located uses.",
+      "seed_source_locators": [
+        "https://securitylab.github.com/advisories/GHSL-2023-271_changed-files/"
+      ]
+    }
+  ],
+  "experiment_id": "SLD-004",
+  "freeze_stage": "before_case_completion_or_scoring",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.feasibility-candidates.v1"
+}
