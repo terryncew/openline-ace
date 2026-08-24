@@ -1,0 +1,100 @@
+{
+  "base_commit": "c90f2a6c3618951c5a730515e754b4d3ee203d12",
+  "experiment_id": "PSD-001",
+  "file_count": 18,
+  "files": [
+    {
+      "path": ".github/workflows/ace-prospective-selective-standing-001.yml",
+      "sha256": "7b8fadce5eab3cb098aa0d2f1607761dc7b9c7e1e065e1f0dc99a23c6fef5c60",
+      "size": 2994
+    },
+    {
+      "path": "PSD001_HANDOFF.json",
+      "sha256": "f9f31ac0daf730fc8c4a299a36a2e07e117fb1ecbca15e0631760c9101b148b5",
+      "size": 615
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/CLAIM_BOUNDARY.md",
+      "sha256": "d0d36fcf3e9cef300810a4e805f1935b7d7bc4c92fcf3e32c67ac9e12c7d2958",
+      "size": 1518
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/FREEZE.json",
+      "sha256": "d219779ed85d3719556fe900e362ec95faffd1d4489be9132d99d8ea2db1d89d",
+      "size": 1232
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/README.md",
+      "sha256": "46c15033ea09e089c278dec3983321822ac3c907518c90b16725f86dba64d93c",
+      "size": 4396
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/fixtures/metadata.json",
+      "sha256": "6200fc491da81f171712be82f8a58f3941ca8f1cffaefccd60b5764482d2c7f1",
+      "size": 8049
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/preregistration.json",
+      "sha256": "39536d6c1b60d12859454ef4709735e35e182cae4e6a7dff376afb226efc6f72",
+      "size": 7722
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/psd001/__init__.py",
+      "sha256": "8efade5308c97935cf7a27d86f97eeae0c50ff0a17282ddc3c037811d7ef3743",
+      "size": 58
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/psd001/core.py",
+      "sha256": "2d77ebf26393b827faed094076be581af71502ea2969bd287c3cb1a307805105",
+      "size": 23938
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/psd001/oracle.py",
+      "sha256": "7ef1d66d81a48638d5c2f1bce7437f1c8624bf82caa8b079b55761960c1b7cd6",
+      "size": 856
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/scripts/run_external.py",
+      "sha256": "632b8c3b3708a8073a3ee0ed5392919cb3dcc9d67d1279e8d3213f645a5989ae",
+      "size": 8280
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/scripts/run_fixture_pressure.py",
+      "sha256": "6f0391af623484b5cef3f0d2b489d4b0054d96210b223109f2516225a77cb37d",
+      "size": 1855
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/scripts/verify_fixture_result.py",
+      "sha256": "852764548da6b744cb4e4e1dbc2ddfa1054a44dc353e980683e750dcf0f4b498",
+      "size": 897
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/scripts/verify_freeze.py",
+      "sha256": "c2bf8621d67de987a8705f971892f37a8f32d8efd287c3f021179f575ce0da06",
+      "size": 1153
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/scripts/verify_release.py",
+      "sha256": "07d9d62728c164146d698f80c6285fd92ac5ee16a7eaab5e9f93969a1e813742",
+      "size": 1516
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/scripts/verify_result.py",
+      "sha256": "71ba279df28ca427770200088b8ed6ab8f8bfbc02ab1e6f2319a0a5e2a7d81cf",
+      "size": 1960
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/source_manifest.json",
+      "sha256": "111f37a8a778efb9d6b3dd0e8ae1c6cfcb4a25ca2a6da2bd9c4f50b604a1534e",
+      "size": 1552
+    },
+    {
+      "path": "experiments/prospective-selective-standing-001/tests/test_psd001.py",
+      "sha256": "9372a304072b35a944ed5ab40093ebe16e42e53f1f202554813f9432b535e882",
+      "size": 6759
+    }
+  ],
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.release-manifest.v1"
+}

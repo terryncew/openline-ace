@@ -1,0 +1,78 @@
+name: ACE Prospective Selective Standing 001
+
+on:
+  pull_request:
+    paths:
+      - "experiments/prospective-selective-standing-001/**"
+      - ".github/workflows/ace-prospective-selective-standing-001.yml"
+      - "PSD001_HANDOFF.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and adversarial tests
+        working-directory: experiments/prospective-selective-standing-001
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen design
+        working-directory: experiments/prospective-selective-standing-001
+        run: python scripts/verify_freeze.py
+      - name: Synthetic implementation pressure test
+        working-directory: experiments/prospective-selective-standing-001
+        run: |
+          python scripts/run_fixture_pressure.py
+          python scripts/verify_fixture_result.py
+      - name: Verify release closure
+        working-directory: experiments/prospective-selective-standing-001
+        run: python scripts/verify_release.py
+
+  external:
+    needs: verify
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install frozen Rust toolchain
+        run: |
+          rustup toolchain install 1.96.0 --profile minimal
+          rustup default 1.96.0
+          rustc --version
+          cargo --version
+      - name: Run first external prospective uv scoring pass
+        working-directory: experiments/prospective-selective-standing-001
+        run: python scripts/run_external.py
+      - name: Independently verify external result
+        working-directory: experiments/prospective-selective-standing-001
+        run: python scripts/verify_result.py
+      - uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: psd001-external-evidence
+          path: |
+            experiments/prospective-selective-standing-001/t0_source_binding.json
+            experiments/prospective-selective-standing-001/t0_model.json
+            experiments/prospective-selective-standing-001/t0_receipts.jsonl
+            experiments/prospective-selective-standing-001/interventions.json
+            experiments/prospective-selective-standing-001/external_traces.jsonl
+            experiments/prospective-selective-standing-001/external_result.json
+            experiments/prospective-selective-standing-001/preregistration.json
+            experiments/prospective-selective-standing-001/source_manifest.json
+            experiments/prospective-selective-standing-001/FREEZE.json
+          if-no-files-found: warn

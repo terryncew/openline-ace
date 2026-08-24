@@ -1,0 +1,408 @@
+{
+  "packages": [
+    {
+      "id": "path+rootA",
+      "name": "uv-auth",
+      "source": null,
+      "version": "0.0.1"
+    },
+    {
+      "id": "path+rootB",
+      "name": "uv-git",
+      "source": null,
+      "version": "0.0.1"
+    },
+    {
+      "id": "path+rootC",
+      "name": "uv-publish",
+      "source": null,
+      "version": "0.0.1"
+    },
+    {
+      "id": "path+rootD",
+      "name": "uv-python",
+      "source": null,
+      "version": "0.0.1"
+    },
+    {
+      "id": "path+rootE",
+      "name": "uv-resolver",
+      "source": null,
+      "version": "0.0.1"
+    },
+    {
+      "id": "path+rootF",
+      "name": "uv-virtualenv",
+      "source": null,
+      "version": "0.0.1"
+    },
+    {
+      "id": "reg+shared",
+      "name": "serde",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+singleA",
+      "name": "ring",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+singleB",
+      "name": "git2",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+build",
+      "name": "cc",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+dev",
+      "name": "insta",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs1",
+      "name": "abs1",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs2",
+      "name": "abs2",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs3",
+      "name": "abs3",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs4",
+      "name": "abs4",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs5",
+      "name": "abs5",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs6",
+      "name": "abs6",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs7",
+      "name": "abs7",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+abs8",
+      "name": "abs8",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+unique0",
+      "name": "unique0",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+unique1",
+      "name": "unique1",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+unique2",
+      "name": "unique2",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+unique3",
+      "name": "unique3",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+unique4",
+      "name": "unique4",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    },
+    {
+      "id": "reg+unique5",
+      "name": "unique5",
+      "source": "registry+https://example/index",
+      "version": "1.0.0"
+    }
+  ],
+  "resolve": {
+    "nodes": [
+      {
+        "deps": [
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+shared"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+unique0"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+singleA"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": "build",
+                "target": null
+              }
+            ],
+            "pkg": "reg+build"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": "dev",
+                "target": null
+              }
+            ],
+            "pkg": "reg+dev"
+          }
+        ],
+        "id": "path+rootA"
+      },
+      {
+        "deps": [
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+shared"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+unique1"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+singleB"
+          }
+        ],
+        "id": "path+rootB"
+      },
+      {
+        "deps": [
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+shared"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+unique2"
+          }
+        ],
+        "id": "path+rootC"
+      },
+      {
+        "deps": [
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+shared"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+unique3"
+          }
+        ],
+        "id": "path+rootD"
+      },
+      {
+        "deps": [
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+shared"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+unique4"
+          }
+        ],
+        "id": "path+rootE"
+      },
+      {
+        "deps": [
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+shared"
+          },
+          {
+            "dep_kinds": [
+              {
+                "kind": null,
+                "target": null
+              }
+            ],
+            "pkg": "reg+unique5"
+          }
+        ],
+        "id": "path+rootF"
+      },
+      {
+        "deps": [],
+        "id": "reg+shared"
+      },
+      {
+        "deps": [],
+        "id": "reg+singleA"
+      },
+      {
+        "deps": [],
+        "id": "reg+singleB"
+      },
+      {
+        "deps": [],
+        "id": "reg+build"
+      },
+      {
+        "deps": [],
+        "id": "reg+dev"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs1"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs2"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs3"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs4"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs5"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs6"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs7"
+      },
+      {
+        "deps": [],
+        "id": "reg+abs8"
+      },
+      {
+        "deps": [],
+        "id": "reg+unique0"
+      },
+      {
+        "deps": [],
+        "id": "reg+unique1"
+      },
+      {
+        "deps": [],
+        "id": "reg+unique2"
+      },
+      {
+        "deps": [],
+        "id": "reg+unique3"
+      },
+      {
+        "deps": [],
+        "id": "reg+unique4"
+      },
+      {
+        "deps": [],
+        "id": "reg+unique5"
+      }
+    ]
+  }
+}
