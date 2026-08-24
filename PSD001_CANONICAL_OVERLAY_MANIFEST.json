@@ -1,0 +1,76 @@
+{
+  "base_commit": "a74d04699d0ec397a72f083675d9dc2fcae44520",
+  "files": [
+    {
+      "path": ".github/workflows/ace-psd001-canonical-result.yml",
+      "sha256": "01b2999792f3000d777a56d8e20476bb73664cef96da485d2756e28fe03bfa92",
+      "size": 757
+    },
+    {
+      "path": "PSD001_CANONICAL_HANDOFF.json",
+      "sha256": "ffca9e9c4a89b62a75f3734c01a4c6077b81849df8fabdf8d066926e16dd7b8e",
+      "size": 670
+    },
+    {
+      "path": "results/psd001-uv-external-001/CANONICAL_RECEIPT.json",
+      "sha256": "5c250ba9d04da4ed2e1d9ab005d7153272bd45d71900e1a02ef72b4dc03c4fe4",
+      "size": 3753
+    },
+    {
+      "path": "results/psd001-uv-external-001/FREEZE.json",
+      "sha256": "d219779ed85d3719556fe900e362ec95faffd1d4489be9132d99d8ea2db1d89d",
+      "size": 1232
+    },
+    {
+      "path": "results/psd001-uv-external-001/RESULT.md",
+      "sha256": "469387953bf73e3eb7df2c255f2e96a2ccc57724f5cfd06bd235243c595edf16",
+      "size": 1825
+    },
+    {
+      "path": "results/psd001-uv-external-001/external_result.json",
+      "sha256": "30568277e0cf0ee1f0bc3b0df155985bfcaf544669bd9ca945c3c73b5a3c8465",
+      "size": 23884
+    },
+    {
+      "path": "results/psd001-uv-external-001/external_traces.jsonl",
+      "sha256": "3d1a7ccf94c419c8222e40ac96ccccbb543e149be8dc5f624bb1c5ea823d8c10",
+      "size": 318271
+    },
+    {
+      "path": "results/psd001-uv-external-001/interventions.json",
+      "sha256": "368f76ab93f70764d53fcbdef5dd3db2a2ab73f907dd34def4bb6b8506ef05bd",
+      "size": 8645
+    },
+    {
+      "path": "results/psd001-uv-external-001/preregistration.json",
+      "sha256": "39536d6c1b60d12859454ef4709735e35e182cae4e6a7dff376afb226efc6f72",
+      "size": 7722
+    },
+    {
+      "path": "results/psd001-uv-external-001/source_manifest.json",
+      "sha256": "111f37a8a778efb9d6b3dd0e8ae1c6cfcb4a25ca2a6da2bd9c4f50b604a1534e",
+      "size": 1552
+    },
+    {
+      "path": "results/psd001-uv-external-001/t0_model.json",
+      "sha256": "937bc61ea6e3c678d78af8fb8344c790fc648551ab4a34145cd2f25c8cebea6d",
+      "size": 1779969
+    },
+    {
+      "path": "results/psd001-uv-external-001/t0_receipts.jsonl",
+      "sha256": "0778a2c0bc2b56920c479d2ceaf3171690564458c710abe229546c5201da1b5f",
+      "size": 279114
+    },
+    {
+      "path": "results/psd001-uv-external-001/t0_source_binding.json",
+      "sha256": "038b89f1961e13af479c80057fd3e63c9232b79bf3539a199064a9a0f616de62",
+      "size": 1064
+    },
+    {
+      "path": "results/psd001-uv-external-001/verify_canonical.py",
+      "sha256": "05d41f8dc0f62947132a35ef0842cc214e112c9e9b32fddf0b2dde0eee4ed9d9",
+      "size": 2953
+    }
+  ],
+  "schema": "openline.ace.psd001.canonical-overlay-manifest.v1"
+}
