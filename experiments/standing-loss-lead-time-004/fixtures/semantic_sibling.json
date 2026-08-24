@@ -1,0 +1,145 @@
+{
+  "case_id": "fixture-semantic-sibling",
+  "decisions": [
+    {
+      "accepted_at": "2024-01-01T00:00:00Z",
+      "active_at_t1": true,
+      "artifact_components": [
+        "pkg:X@1",
+        "pkg:Y@2"
+      ],
+      "artifact_id": "artifact:shared1",
+      "artifact_source": {
+        "assertion": "A-artifact",
+        "captured_sha256": "5a9e815cf5d8349ff77c43c7a02e21a835746feb94074408f57ad163060ee476",
+        "locator": "fixture://A-artifact",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "decision_id": "A",
+      "decision_node_id": "decision:A",
+      "decision_source": {
+        "assertion": "A-decision",
+        "captured_sha256": "197dc3e9056f97810e1cf5ae5a654c9ef94def2a27380d0ce7996d337dd801db",
+        "locator": "fixture://A-decision",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "ground_truth": {
+        "affected": true,
+        "source": {
+          "assertion": "A-truth",
+          "captured_sha256": "a9e40da18b899ef8e01e5b82caee35566552c3c6f8d832bd0589ce97f75f2b42",
+          "locator": "fixture://A-truth",
+          "published_at": "2024-03-10T00:00:00Z"
+        },
+        "t3": "2024-03-10T00:00:00Z"
+      },
+      "repo_scope": "repoA"
+    },
+    {
+      "accepted_at": "2024-01-02T00:00:00Z",
+      "active_at_t1": true,
+      "artifact_components": [
+        "pkg:X@1",
+        "pkg:Y@2"
+      ],
+      "artifact_id": "artifact:shared2",
+      "artifact_source": {
+        "assertion": "B-artifact",
+        "captured_sha256": "51fa3c2fe0ad5e51bf3dfe372d9aacce1b7edd29c9a15e10087ad703c3a0a43c",
+        "locator": "fixture://B-artifact",
+        "published_at": "2024-01-02T00:00:00Z"
+      },
+      "decision_id": "B",
+      "decision_node_id": "decision:B",
+      "decision_source": {
+        "assertion": "B-decision",
+        "captured_sha256": "d8bc96dcd23d34574870612bf70460dbacddb0ad1d862185c2579ac3555a8ebe",
+        "locator": "fixture://B-decision",
+        "published_at": "2024-01-02T00:00:00Z"
+      },
+      "ground_truth": {
+        "affected": false,
+        "source": {
+          "assertion": "B-truth",
+          "captured_sha256": "ad564fd223237d32bbe4601a846b174697a5c0dee8260a4e250caeb7b5c6a32c",
+          "locator": "fixture://B-truth",
+          "published_at": "2024-03-10T00:00:00Z"
+        },
+        "t3": "2024-03-10T00:00:00Z"
+      },
+      "negative_control_category": "sibling_valid_decision",
+      "repo_scope": "repoA"
+    }
+  ],
+  "evidence_edges": [
+    {
+      "from": "component:X@1",
+      "source": {
+        "assertion": "edge1",
+        "captured_sha256": "b4baca894ba024f0c5e6467e8378782de5061e031991f9850a7c73c6c8d326f4",
+        "locator": "fixture://edge1",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "claim:security-X"
+    },
+    {
+      "from": "claim:security-X",
+      "source": {
+        "assertion": "edge2",
+        "captured_sha256": "bee95ea87c7ca8660d13e86fdff7e45fb3d9e9b14f08d349cbea1d0553e62950",
+        "locator": "fixture://edge2",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "decision:A"
+    },
+    {
+      "from": "claim:perf-Y",
+      "source": {
+        "assertion": "edge3",
+        "captured_sha256": "05aed700ad29d50340bdecbe587b14f155e768e8d6ed766f2a3a9a06f5b8aec0",
+        "locator": "fixture://edge3",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "decision:B"
+    }
+  ],
+  "evidence_nodes": [
+    {
+      "id": "component:X@1",
+      "type": "component"
+    },
+    {
+      "id": "claim:security-X",
+      "type": "claim"
+    },
+    {
+      "id": "decision:A",
+      "type": "decision"
+    },
+    {
+      "id": "claim:perf-Y",
+      "type": "claim"
+    },
+    {
+      "id": "decision:B",
+      "type": "decision"
+    }
+  ],
+  "schema": "openline.ace.sld004.case.v1",
+  "scope_id": "scope1",
+  "signal": {
+    "affected_component_ids": [
+      "pkg:X@1"
+    ],
+    "invalidated_evidence_node_ids": [
+      "component:X@1"
+    ],
+    "source": {
+      "assertion": "signal1",
+      "captured_sha256": "bc1741a520df04521c2a631a9861500bcc9278a76af829d394062235be489959",
+      "locator": "fixture://signal1",
+      "published_at": "2024-03-01T00:00:00Z"
+    },
+    "t1": "2024-03-01T00:00:00Z"
+  }
+}

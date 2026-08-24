@@ -1,0 +1,251 @@
+{
+  "all_cases_admissible": true,
+  "case_validations": [
+    {
+      "admissible": true,
+      "case_id": "fixture-artifact-fairness",
+      "decision_count": 3,
+      "errors": []
+    },
+    {
+      "admissible": true,
+      "case_id": "fixture-semantic-sibling",
+      "decision_count": 2,
+      "errors": []
+    },
+    {
+      "admissible": true,
+      "case_id": "fixture-version-and-semantic-controls",
+      "decision_count": 3,
+      "errors": []
+    }
+  ],
+  "metrics": {
+    "any_change": {
+      "decision_precision": 0.375,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 1.0,
+      "fn": 0,
+      "fp": 5,
+      "negative_controls": {
+        "dead_or_dev_dependency": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "non_invalidating_upstream_mutation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "out_of_path_colocation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "post_fix_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "sibling_valid_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        }
+      },
+      "retention_specificity": 0.0,
+      "tn": 0,
+      "tp": 3
+    },
+    "artifact_component_join": {
+      "decision_precision": 0.6,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.4,
+      "fn": 0,
+      "fp": 2,
+      "negative_controls": {
+        "dead_or_dev_dependency": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "non_invalidating_upstream_mutation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "out_of_path_colocation": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "post_fix_decision": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "sibling_valid_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        }
+      },
+      "retention_specificity": 0.6,
+      "tn": 3,
+      "tp": 3
+    },
+    "headline_only": {
+      "decision_precision": 0.0,
+      "decision_recall": 0.0,
+      "false_reopen_rate": 0.0,
+      "fn": 3,
+      "fp": 0,
+      "negative_controls": {
+        "dead_or_dev_dependency": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "non_invalidating_upstream_mutation": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "out_of_path_colocation": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "post_fix_decision": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "sibling_valid_decision": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        }
+      },
+      "retention_specificity": 1.0,
+      "tn": 5,
+      "tp": 0
+    },
+    "openline_evidence_dag": {
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.0,
+      "fn": 0,
+      "fp": 0,
+      "negative_controls": {
+        "dead_or_dev_dependency": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "non_invalidating_upstream_mutation": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "out_of_path_colocation": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "post_fix_decision": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        },
+        "sibling_valid_decision": {
+          "count": 1,
+          "fp": 0,
+          "tn": 1
+        }
+      },
+      "retention_specificity": 1.0,
+      "tn": 5,
+      "tp": 3
+    },
+    "repo_scope_flat_join": {
+      "decision_precision": 0.375,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 1.0,
+      "fn": 0,
+      "fp": 5,
+      "negative_controls": {
+        "dead_or_dev_dependency": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "non_invalidating_upstream_mutation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "out_of_path_colocation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "post_fix_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "sibling_valid_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        }
+      },
+      "retention_specificity": 0.0,
+      "tn": 0,
+      "tp": 3
+    },
+    "ttl_freshness": {
+      "decision_precision": 0.375,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 1.0,
+      "fn": 0,
+      "fp": 5,
+      "negative_controls": {
+        "dead_or_dev_dependency": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "non_invalidating_upstream_mutation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "out_of_path_colocation": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "post_fix_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        },
+        "sibling_valid_decision": {
+          "count": 1,
+          "fp": 1,
+          "tn": 0
+        }
+      },
+      "retention_specificity": 0.0,
+      "tn": 0,
+      "tp": 3
+    }
+  },
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld004.fixture-pressure.v1",
+  "scientific_evidence": false
+}

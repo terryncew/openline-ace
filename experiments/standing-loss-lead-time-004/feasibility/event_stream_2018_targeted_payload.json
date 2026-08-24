@@ -1,0 +1,21 @@
+{
+  "case_id": "event_stream_2018_targeted_payload",
+  "current_packet_status": "INCOMPLETE",
+  "incident": "event-stream / flatmap-stream",
+  "missing_required_evidence": [
+    "source_bound_t0_decision_inventory",
+    "source_bound_pre_t1_evidence_dependency_edges_for_each_decision",
+    "independent_t3_truth_for_every_affected_and_unaffected_decision"
+  ],
+  "note": "Conditional payload behavior makes this scientifically attractive, but the issue record alone is not a source-bound inventory of prior accepted downstream decisions.",
+  "seed_sources": [
+    {
+      "assertion_scope": "public discovery of backdoored dependency",
+      "locator": "https://github.com/dominictarr/event-stream/issues/115"
+    },
+    {
+      "assertion_scope": "public discussion of targeted Copay/cryptocurrency execution and mitigation",
+      "locator": "https://github.com/dominictarr/event-stream/issues/116"
+    }
+  ]
+}

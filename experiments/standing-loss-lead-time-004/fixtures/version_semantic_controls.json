@@ -1,0 +1,191 @@
+{
+  "case_id": "fixture-version-and-semantic-controls",
+  "decisions": [
+    {
+      "accepted_at": "2024-02-01T00:00:00Z",
+      "active_at_t1": true,
+      "artifact_components": [
+        "pkg:X@1"
+      ],
+      "artifact_id": "artifact:f",
+      "artifact_source": {
+        "assertion": "F-artifact",
+        "captured_sha256": "28cc3a1bc6c85eb89761a7880139fd32e1db8bc906f783d0ce1d80ffa3dbbe4a",
+        "locator": "fixture://F-artifact",
+        "published_at": "2024-02-01T00:00:00Z"
+      },
+      "decision_id": "F",
+      "decision_node_id": "decision:F",
+      "decision_source": {
+        "assertion": "F-decision",
+        "captured_sha256": "054a5aa1d2391815634c62482e189d70a3693642daac62333cf2b2e6b0c87eae",
+        "locator": "fixture://F-decision",
+        "published_at": "2024-02-01T00:00:00Z"
+      },
+      "ground_truth": {
+        "affected": true,
+        "source": {
+          "assertion": "F-truth",
+          "captured_sha256": "b241c51c195a6a899d410acba0a01f8d5d956ddbc2b6c3c4040bec6880fa55ee",
+          "locator": "fixture://F-truth",
+          "published_at": "2024-05-06T00:00:00Z"
+        },
+        "t3": "2024-05-06T00:00:00Z"
+      },
+      "repo_scope": "repoA"
+    },
+    {
+      "accepted_at": "2024-02-02T00:00:00Z",
+      "active_at_t1": true,
+      "artifact_components": [
+        "pkg:X@2"
+      ],
+      "artifact_id": "artifact:g",
+      "artifact_source": {
+        "assertion": "G-artifact",
+        "captured_sha256": "1fb505418ee8f1af036785a6bf4e40c5eb109d08613770232f46b9462f28623c",
+        "locator": "fixture://G-artifact",
+        "published_at": "2024-02-02T00:00:00Z"
+      },
+      "decision_id": "G",
+      "decision_node_id": "decision:G",
+      "decision_source": {
+        "assertion": "G-decision",
+        "captured_sha256": "c798a25db7316ebef51d0ef8425773b2dd7e56d5f138ceec703a42ca14ca84c8",
+        "locator": "fixture://G-decision",
+        "published_at": "2024-02-02T00:00:00Z"
+      },
+      "ground_truth": {
+        "affected": false,
+        "source": {
+          "assertion": "G-truth",
+          "captured_sha256": "22dab8e71896f4b026b0ea11551144af98e56ae87a741edfa164a926240c9103",
+          "locator": "fixture://G-truth",
+          "published_at": "2024-05-06T00:00:00Z"
+        },
+        "t3": "2024-05-06T00:00:00Z"
+      },
+      "negative_control_category": "post_fix_decision",
+      "repo_scope": "repoA"
+    },
+    {
+      "accepted_at": "2024-02-03T00:00:00Z",
+      "active_at_t1": true,
+      "artifact_components": [
+        "pkg:X@1"
+      ],
+      "artifact_id": "artifact:h",
+      "artifact_source": {
+        "assertion": "H-artifact",
+        "captured_sha256": "de52c65aca9816b526bffcc462768aba577e679f6d07e20e7c25cf66aa1e3424",
+        "locator": "fixture://H-artifact",
+        "published_at": "2024-02-03T00:00:00Z"
+      },
+      "decision_id": "H",
+      "decision_node_id": "decision:H",
+      "decision_source": {
+        "assertion": "H-decision",
+        "captured_sha256": "651394633d0f8cebbac22384a11050ebe2df482222357a8ad94ae72b5206d6a7",
+        "locator": "fixture://H-decision",
+        "published_at": "2024-02-03T00:00:00Z"
+      },
+      "ground_truth": {
+        "affected": false,
+        "source": {
+          "assertion": "H-truth",
+          "captured_sha256": "5a1cd295557c5ecc36020188a868122eb693bd2c58e9924e20b6198c777bb92b",
+          "locator": "fixture://H-truth",
+          "published_at": "2024-05-06T00:00:00Z"
+        },
+        "t3": "2024-05-06T00:00:00Z"
+      },
+      "negative_control_category": "non_invalidating_upstream_mutation",
+      "repo_scope": "repoA"
+    }
+  ],
+  "evidence_edges": [
+    {
+      "from": "component:X@1",
+      "source": {
+        "assertion": "f3e1",
+        "captured_sha256": "34b56c60857114d039994c11f87e695c31acff3f06d8ba2b962513ad5298a09e",
+        "locator": "fixture://f3e1",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "claim:Xauth"
+    },
+    {
+      "from": "claim:Xauth",
+      "source": {
+        "assertion": "f3e2",
+        "captured_sha256": "001e6d00fa2f651220c11b5bbb6de82b1bc7a8dab8b77ed0df1a0d683f2aad57",
+        "locator": "fixture://f3e2",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "decision:F"
+    },
+    {
+      "from": "claim:isolated",
+      "source": {
+        "assertion": "f3e3",
+        "captured_sha256": "416a57382dd764b5716c4dc052e0bfed93986590386156c592b2f2e610be9b90",
+        "locator": "fixture://f3e3",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "decision:G"
+    },
+    {
+      "from": "claim:isolated",
+      "source": {
+        "assertion": "f3e4",
+        "captured_sha256": "b7c95617dd6610cd009fad4bf602e881a009dea5c3a4979933efe5f7181ecb7c",
+        "locator": "fixture://f3e4",
+        "published_at": "2024-01-01T00:00:00Z"
+      },
+      "to": "decision:H"
+    }
+  ],
+  "evidence_nodes": [
+    {
+      "id": "component:X@1",
+      "type": "component"
+    },
+    {
+      "id": "claim:Xauth",
+      "type": "claim"
+    },
+    {
+      "id": "decision:F",
+      "type": "decision"
+    },
+    {
+      "id": "claim:isolated",
+      "type": "claim"
+    },
+    {
+      "id": "decision:G",
+      "type": "decision"
+    },
+    {
+      "id": "decision:H",
+      "type": "decision"
+    }
+  ],
+  "schema": "openline.ace.sld004.case.v1",
+  "scope_id": "scope3",
+  "signal": {
+    "affected_component_ids": [
+      "pkg:X@1"
+    ],
+    "invalidated_evidence_node_ids": [
+      "component:X@1"
+    ],
+    "source": {
+      "assertion": "signal3",
+      "captured_sha256": "8ff9e94d514b248dc15698acb589a854142f97d10081deb91e81d54a14639ee6",
+      "locator": "fixture://signal3",
+      "published_at": "2024-05-01T00:00:00Z"
+    },
+    "t1": "2024-05-01T00:00:00Z"
+  }
+}

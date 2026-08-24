@@ -1,0 +1,58 @@
+name: ACE Standing-Loss Lead-Time 004
+
+on:
+  pull_request:
+    paths:
+      - "experiments/standing-loss-lead-time-004/**"
+      - ".github/workflows/ace-standing-loss-lead-time-004.yml"
+      - "SLD004_HANDOFF.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sld004:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and adversarial tests
+        working-directory: experiments/standing-loss-lead-time-004
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen design
+        working-directory: experiments/standing-loss-lead-time-004
+        run: python scripts/verify_freeze.py
+      - name: Run synthetic semantic pressure test
+        working-directory: experiments/standing-loss-lead-time-004
+        run: |
+          python scripts/run_fixture_pressure.py
+          python scripts/verify_fixture_result.py
+      - name: Run frozen F0 feasibility audit
+        if: matrix.python-version == '3.12'
+        working-directory: experiments/standing-loss-lead-time-004
+        run: |
+          python scripts/run_feasibility.py
+          python scripts/verify_feasibility_result.py
+      - name: Verify release closure
+        working-directory: experiments/standing-loss-lead-time-004
+        run: python scripts/verify_release.py
+      - uses: actions/upload-artifact@v6
+        if: matrix.python-version == '3.12' && always()
+        with:
+          name: sld004-feasibility-evidence
+          path: |
+            experiments/standing-loss-lead-time-004/feasibility_result.json
+            experiments/standing-loss-lead-time-004/fixture_result.json
+            experiments/standing-loss-lead-time-004/preregistration.json
+            experiments/standing-loss-lead-time-004/feasibility_candidates.json
+            experiments/standing-loss-lead-time-004/source_requirements.json
+            experiments/standing-loss-lead-time-004/FREEZE.json
+          if-no-files-found: warn
