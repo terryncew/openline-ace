@@ -1,0 +1,58 @@
+name: Trial Selector Ginkgo External 001
+
+on:
+  pull_request:
+    paths:
+      - "benchmarks/trial_selector/external_ginkgo_001/**"
+      - ".github/workflows/trial-selector-ginkgo-external-001.yml"
+      - "TRIAL_SELECTOR_GINKGO_001_HANDOFF.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install frozen selector dependency
+        run: python -m pip install --disable-pip-version-check scikit-learn==1.8.0
+      - name: Unit and adversarial tests
+        working-directory: benchmarks/trial_selector/external_ginkgo_001
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen external design
+        working-directory: benchmarks/trial_selector/external_ginkgo_001
+        run: python scripts/verify_freeze.py
+      - name: Verify release closure
+        working-directory: benchmarks/trial_selector/external_ginkgo_001
+        run: python scripts/verify_release.py
+      - name: Run external GDPa1 confirmation
+        if: matrix.python-version == '3.12'
+        working-directory: benchmarks/trial_selector/external_ginkgo_001
+        run: python scripts/run_external.py
+      - name: Verify external result
+        if: matrix.python-version == '3.12'
+        working-directory: benchmarks/trial_selector/external_ginkgo_001
+        run: python scripts/verify_result.py
+      - uses: actions/upload-artifact@v6
+        if: matrix.python-version == '3.12' && always()
+        with:
+          name: trial-selector-ginkgo-external-001-evidence
+          path: |
+            benchmarks/trial_selector/external_ginkgo_001/external_cohort.json
+            benchmarks/trial_selector/external_ginkgo_001/external_traces.jsonl
+            benchmarks/trial_selector/external_ginkgo_001/external_result.json
+            benchmarks/trial_selector/external_ginkgo_001/PREREGISTRATION.json
+            benchmarks/trial_selector/external_ginkgo_001/SOURCE_MANIFEST.json
+            benchmarks/trial_selector/external_ginkgo_001/GINKGO_THRESHOLDS.json
+            benchmarks/trial_selector/external_ginkgo_001/FREEZE.json
+          if-no-files-found: warn

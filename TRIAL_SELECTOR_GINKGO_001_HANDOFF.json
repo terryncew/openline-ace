@@ -1,0 +1,13 @@
+{
+  "base_commit": "850ceeb22976e70036ccafbbd626f400f6b985e1",
+  "branch": "feat/ginkgo-trial-selector-external-001",
+  "commit": "fix(gate): make Ginkgo selector provenance self-contained",
+  "merge": "feat/ginkgo-trial-selector-external-001 -> main",
+  "policy_authority": "NONE",
+  "pr_title": "feat(gate): add Ginkgo external trial-selector confirmation",
+  "repair_of_head_sha": "f3c6d85924649e274fedc36983f06502d9617380",
+  "repository": "terryncew/openline-ace",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.handoff.v1",
+  "status_before_external_run": "EXTERNAL_RUN_READY_UNRUN"
+}
