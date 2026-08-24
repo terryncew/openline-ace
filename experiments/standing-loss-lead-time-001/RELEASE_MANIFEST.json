@@ -59,8 +59,8 @@
     },
     {
       "path": "experiments/standing-loss-lead-time-001/scripts/verify_release.py",
-      "sha256": "58bafaa977deb859e56a1366e9695c32320965389331ae0ff9150e812cea1830",
-      "size": 1340
+      "sha256": "d0b9255d64872995a64c08385d11676f58c6d8d559ec387cc0ed6c7bd695d421",
+      "size": 1600
     },
     {
       "path": "experiments/standing-loss-lead-time-001/scripts/verify_result.py",
