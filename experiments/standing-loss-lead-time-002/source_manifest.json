@@ -1,0 +1,33 @@
+{
+  "commits_per_pr_max": 100,
+  "policy_authority": "NONE",
+  "public_api_budget_note": "The frozen design requires four search calls plus at most two detail calls per unique candidate; authenticated access is attempted first and public unauthenticated fallback is allowed without changing the source set.",
+  "repositories": [
+    "astral-sh/ruff",
+    "pydantic/pydantic"
+  ],
+  "reviews_per_pr_max": 100,
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld002.source-manifest.v1",
+  "selection_rule": "Take the first max_items_per_repository search results in each frozen repo/stratum after created-ascending sort, deduplicate by repository and PR number preserving terminal_unmerged priority, then apply eligibility without replacement or source expansion.",
+  "strata": [
+    {
+      "max_items_per_repository": 6,
+      "name": "terminal_unmerged",
+      "order": "asc",
+      "query_template": "repo:{repo} is:pr is:closed is:unmerged closed:2025-01-01..2025-12-31 review:approved",
+      "sort": "created"
+    },
+    {
+      "max_items_per_repository": 6,
+      "name": "merged_control",
+      "order": "asc",
+      "query_template": "repo:{repo} is:pr is:merged merged:2025-01-01..2025-12-31 review:approved",
+      "sort": "created"
+    }
+  ],
+  "window": {
+    "from": "2025-01-01",
+    "through": "2025-12-31"
+  }
+}

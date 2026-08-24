@@ -1,0 +1,26 @@
+{
+  "allowed_verdicts": [
+    "EXTERNAL_STANDING_LOSS_LEAD_TIME_ADVANTAGE",
+    "NO_EXTERNAL_STANDING_LOSS_ADVANTAGE",
+    "DATA_INSUFFICIENT",
+    "SOURCE_ACCESS_FAILED"
+  ],
+  "anti_rescue_rule": "After any external source response is fetched, no repository, query window, intake size, eligibility rule, baseline, threshold, extractor, evaluator, or verdict rule may change in SLD-002.",
+  "claim": "In real pull-request histories, exact-state review standing can resolve LOST before terminal human disposition, while avoiding the indiscriminate invalidation behavior of any-change and fixed-TTL baselines.",
+  "data_boundary": "frozen_external_public_github_review_histories",
+  "experiment_id": "SLD-002",
+  "headline_definition": "closed_at of a frozen closed-unmerged pull request",
+  "minimum_detected_terminal_cases": 3,
+  "minimum_median_lead_hours": 6.0,
+  "minimum_positive_lead_fraction": 0.75,
+  "minimum_repositories_with_eligible_cases": 2,
+  "minimum_terminal_cases": 4,
+  "minimum_terminal_detection_fraction": 0.5,
+  "minimum_valid_reverification_controls": 4,
+  "naive_false_invalidation_ratio_max": 0.25,
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "standing_loss_definition": "t_loss is the submitted_at timestamp of the first decisive re-review on a post-approval commit when that re-review is CHANGES_REQUESTED; the first post-approval commit only reopens standing and earns no lead-time credit",
+  "ttl_dominance_rule": "NO_EXTERNAL_STANDING_LOSS_ADVANTAGE if TTL has at least OLP terminal coverage, at least OLP median lead among detected terminal cases, and no greater unnecessary invalidation rate on VALID re-verification controls",
+  "ttl_hours": 24.0
+}
