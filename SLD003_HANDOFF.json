@@ -1,0 +1,12 @@
+{
+  "base_commit": "a621c0ef18aa23068c82d856876a2e1ee9ead017",
+  "branch": "feat/standing-loss-lead-time-003-external",
+  "commit": "feat(ace): add external transitive standing-loss audit",
+  "experiment_id": "SLD-003",
+  "merge": "feat/standing-loss-lead-time-003-external -> main",
+  "policy_authority": "NONE",
+  "pr_title": "Add SLD-003 external transitive standing-loss audit",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld003.handoff.v1",
+  "status_before_external_run": "EXTERNAL_RUN_READY_UNRUN"
+}

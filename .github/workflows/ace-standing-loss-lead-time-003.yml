@@ -1,0 +1,57 @@
+name: ACE Standing-Loss Lead-Time 003
+
+on:
+  pull_request:
+    paths:
+      - "experiments/standing-loss-lead-time-003/**"
+      - ".github/workflows/ace-standing-loss-lead-time-003.yml"
+      - "SLD003_HANDOFF.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sld003:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Unit and adversarial tests
+        working-directory: experiments/standing-loss-lead-time-003
+        run: python -m unittest discover -s tests -v
+      - name: Verify frozen design
+        working-directory: experiments/standing-loss-lead-time-003
+        run: python scripts/verify_freeze.py
+      - name: Verify release closure
+        working-directory: experiments/standing-loss-lead-time-003
+        run: python scripts/verify_release.py
+      - name: Run frozen external dependency replay
+        if: matrix.python-version == '3.12'
+        working-directory: experiments/standing-loss-lead-time-003
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/run_external.py
+      - name: Independently verify external result
+        if: matrix.python-version == '3.12'
+        working-directory: experiments/standing-loss-lead-time-003
+        run: python scripts/verify_result.py
+      - uses: actions/upload-artifact@v6
+        if: matrix.python-version == '3.12' && always()
+        with:
+          name: sld003-external-evidence
+          path: |
+            experiments/standing-loss-lead-time-003/external_raw.json
+            experiments/standing-loss-lead-time-003/external_events.jsonl
+            experiments/standing-loss-lead-time-003/external_result.json
+            experiments/standing-loss-lead-time-003/preregistration.json
+            experiments/standing-loss-lead-time-003/source_manifest.json
+            experiments/standing-loss-lead-time-003/FREEZE.json
+          if-no-files-found: warn

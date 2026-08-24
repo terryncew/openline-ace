@@ -1,0 +1,33 @@
+{
+  "allowed_verdicts": [
+    "EXTERNAL_TRANSITIVE_STANDING_ADVANTAGE",
+    "NO_EXTERNAL_TRANSITIVE_STANDING_ADVANTAGE",
+    "DATA_INSUFFICIENT",
+    "SOURCE_ACCESS_FAILED"
+  ],
+  "anti_rescue_rule": "After any external advisory or event-time source response is observed, no source repo, snapshot rule, event window, candidate cap, eligibility rule, graph parser, threshold, baseline, or verdict rule may change in SLD-003.",
+  "anti_tautology": "Positive verdict is not earned merely because advisory publication precedes remediation. It requires preregistered transitive incremental coverage, stale-watchlist precision advantage, ecosystem diversity, and remediation lead as a secondary condition.",
+  "claim": "In real dependency histories, exact-state full-graph standing detects materially more advisory invalidations than direct-dependency watching because consequential events occur at transitive depth, while event-time rebinding suppresses stale snapshot alerts; detected standing loss can precede downstream remediation.",
+  "direct_baseline": "alerts only when the affected event-time package has dependency depth 1",
+  "experiment_id": "SLD-003",
+  "headline": "first later lockfile commit by remediation_horizon at which the advisory no longer affects any reachable version of the target package",
+  "maximum_false_invalidation_rate": 0.05,
+  "minimum_event_ecosystems": 3,
+  "minimum_incremental_coverage_over_direct": 0.25,
+  "minimum_median_lead_hours": 24.0,
+  "minimum_negative_control_ecosystems": 2,
+  "minimum_negative_controls": 4,
+  "minimum_positive_lead_fraction": 0.75,
+  "minimum_remediated_transitive_events": 4,
+  "minimum_remediation_observation_fraction": 0.4,
+  "minimum_snapshot_watchlist_false_rate": 0.5,
+  "minimum_structural_ecosystems": 4,
+  "minimum_transitive_nodes_per_source": 15,
+  "minimum_transitive_true_events": 6,
+  "minimum_true_events": 10,
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld003.preregistration.v1",
+  "stale_snapshot_baseline": "alerts on every retained advisory matched to the frozen 2025-01-01 snapshot, without event-time rebinding",
+  "standing_loss_time": "OSV advisory published timestamp after event-time affected-version confirmation"
+}
