@@ -1,0 +1,31 @@
+{
+  "cargo_check_command": [
+    "cargo",
+    "check",
+    "--locked",
+    "-p",
+    "uv-auth",
+    "-p",
+    "uv-git",
+    "-p",
+    "uv-publish",
+    "-p",
+    "uv-python",
+    "-p",
+    "uv-resolver",
+    "-p",
+    "uv-virtualenv"
+  ],
+  "cargo_check_returncode": 0,
+  "cargo_metadata_sha256": "af65df0bbf20d4d77677afe4e22491c8eb6610f101538c516991a4f623c62c67",
+  "t0_model_sha256": "5d8f6703671997f6acccd050b6787d44d1e2ff508d981263844c7064199f3756",
+  "target_source_hashes": {
+    "uv-auth": "c00fd5be80fe98be35b86363c083f35a7a5fc617e0a85385d66fea17cee53eba",
+    "uv-git": "6fd2227b7a92ba3c15ad606a06149e4dc804f34f7cecdda143cead5ff6bde657",
+    "uv-publish": "9083733eff38b19d46f9cf1088dcc099b98d9b7ef5bb2a16d713bae4a3fdb1b0",
+    "uv-python": "85ecc57cde17554a5ac9f2aeabc98d01e9a849dcccf60d8f652547cb1d4a187d",
+    "uv-resolver": "829074e774f9e7d97ba6ec1b2c8a5fb38185c5ec37651d37016adcccfdbaa972",
+    "uv-virtualenv": "da559770be4c81c1920d4670be822351ae40d39457b5961e332e9f14e3734e82"
+  },
+  "upstream_commit": "26a9dd4b2125bc271b47855e1fa0c49af3365db5"
+}

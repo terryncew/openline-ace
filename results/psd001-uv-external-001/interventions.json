@@ -1,0 +1,276 @@
+{
+  "pool": {
+    "absent": 57,
+    "shared": 555,
+    "single": 17
+  },
+  "schema": "openline.ace.psd001.interventions.v1",
+  "seed": 6798895571463180325,
+  "selector_has_seen_propagation_outputs": false,
+  "trials": [
+    {
+      "arm": "complete_graph",
+      "component_id": "pretty_assertions@1.4.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-01"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "codspeed-criterion-compat@5.0.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-02"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "anes@0.1.6|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-03"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "ciborium@0.2.2|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-04"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "open@5.4.0|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-05"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "oorandom@11.1.5|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-06"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "supports-unicode@3.0.0|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-07"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "yansi@1.0.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "absent",
+      "trial_id": "absent-08"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "borrow-or-share@0.2.4|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-resolver"
+      },
+      "paired_complete_trial_id": "single-06",
+      "stratum": "single",
+      "trial_id": "missing-01"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "cargo-util@0.2.30|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-resolver"
+      },
+      "paired_complete_trial_id": "shared-05",
+      "stratum": "shared",
+      "trial_id": "missing-02"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "redox_syscall@0.5.15|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "dev",
+        "known_incomplete": true,
+        "target": "uv-python"
+      },
+      "paired_complete_trial_id": "shared-08",
+      "stratum": "shared",
+      "trial_id": "missing-03"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "astral-pubgrub@0.6.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-resolver"
+      },
+      "paired_complete_trial_id": "single-02",
+      "stratum": "single",
+      "trial_id": "missing-04"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "asn1-rs@0.7.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-python"
+      },
+      "paired_complete_trial_id": "shared-07",
+      "stratum": "shared",
+      "trial_id": "missing-05"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "purl@0.1.6|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-resolver"
+      },
+      "paired_complete_trial_id": "single-03",
+      "stratum": "single",
+      "trial_id": "missing-06"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "xml-rs@0.8.28|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-resolver"
+      },
+      "paired_complete_trial_id": "single-01",
+      "stratum": "single",
+      "trial_id": "missing-07"
+    },
+    {
+      "arm": "known_missing_edge",
+      "component_id": "test-case-core@3.3.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": {
+        "kind": "runtime",
+        "known_incomplete": true,
+        "target": "uv-resolver"
+      },
+      "paired_complete_trial_id": "single-07",
+      "stratum": "single",
+      "trial_id": "missing-08"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "serde_spanned@1.1.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-01"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "schemars@1.2.2|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-02"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "windows@0.61.3|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-03"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "async-trait@0.1.91|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-04"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "cargo-util@0.2.30|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-05"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "ptr_meta@0.3.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-06"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "asn1-rs@0.7.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-07"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "redox_syscall@0.5.15|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "shared",
+      "trial_id": "shared-08"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "xml-rs@0.8.28|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-01"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "astral-pubgrub@0.6.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-02"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "purl@0.1.6|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-03"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "cyclonedx-bom-macros@0.1.0|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-04"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "test-case@3.3.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-05"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "borrow-or-share@0.2.4|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-06"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "test-case-core@3.3.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-07"
+    },
+    {
+      "arm": "complete_graph",
+      "component_id": "fluent-uri@0.4.1|registry+https://github.com/rust-lang/crates.io-index",
+      "graph_damage": null,
+      "stratum": "single",
+      "trial_id": "single-08"
+    }
+  ]
+}

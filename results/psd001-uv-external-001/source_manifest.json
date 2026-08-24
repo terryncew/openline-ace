@@ -1,0 +1,37 @@
+{
+  "decision_types_per_target": [
+    "runtime_security_acceptance",
+    "build_security_acceptance",
+    "test_security_acceptance",
+    "build_acceptance",
+    "promotion_permission"
+  ],
+  "expected_t0_decision_count": 30,
+  "experiment_id": "PSD-001",
+  "external_component_definition": "Cargo package from cargo metadata with non-null source. Workspace path packages are excluded from component-revocation trials.",
+  "external_substrate": {
+    "clone_url": "https://github.com/astral-sh/uv.git",
+    "commit": "26a9dd4b2125bc271b47855e1fa0c49af3365db5",
+    "default_branch_observed": "main",
+    "repository": "astral-sh/uv",
+    "selection_reason": "Real protected external Rust workspace with many independently declared component crates, shared/transitive third-party dependencies, a locked dependency graph, and reproducible cargo metadata/build checks."
+  },
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.source-manifest.v1",
+  "source_acquisition": {
+    "build_check": "cargo check --locked for all six frozen target packages in one invocation",
+    "dependency_projection": "cargo metadata --format-version 1 --locked",
+    "git_fetch": "git init + fetch exact commit with depth 1 + detached checkout",
+    "source_tree_binding": "SHA-256 over target Cargo.toml plus recursive target crate files, root Cargo.toml, and Cargo.lock"
+  },
+  "target_count": 6,
+  "target_crates": [
+    "uv-auth",
+    "uv-git",
+    "uv-publish",
+    "uv-python",
+    "uv-resolver",
+    "uv-virtualenv"
+  ]
+}

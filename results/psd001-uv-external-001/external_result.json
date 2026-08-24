@@ -1,0 +1,1112 @@
+{
+  "bootstrap_false_reopen_difference": {
+    "ci_lower": 0.1337386018237082,
+    "ci_upper": 0.4064748201438849,
+    "observed_difference": 0.2540983606557377,
+    "resamples": 10000,
+    "seed": 0
+  },
+  "claims": {
+    "algorithmic_graph_superiority_over_equivalent_index": false,
+    "early_warning": false,
+    "fast_selection": false,
+    "minimal_intervention": false,
+    "selective_localization": true
+  },
+  "criteria": {
+    "artifact_recall_fair": true,
+    "bootstrap_ci_positive": true,
+    "equivalent_index_matches": true,
+    "false_reopen_reduction": true,
+    "missing_edge_safe": true,
+    "not_artifact_precision_parity": true,
+    "openline_precision": true,
+    "openline_recall": true
+  },
+  "data_sufficiency": {
+    "checks": {
+      "absent_pool": true,
+      "build_passed": true,
+      "complete_trials": true,
+      "exact_decisions": true,
+      "exact_targets": true,
+      "missing_trials": true,
+      "shared_pool": true,
+      "single_pool": true
+    },
+    "complete_trials": 24,
+    "missing_edge_trials": 8,
+    "pool": {
+      "absent": 57,
+      "shared": 555,
+      "single": 17
+    },
+    "sufficient": true
+  },
+  "equivalence_mismatches": 0,
+  "experiment_id": "PSD-001",
+  "external_substrate": {
+    "clone_url": "https://github.com/astral-sh/uv.git",
+    "commit": "26a9dd4b2125bc271b47855e1fa0c49af3365db5",
+    "default_branch_observed": "main",
+    "repository": "astral-sh/uv",
+    "selection_reason": "Real protected external Rust workspace with many independently declared component crates, shared/transitive third-party dependencies, a locked dependency graph, and reproducible cargo metadata/build checks."
+  },
+  "external_traces_sha256": "3d1a7ccf94c419c8222e40ac96ccccbb543e149be8dc5f624bb1c5ea823d8c10",
+  "freeze_sha256": "d219779ed85d3719556fe900e362ec95faffd1d4489be9132d99d8ea2db1d89d",
+  "interventions_sha256": "368f76ab93f70764d53fcbdef5dd3db2a2ab73f907dd34def4bb6b8506ef05bd",
+  "metrics": {
+    "artifact_component_join": {
+      "decision_precision": 0.41509433962264153,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.2540983606557377,
+      "fn": 0,
+      "fp": 155,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 17,
+          "tn": 0,
+          "tp": 13,
+          "trial_id": "shared-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 16,
+          "tn": 0,
+          "tp": 14,
+          "trial_id": "shared-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 15,
+          "tn": 5,
+          "tp": 10,
+          "trial_id": "shared-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 12,
+          "tn": 10,
+          "tp": 8,
+          "trial_id": "shared-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 17,
+          "tn": 0,
+          "tp": 13,
+          "trial_id": "shared-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single-08",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 0.7459016393442623,
+      "tn": 455,
+      "tp": 110,
+      "undetermined": 0
+    },
+    "decision_closure_index": {
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.0,
+      "fn": 0,
+      "fp": 0,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 17,
+          "tp": 13,
+          "trial_id": "shared-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 16,
+          "tp": 14,
+          "trial_id": "shared-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 20,
+          "tp": 10,
+          "trial_id": "shared-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 22,
+          "tp": 8,
+          "trial_id": "shared-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 17,
+          "tp": 13,
+          "trial_id": "shared-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-08",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 1.0,
+      "tn": 610,
+      "tp": 110,
+      "undetermined": 0
+    },
+    "headline_only": {
+      "decision_precision": 1.0,
+      "decision_recall": 0.0,
+      "false_reopen_rate": 0.0,
+      "fn": 110,
+      "fp": 0,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 13,
+          "fp": 0,
+          "tn": 17,
+          "tp": 0,
+          "trial_id": "shared-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 14,
+          "fp": 0,
+          "tn": 16,
+          "tp": 0,
+          "trial_id": "shared-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 12,
+          "fp": 0,
+          "tn": 18,
+          "tp": 0,
+          "trial_id": "shared-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 12,
+          "fp": 0,
+          "tn": 18,
+          "tp": 0,
+          "trial_id": "shared-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 10,
+          "fp": 0,
+          "tn": 20,
+          "tp": 0,
+          "trial_id": "shared-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 12,
+          "fp": 0,
+          "tn": 18,
+          "tp": 0,
+          "trial_id": "shared-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 8,
+          "fp": 0,
+          "tn": 22,
+          "tp": 0,
+          "trial_id": "shared-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 13,
+          "fp": 0,
+          "tn": 17,
+          "tp": 0,
+          "trial_id": "shared-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single-08",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 1.0,
+      "tn": 610,
+      "tp": 0,
+      "undetermined": 0
+    },
+    "openline_evidence_graph": {
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.0,
+      "fn": 0,
+      "fp": 0,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 17,
+          "tp": 13,
+          "trial_id": "shared-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 16,
+          "tp": 14,
+          "trial_id": "shared-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 20,
+          "tp": 10,
+          "trial_id": "shared-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 22,
+          "tp": 8,
+          "trial_id": "shared-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 17,
+          "tp": 13,
+          "trial_id": "shared-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single-08",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 1.0,
+      "tn": 610,
+      "tp": 110,
+      "undetermined": 0
+    },
+    "repo_scope_join": {
+      "decision_precision": 0.22916666666666666,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.6065573770491803,
+      "fn": 0,
+      "fp": 370,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 17,
+          "tn": 0,
+          "tp": 13,
+          "trial_id": "shared-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 16,
+          "tn": 0,
+          "tp": 14,
+          "trial_id": "shared-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 20,
+          "tn": 0,
+          "tp": 10,
+          "trial_id": "shared-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 22,
+          "tn": 0,
+          "tp": 8,
+          "trial_id": "shared-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 17,
+          "tn": 0,
+          "tp": 13,
+          "trial_id": "shared-08",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-01",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-02",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-03",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-04",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-05",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-06",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-07",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single-08",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 0.39344262295081966,
+      "tn": 240,
+      "tp": 110,
+      "undetermined": 0
+    }
+  },
+  "missing_edge_safety": {
+    "affected_decision_count": 41,
+    "silent_false_retain_count": 0,
+    "silent_false_retain_rate": 0.0,
+    "undetermined_count": 15,
+    "unresolved_rate": 0.0625
+  },
+  "policy_authority": "NONE",
+  "preregistration_sha256": "39536d6c1b60d12859454ef4709735e35e182cae4e6a7dff376afb226efc6f72",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.result.v1",
+  "selective_blast_radius_reduction": 1.0,
+  "source_binding_sha256": "038b89f1961e13af479c80057fd3e63c9232b79bf3539a199064a9a0f616de62",
+  "source_manifest_sha256": "111f37a8a778efb9d6b3dd0e8ae1c6cfcb4a25ca2a6da2bd9c4f50b604a1534e",
+  "t0_decision_count": 30,
+  "t0_model_sha256": "937bc61ea6e3c678d78af8fb8344c790fc648551ab4a34145cd2f25c8cebea6d",
+  "t0_receipts_sha256": "0778a2c0bc2b56920c479d2ceaf3171690564458c710abe229546c5201da1b5f",
+  "target_crates": [
+    "uv-auth",
+    "uv-git",
+    "uv-publish",
+    "uv-python",
+    "uv-resolver",
+    "uv-virtualenv"
+  ],
+  "trial_count": 32,
+  "verdict": "SELECTIVE_LOCALIZATION_ADVANTAGE"
+}

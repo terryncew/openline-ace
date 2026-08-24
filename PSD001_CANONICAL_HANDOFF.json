@@ -1,0 +1,14 @@
+{
+  "artifact_sha256": "9e6dc6f4e1a7a4d89ac7a3e525ea07e17c97beed81563e73e3cbd5af81678c78",
+  "base_commit": "a74d04699d0ec397a72f083675d9dc2fcae44520",
+  "branch": "chore/psd001-canonical-result",
+  "commit": "chore(ace): preserve PSD-001 canonical external result",
+  "merge": "chore/psd001-canonical-result -> main",
+  "policy_authority": "NONE",
+  "pr_title": "Preserve PSD-001 canonical external result",
+  "receipt_id": "PSD001-UV-EXTERNAL-001",
+  "receipt_sha256": "0ac12393c6de8587e3879c67e51c02a7bd19646fe3be567b58aeb3338988078b",
+  "repository": "terryncew/openline-ace",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.canonical-handoff.v1"
+}

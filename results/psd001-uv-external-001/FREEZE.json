@@ -1,0 +1,32 @@
+{
+  "base_commit": "c90f2a6c3618951c5a730515e754b4d3ee203d12",
+  "core_sha256": "2d77ebf26393b827faed094076be581af71502ea2969bd287c3cb1a307805105",
+  "decision_types": [
+    "runtime_security_acceptance",
+    "build_security_acceptance",
+    "test_security_acceptance",
+    "build_acceptance",
+    "promotion_permission"
+  ],
+  "experiment_id": "PSD-001",
+  "external_runner_sha256": "632b8c3b3708a8073a3ee0ed5392919cb3dcc9d67d1279e8d3213f645a5989ae",
+  "freeze_stage": "before_external_checkout_or_intervention_selection",
+  "oracle_sha256": "7ef1d66d81a48638d5c2f1bce7437f1c8624bf82caa8b079b55761960c1b7cd6",
+  "policy_authority": "NONE",
+  "policy_change_after_run_allowed": false,
+  "preregistration_sha256": "39536d6c1b60d12859454ef4709735e35e182cae4e6a7dff376afb226efc6f72",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.freeze.v1",
+  "source_manifest_sha256": "111f37a8a778efb9d6b3dd0e8ae1c6cfcb4a25ca2a6da2bd9c4f50b604a1534e",
+  "target_crates": [
+    "uv-auth",
+    "uv-git",
+    "uv-publish",
+    "uv-python",
+    "uv-resolver",
+    "uv-virtualenv"
+  ],
+  "target_substitution_allowed": false,
+  "upstream_commit": "26a9dd4b2125bc271b47855e1fa0c49af3365db5",
+  "upstream_commit_change_allowed": false
+}
