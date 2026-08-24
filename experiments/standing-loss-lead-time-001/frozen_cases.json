@@ -1,0 +1,23 @@
+[
+  {"case_id":"C1","category":"consequential_invalidation","receipt_issued":0,"change":1,"reopen":1,"reverify_latency":1,"dependency_declared":true,"reverify_outcome":"LOST","headline":5,"headline_outcome":"FAIL"},
+  {"case_id":"C2","category":"consequential_invalidation","receipt_issued":0,"change":1,"reopen":1,"reverify_latency":2,"dependency_declared":true,"reverify_outcome":"LOST","headline":6,"headline_outcome":"FAIL"},
+  {"case_id":"C3","category":"consequential_invalidation","receipt_issued":0,"change":2,"reopen":2,"reverify_latency":2,"dependency_declared":true,"reverify_outcome":"LOST","headline":5,"headline_outcome":"FAIL"},
+  {"case_id":"C4","category":"consequential_invalidation","receipt_issued":0,"change":1,"reopen":1,"reverify_latency":4,"dependency_declared":true,"reverify_outcome":"LOST","headline":4,"headline_outcome":"FAIL"},
+
+  {"case_id":"B1","category":"benign_upstream_mutation","receipt_issued":0,"change":1,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":8,"headline_outcome":"PASS"},
+  {"case_id":"B2","category":"benign_upstream_mutation","receipt_issued":0,"change":2,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":8,"headline_outcome":"PASS"},
+  {"case_id":"B3","category":"benign_upstream_mutation","receipt_issued":0,"change":3,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":8,"headline_outcome":"PASS"},
+
+  {"case_id":"R1","category":"mutation_with_seamless_reverification","receipt_issued":0,"change":1,"reopen":1,"reverify_latency":1,"dependency_declared":true,"reverify_outcome":"VALID","headline":8,"headline_outcome":"PASS"},
+  {"case_id":"R2","category":"mutation_with_seamless_reverification","receipt_issued":0,"change":2,"reopen":2,"reverify_latency":1,"dependency_declared":true,"reverify_outcome":"VALID","headline":8,"headline_outcome":"PASS"},
+  {"case_id":"R3","category":"mutation_with_seamless_reverification","receipt_issued":0,"change":2,"reopen":2,"reverify_latency":2,"dependency_declared":true,"reverify_outcome":"VALID","headline":8,"headline_outcome":"PASS"},
+
+  {"case_id":"H1","category":"undeclared_hidden_dependency","receipt_issued":0,"change":1,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":5,"headline_outcome":"FAIL"},
+  {"case_id":"H2","category":"undeclared_hidden_dependency","receipt_issued":0,"change":2,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":6,"headline_outcome":"FAIL"},
+
+  {"case_id":"V1","category":"benign_revocation","receipt_issued":0,"change":2,"reopen":2,"reverify_latency":1,"dependency_declared":true,"reverify_outcome":"LOST","headline":8,"headline_outcome":"PASS"},
+  {"case_id":"V2","category":"benign_revocation","receipt_issued":0,"change":3,"reopen":3,"reverify_latency":1,"dependency_declared":true,"reverify_outcome":"LOST","headline":8,"headline_outcome":"PASS"},
+
+  {"case_id":"F1","category":"raw_failure_without_upstream_signal","receipt_issued":0,"change":null,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":4,"headline_outcome":"FAIL"},
+  {"case_id":"F2","category":"raw_failure_without_upstream_signal","receipt_issued":0,"change":null,"reopen":null,"reverify_latency":0,"dependency_declared":false,"reverify_outcome":"NOT_RUN","headline":5,"headline_outcome":"FAIL"}
+]

@@ -1,0 +1,9 @@
+{
+  "anti_rescue_rule": "No case edits, threshold edits, baseline edits, category reclassification, or standing-loss timestamp redefinition after result generation. Any materially different test is a new experiment.",
+  "experiment_id": "SLD-001",
+  "frozen_cases_sha256": "c09297cc4c83f16c448a01151d227adfb02eaaa155c4560fd13b98742769b601",
+  "policy_authority": "NONE",
+  "preregistration_sha256": "4e9aafd30827028859347a08184a6c7d3773e24d8f1d6e47ad9493174c745d91",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld001.freeze.v1"
+}
