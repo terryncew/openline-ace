@@ -1,0 +1,13 @@
+{
+  "anti_rescue": true,
+  "base_commit": "e48f71cc0a7c6e16ad78925e9835703fecc61fdc",
+  "core_sha256": "1320acbfea73f8c4bc6022de38f5ef4ec952418174e84c3f7cc3b3d67025651e",
+  "experiment_id": "SLD-002",
+  "external_runner_sha256": "bd0d3b169882a9ae865883429764c6de5f6777255f0748b8156844cabcf9d874",
+  "freeze_stage": "before_external_fetch",
+  "policy_authority": "NONE",
+  "preregistration_sha256": "c1a68a5066f08ab9a5f644cfff7342626dbff0bba101557ac5872ad0393f9a54",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld002.freeze.v1",
+  "source_manifest_sha256": "b82bd6346ff2050d72d5804ecd7e50c3bb1d79b55b716ff10f1c138226e72cb9"
+}
