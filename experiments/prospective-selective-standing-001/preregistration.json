@@ -1,0 +1,119 @@
+{
+  "allowed_verdicts": [
+    "SELECTIVE_LOCALIZATION_ADVANTAGE",
+    "CAPABILITY_PARITY",
+    "SAFETY_FAILURE",
+    "DATA_INSUFFICIENT",
+    "SOURCE_ACCESS_FAILED",
+    "SOURCE_BUILD_FAILED",
+    "SOURCE_BINDING_FAILED"
+  ],
+  "anti_rescue_rule": "After first external scoring run: no target-crate substitution, upstream commit change, decision semantic change, dependency-kind rule change, intervention-count change, baseline weakening, threshold change, or missing-edge scoring change.",
+  "bootstrap": {
+    "ci": 0.95,
+    "resamples": 10000,
+    "seed": 0,
+    "unit": "intervention_trial"
+  },
+  "claim_boundary": {
+    "causal_discovery": false,
+    "cryptographic_signature_security": false,
+    "early_warning": false,
+    "external_generalization_beyond_frozen_uv_snapshot": false,
+    "fast_selection": false,
+    "minimal_intervention": false,
+    "operational_speed_advantage": false,
+    "vulnerability_discovery": false
+  },
+  "data_sufficiency": {
+    "all_target_build_checks_pass": true,
+    "exact_t0_decisions": 30,
+    "exact_target_count": 6,
+    "minimum_absent_components": 8,
+    "minimum_complete_trials": 24,
+    "minimum_missing_edge_trials": 8,
+    "minimum_shared_components": 8,
+    "minimum_single_target_components": 8
+  },
+  "experiment_id": "PSD-001",
+  "ground_truth_oracle": "Separately implemented from propagation. Recompute each decision's standing from frozen cargo dependency-kind closures, frozen build result, and the injected component signal. It does not import graph traversal code.",
+  "hypothesis_h1": "Decision-specific evidence bindings will preserve affected-decision recall while reducing false reopening of orthogonal decisions relative to artifact-level component joins on blind post-freeze component invalidations.",
+  "intervention_selector": {
+    "absent_component_controls": 8,
+    "absent_definition": "external component appears in full upstream cargo metadata but in none of the six target closures",
+    "blind_to_propagation_predictions": true,
+    "known_missing_edge_trials": 8,
+    "missing_edge_rule": "Pair with a selected affected component, remove one actual component-to-security evidence edge after t0 freeze, and mark that exact target/kind graph segment INCOMPLETE. Missingness is known; it is never silently treated as independence.",
+    "normal_shared_component_trials": 8,
+    "normal_single_target_component_trials": 8,
+    "seed_material": "SHA256(experiment_id | upstream_commit | FREEZE.json sha256)",
+    "shared_definition": "external component appears in union dependency closure of at least 2 frozen target crates",
+    "single_definition": "external component appears in union dependency closure of exactly 1 frozen target crate",
+    "total_trials": 32
+  },
+  "metrics": {
+    "bootstrap_quantity": "artifact_component_join false_reopen_rate minus OLP false_reopen_rate, trial-cluster bootstrap",
+    "decision_precision": "TP/(TP+FP)",
+    "decision_recall": "TP/(TP+FN), REOPEN counts positive; UNDETERMINED is not a true positive",
+    "false_reopen_rate": "FP/(FP+TN) on RETAIN/REOPEN complete trials",
+    "retention_specificity": "TN/(TN+FP)",
+    "selective_blast_radius_reduction": "1 - OLP false_reopen_rate / artifact_component_join false_reopen_rate",
+    "silent_false_retain_rate_missing_edge": "Affected decisions output RETAIN / affected decisions in known-missing-edge trials. UNDETERMINED is safe-unresolved, not RETAIN.",
+    "unresolved_rate_missing_edge": "UNDETERMINED outputs / all decision outputs in known-missing-edge trials"
+  },
+  "missing_edge_population": "Known missing-edge trials scored separately for silent false-retain safety.",
+  "null_h0": "Artifact-level component joins achieve materially equivalent decision precision/false-reopen performance at equivalent recall.",
+  "policy_authority": "NONE",
+  "positive_criteria": {
+    "artifact_join_min_recall_for_fair_comparison": 0.95,
+    "artifact_precision_parity_ratio": 0.9,
+    "bootstrap_false_reopen_difference_ci_lower_gt_zero": true,
+    "complete_graph_equivalence_index_mismatches": 0,
+    "minimum_false_reopen_reduction_vs_artifact_join": 0.5,
+    "missing_edge_silent_false_retain_rate": 0.0,
+    "openline_min_precision": 0.9,
+    "openline_min_recall": 0.95
+  },
+  "primary_population": "Complete-graph shared, single-target, and absent-control trials only.",
+  "primary_question": "After t0 decisions and evidence bindings are frozen on a real external software workspace, can decision-specific evidence propagation localize a later blind component invalidation with materially less unnecessary revocation than artifact-level component joins while avoiding silent false retain under known graph damage?",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.preregistration.v1",
+  "stop_rule": "If CAPABILITY_PARITY or SAFETY_FAILURE, do not progress this line to EWS/MIN/FAST on the basis of PSD-001. If positive, only selective localization/containment is earned.",
+  "strategies": {
+    "artifact_component_join": "Given the same invalidated component and exact target artifact component membership, REOPEN all five active decisions for every target whose union closure contains the component.",
+    "decision_closure_index": "Diagnostic equivalence baseline: precomputed decision-specific component sets derived from the same t0 metadata, no graph traversal. Expected to match complete-graph OpenLine outcomes; parity here limits algorithmic novelty claims.",
+    "headline_only": "RETAIN everything at t1; no containment before later consequence.",
+    "openline_evidence_graph": "REOPEN when invalidated component reaches a decision through frozen evidence edges; UNDETERMINED when a known-incomplete affected target/kind segment could hide a path; otherwise RETAIN.",
+    "repo_scope_join": "If invalidated component is present in any selected target, REOPEN all 30 decisions."
+  },
+  "t0": {
+    "all_decisions_must_begin_accepted": true,
+    "decision_count": 30,
+    "decision_semantics": {
+      "build_acceptance": "The frozen target set passes cargo check at the pinned upstream commit.",
+      "build_security_acceptance": "No externally invalidated component exists in the target's frozen build-root dependency closure.",
+      "promotion_permission": "Runtime-security, build-security, and build-acceptance decisions retain standing. Test-security is informative but not promotion-critical.",
+      "runtime_security_acceptance": "No externally invalidated component exists in the target's frozen normal-root dependency closure.",
+      "test_security_acceptance": "No externally invalidated component exists in the target's frozen dev-root dependency closure."
+    },
+    "decision_types": [
+      "runtime_security_acceptance",
+      "build_security_acceptance",
+      "test_security_acceptance",
+      "build_acceptance",
+      "promotion_permission"
+    ],
+    "graph_built_before_intervention_selection": true,
+    "receipt_binding": "deterministic SHA-256 canonical JSON receipts; signature layer explicitly out of scope",
+    "targets": [
+      "uv-auth",
+      "uv-git",
+      "uv-publish",
+      "uv-python",
+      "uv-resolver",
+      "uv-virtualenv"
+    ]
+  },
+  "title": "Prospective Selective Standing Propagation",
+  "verdict_rule": "SAFETY_FAILURE if known missing-edge trials silently RETAIN any affected decision. DATA_INSUFFICIENT if source/data gates fail. SELECTIVE_LOCALIZATION_ADVANTAGE only if all positive criteria pass and artifact_component_join precision is < 0.90 of OpenLine precision. Otherwise CAPABILITY_PARITY. Exact decision_closure_index parity is expected and explicitly limits the result to the value of decision-specific binding versus artifact-level joining."
+}

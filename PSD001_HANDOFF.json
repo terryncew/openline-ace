@@ -1,0 +1,14 @@
+{
+  "base_commit": "c90f2a6c3618951c5a730515e754b4d3ee203d12",
+  "branch": "feat/prospective-selective-standing-001",
+  "commit": "feat(ace): add prospective selective standing audit",
+  "experiment_id": "PSD-001",
+  "external_substrate": "astral-sh/uv@26a9dd4b2125bc271b47855e1fa0c49af3365db5",
+  "merge": "feat/prospective-selective-standing-001 -> main",
+  "policy_authority": "NONE",
+  "pr_title": "Add PSD-001 prospective selective standing audit",
+  "repository": "terryncew/openline-ace",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.handoff.v1",
+  "status_before_ci": "EXTERNAL_UNRUN"
+}

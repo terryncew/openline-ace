@@ -1,0 +1,196 @@
+{
+  "complete_metrics": {
+    "artifact_component_join": {
+      "decision_precision": 0.4,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.27631578947368424,
+      "fn": 0,
+      "fp": 21,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 3,
+          "tn": 25,
+          "tp": 2,
+          "trial_id": "single",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 0.7236842105263158,
+      "tn": 55,
+      "tp": 14,
+      "undetermined": 0
+    },
+    "decision_closure_index": {
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.0,
+      "fn": 0,
+      "fp": 0,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 1.0,
+      "tn": 76,
+      "tp": 14,
+      "undetermined": 0
+    },
+    "headline_only": {
+      "decision_precision": 1.0,
+      "decision_recall": 0.0,
+      "false_reopen_rate": 0.0,
+      "fn": 14,
+      "fp": 0,
+      "per_trial": [
+        {
+          "fn": 12,
+          "fp": 0,
+          "tn": 18,
+          "tp": 0,
+          "trial_id": "shared",
+          "undetermined": 0
+        },
+        {
+          "fn": 2,
+          "fp": 0,
+          "tn": 28,
+          "tp": 0,
+          "trial_id": "single",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 1.0,
+      "tn": 76,
+      "tp": 0,
+      "undetermined": 0
+    },
+    "openline_evidence_graph": {
+      "decision_precision": 1.0,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.0,
+      "fn": 0,
+      "fp": 0,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 18,
+          "tp": 12,
+          "trial_id": "shared",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 28,
+          "tp": 2,
+          "trial_id": "single",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 1.0,
+      "tn": 76,
+      "tp": 14,
+      "undetermined": 0
+    },
+    "repo_scope_join": {
+      "decision_precision": 0.23333333333333334,
+      "decision_recall": 1.0,
+      "false_reopen_rate": 0.6052631578947368,
+      "fn": 0,
+      "fp": 46,
+      "per_trial": [
+        {
+          "fn": 0,
+          "fp": 18,
+          "tn": 0,
+          "tp": 12,
+          "trial_id": "shared",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 28,
+          "tn": 0,
+          "tp": 2,
+          "trial_id": "single",
+          "undetermined": 0
+        },
+        {
+          "fn": 0,
+          "fp": 0,
+          "tn": 30,
+          "tp": 0,
+          "trial_id": "absent",
+          "undetermined": 0
+        }
+      ],
+      "retention_specificity": 0.39473684210526316,
+      "tn": 30,
+      "tp": 14,
+      "undetermined": 0
+    }
+  },
+  "equivalence_mismatches": 0,
+  "missing_prediction": "UNDETERMINED",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.psd001.fixture-pressure.v1",
+  "scientific_evidence": false,
+  "t0_decisions": 30
+}
