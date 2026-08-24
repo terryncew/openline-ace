@@ -1,0 +1,71 @@
+{
+  "anti_rescue": "Any changed router weights, tie-break, budget, scenario, oracle, or baseline belongs to DOR-002 or later.",
+  "experiment_id": "DOR-001",
+  "files": [
+    {
+      "bytes": 3355,
+      "path": "README.md",
+      "sha256": "9e31e6ed97ef30ce7094950d8291a0f2e3dc6dddccf7a985d872d2aa4f4a5186"
+    },
+    {
+      "bytes": 2615,
+      "path": "preregistration.json",
+      "sha256": "e7b6f673b83e6ad318a54ae34d1d6bee06161c62dba95a1da86c2eaecf71e9cc"
+    },
+    {
+      "bytes": 254,
+      "path": "dor001/__init__.py",
+      "sha256": "9ff70cb3fa77eb1eb664c8576b666466f09b71967b6f5637cfb572a99c79b586"
+    },
+    {
+      "bytes": 99,
+      "path": "dor001/__main__.py",
+      "sha256": "8f1aa3a0e0e13e7cc5d38376bf1fa4d858ac5e2c1101db1e091c497543add3ff"
+    },
+    {
+      "bytes": 9332,
+      "path": "dor001/core.py",
+      "sha256": "c6332b69df7422e877ef0a82a0b821533c34f27278838df3c4f25d230c37dcfa"
+    },
+    {
+      "bytes": 5568,
+      "path": "dor001/fixture.py",
+      "sha256": "c3d03c462f9bfe6677a556873f99cb80b03da4e46ece6f78dcaff5782db14fff"
+    },
+    {
+      "bytes": 8636,
+      "path": "dor001/evaluator.py",
+      "sha256": "12a1a454085636f5def20c89e702b8d114908c959c6f6096da34b28c5ebad3da"
+    },
+    {
+      "bytes": 904,
+      "path": "scripts/run.py",
+      "sha256": "cb3302d9e5bda711b64869163690184980919d9b409e0c78b9fb7387487509f3"
+    },
+    {
+      "bytes": 1153,
+      "path": "scripts/verify_result.py",
+      "sha256": "333984e9be4887a037ebe97465ba21868786b0f98b760eb116a9aded3383ed3b"
+    },
+    {
+      "bytes": 4900,
+      "path": "tests/test_dor001.py",
+      "sha256": "7d5a20b1643642980a888ba9602c178a1a325ba2342801c02a17076b3906abb5"
+    },
+    {
+      "bytes": 212939,
+      "path": "results/replay_report.json",
+      "sha256": "bca8879ceadac4ac4af7d13d8b4a495e02503d514277ed406c4faeb649abbb46"
+    },
+    {
+      "bytes": 128288,
+      "path": "results/measurement_receipts.jsonl",
+      "sha256": "56a102c6e9bc64107cd49b09561b677de2203b50fcc024156887fecab6bb05f1"
+    }
+  ],
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.dor001.freeze.v1",
+  "status": "FROZEN_COMPLETE",
+  "verdict": "NO_ROUTING_ADVANTAGE"
+}

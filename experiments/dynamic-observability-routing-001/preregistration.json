@@ -1,0 +1,45 @@
+{
+  "schema": "openline.ace.dor001.preregistration.v1",
+  "experiment_id": "DOR-001",
+  "question": "Can verified prior evidence route a fixed measurement budget toward channels that make an already-unfolding state externally resolvable sooner than fixed headline monitoring and equal-budget wide monitoring?",
+  "claim_boundary": "Synthetic observability-routing mechanism audit only. This is not a prediction, safety, causal-generalization, or runtime-authority claim.",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "measurement_budget_per_tick": 2,
+  "mandatory_sentinel": "sentinel",
+  "candidate_router": {
+    "inputs": [
+      "receiver-owned ChannelManifest",
+      "verified receipts issued at_or_before t",
+      "observations acquired at_or_before t"
+    ],
+    "forbidden_inputs": [
+      "future receipts",
+      "future observations",
+      "scenario true_state",
+      "scenario mechanism_id",
+      "oracle diagnostic channels",
+      "oracle reveal times"
+    ],
+    "frozen_rule": "Force mandatory sentinel. Score remaining channels by receipt-tag match, fallback priority, first-look bonus, repeated-clean penalty, prior-positive bonus, and latency penalty; fill the fixed budget using deterministic tie-breaks."
+  },
+  "baselines": [
+    "fixed_headline: mandatory sentinel plus headline every tick",
+    "equal_budget_wide: mandatory sentinel plus deterministic round-robin non-sentinel coverage"
+  ],
+  "primary_metrics": [
+    "delta_tau = t_fixed_headline - t_DOR",
+    "delta_tau_wide = t_equal_budget_wide - t_DOR",
+    "false-resolution events",
+    "telemetry cost"
+  ],
+  "resolution_rule": "t_resolved is determined only by the frozen ExternalOracle from evidence actually measured by time t. Measurement policies cannot emit RESOLVED or runtime permission.",
+  "promotion_rule": "SYNTHETIC_ROUTING_ADVANTAGE requires positive median held-out delta_tau against both baselines, identical per-tick telemetry budget, mandatory sentinel coverage, and no more false-resolution events than either baseline.",
+  "allowed_verdicts": [
+    "SYNTHETIC_ROUTING_ADVANTAGE",
+    "NO_ROUTING_ADVANTAGE",
+    "ROUTING_ADVANTAGE_REJECTED"
+  ],
+  "heldout_design": "Held-out mechanisms include useful receipt routing, wrong prior, no precursor, unmonitored precursor, and nuisance-positive cases. Router does not receive partition or mechanism identity.",
+  "anti_rescue_rule": "After the frozen replay report is produced, no score-weight, tie-break, budget, scenario, oracle, or baseline change may be used to rescue DOR-001. Any materially different router is DOR-002 or later."
+}
