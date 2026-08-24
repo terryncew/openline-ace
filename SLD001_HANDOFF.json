@@ -1,0 +1,21 @@
+{
+  "base_commit": "3e3e2679a5100729f806b479e0860c7274006b65",
+  "branch": "feat/standing-loss-lead-time-001",
+  "claim_boundary": "deterministic conformance harness only; external-world advantage remains untested",
+  "commit": "feat(ace): add standing-loss lead-time audit",
+  "experiment_path": "experiments/standing-loss-lead-time-001",
+  "hidden_dependency_misses": 2,
+  "median_lead_ticks_naive_diff": 3.5,
+  "median_lead_ticks_olp": 2.0,
+  "median_lead_ticks_ttl": 1.0,
+  "merge": "feat/standing-loss-lead-time-001 -> main",
+  "naive_false_invalidation_rate": 1.0,
+  "olp_false_invalidation_rate": 0.0,
+  "policy_authority": "NONE",
+  "pr_title": "Add SLD-001 standing-loss lead-time audit",
+  "raw_failures_without_prior_signal": 2,
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.sld001.handoff.v1",
+  "ttl_false_invalidation_rate": 1.0,
+  "verdict": "STANDING_LOSS_LEAD_TIME_ADVANTAGE"
+}

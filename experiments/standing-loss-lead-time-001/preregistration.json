@@ -1,0 +1,29 @@
+{
+  "allowed_verdicts": [
+    "STANDING_LOSS_LEAD_TIME_ADVANTAGE",
+    "NO_STANDING_LOSS_ADVANTAGE",
+    "DATA_INSUFFICIENT"
+  ],
+  "claim": "Dependency-bound evidence invalidation can establish loss of justified reliance before downstream failure becomes observable, with materially less false invalidation than indiscriminate change monitoring.",
+  "consequential_categories": ["consequential_invalidation"],
+  "data_boundary": "frozen_deterministic_conformance_harness_only",
+  "experiment_id": "SLD-001",
+  "false_invalidation_negative_controls": [
+    "benign_upstream_mutation",
+    "mutation_with_seamless_reverification"
+  ],
+  "hidden_dependency_category": "undeclared_hidden_dependency",
+  "minimum_cases_total": 12,
+  "minimum_consequential_cases": 4,
+  "minimum_negative_controls": 4,
+  "minimum_early_fraction": 0.75,
+  "minimum_median_lead_ticks": 1.0,
+  "naive_false_invalidation_ratio_max": 0.2,
+  "policy_authority": "NONE",
+  "raw_failure_category": "raw_failure_without_upstream_signal",
+  "standing_loss_definition": "t_resolved when dependency-bound reverification completes with LOST; reopening time is not standing-loss time",
+  "ttl_ticks": 4,
+  "ttl_dominance_rule": "NO_STANDING_LOSS_ADVANTAGE if TTL median lead is at least OLP median lead and TTL false-invalidation rate is no higher than OLP",
+  "verdict_rule": "ADVANTAGE requires data sufficiency, positive preregistered median lead on declared consequential cases, early resolution in at least the preregistered fraction, OLP false-invalidation rate <= preregistered ratio times Naive Diff, and no TTL Pareto dominance. Otherwise NO_ADVANTAGE.",
+  "runtime_permission": "NONE"
+}
