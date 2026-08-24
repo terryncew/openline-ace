@@ -1,0 +1,60 @@
+{
+  "assay_order": [
+    "AC-SINS_pH6.0",
+    "AC-SINS_pH7.4",
+    "HAC",
+    "HIC",
+    "PR_CHO",
+    "PR_Ova",
+    "SMAC",
+    "Tm1",
+    "Tm2"
+  ],
+  "assays": {
+    "AC-SINS_pH6.0": {
+      "operator": "<=",
+      "threshold": 3.3
+    },
+    "AC-SINS_pH7.4": {
+      "operator": "<=",
+      "threshold": 17.51
+    },
+    "HAC": {
+      "operator": "<=",
+      "threshold": 4.46
+    },
+    "HIC": {
+      "operator": "<=",
+      "threshold": 3.18
+    },
+    "PR_CHO": {
+      "operator": "<=",
+      "threshold": 0.38
+    },
+    "PR_Ova": {
+      "operator": "<=",
+      "threshold": 0.3
+    },
+    "SMAC": {
+      "operator": "<=",
+      "threshold": 3.15
+    },
+    "Tm1": {
+      "operator": ">=",
+      "threshold": 68.09
+    },
+    "Tm2": {
+      "operator": ">=",
+      "threshold": 77.71
+    }
+  },
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.thresholds.v1",
+  "source": {
+    "doi": "10.1080/19420862.2025.2559405",
+    "note": "Prospectively frozen external-panel thresholds; not fit on Jain or GDPa1 selector outcomes.",
+    "table": "Table 2 physicochemical warning criteria for approved antibody therapeutics",
+    "title": "PROPHET-Ab: high-throughput quantification of antibody developability and its application to machine learning"
+  }
+}

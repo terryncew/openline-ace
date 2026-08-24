@@ -1,0 +1,14 @@
+{
+  "anti_rescue": true,
+  "base_commit": "78555a36c0f99d6b3b30ab75988d9060808db711",
+  "experiment_id": "TRIAL-SELECTOR-GINKGO-EXT-001",
+  "external_runner_sha256": "45c8c5c2ec668186f1acdc9c1b8eb104d378779854367be5bb21ce0431e5271b",
+  "freeze_stage": "before_external_scoring",
+  "policy_authority": "NONE",
+  "preregistration_sha256": "5716d44b25d627c6c9a126d7471d7c2c4c94e37e4c44fe7657c71e4b350b7a25",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.freeze.v1",
+  "selector_sha256": "151692d3479079031c652a1818984b51d04f47af89e57e6dec7bcd36bb026031",
+  "source_manifest_sha256": "518bd38c97d25924df4237b89225745039cdc61be6b0404ab0bafe9af67e509c",
+  "thresholds_sha256": "cc850ad33ba75b099ae211799925ec11ecfdfa2353b19ec207908be02bd671a0"
+}

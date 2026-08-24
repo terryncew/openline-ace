@@ -1,0 +1,22 @@
+{
+  "candidate_id_column": "antibody_name",
+  "dataset": "Ginkgo Bioworks GDPa1 v1.2",
+  "duplicate_identity_policy": "SOURCE_BINDING_FAILED if normalized candidate identity is duplicated after Jain exclusion and complete-case projection.",
+  "git_blob_sha1": "923c38b1a7b7d2421bd4c6fa7461febc797c446c",
+  "identity_exclusion": {
+    "jain_canonical_path": "benchmarks/candidate_promotion/results/jain_canonical_01/JAIN_2017_CANONICAL_COHORT.json",
+    "limitation": "Alias or renamed identity overlap not captured by exact normalized names remains a stated limitation.",
+    "normalization": "strip_then_casefold",
+    "rule": "Exclude GDPa1 rows whose normalized antibody_name exactly matches a canonical Jain candidate_id."
+  },
+  "missingness_policy": "Primary cohort is complete-case across all nine frozen mapped assays; no imputation and no post-run assay removal.",
+  "path": "data/GDPa1_v1.2_20250814.csv",
+  "policy_authority": "NONE",
+  "raw_url": "https://raw.githubusercontent.com/ginkgobioworks/abdev-benchmark/cc6d3b69afc92695445695345399d9c91b0d14a4/data/GDPa1_v1.2_20250814.csv",
+  "repository": "ginkgobioworks/abdev-benchmark",
+  "repository_commit": "cc6d3b69afc92695445695345399d9c91b0d14a4",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.source-manifest.v1",
+  "size_bytes": 862134,
+  "unit_assay_cost": 1.0
+}

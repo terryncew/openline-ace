@@ -1,0 +1,11 @@
+{
+  "base_commit": "78555a36c0f99d6b3b30ab75988d9060808db711",
+  "branch": "feat/ginkgo-trial-selector-external-001",
+  "commit": "feat(gate): add Ginkgo external trial-selector confirmation",
+  "merge": "feat/ginkgo-trial-selector-external-001 -> main",
+  "policy_authority": "NONE",
+  "pr_title": "Add Ginkgo external trial-selector confirmation",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.handoff.v1",
+  "status_before_external_run": "EXTERNAL_RUN_READY_UNRUN"
+}

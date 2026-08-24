@@ -1,0 +1,65 @@
+{
+  "allowed_verdicts": [
+    "EXTERNAL_ALLOCATION_ADVANTAGE_SUPPORTED",
+    "EXTERNAL_GENERALIZATION_NOT_SUPPORTED",
+    "DATA_INSUFFICIENT",
+    "SOURCE_ACCESS_FAILED",
+    "SOURCE_BINDING_FAILED"
+  ],
+  "anti_rescue_rule": "After the first external scoring run, no dataset substitution, assay-set edit, threshold change, identity rule change, missingness rule change, model parameter change, comparator change, budget change, data-sufficiency threshold change, or success criterion change is permitted in this experiment.",
+  "assay_costs": "unit_cost_equal_across_assays",
+  "bootstrap": {
+    "ci": 0.95,
+    "paired": true,
+    "quantity": "mean paired cost difference target minus strongest comparator over liability-positive candidates",
+    "resamples": 10000,
+    "seed": 0
+  },
+  "budgets": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "claim": "With critical evidence still unknown, the frozen continuous-value conditional-risk selector can reduce assay spend to first declared developability liability on an independent antibody panel without increasing false reassurance at the frozen three-assay budget relative to the strongest admissible comparator.",
+  "comparators": [
+    "fixed_prevalence",
+    "greedy_fixed_coverage",
+    "uniform_random_expected",
+    "binary_dynamic",
+    "entropy_information_gain"
+  ],
+  "experiment_id": "TRIAL-SELECTOR-GINKGO-EXT-001",
+  "information_gain_baseline": "For each unmeasured assay, use the same frozen logistic risk estimator as the target, then choose the assay with maximum Bernoulli entropy H(p); this is an uncertainty/information-gain comparator, not a promotion rule.",
+  "minimum_complete_candidates": 60,
+  "minimum_liability_negative_candidates": 15,
+  "minimum_liability_positive_candidates": 15,
+  "model_form": {
+    "C": 1.0,
+    "class_weight": null,
+    "classifier": "LogisticRegression",
+    "constant_label_rule": "Use the constant training label as probability when an assay target has one class.",
+    "features": "only already observed assay values for that held-out candidate",
+    "fit_intercept": true,
+    "max_iter": 1000,
+    "no_observation_rule": "Use leave-one-out training prevalence for remaining assays.",
+    "penalty": "l2",
+    "random_state": 0,
+    "scaler": "StandardScaler",
+    "sklearn_version": "1.8.0",
+    "solver": "liblinear",
+    "tie_break": "frozen assay_order"
+  },
+  "policy_authority": "NONE",
+  "positive_verdict_rule": "Data sufficient AND target mean assay cost strictly lower than strongest comparator AND paired-bootstrap 95% CI upper bound for target-minus-comparator mean cost is < 0 AND target false reassurance at budget 3 is <= strongest comparator.",
+  "prediction_boundary": "The selector estimates assay-liability risk only to allocate the next measurement. It does not predict therapeutic efficacy, clinical success, or authorize promotion.",
+  "primary_budget": 3,
+  "primary_metric": "mean_assays_to_first_liability_positive_only",
+  "relationship_to_prior_work": "External confirmation of the frozen Jain sequential assay selector; not Candidate Promotion Gate and not a new selection framework.",
+  "runtime_permission": "NONE",
+  "safety_metric": "false_reassurance_fraction_at_budget_3",
+  "schema": "openline.trial-selector.ginkgo.preregistration.v1",
+  "strongest_comparator_rule": "Among admissible comparators choose the lowest mean assays to first liability on liability-positive candidates; tie by lower false reassurance at budget 3; final tie by strategy name.",
+  "target_strategy": "continuous_value_conditional_risk"
+}

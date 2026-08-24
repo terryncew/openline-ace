@@ -1,0 +1,79 @@
+{
+  "base_commit": "78555a36c0f99d6b3b30ab75988d9060808db711",
+  "file_count": 14,
+  "files": [
+    {
+      "path": ".github/workflows/trial-selector-ginkgo-external-001.yml",
+      "sha256": "c8cc4cb7a8a5601ff87f73748c1413e3c0a0d92218b2f28e1de88e8ebf808401",
+      "size": 2416
+    },
+    {
+      "path": "TRIAL_SELECTOR_GINKGO_001_HANDOFF.json",
+      "sha256": "c554f36e6a5b7fea8b984dafb60c21bfee28d300c62c1aa2f65f536c1c471973",
+      "size": 500
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/CLAIM_BOUNDARY.md",
+      "sha256": "a930d2f05eb9b27b305409fe647d6c75727e133ff232feebcaca7db2890582ce",
+      "size": 1057
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/FREEZE.json",
+      "sha256": "e815386e9562e81d484ee0554edc40f2548dd47074df680e29709e585d6618fd",
+      "size": 770
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/GINKGO_THRESHOLDS.json",
+      "sha256": "cc850ad33ba75b099ae211799925ec11ecfdfa2353b19ec207908be02bd671a0",
+      "size": 1319
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/PREREGISTRATION.json",
+      "sha256": "5716d44b25d627c6c9a126d7471d7c2c4c94e37e4c44fe7657c71e4b350b7a25",
+      "size": 3560
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/README.md",
+      "sha256": "91d5bd3270c0280b4cc2787099be13445b0da027d6613006821f81ae3db416a9",
+      "size": 3100
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/SOURCE_MANIFEST.json",
+      "sha256": "518bd38c97d25924df4237b89225745039cdc61be6b0404ab0bafe9af67e509c",
+      "size": 1362
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/external_selector.py",
+      "sha256": "151692d3479079031c652a1818984b51d04f47af89e57e6dec7bcd36bb026031",
+      "size": 13395
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/run_external.py",
+      "sha256": "45c8c5c2ec668186f1acdc9c1b8eb104d378779854367be5bb21ce0431e5271b",
+      "size": 7018
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/verify_freeze.py",
+      "sha256": "9ab5dd4526af1dae000c28ec4102c8e2a76824251adcf1d9c556b70689f671c3",
+      "size": 1189
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/verify_release.py",
+      "sha256": "6075f1628c6559b045e64c60c9d241149d8a9a15c6b0b997286aa143d1cba7f8",
+      "size": 1439
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/verify_result.py",
+      "sha256": "19ed5ceb6abbac639a1fc12b1883b490cf99c6c945f795ac96b19e05e4fd4849",
+      "size": 2662
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/tests/test_external_selector.py",
+      "sha256": "3094954acc47a59e0e7e598178765252fe77ec58d08a44c50f26389d39034ac6",
+      "size": 5233
+    }
+  ],
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.release-manifest.v1"
+}
