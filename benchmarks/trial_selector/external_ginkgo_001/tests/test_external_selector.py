@@ -87,4 +87,18 @@ class CoreTests(unittest.TestCase):
         p={"target_strategy":names[0],"comparators":[names[1]],"primary_budget":3,"bootstrap":{"resamples":100,"seed":0}}
         self.assertEqual(adjudicate(run,p)["verdict"],"EXTERNAL_GENERALIZATION_NOT_SUPPORTED")
 
+    def test_embedded_jain_identity_projection_is_bound_and_complete(self):
+        from pathlib import Path
+        import hashlib, json
+        root = Path(__file__).resolve().parents[1]
+        source = json.loads((root / "SOURCE_MANIFEST.json").read_text())
+        rel = source["identity_exclusion"]["embedded_path"]
+        p = root / rel
+        self.assertTrue(p.is_file())
+        self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(), source["identity_exclusion"]["embedded_sha256"])
+        cohort = json.loads(p.read_text())
+        self.assertEqual(cohort["candidate_count"], 137)
+        self.assertEqual(len(cohort["candidate_ids"]), 137)
+        self.assertEqual(cohort["candidate_ids_sha256"], source["identity_exclusion"]["canonical_candidate_ids_sha256"])
+
 if __name__ == "__main__": unittest.main()

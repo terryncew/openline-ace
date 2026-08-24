@@ -10,6 +10,8 @@ checks = {
     "thresholds": f["thresholds_sha256"] == sha256((ROOT/"GINKGO_THRESHOLDS.json").read_bytes()).hexdigest(),
     "selector": f["selector_sha256"] == sha256((ROOT/"external_selector.py").read_bytes()).hexdigest(),
     "runner": f["external_runner_sha256"] == sha256((ROOT/"scripts/run_external.py").read_bytes()).hexdigest(),
+    "jain_identity_projection": f["jain_identity_projection_sha256"] == sha256((ROOT/"JAIN_2017_CANONICAL_COHORT.bound.json").read_bytes()).hexdigest(),
+    "packaging_repair_receipt": f["packaging_repair_receipt_sha256"] == sha256((ROOT/"PACKAGING_REPAIR_RECEIPT.json").read_bytes()).hexdigest(),
     "pre_external": f.get("freeze_stage") == "before_external_scoring",
     "anti_rescue": f.get("anti_rescue") is True,
     "authority_none": f.get("policy_authority") == "NONE",

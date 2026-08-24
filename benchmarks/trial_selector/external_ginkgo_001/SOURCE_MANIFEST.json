@@ -4,9 +4,16 @@
   "duplicate_identity_policy": "SOURCE_BINDING_FAILED if normalized candidate identity is duplicated after Jain exclusion and complete-case projection.",
   "git_blob_sha1": "923c38b1a7b7d2421bd4c6fa7461febc797c446c",
   "identity_exclusion": {
-    "jain_canonical_path": "benchmarks/candidate_promotion/results/jain_canonical_01/JAIN_2017_CANONICAL_COHORT.json",
+    "canonical_candidate_count": 137,
+    "canonical_candidate_ids_sha256": "a67946700a7b4a98cb46c3bd1ba205a708c04544e55591540b5d8bfe084a633f",
+    "embedded_path": "JAIN_2017_CANONICAL_COHORT.bound.json",
+    "embedded_sha256": "c19322c32320aa94d1f0a74948c9ece3678b2759f3be2f9e7275caa61121e475",
     "limitation": "Alias or renamed identity overlap not captured by exact normalized names remains a stated limitation.",
     "normalization": "strip_then_casefold",
+    "provenance_commit": "78555a36c0f99d6b3b30ab75988d9060808db711",
+    "provenance_git_blob_sha1": "73c2e2287704a07ccce64a711f2fb754dc6970a2",
+    "provenance_path": "benchmarks/candidate_promotion/results/jain_canonical_01/JAIN_2017_CANONICAL_COHORT.json",
+    "provenance_repository": "terryncew/openline-receipt-gate",
     "rule": "Exclude GDPa1 rows whose normalized antibody_name exactly matches a canonical Jain candidate_id."
   },
   "missingness_policy": "Primary cohort is complete-case across all nine frozen mapped assays; no imputation and no post-run assay removal.",

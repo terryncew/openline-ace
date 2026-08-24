@@ -10,7 +10,6 @@ import sys
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-REPO = ROOT.parents[2]
 sys.path.insert(0, str(ROOT))
 from external_selector import Threshold, run_leave_one_out, adjudicate
 
@@ -71,8 +70,27 @@ if missing_columns:
     write_terminal("SOURCE_BINDING_FAILED", {"reason": "missing_columns", "columns": missing_columns, **binding})
     raise SystemExit(0)
 
-jain_path = REPO / S["identity_exclusion"]["jain_canonical_path"]
-jain = json.loads(jain_path.read_text())
+jain_path = ROOT / S["identity_exclusion"]["embedded_path"]
+if not jain_path.is_file():
+    write_terminal("SOURCE_BINDING_FAILED", {"reason": "missing_embedded_jain_identity_projection", "path": str(jain_path), **binding})
+    raise SystemExit(0)
+jain_bytes = jain_path.read_bytes()
+jain_sha256 = __import__("hashlib").sha256(jain_bytes).hexdigest()
+if jain_sha256 != S["identity_exclusion"]["embedded_sha256"]:
+    write_terminal("SOURCE_BINDING_FAILED", {
+        "reason": "embedded_jain_identity_projection_hash_mismatch",
+        "actual_sha256": jain_sha256,
+        "expected_sha256": S["identity_exclusion"]["embedded_sha256"],
+        **binding,
+    })
+    raise SystemExit(0)
+jain = json.loads(jain_bytes.decode("utf-8"))
+if int(jain.get("candidate_count", -1)) != int(S["identity_exclusion"]["canonical_candidate_count"]):
+    write_terminal("SOURCE_BINDING_FAILED", {"reason": "embedded_jain_candidate_count_mismatch", **binding})
+    raise SystemExit(0)
+if jain.get("candidate_ids_sha256") != S["identity_exclusion"]["canonical_candidate_ids_sha256"]:
+    write_terminal("SOURCE_BINDING_FAILED", {"reason": "embedded_jain_candidate_ids_hash_marker_mismatch", **binding})
+    raise SystemExit(0)
 jain_ids = {str(x).strip().casefold() for x in jain["candidate_ids"]}
 
 def number(value):

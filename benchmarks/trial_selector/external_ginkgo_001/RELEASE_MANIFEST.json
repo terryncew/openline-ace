@@ -1,6 +1,6 @@
 {
-  "base_commit": "78555a36c0f99d6b3b30ab75988d9060808db711",
-  "file_count": 14,
+  "base_commit": "850ceeb22976e70036ccafbbd626f400f6b985e1",
+  "file_count": 16,
   "files": [
     {
       "path": ".github/workflows/trial-selector-ginkgo-external-001.yml",
@@ -9,8 +9,8 @@
     },
     {
       "path": "TRIAL_SELECTOR_GINKGO_001_HANDOFF.json",
-      "sha256": "c554f36e6a5b7fea8b984dafb60c21bfee28d300c62c1aa2f65f536c1c471973",
-      "size": 500
+      "sha256": "dce19e1fd7ead930fac3726a1471d1f8bfe55212f5975eb06c2ef90d7f95fdba",
+      "size": 620
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/CLAIM_BOUNDARY.md",
@@ -19,13 +19,23 @@
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/FREEZE.json",
-      "sha256": "e815386e9562e81d484ee0554edc40f2548dd47074df680e29709e585d6618fd",
-      "size": 770
+      "sha256": "dfb8f472414d95913e12a69415b3d7e2248dad7f0ccd54371d778ef063dead06",
+      "size": 1055
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/GINKGO_THRESHOLDS.json",
       "sha256": "cc850ad33ba75b099ae211799925ec11ecfdfa2353b19ec207908be02bd671a0",
       "size": 1319
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/JAIN_2017_CANONICAL_COHORT.bound.json",
+      "sha256": "c19322c32320aa94d1f0a74948c9ece3678b2759f3be2f9e7275caa61121e475",
+      "size": 3482
+    },
+    {
+      "path": "benchmarks/trial_selector/external_ginkgo_001/PACKAGING_REPAIR_RECEIPT.json",
+      "sha256": "41845c2df32921aa6ae4f0ff775d6ad5d40e1b71d269ed74e915a4f556dc1f92",
+      "size": 1572
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/PREREGISTRATION.json",
@@ -34,13 +44,13 @@
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/README.md",
-      "sha256": "91d5bd3270c0280b4cc2787099be13445b0da027d6613006821f81ae3db416a9",
-      "size": 3100
+      "sha256": "6651ddc01e8784dded46818cbd324b8a496bb4eb4e8c2f73e281fee244f43e3c",
+      "size": 3321
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/SOURCE_MANIFEST.json",
-      "sha256": "518bd38c97d25924df4237b89225745039cdc61be6b0404ab0bafe9af67e509c",
-      "size": 1362
+      "sha256": "a47ecc00bfd3fe7831d96d564cd481d9619ae97bfe7b79aa89f796da08c36933",
+      "size": 1864
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/external_selector.py",
@@ -49,13 +59,13 @@
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/run_external.py",
-      "sha256": "45c8c5c2ec668186f1acdc9c1b8eb104d378779854367be5bb21ce0431e5271b",
-      "size": 7018
+      "sha256": "bc89609276f88c61a3ab5fbb166d585503b7baaa3a077016fa76502febe995a2",
+      "size": 8097
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/verify_freeze.py",
-      "sha256": "9ab5dd4526af1dae000c28ec4102c8e2a76824251adcf1d9c556b70689f671c3",
-      "size": 1189
+      "sha256": "3f5c27903e8b7f309e8ebc85e50b1b64d8805d291c189adf8e59cdf3ac722454",
+      "size": 1487
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/scripts/verify_release.py",
@@ -69,8 +79,8 @@
     },
     {
       "path": "benchmarks/trial_selector/external_ginkgo_001/tests/test_external_selector.py",
-      "sha256": "3094954acc47a59e0e7e598178765252fe77ec58d08a44c50f26389d39034ac6",
-      "size": 5233
+      "sha256": "d1cecb4e6f67da003e516103b9a7a022200e44f70a93067a3630bfd028ea4c60",
+      "size": 6015
     }
   ],
   "policy_authority": "NONE",

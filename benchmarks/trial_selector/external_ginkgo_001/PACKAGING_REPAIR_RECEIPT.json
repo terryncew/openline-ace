@@ -1,0 +1,30 @@
+{
+  "anti_rescue_interpretation": "Permitted packaging/provenance repair because no external selector outcome or verdict existed and no outcome-dependent parameter is changed.",
+  "experiment_id": "TRIAL-SELECTOR-GINKGO-EXT-001",
+  "failed_head_sha": "f3c6d85924649e274fedc36983f06502d9617380",
+  "failed_pr": 30,
+  "failed_repository": "terryncew/openline-ace",
+  "failure_stage": "after GDPa1 source download/CSV parse, before Jain-overlap projection, cohort construction, liability matrix construction, selector scoring, comparator selection, bootstrap, or verdict adjudication",
+  "policy_authority": "NONE",
+  "repair": "Embed the already-frozen 137-name Jain canonical identity projection in the experiment and hash-bind it. Replace cross-repository filesystem lookup with experiment-local lookup.",
+  "runtime_permission": "NONE",
+  "schema": "openline.trial-selector.ginkgo.packaging-repair.v1",
+  "scientific_parameters_changed": false,
+  "trigger": "GitHub Actions verify(3.12) failed with FileNotFoundError for a cross-repository Jain cohort path.",
+  "unchanged": [
+    "GDPa1 source commit/blob/path/size",
+    "nine assay mappings",
+    "nine warning thresholds",
+    "complete-case missingness policy",
+    "exact-name Jain overlap exclusion semantics",
+    "unit assay costs",
+    "target selector model and hyperparameters",
+    "all five comparators",
+    "reported budgets and primary budget",
+    "data sufficiency gates",
+    "bootstrap resamples/seed/CI",
+    "positive verdict rule",
+    "policy_authority NONE",
+    "runtime_permission NONE"
+  ]
+}

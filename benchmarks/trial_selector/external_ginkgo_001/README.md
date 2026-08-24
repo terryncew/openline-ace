@@ -16,7 +16,7 @@ The target strategy uses only measurements already revealed for the held-out ant
 
 ## Independent panel
 
-GDPa1 v1.2 is pinned to an exact Ginkgo repository commit, Git blob, path, and byte size. The primary cohort:
+GDPa1 v1.2 is pinned to an exact Ginkgo repository commit, Git blob, path, and byte size. The frozen 137-name Jain identity projection used only for overlap exclusion is embedded locally and hash-bound to its `openline-receipt-gate` provenance, so this experiment has no cross-repository filesystem dependency. The primary cohort:
 
 1. excludes exact normalized antibody-name overlap with the canonical 137-antibody Jain cohort;
 2. requires complete values across the nine prospectively frozen Ginkgo assays;
