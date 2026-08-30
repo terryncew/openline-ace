@@ -1,0 +1,37 @@
+{
+  "schema": "openline.ace.intervention-sufficiency.preregistration.v1",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-001",
+  "question": "Does a candidate intervention corpus contain enough matched state-action-lag contrast to test state-specific recovery prediction?",
+  "row_schema": "openline.ace.intervention-outcome.v1",
+  "outcome_target": "RECOVERED versus FAILED under one frozen recovery-target hash",
+  "thresholds": {
+    "required_lags_ms": [0, 40, 80, 120, 160],
+    "min_contexts": 12,
+    "min_actions": 3,
+    "min_replicates_per_cell": 4,
+    "min_complete_context_rate": 1.0,
+    "feasible_recovery_rate": 0.75,
+    "infeasible_recovery_rate": 0.25,
+    "min_determinate_cell_rate": 0.9,
+    "min_state_dependent_action_lag_strata": 4,
+    "min_remedy_divergent_risk_pairs": 6,
+    "min_contexts_in_divergent_pairs": 12,
+    "min_lag_contractions": 6,
+    "max_global_action_delay_cell_accuracy": 0.85
+  },
+  "required_integrity": {
+    "one_snapshot_hash_per_context": true,
+    "one_risk_bucket_per_context": true,
+    "one_target_hash_per_dataset": true,
+    "unique_trial_ids": true,
+    "complete_context_action_lag_grid": true
+  },
+  "success_verdict": "SUFFICIENT_FOR_STATE_CONDITIONED_TRANSITION_TEST",
+  "failure_verdict": "INSUFFICIENT_INTERVENTION_CONTRAST",
+  "invalid_verdict": "INVALID_INTERVENTION_CORPUS",
+  "anti_rescue": "Changing the lags, thresholds, recovery target, risk buckets, actions, or outcome labels after an audit requires a new experiment ID.",
+  "next_if_success": "Run a context-held-out tournament: action-plus-delay versus state-plus-action-plus-delay. Do not train a capacity selector yet.",
+  "next_if_failure": "Repair the intervention substrate or stop. Do not compensate with a more elaborate model.",
+  "policy_authority": "NONE",
+  "execution_authority": "NONE"
+}
