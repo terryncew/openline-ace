@@ -1,0 +1,61 @@
+{
+  "actions": [
+    "CONTINUE",
+    "LATERAL_LEFT",
+    "LATERAL_RIGHT",
+    "RETREAT",
+    "SLOW",
+    "STOP"
+  ],
+  "anti_rescue": "Any change to grid, source pins, action set, lag grid, target, constraints, outcome rule, risk projection, or thresholds after the first confirmatory outcome exists requires a new experiment ID.",
+  "base_commit": "7372a512312b83570218eaac5cfdccf68c8bee9c",
+  "execution_authority": "NONE",
+  "experiment_id": "IS-003",
+  "failure_verdict": "CONFIRMATORY_INTERVENTION_CONTRAST_FAILED",
+  "grid_sha256": "d163cecdb806f71ec27eb11a621a203179ef0df46ae743fb90879fe701cf3aae",
+  "invalid_verdict": "INVALID_CONFIRMATORY_CORPUS",
+  "lags_ms": [
+    0,
+    40,
+    80,
+    120,
+    160
+  ],
+  "name": "Unitree Disjoint-Context Confirmatory Grid",
+  "next_if_failure": "Stop this transition claim or redesign under a new experiment ID. Do not merge pilot outcomes into the confirmatory corpus.",
+  "next_if_success": "Run the already-frozen 60/20/20 context split as a direct action-conditioned transition-model benchmark. Pilot outcomes remain excluded.",
+  "pilot_use": "DESIGN_ONLY_NO_OUTCOMES_IN_EVIDENCE_OR_THRESHOLDS",
+  "policy_authority": "NONE",
+  "question": "On a prospectively frozen Unitree context grid disjoint from the 50-context design pilot, does the deterministic action-by-lag corpus contain enough state-specific remedy divergence and lag contraction to support a fresh transition-model benchmark?",
+  "risk_projection": "force magnitude plus absolute pitch torque; direction, phase, sign, action, lag, split, and outcomes excluded",
+  "schema": "openline.ace.intervention-sufficiency.preregistration.v3",
+  "scientific_standing": "PROSPECTIVE_CONFIRMATORY",
+  "selector_training_authorized": false,
+  "source_pins": {
+    "mujoco_version": "3.12.0",
+    "openline_receipt_gate_commit": "20db896fafabe197039e567f364ec5f7a6c3d699",
+    "unitree_rl_gym_commit": "276801e46c5d433564f24658bac64f254b7d2d4b"
+  },
+  "success_verdict": "CONFIRMED_STATE_SPECIFIC_INTERVENTION_CONTRAST",
+  "threshold_derivation": {
+    "count_rule": "IS-002 preregistered count thresholds tied to context multiplicity are doubled because IS-003 doubles contexts from 50 to 100.",
+    "pilot_observed_metrics_used": false,
+    "unchanged_rate_thresholds": [
+      "min_complete_context_rate",
+      "max_global_action_delay_cell_accuracy"
+    ],
+    "unchanged_structure_thresholds": [
+      "min_state_dependent_action_lag_strata"
+    ]
+  },
+  "thresholds": {
+    "max_global_action_delay_cell_accuracy": 0.85,
+    "min_bidirectional_remedy_divergent_risk_pairs": 12,
+    "min_complete_context_rate": 1.0,
+    "min_contexts_in_divergent_pairs": 24,
+    "min_lag_contractions": 12,
+    "min_state_dependent_action_lag_strata": 4,
+    "required_cells": 3000,
+    "required_contexts": 100
+  }
+}

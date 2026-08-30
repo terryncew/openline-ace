@@ -1,0 +1,68 @@
+name: INTERVENTION-SUFFICIENCY-003
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  freeze:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/intervention-sufficiency-003
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "${{ matrix.python-version }}"}
+      - run: python scripts/release_check.py
+  confirmatory-unitree:
+    if: github.event_name == 'workflow_dispatch'
+    needs: freeze
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Acquire pinned oracle source
+        run: |
+          git clone https://github.com/terryncew/openline-receipt-gate.git external/openline-receipt-gate
+          git -C external/openline-receipt-gate checkout 20db896fafabe197039e567f364ec5f7a6c3d699
+          test "$(git -C external/openline-receipt-gate rev-parse HEAD)" = "20db896fafabe197039e567f364ec5f7a6c3d699"
+      - name: Acquire pinned Unitree controller
+        run: |
+          git clone https://github.com/unitreerobotics/unitree_rl_gym.git external/unitree_rl_gym
+          git -C external/unitree_rl_gym checkout 276801e46c5d433564f24658bac64f254b7d2d4b
+          test "$(git -C external/unitree_rl_gym rev-parse HEAD)" = "276801e46c5d433564f24658bac64f254b7d2d4b"
+      - name: Install frozen simulation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r external/openline-receipt-gate/INTERVENTION-TRANSITION-001/requirements.txt
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.7.1
+      - name: Run disjoint confirmatory grid
+        run: |
+          python experiments/intervention-sufficiency-003/scripts/run_external.py \
+            --unitree-root external/unitree_rl_gym \
+            --oracle-root external/openline-receipt-gate/INTERVENTION-TRANSITION-001 \
+            --output external-artifacts/is003
+          python experiments/intervention-sufficiency-003/scripts/verify_external.py --result-dir external-artifacts/is003
+      - name: Write scientific verdict
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('external-artifacts/is003/result.json').read_text())
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(f"# IS-003\n\n**Verdict:** `{r['verdict']}`\n\n**Standing:** `PROSPECTIVE_CONFIRMATORY`\n\n**Pilot outcomes used:** `{r['pilot_outcomes_used']}`\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: INTERVENTION-SUFFICIENCY-003-confirmatory-unitree
+          path: external-artifacts/is003/*
+          if-no-files-found: error
+          retention-days: 90
