@@ -1,0 +1,102 @@
+{
+  "base_commit": "9bb4987dafd9bce9eb94c0b0d568f739a84d1f3b",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+  "external_verdict": "INSUFFICIENT_STATE_SPECIFIC_INTERVENTION_CONTRAST",
+  "files": [
+    {
+      "path": "../../.github/workflows/intervention-sufficiency-002.yml",
+      "sha256": "4d612d2e2c5867ec1cb28418c17125986c6b82e089c7133298ef3cc7572600ce"
+    },
+    {
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "861b982911edcc5e0a0bcc5649c1feb070f873febf2ed246d18ab4cb9ced0522"
+    },
+    {
+      "path": "DATA_CONTRACT.md",
+      "sha256": "80f0186409a196b2249aeed5890697e483e5a9ae2aa1ff0e0782b053ef51910c"
+    },
+    {
+      "path": "PREREGISTRATION.json",
+      "sha256": "5040b0df314365b8719feb47129dd632a0d16877b8feee9aa1aa844621e22431"
+    },
+    {
+      "path": "README.md",
+      "sha256": "97d9a9f590c789dca44f6b3a95e33541cc800c1237e9a83daf8d3cbc3130f7f1"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "a1a6760da457df37d60e5e9ae44f37345df45736707768126eddcf8812fce6c7"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "10ea1a9cfd1a275147d335f3e955434bcf792fcd75b303075592f05597741915"
+    },
+    {
+      "path": "is002/__init__.py",
+      "sha256": "b3d50c229c4e82d3e544aa2e3c9df261b88e1f8c32ecd6a3d59777debf81c323"
+    },
+    {
+      "path": "is002/core.py",
+      "sha256": "509c45bb36250f3728e9114b80a42b968da0a4b8ac418fe92bb917578230939c"
+    },
+    {
+      "path": "is002/external.py",
+      "sha256": "f0c0c0a57425793ce2be6a81670c00360938965ab0379d74abf8041cc5e6efc8"
+    },
+    {
+      "path": "is002/fixtures.py",
+      "sha256": "05b4e03dbce754ffc0e6e4b4d3f409e6cc5fa52eba6b892e5f6967871cf59b93"
+    },
+    {
+      "path": "results/reference_result.json",
+      "sha256": "14b4f3f31cb4aab95a68161fd8c2abec6a379f019490fcaf98338bae915414c1"
+    },
+    {
+      "path": "results/unitree_external_result.json",
+      "sha256": "22c7380a26eefc4860289eae8064a864163cdd1b1807bfcff74a64908122343e"
+    },
+    {
+      "path": "results/unitree_external_result.sha256",
+      "sha256": "9766ce0e91c1cd6c8869c26f3994ef62ed53816eaa4cad2d58e4c8543866e219"
+    },
+    {
+      "path": "scripts/audit_jsonl.py",
+      "sha256": "f38fce420214925a7f178cad88b714b604b7e36649ed8ff5a4a8f44676de91cd"
+    },
+    {
+      "path": "scripts/release_check.py",
+      "sha256": "0002476b2e4a306855df6367b9ea705226451178dda933a34fec32aa6ee24cb7"
+    },
+    {
+      "path": "scripts/run_external.py",
+      "sha256": "f0981e558e677eb5a571f400f86024fdade5301417f6c8c4bdd4f125a0485dd8"
+    },
+    {
+      "path": "scripts/run_reference.py",
+      "sha256": "b97d6822e6b265aed3c3010497fff01fa1d3f52fdc6ecc81f4bc0862837ee376"
+    },
+    {
+      "path": "scripts/verify_external.py",
+      "sha256": "c32e451cce54397434b2b2e3d2e392c4c6889d70090fe97487a03532b3d76d95"
+    },
+    {
+      "path": "scripts/verify_freeze.py",
+      "sha256": "90ce58835d30b0ce955be8072ba8137fff861eabb984ce465b80c1e444e6920a"
+    },
+    {
+      "path": "scripts/verify_reference.py",
+      "sha256": "ff40cfdeed5371657db8686cecc82757ec9c7a2015f6cbad0c7043816cae5dc5"
+    },
+    {
+      "path": "tests/test_is002.py",
+      "sha256": "b331846874404a9b3458917ff6cf03f6e9afbdb7f3f1b13d1a9d460892168089"
+    }
+  ],
+  "freeze_stage": "after_retrospective_external_replay_before_public_workflow_reproduction",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.intervention-sufficiency.freeze.v2",
+  "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+  "selector_training_authorized": false,
+  "transition_confirmation_authorized": false
+}

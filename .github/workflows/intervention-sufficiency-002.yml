@@ -1,0 +1,129 @@
+name: INTERVENTION-SUFFICIENCY-002
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mechanics:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/intervention-sufficiency-002
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen mode-aware gate
+        run: python scripts/release_check.py
+
+  unitree-external-replay:
+    if: github.event_name == 'workflow_dispatch'
+    needs: mechanics
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Acquire pinned Receipt Gate oracle source
+        env:
+          RECEIPT_GATE_COMMIT: 20db896fafabe197039e567f364ec5f7a6c3d699
+        run: |
+          mkdir -p external/openline-receipt-gate
+          git -C external/openline-receipt-gate init
+          git -C external/openline-receipt-gate remote add origin \
+            https://github.com/terryncew/openline-receipt-gate.git
+          git -C external/openline-receipt-gate fetch \
+            --depth 1 origin "$RECEIPT_GATE_COMMIT"
+          git -C external/openline-receipt-gate checkout --detach FETCH_HEAD
+          test "$(git -C external/openline-receipt-gate rev-parse HEAD)" = \
+            "$RECEIPT_GATE_COMMIT"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install frozen simulation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install \
+            -r external/openline-receipt-gate/INTERVENTION-TRANSITION-001/requirements.txt
+          python -m pip install \
+            --index-url https://download.pytorch.org/whl/cpu \
+            torch==2.7.1
+
+      - name: Acquire pinned Unitree controller
+        env:
+          UNITREE_COMMIT: 276801e46c5d433564f24658bac64f254b7d2d4b
+        run: |
+          mkdir -p external/unitree_rl_gym
+          git -C external/unitree_rl_gym init
+          git -C external/unitree_rl_gym remote add origin \
+            https://github.com/unitreerobotics/unitree_rl_gym.git
+          git -C external/unitree_rl_gym fetch --depth 1 origin "$UNITREE_COMMIT"
+          git -C external/unitree_rl_gym checkout --detach FETCH_HEAD
+          test "$(git -C external/unitree_rl_gym rev-parse HEAD)" = "$UNITREE_COMMIT"
+
+      - name: Reproduce frozen Stage A oracle
+        working-directory: external/openline-receipt-gate/INTERVENTION-TRANSITION-001
+        env:
+          PYTHONPATH: src
+        run: |
+          python -m intervention_transition.cli oracle \
+            --unitree-root ../../unitree_rl_gym \
+            --out ../../../external-artifacts/stage-a
+
+      - name: Run retrospective Unitree replay
+        run: |
+          python experiments/intervention-sufficiency-002/scripts/run_external.py \
+            --stage-a external-artifacts/stage-a \
+            --output external-artifacts/is002
+          python experiments/intervention-sufficiency-002/scripts/verify_external.py \
+            --result-dir external-artifacts/is002 \
+            --expected experiments/intervention-sufficiency-002/results/unitree_external_result.json
+
+      - name: Write scientific verdict to run summary
+        env:
+          RESULT_PATH: external-artifacts/is002/unitree_external_result.json
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          result = json.loads(Path(os.environ["RESULT_PATH"]).read_text())
+          summary = Path(os.environ["GITHUB_STEP_SUMMARY"])
+          summary.write_text(
+              "# INTERVENTION-SUFFICIENCY-002\n\n"
+              f"**Verdict:** `{result['verdict']}`\n\n"
+              f"**Standing:** `{result['scientific_standing']}`\n\n"
+              f"**Dataset:** `{result['source']['dataset_sha256']}`\n\n"
+              "A green workflow means the replay completed and verified. "
+              "The verdict above determines the scientific disposition.\n"
+          )
+          PY
+
+      - name: Upload immutable external replay receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: INTERVENTION-SUFFICIENCY-002-unitree-external
+          path: |
+            external-artifacts/stage-a/intervention_sufficiency_input.csv
+            external-artifacts/stage-a/intervention_sufficiency_manifest.json
+            external-artifacts/stage-a/context_receipts.json
+            external-artifacts/stage-a/oracle_receipt.json
+            external-artifacts/is002/*.json
+            external-artifacts/is002/*.jsonl
+            external-artifacts/is002/*.sha256
+          if-no-files-found: error
+          retention-days: 90

@@ -1,0 +1,207 @@
+{
+  "canonical_rows_sha256": "18f91e2a9a6b6660d4cc1c249aa260f62b537985e9839990a21e68563841a93d",
+  "capacity_selector_training_authorized": false,
+  "claim_boundary": "Data sufficiency only. No model performance, complete feasible set, capacity benefit, hardware transfer, or execution authority is established.",
+  "dataset_id": "unitree-g1-stage-a-run-33288841294",
+  "dataset_sha256": "18f91e2a9a6b6660d4cc1c249aa260f62b537985e9839990a21e68563841a93d",
+  "evidence_mode": "deterministic_rollout",
+  "execution_authority": "NONE",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+  "gates": {
+    "actions": {
+      "observed": [
+        "CONTINUE",
+        "LATERAL_LEFT",
+        "LATERAL_RIGHT",
+        "RETREAT",
+        "SLOW",
+        "STOP"
+      ],
+      "passed": true,
+      "relation": "==",
+      "required": [
+        "CONTINUE",
+        "LATERAL_LEFT",
+        "LATERAL_RIGHT",
+        "RETREAT",
+        "SLOW",
+        "STOP"
+      ]
+    },
+    "bidirectional_remedy_divergent_risk_pairs": {
+      "observed": 3,
+      "passed": false,
+      "relation": ">=",
+      "required": 6
+    },
+    "complete_context_rate": {
+      "observed": 1.0,
+      "passed": true,
+      "relation": ">=",
+      "required": 1.0
+    },
+    "contexts": {
+      "observed": 50,
+      "passed": true,
+      "relation": "==",
+      "required": 50
+    },
+    "contexts_in_divergent_pairs": {
+      "observed": 3,
+      "passed": false,
+      "relation": ">=",
+      "required": 12
+    },
+    "determinate_cell_rate": {
+      "observed": 1.0,
+      "passed": true,
+      "relation": ">=",
+      "required": 0.9
+    },
+    "global_action_delay_cell_accuracy": {
+      "observed": 0.9253333333333333,
+      "passed": false,
+      "relation": "<=",
+      "required": 0.85
+    },
+    "lag_contractions": {
+      "observed": 4,
+      "passed": false,
+      "relation": ">=",
+      "required": 6
+    },
+    "lags": {
+      "observed": [
+        0,
+        40,
+        80,
+        120,
+        160
+      ],
+      "passed": true,
+      "relation": "==",
+      "required": [
+        0,
+        40,
+        80,
+        120,
+        160
+      ]
+    },
+    "state_dependent_action_lag_strata": {
+      "observed": 30,
+      "passed": true,
+      "relation": ">=",
+      "required": 4
+    }
+  },
+  "lag_contraction_examples": [
+    {
+      "action_id": "RETREAT",
+      "context_id": "g1-000",
+      "first_terminal_infeasible_lag_ms": 40,
+      "last_feasible_lag_ms": 0
+    },
+    {
+      "action_id": "SLOW",
+      "context_id": "g1-000",
+      "first_terminal_infeasible_lag_ms": 120,
+      "last_feasible_lag_ms": 80
+    },
+    {
+      "action_id": "STOP",
+      "context_id": "g1-000",
+      "first_terminal_infeasible_lag_ms": 80,
+      "last_feasible_lag_ms": 40
+    },
+    {
+      "action_id": "LATERAL_RIGHT",
+      "context_id": "g1-023",
+      "first_terminal_infeasible_lag_ms": 120,
+      "last_feasible_lag_ms": 80
+    }
+  ],
+  "metrics": {
+    "action_count": 6,
+    "bidirectional_remedy_divergent_risk_pairs": 3,
+    "complete_context_rate": 1.0,
+    "context_count": 50,
+    "contexts_in_divergent_pairs": 3,
+    "determinate_cell_rate": 1.0,
+    "expected_cell_count": 1500,
+    "global_action_delay_cell_accuracy": 0.9253333333333333,
+    "lag_contraction_count": 4,
+    "lags_ms": [
+      0,
+      40,
+      80,
+      120,
+      160
+    ],
+    "observed_cell_count": 1500,
+    "row_count": 1500,
+    "state_dependent_action_lag_strata": 30
+  },
+  "next_step": "Repair the intervention substrate or stop. Do not compensate with a more elaborate model.",
+  "policy_authority": "NONE",
+  "prior_stage_b_regraded": false,
+  "prior_stage_b_run_id": 33290661841,
+  "receipt_gate_required_for_execution": true,
+  "remedy_divergence_examples": [
+    {
+      "a_only": [
+        "SLOW",
+        "STOP"
+      ],
+      "b_only": [
+        "LATERAL_LEFT"
+      ],
+      "context_a": "g1-000",
+      "context_b": "g1-016",
+      "lag_ms": 40,
+      "risk_bucket": "force:420|abs_pitch_torque:45"
+    },
+    {
+      "a_only": [
+        "STOP"
+      ],
+      "b_only": [
+        "LATERAL_LEFT",
+        "RETREAT"
+      ],
+      "context_a": "g1-000",
+      "context_b": "g1-028",
+      "lag_ms": 40,
+      "risk_bucket": "force:420|abs_pitch_torque:45"
+    },
+    {
+      "a_only": [
+        "STOP"
+      ],
+      "b_only": [
+        "LATERAL_LEFT",
+        "RETREAT"
+      ],
+      "context_a": "g1-016",
+      "context_b": "g1-028",
+      "lag_ms": 120,
+      "risk_bucket": "force:420|abs_pitch_torque:45"
+    }
+  ],
+  "retrospective_reason": "The source data and prior Stage B result existed before the 002 risk projection and thresholds were frozen.",
+  "schema": "openline.ace.intervention-sufficiency.external-result.v2",
+  "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+  "source": {
+    "commit": "20db896fafabe197039e567f364ec5f7a6c3d699",
+    "context_receipts_sha256": "9fb1b1d661c48bdd19e4db9fd97d5e219b767d54b1168f494ee64f1d59fb204e",
+    "dataset_sha256": "50bdcc13dff766fc13f9694347bfaef3f12b6951a85340ae96cd1cc5abb4c94c",
+    "repository": "https://github.com/terryncew/openline-receipt-gate.git",
+    "stage_a_manifest_sha256": "3410f5e13ae835ccc88c40624f60fe961f8bb81b1fdcc1e3abc16fb3d197fb45",
+    "stage_a_run_id": 33288841294,
+    "unitree_commit": "276801e46c5d433564f24658bac64f254b7d2d4b",
+    "unitree_repository": "https://github.com/unitreerobotics/unitree_rl_gym.git"
+  },
+  "stage": "UNITREE_STAGE_A_RETROSPECTIVE_REPLAY",
+  "transition_confirmation_authorized": false,
+  "verdict": "INSUFFICIENT_STATE_SPECIFIC_INTERVENTION_CONTRAST"
+}

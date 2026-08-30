@@ -1,0 +1,57 @@
+{
+  "schema": "openline.ace.intervention-sufficiency.preregistration.v2",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+  "question": "Does the pinned Unitree Stage A corpus contain state-specific remedy divergence and lag contraction that a global action-plus-delay rule cannot explain?",
+  "row_schema": "openline.ace.intervention-outcome.v2",
+  "candidate": "INTERVENTION-TRANSITION-001 Stage A / Unitree G1 deterministic counterfactual oracle",
+  "evidence_modes": {
+    "deterministic_rollout": {
+      "value_field": "outcome_success",
+      "rows_per_cell": "exactly_one"
+    },
+    "stochastic_rollout": {
+      "value_field": "outcome_success",
+      "rows_per_cell": "at_least_four"
+    },
+    "validated_dynamics_model": {
+      "value_field": "success_probability",
+      "rows_per_cell": "exactly_one",
+      "validation_receipt_required": true
+    }
+  },
+  "thresholds": {
+    "required_contexts": 50,
+    "required_actions": [
+      "CONTINUE",
+      "LATERAL_LEFT",
+      "LATERAL_RIGHT",
+      "RETREAT",
+      "SLOW",
+      "STOP"
+    ],
+    "required_lags_ms": [0, 40, 80, 120, 160],
+    "stochastic_min_replicates_per_cell": 4,
+    "feasible_success_probability": 0.75,
+    "infeasible_success_probability": 0.25,
+    "min_complete_context_rate": 1.0,
+    "min_determinate_cell_rate": 0.9,
+    "min_state_dependent_action_lag_strata": 4,
+    "min_bidirectional_remedy_divergent_risk_pairs": 6,
+    "min_contexts_in_divergent_pairs": 12,
+    "min_lag_contractions": 6,
+    "max_global_action_delay_cell_accuracy": 0.85
+  },
+  "risk_projection": {
+    "unitree_rule": "force_magnitude_newtons plus absolute pitch_torque_nm; direction, gait phase, actions, lags, and outcomes excluded",
+    "frozen_after_source_data_existed": true
+  },
+  "success_verdict": "SUFFICIENT_FOR_FRESH_TRANSITION_CONFIRMATION",
+  "failure_verdict": "INSUFFICIENT_STATE_SPECIFIC_INTERVENTION_CONTRAST",
+  "invalid_verdict": "INVALID_EXTERNAL_INTERVENTION_CORPUS",
+  "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+  "next_if_success": "Freeze new contexts before outcomes and run one fresh held-out direct action-conditioned transition benchmark. Do not train a capacity selector.",
+  "next_if_failure": "Repair the intervention substrate or stop. Do not compensate with a more elaborate model.",
+  "anti_rescue": "Changing evidence modes, risk projection, source pins, actions, lags, thresholds, target, constraints, or outcome labels after the external run requires a new experiment ID.",
+  "policy_authority": "NONE",
+  "execution_authority": "NONE"
+}
