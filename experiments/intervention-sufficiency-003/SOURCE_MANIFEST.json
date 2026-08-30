@@ -3,7 +3,7 @@
   "grid_sha256": "d163cecdb806f71ec27eb11a621a203179ef0df46ae743fb90879fe701cf3aae",
   "openline_receipt_gate": {
     "commit": "20db896fafabe197039e567f364ec5f7a6c3d699",
-    "protocol_sha256": "63f862516fd28bc2cb9f0f3181d69933693a301a",
+    "protocol_sha256": "41fd6dc77bd16abdeaf141a733a86f6328b159c8fd44107cae0a59a34a502130",
     "repo": "terryncew/openline-receipt-gate"
   },
   "pilot_outcome_artifacts": {
