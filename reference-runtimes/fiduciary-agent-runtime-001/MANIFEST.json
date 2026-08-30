@@ -1,0 +1,82 @@
+{
+  "base_commit": "7ec22721cd09fda6be6512cc39bb8032fac53fe4",
+  "claim": "proposal/evidence/authority/admission remain mechanically distinct",
+  "execution_authority": "NONE",
+  "files": [
+    {
+      "path": ".github/workflows/fiduciary-agent-runtime-001.yml",
+      "sha256": "07f71831c3493c0097a6d8380e010960853832ce1c9beabedc38a2999b514cd2"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/CLAIM_BOUNDARY.md",
+      "sha256": "fb8eb93e0249bb7c21d713c39f2331000d678ee9fe057c5fe1e197018a51e77e"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/README.md",
+      "sha256": "c59a8436e343880dad62a3f8e6fbf8d7bbf7cc0ec3721eb7fdccf76d239c4359"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/docs/ARCHITECTURE.md",
+      "sha256": "69604a206e47de213e35dedeecee2672b8a9cac338c0a84424ba369315874a7f"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/docs/INVARIANTS.md",
+      "sha256": "3d2e85e2cb4a3048eb66bfad6ab12cd2143eeb541ad8d9d523f8c2ac8a894dab"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/__init__.py",
+      "sha256": "4c5e18d9903ff75ffded23f53b5b7e2da94d213074e2d60545ddd7f460f45607"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/canonical.py",
+      "sha256": "16d1b6573952c40e959a09dbf4fe889d22d41541b8329d3d4f4a3970d6467ae1"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/classifier.py",
+      "sha256": "1f0cf68d1534fefad21a1c26db7483d2bbab685548624bb09e668cabbe9efb16"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/crypto.py",
+      "sha256": "e0d9bed9b0cfbabe51fa1649f0ef61aac6d948037620808e8eb21524441f1ebb"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/gate.py",
+      "sha256": "dac1198e2da20038d92e89d2801fc8e63b27505b61f265dab0b792415fcb1d6c"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/ledger.py",
+      "sha256": "4b8c0086348aa9c694cca1b0a888c503c5802e98c8979689407c019f172ce25a"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/model.py",
+      "sha256": "2f2a52a726f9a542967ccd3813de32fb6b044cf54efa274dad513b0385c9cd34"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/receipts.py",
+      "sha256": "7137fe4dacc77ea2c8efcea16e5b8c8a252616bf4801f8ee4ac61cffe442d7e1"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/openline_assurance/runtime.py",
+      "sha256": "fa5bc6d9b3722ac14e57e63b044ba02c4c198a9fd326fb0fcacd44a5cc497f44"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/scripts/release_check.py",
+      "sha256": "63fa31fac726ee6b184051f1bca5410d69e1b8bc54723d96b082a23c3ce9b5d2"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/scripts/run_demo.py",
+      "sha256": "cafda7abf926aa6a24c853a1661a5fab64a98a685e654bd224b4a727c8b76cbd"
+    },
+    {
+      "path": "reference-runtimes/fiduciary-agent-runtime-001/tests/test_runtime.py",
+      "sha256": "eacbce18e7b78c16249e36d91c03759d6fb31f9e4c494c4d3587fb0a14ab415a"
+    }
+  ],
+  "policy_authority": "NONE",
+  "runtime_id": "FIDUCIARY-AGENT-RUNTIME-001",
+  "schema": "openline.ace.fiduciary-agent-runtime-001.manifest.v1",
+  "tests": {
+    "count": 11,
+    "status": "PASS"
+  }
+}
