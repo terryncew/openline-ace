@@ -1,0 +1,20 @@
+{
+  "agent_can_modify_manifest": false,
+  "module_level_changes_allowed": false,
+  "new_or_deleted_top_level_symbols_allowed": false,
+  "schema": "openline.ace.far003.scope-manifest.v1",
+  "standing": "PRINCIPAL_OWNED_FROZEN_PRE_PRIMARY",
+  "target_closures": {
+    "bounded_sum": [
+      "bounded_sum"
+    ],
+    "median": [
+      "median"
+    ],
+    "slugify": [
+      "slugify"
+    ]
+  },
+  "target_file": "src/targetlib/core.py",
+  "unresolved_dynamic_reachability": "DENY"
+}
