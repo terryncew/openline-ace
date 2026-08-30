@@ -28,7 +28,7 @@
     },
     {
       "path": "experiments/intervention-sufficiency-003/SOURCE_MANIFEST.json",
-      "sha256": "4c0ab39506873ae3f8c6f7f236397b7484df059000c53fab614cb64259d84eb2"
+      "sha256": "6205a30b21e87db91c1237f533f45e5a14bf0dd3044127149de25d799a7f3c86"
     },
     {
       "path": "experiments/intervention-sufficiency-003/is003/__init__.py",
@@ -52,7 +52,7 @@
     },
     {
       "path": "experiments/intervention-sufficiency-003/scripts/run_external.py",
-      "sha256": "d14a81116bb05fca0a2f229790b2a212dfcaed008a5f4b5d17e26668c3ec58c9"
+      "sha256": "33fb02e217ebc6e876ae6abac2b54303a31a7839d90c20baa74595e06946d946"
     },
     {
       "path": "experiments/intervention-sufficiency-003/scripts/verify_external.py",

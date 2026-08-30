@@ -16,7 +16,7 @@ def main():
     from intervention_transition.common import load_protocol, canonical_sha256
     protocol_path=args.oracle_root/'config/protocol.frozen.json'
     protocol_sha=hashlib.sha256(protocol_path.read_bytes()).hexdigest()
-    if protocol_sha!='63f862516fd28bc2cb9f0f3181d69933693a301a':
+    if protocol_sha!='41fd6dc77bd16abdeaf141a733a86f6328b159c8fd44107cae0a59a34a502130':
         raise SystemExit(f'upstream protocol hash mismatch: {protocol_sha}')
     protocol=json.loads(protocol_path.read_text())
     grid=load_grid(); errors=verify_grid(grid)
