@@ -1,0 +1,24 @@
+{
+  "base_commit": "1a9a6cab081982c0bebf385258f35b098b14f778",
+  "experiment_id": "FIDUCIARY-AGENT-RUNTIME-004",
+  "files": {
+    ".github/workflows/fiduciary-agent-runtime-004.yml": "5bc1cdbae0ca25aa39508bc7c8b516ea5a43a3ef76a36ec1902dd9988a7bce74",
+    "experiments/fiduciary-agent-runtime-004/CLAIM_BOUNDARY.md": "18d9f180d9e13fd97938ad4d4cd4f0422494567314bf2aefc1d0db911d253500",
+    "experiments/fiduciary-agent-runtime-004/PREREGISTRATION.json": "292a21485c407cbee780039f79c91ca1db5fdc44eec71807de64188e246e5803",
+    "experiments/fiduciary-agent-runtime-004/README.md": "6d6826be6e10640664829823dfbd99098966ac06430aa8f1858b62da0171d4f8",
+    "experiments/fiduciary-agent-runtime-004/UPSTREAM_FAR003_RESULT.json": "055a5ba7d1459833f9f402ba2f8dc9d1be2e6d2f9d4401d50d9fec6e262f358c",
+    "experiments/fiduciary-agent-runtime-004/UPSTREAM_RUNTIME_PINS.json": "e17695d7c986c8e61e84f58b09c88019844cb0b4267d2d6340f967e7f68090f6",
+    "experiments/fiduciary-agent-runtime-004/far004/__init__.py": "f002e277e753b3543289813f6d86c57e62eb5e30c02f773d287c687db788e8ce",
+    "experiments/fiduciary-agent-runtime-004/far004/experiment.py": "05004d85a6f1789495a5adcf9b58a80842af77d2483ed3bc7d083ffe0d9955bb",
+    "experiments/fiduciary-agent-runtime-004/scripts/release_check.py": "1cad30156086a9c6ac6b9208a826503cfe54e7bb4b9e5dc384072aeb3a7a845a",
+    "experiments/fiduciary-agent-runtime-004/scripts/run_primary.py": "8d32f0ed63f7175773cc813385bacad299a641f65ccf907ad218cc9977c77b84",
+    "experiments/fiduciary-agent-runtime-004/scripts/verify_freeze.py": "7e6b7db034c092ddf6e492a86782b0856f12018d811e5c4e419ee6cf370924fb",
+    "experiments/fiduciary-agent-runtime-004/scripts/verify_result.py": "80d280cd78514326e50305cb19343ce40cce9acccca857289db04a2efd49253f",
+    "experiments/fiduciary-agent-runtime-004/scripts/verify_upstream_runtime.py": "e3cd194cf25707909e95153a5dbe52fd72a92d4793c134e76a8c16740d215c28",
+    "experiments/fiduciary-agent-runtime-004/tests/test_far004.py": "9990463963b23b7d0fd7dcf05916328bd887546422fa7b333a6c09a71239b09f"
+  },
+  "primary_outcomes_observed": false,
+  "runtime_behavior_changed_from_far003": false,
+  "schema": "openline.ace.far004.freeze.v1",
+  "scientific_standing": "PROTOCOL_FROZEN_PRE_PRIMARY_OUTCOME"
+}

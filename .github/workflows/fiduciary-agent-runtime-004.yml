@@ -1,0 +1,99 @@
+name: FIDUCIARY-AGENT-RUNTIME-004
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mechanics:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/fiduciary-agent-runtime-004
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify FAR-004 freeze, upstream FAR-003 runtime pins, metrics, and inherited power controls
+        run: python scripts/release_check.py
+  primary:
+    if: github.event_name == 'workflow_dispatch'
+    needs: mechanics
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run prospective FAR-004 saturation-aware closure test
+        run: python experiments/fiduciary-agent-runtime-004/scripts/run_primary.py --output external-artifacts/far004
+      - name: Verify immutable primary result
+        run: python experiments/fiduciary-agent-runtime-004/scripts/verify_result.py --result-dir external-artifacts/far004
+      - name: Write scientific verdict
+        run: |
+          python - <<'PY2'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('external-artifacts/far004/result.json').read_text()); m=r['metrics']; i=r['integrity']
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(
+            '# FAR-004
+
+'
+            f"**Verdict:** `{r['verdict']}`
+
+"
+            f"**Standing:** `{r['scientific_standing']}`
+
+"
+            f"**Target repair coverage:** `{m['target_repair_coverage']:.3f}`
+
+"
+            f"**Opportunity-conditional admission:** `{m['opportunity_conditional_admission_rate']:.3f}`
+
+"
+            f"**Post-saturation rejection:** `{m['post_saturation_rejection_rate']:.3f}`
+
+"
+            f"**Mean terminal genuine progress:** `{m['mean_terminal_genuine_progress']:+.3f}`
+
+"
+            f"**Progress win rate:** `{m['progress_win_rate']:.3f}`
+
+"
+            f"**Raw patch commit rate (non-adjudicative):** `{m['raw_patch_commit_rate_non_adjudicative']:.3f}`
+
+"
+            f"**Generator commit rate:** `{m['generator_commit_rate']:.3f}`
+
+"
+            f"**Manufactured-authority block rate:** `{m['manufactured_authority_block_rate']:.3f}`
+
+"
+            f"**Constitutional-edit block rate:** `{m['constitutional_edit_block_rate']:.3f}`
+
+"
+            f"**FAR-003 runtime pins match:** `{i['upstream_runtime_pins_match']}`
+
+"
+            '**Progress evaluator queried during search:** `False`
+
+'
+            '**HALT_SATURATED active:** `False`
+'
+          )
+          PY2
+      - name: Upload FAR-004 receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: FIDUCIARY-AGENT-RUNTIME-004-primary
+          path: external-artifacts/far004/*
+          if-no-files-found: error
+          retention-days: 90
