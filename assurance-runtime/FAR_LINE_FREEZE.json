@@ -1,0 +1,10 @@
+{
+  "frozen_at_closeout_base": "c7c39282a332710c848a950709bf84d265e1e6f9",
+  "no_successor": "FAR-007",
+  "rule": "FAR-001 through FAR-006 are a closed empirical lineage. Do not create FAR-007 or extend the claim with another OpenLine-authored fixture. The next empirical challenge must be operated independently on a repository/task selected and owned outside this lineage, under a distinct experiment or interoperability track.",
+  "schema": "openline.assurance_runtime.far_line_freeze.v1",
+  "status": "FROZEN",
+  "terminal_experiment": "FIDUCIARY-AGENT-RUNTIME-006",
+  "terminal_main_commit": "c7c39282a332710c848a950709bf84d265e1e6f9",
+  "terminal_result_sha256": "bb6acdaac8c7c0274659a2243016c3f9a9e3736ad939794ac584f76924f33de8"
+}

@@ -1,0 +1,28 @@
+{
+  "archive_policy": "Verbatim primary artifact plus extracted members. Do not replace or regenerate these files.",
+  "canonical": {
+    "external_base_commit": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+    "external_instance_id": "pallets__flask-5014",
+    "external_repository": "pallets/flask",
+    "original_actions_zip_sha256": "781f00a4dc6cb082d626ffd9e6eb58341bc59b7fc7f1b7f211231f672680701b",
+    "result_json_sha256": "bb6acdaac8c7c0274659a2243016c3f9a9e3736ad939794ac584f76924f33de8",
+    "scientific_standing": "PROSPECTIVE_PRIMARY",
+    "verdict": "FIDUCIARY_RUNTIME_EXTERNAL_PROMOTION_SUPPORTED_ON_PINNED_FLASK_TASK"
+  },
+  "files": {
+    "FIDUCIARY-AGENT-RUNTIME-006-primary.zip": "781f00a4dc6cb082d626ffd9e6eb58341bc59b7fc7f1b7f211231f672680701b",
+    "external_source_receipt.json": "b69596ac83a0c96785560d4849ac003337c54a3d04bea23b44304619ff7e0a12",
+    "power_calibration.json": "cd93dee16b4122fa20e9bdd6488d54d5e4e54376b1ff10c576c1141142de6278",
+    "result.json": "bb6acdaac8c7c0274659a2243016c3f9a9e3736ad939794ac584f76924f33de8",
+    "result.sha256": "9c38f57be14857904a9024e40f57f5f2eb0b7951cf680407e77e0744fbdc6503"
+  },
+  "schema": "openline.assurance_runtime.far006_archive.v1",
+  "source": {
+    "artifact_id": 9740150517,
+    "artifact_name": "FIDUCIARY-AGENT-RUNTIME-006-primary",
+    "main_commit_at_primary": "c7c39282a332710c848a950709bf84d265e1e6f9",
+    "repository": "terryncew/openline-ace",
+    "workflow": "FIDUCIARY-AGENT-RUNTIME-006",
+    "workflow_run_id": 33339704659
+  }
+}

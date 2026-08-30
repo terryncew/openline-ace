@@ -1,0 +1,32 @@
+{
+  "clean": true,
+  "head": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+  "head_matched": true,
+  "source_hashes": [
+    {
+      "expected": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+      "matched": true,
+      "observed": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+      "path": "LICENSE.rst"
+    },
+    {
+      "expected": "738b80e461d53775a148faa291d4b66d8b715aee674d749827002616c760b01b",
+      "matched": true,
+      "observed": "738b80e461d53775a148faa291d4b66d8b715aee674d749827002616c760b01b",
+      "path": "pyproject.toml"
+    },
+    {
+      "expected": "9d296c3a0dffffbafd59ef15290a6d4c2061a470f3ad2b00709388d35d1dddc0",
+      "matched": true,
+      "observed": "9d296c3a0dffffbafd59ef15290a6d4c2061a470f3ad2b00709388d35d1dddc0",
+      "path": "src/flask/blueprints.py"
+    },
+    {
+      "expected": "804b98bbb71ccce566ab78a15cb141793ebbaee3c1b3bb591d9dab04c9940f4a",
+      "matched": true,
+      "observed": "804b98bbb71ccce566ab78a15cb141793ebbaee3c1b3bb591d9dab04c9940f4a",
+      "path": "tests/test_blueprints.py"
+    }
+  ],
+  "source_hashes_matched": true
+}
