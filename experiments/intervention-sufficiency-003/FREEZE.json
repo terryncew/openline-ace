@@ -60,7 +60,7 @@
     },
     {
       "path": "experiments/intervention-sufficiency-003/scripts/verify_freeze.py",
-      "sha256": "cba0d6e6ddfb32d633e7536abc632178bcaeea7533d175c2068152c51fd8efe5"
+      "sha256": "c1257a03af6460d5ad1b48faa3811f43e07b19a03434b806549f0e8bf162881b"
     },
     {
       "path": "experiments/intervention-sufficiency-003/scripts/verify_grid.py",
