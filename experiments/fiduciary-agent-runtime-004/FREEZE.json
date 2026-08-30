@@ -2,7 +2,7 @@
   "base_commit": "1a9a6cab081982c0bebf385258f35b098b14f778",
   "experiment_id": "FIDUCIARY-AGENT-RUNTIME-004",
   "files": {
-    ".github/workflows/fiduciary-agent-runtime-004.yml": "5bc1cdbae0ca25aa39508bc7c8b516ea5a43a3ef76a36ec1902dd9988a7bce74",
+    ".github/workflows/fiduciary-agent-runtime-004.yml": "373112d6df1f1de8ab5291bde504ec3c6222ae7e91ca509cdaf10462a9de6f6e",
     "experiments/fiduciary-agent-runtime-004/CLAIM_BOUNDARY.md": "18d9f180d9e13fd97938ad4d4cd4f0422494567314bf2aefc1d0db911d253500",
     "experiments/fiduciary-agent-runtime-004/PREREGISTRATION.json": "292a21485c407cbee780039f79c91ca1db5fdc44eec71807de64188e246e5803",
     "experiments/fiduciary-agent-runtime-004/README.md": "6d6826be6e10640664829823dfbd99098966ac06430aa8f1858b62da0171d4f8",
