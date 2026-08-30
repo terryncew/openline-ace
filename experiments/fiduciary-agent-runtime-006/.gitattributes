@@ -1,0 +1,2 @@
+external/*.patch binary
+fixtures/*.patch binary

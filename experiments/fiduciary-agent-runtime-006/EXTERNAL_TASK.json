@@ -1,0 +1,47 @@
+{
+  "base_commit": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+  "created_at": "2023-03-04T18:36:21Z",
+  "dataset": {
+    "artifact_sha256": "030cfd7f2a704c4c0226e7f104c725a3b41230b1d3517f9c915ad7ea5be3fa25",
+    "artifact_subpath": "data/test-00000-of-00001.parquet",
+    "repository": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified",
+    "revision": "78f471bf655a3137b2e8a75af1501690ec009ec3"
+  },
+  "difficulty": "<15 min fix",
+  "environment": {
+    "lock_file": "environment-py311.lock",
+    "lock_sha256": "89b7ef4cdea42cfb4c5a93c4d80790846c5dd80182221ae12ad4f481570bfdf9",
+    "python": "3.11"
+  },
+  "environment_setup_commit": "182ce3dd15dfa3537391c3efaf9c3ff407d134d4",
+  "historical_fix": {
+    "changed_paths": [
+      "src/flask/blueprints.py"
+    ],
+    "patch_file": "external/historical_fix.patch",
+    "patch_sha256": "087d51d66413bfa35111ac0eca31f1db1636572702cfd967c428049b453f451d"
+  },
+  "instance_id": "pallets__flask-5014",
+  "oracle": {
+    "consequence_command": [
+      "tests/test_blueprints.py"
+    ],
+    "fail_to_pass": [
+      "tests/test_blueprints.py::test_empty_name_not_allowed"
+    ],
+    "test_patch_file": "external/oracle.patch",
+    "test_patch_sha256": "e16f06b260b5169a49397e9d571b5af70317cd23792e1437232fabf718fe8871"
+  },
+  "problem_statement": "Require a non-empty name for Blueprints. Things do not work correctly if a Blueprint is given an empty name; raise ValueError.",
+  "repository": "pallets/flask",
+  "repository_url": "https://github.com/pallets/flask.git",
+  "schema": "openline.ace.far006.external-task.v1",
+  "source_files": {
+    "LICENSE.rst": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+    "pyproject.toml": "738b80e461d53775a148faa291d4b66d8b715aee674d749827002616c760b01b",
+    "src/flask/blueprints.py": "9d296c3a0dffffbafd59ef15290a6d4c2061a470f3ad2b00709388d35d1dddc0",
+    "tests/test_blueprints.py": "804b98bbb71ccce566ab78a15cb141793ebbaee3c1b3bb591d9dab04c9940f4a"
+  },
+  "source_tier": "INDEPENDENT_SWE_BENCH_VERIFIED_TASK",
+  "version": "2.3"
+}
