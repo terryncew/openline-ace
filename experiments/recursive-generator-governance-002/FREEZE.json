@@ -1,0 +1,74 @@
+{
+  "base_commit": "ab1fd0a845e2d57d08f2c2d9526a3e7e3a8764bf",
+  "experiment_id": "RECURSIVE-GENERATOR-GOVERNANCE-002",
+  "files": [
+    {
+      "path": ".github/workflows/recursive-generator-governance-002.yml",
+      "sha256": "5e7a41e42ae70e85512389ff72e9072edaea1770b73c008ea36c166c6d9589fa"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/CLAIM_BOUNDARY.md",
+      "sha256": "1e353069c5063e382c9512ab07e1d6f7da02ac0d9aeb186358ce14401e674f2d"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/PREREGISTRATION.json",
+      "sha256": "4580359b3f579c87467b930cb73c4b1b30204ef1692f115a1fe5d9c550f700e4"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/README.md",
+      "sha256": "48418834a191e0dbd22ae5d8955dea54886d19d72141a48129ef241112ab03d6"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/SOURCE_MANIFEST.json",
+      "sha256": "15deafe0b93fc74be63e46d96be8475d0320998b1799b2d504614fef1ec8d463"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/docs/DESIGN.md",
+      "sha256": "28024e19261dcd582facc9dfb6f30da26b147b4feaf1daef981b93d1cacc19c7"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/rgg002/__init__.py",
+      "sha256": "e31b150b9f630c5e6f64953b495e1fcf0a2a84ab6641295f96aebe99648e352f"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/rgg002/experiment.py",
+      "sha256": "41766e41b8da765ab0262b0be4e54f9f60e6765343430e639f6b314afe13aae4"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/rgg002/progress.py",
+      "sha256": "12d0cc5dd52a04e6fc4c31a883965f5d61b638e182f27f644e9c346dc4b9bb59"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/scripts/release_check.py",
+      "sha256": "11b1dc13a98d0234a4dfb6300a571faac77d0e3cc21614f664eb69ea87bcaa33"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/scripts/run_primary.py",
+      "sha256": "4c8cd6a416c056b894732be21f8080319fa3dfe474fb900f730df4add98b0106"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/scripts/verify_freeze.py",
+      "sha256": "8c6a5be5179226d8626902c5e879b9fab7a78ea9b29bbf667d75c08a620da9ae"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/scripts/verify_preregistration.py",
+      "sha256": "495d4a211f0012befb2518928d1c4fd6d1f01c71c17a36f02a2c9556e3fdbbac"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/scripts/verify_result.py",
+      "sha256": "51b5d9d9fd3635aa9cdd59feb39c38c005258c9f00c2ae430042c607332c8bf5"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/scripts/verify_source.py",
+      "sha256": "4b1dee4f13037fb0d129b602eb071fb9ddd485f0982cc84edff022e6c36471f6"
+    },
+    {
+      "path": "experiments/recursive-generator-governance-002/tests/test_rgg002.py",
+      "sha256": "2d7a350af51acf7cb6713a0a8de0532c34a078841e58b34a97a667a04feb9845"
+    }
+  ],
+  "primary_outcome_seen": false,
+  "rgg001_external_holdout_reuse_permitted": false,
+  "schema": "openline.ace.rgg002.freeze.v1",
+  "scientific_standing": "PROTOCOL_FROZEN_PRE_PRIMARY_OUTCOME"
+}

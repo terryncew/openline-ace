@@ -1,0 +1,74 @@
+name: RECURSIVE-GENERATOR-GOVERNANCE-002
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mechanics:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/recursive-generator-governance-002
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen RGG-002 mechanics
+        run: python scripts/release_check.py
+
+  primary:
+    if: github.event_name == 'workflow_dispatch'
+    needs: mechanics
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run prospective independent-progress comparison
+        run: |
+          python experiments/recursive-generator-governance-002/scripts/run_primary.py \
+            --output external-artifacts/rgg002
+      - name: Verify sealed trajectories, post-seal progress seed, and receipts
+        run: |
+          python experiments/recursive-generator-governance-002/scripts/verify_result.py \
+            --result-dir external-artifacts/rgg002
+      - name: Write scientific verdict
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path('external-artifacts/rgg002/result.json').read_text())
+          m = r['metrics']
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(
+              '# RGG-002\n\n'
+              f"**Verdict:** `{r['verdict']}`\n\n"
+              f"**Standing:** `{r['scientific_standing']}`\n\n"
+              f"**Arm A capture rate:** `{m['arm_a_capture_rate']:.3f}`\n\n"
+              f"**Arm B capture rate:** `{m['arm_b_capture_rate']:.3f}`\n\n"
+              f"**Arm B mean genuine progress:** `{m['arm_b_mean_progress_delta']:+.4f}`\n\n"
+              f"**Arm B progress advantage:** `{m['mean_arm_b_progress_advantage']:+.4f}`\n\n"
+              f"**Paired B win rate:** `{m['pairwise_arm_b_win_rate']:.3f}`\n\n"
+              '**Progress evaluator queried during search:** `False`\n\n'
+              '**RGG-001 external holdout reused:** `False`\n'
+          )
+          PY
+      - name: Upload immutable RGG-002 receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RECURSIVE-GENERATOR-GOVERNANCE-002-primary
+          path: external-artifacts/rgg002/*
+          if-no-files-found: error
+          retention-days: 90
