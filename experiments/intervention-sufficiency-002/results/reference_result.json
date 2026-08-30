@@ -1,0 +1,1391 @@
+{
+  "execution_authority": "NONE",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+  "external_candidate_status": "COMPLETE_RETROSPECTIVE_REPLAY",
+  "external_result_sha256": "22c7380a26eefc4860289eae8064a864163cdd1b1807bfcff74a64908122343e",
+  "external_verdict": "INSUFFICIENT_STATE_SPECIFIC_INTERVENTION_CONTRAST",
+  "policy_authority": "NONE",
+  "reports": {
+    "deterministic_global_control": {
+      "capacity_selector_training_authorized": false,
+      "claim_boundary": "Data sufficiency only. No model performance, complete feasible set, capacity benefit, hardware transfer, or execution authority is established.",
+      "dataset_id": "is002-deterministic-global-control",
+      "dataset_sha256": "f059c00a340f3d752d4271b613023e60736e54fa9d614ea050262fdcb3083d6f",
+      "evidence_mode": "deterministic_rollout",
+      "execution_authority": "NONE",
+      "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+      "gates": {
+        "actions": {
+          "observed": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ]
+        },
+        "bidirectional_remedy_divergent_risk_pairs": {
+          "observed": 0,
+          "passed": false,
+          "relation": ">=",
+          "required": 6
+        },
+        "complete_context_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 1.0
+        },
+        "contexts": {
+          "observed": 50,
+          "passed": true,
+          "relation": "==",
+          "required": 50
+        },
+        "contexts_in_divergent_pairs": {
+          "observed": 0,
+          "passed": false,
+          "relation": ">=",
+          "required": 12
+        },
+        "determinate_cell_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 0.9
+        },
+        "global_action_delay_cell_accuracy": {
+          "observed": 1.0,
+          "passed": false,
+          "relation": "<=",
+          "required": 0.85
+        },
+        "lag_contractions": {
+          "observed": 50,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "lags": {
+          "observed": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ]
+        },
+        "state_dependent_action_lag_strata": {
+          "observed": 0,
+          "passed": false,
+          "relation": ">=",
+          "required": 4
+        }
+      },
+      "lag_contraction_examples": [
+        {
+          "action_id": "STOP",
+          "context_id": "global-000",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-001",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-002",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-003",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-004",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-005",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-006",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-007",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-008",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-009",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-010",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "global-011",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        }
+      ],
+      "metrics": {
+        "action_count": 6,
+        "bidirectional_remedy_divergent_risk_pairs": 0,
+        "complete_context_rate": 1.0,
+        "context_count": 50,
+        "contexts_in_divergent_pairs": 0,
+        "determinate_cell_rate": 1.0,
+        "expected_cell_count": 1500,
+        "global_action_delay_cell_accuracy": 1.0,
+        "lag_contraction_count": 50,
+        "lags_ms": [
+          0,
+          40,
+          80,
+          120,
+          160
+        ],
+        "observed_cell_count": 1500,
+        "row_count": 1500,
+        "state_dependent_action_lag_strata": 0
+      },
+      "next_step": "Repair the intervention substrate or stop. Do not compensate with a more elaborate model.",
+      "policy_authority": "NONE",
+      "receipt_gate_required_for_execution": true,
+      "remedy_divergence_examples": [],
+      "schema": "openline.ace.intervention-sufficiency.report.v2",
+      "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+      "transition_confirmation_authorized": false,
+      "verdict": "INSUFFICIENT_STATE_SPECIFIC_INTERVENTION_CONTRAST"
+    },
+    "deterministic_state_specific_control": {
+      "capacity_selector_training_authorized": false,
+      "claim_boundary": "Data sufficiency only. No model performance, complete feasible set, capacity benefit, hardware transfer, or execution authority is established.",
+      "dataset_id": "is002-deterministic-state-specific-control",
+      "dataset_sha256": "fce05ff2bdfbb45756d73c561dd8438942fdf34224b9d0495ac850f02dc1044d",
+      "evidence_mode": "deterministic_rollout",
+      "execution_authority": "NONE",
+      "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+      "gates": {
+        "actions": {
+          "observed": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ]
+        },
+        "bidirectional_remedy_divergent_risk_pairs": {
+          "observed": 25,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "complete_context_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 1.0
+        },
+        "contexts": {
+          "observed": 50,
+          "passed": true,
+          "relation": "==",
+          "required": 50
+        },
+        "contexts_in_divergent_pairs": {
+          "observed": 50,
+          "passed": true,
+          "relation": ">=",
+          "required": 12
+        },
+        "determinate_cell_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 0.9
+        },
+        "global_action_delay_cell_accuracy": {
+          "observed": 0.7,
+          "passed": true,
+          "relation": "<=",
+          "required": 0.85
+        },
+        "lag_contractions": {
+          "observed": 120,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "lags": {
+          "observed": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ]
+        },
+        "state_dependent_action_lag_strata": {
+          "observed": 30,
+          "passed": true,
+          "relation": ">=",
+          "required": 4
+        }
+      },
+      "lag_contraction_examples": [
+        {
+          "action_id": "CONTINUE",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "LATERAL_LEFT",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "LATERAL_RIGHT",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "RETREAT",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "SLOW",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "CONTINUE",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "LATERAL_LEFT",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "LATERAL_RIGHT",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "RETREAT",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "SLOW",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        }
+      ],
+      "metrics": {
+        "action_count": 6,
+        "bidirectional_remedy_divergent_risk_pairs": 25,
+        "complete_context_rate": 1.0,
+        "context_count": 50,
+        "contexts_in_divergent_pairs": 50,
+        "determinate_cell_rate": 1.0,
+        "expected_cell_count": 1500,
+        "global_action_delay_cell_accuracy": 0.7,
+        "lag_contraction_count": 120,
+        "lags_ms": [
+          0,
+          40,
+          80,
+          120,
+          160
+        ],
+        "observed_cell_count": 1500,
+        "row_count": 1500,
+        "state_dependent_action_lag_strata": 30
+      },
+      "next_step": "Freeze new contexts before outcomes and run one fresh held-out direct action-conditioned transition benchmark. Do not train a capacity selector.",
+      "policy_authority": "NONE",
+      "receipt_gate_required_for_execution": true,
+      "remedy_divergence_examples": [
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-00:a",
+          "context_b": "pair-00:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-00"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-01:a",
+          "context_b": "pair-01:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-01"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-02:a",
+          "context_b": "pair-02:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-02"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-03:a",
+          "context_b": "pair-03:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-03"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-04:a",
+          "context_b": "pair-04:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-04"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-05:a",
+          "context_b": "pair-05:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-05"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-06:a",
+          "context_b": "pair-06:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-06"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-07:a",
+          "context_b": "pair-07:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-07"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-08:a",
+          "context_b": "pair-08:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-08"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-09:a",
+          "context_b": "pair-09:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-09"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-10:a",
+          "context_b": "pair-10:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-10"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-11:a",
+          "context_b": "pair-11:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-11"
+        }
+      ],
+      "schema": "openline.ace.intervention-sufficiency.report.v2",
+      "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+      "transition_confirmation_authorized": true,
+      "verdict": "SUFFICIENT_FOR_FRESH_TRANSITION_CONFIRMATION"
+    },
+    "stochastic_state_specific_control": {
+      "capacity_selector_training_authorized": false,
+      "claim_boundary": "Data sufficiency only. No model performance, complete feasible set, capacity benefit, hardware transfer, or execution authority is established.",
+      "dataset_id": "is002-stochastic-state-specific-control",
+      "dataset_sha256": "3dae1024205dab8df536f1a8b991c0107b76b5e377fbb500bc3c141ab321e67a",
+      "evidence_mode": "stochastic_rollout",
+      "execution_authority": "NONE",
+      "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+      "gates": {
+        "actions": {
+          "observed": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ]
+        },
+        "bidirectional_remedy_divergent_risk_pairs": {
+          "observed": 25,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "complete_context_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 1.0
+        },
+        "contexts": {
+          "observed": 50,
+          "passed": true,
+          "relation": "==",
+          "required": 50
+        },
+        "contexts_in_divergent_pairs": {
+          "observed": 50,
+          "passed": true,
+          "relation": ">=",
+          "required": 12
+        },
+        "determinate_cell_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 0.9
+        },
+        "global_action_delay_cell_accuracy": {
+          "observed": 0.7,
+          "passed": true,
+          "relation": "<=",
+          "required": 0.85
+        },
+        "lag_contractions": {
+          "observed": 120,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "lags": {
+          "observed": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ]
+        },
+        "state_dependent_action_lag_strata": {
+          "observed": 30,
+          "passed": true,
+          "relation": ">=",
+          "required": 4
+        }
+      },
+      "lag_contraction_examples": [
+        {
+          "action_id": "CONTINUE",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "LATERAL_LEFT",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "LATERAL_RIGHT",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "RETREAT",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "SLOW",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "CONTINUE",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "LATERAL_LEFT",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "LATERAL_RIGHT",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "RETREAT",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "SLOW",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        }
+      ],
+      "metrics": {
+        "action_count": 6,
+        "bidirectional_remedy_divergent_risk_pairs": 25,
+        "complete_context_rate": 1.0,
+        "context_count": 50,
+        "contexts_in_divergent_pairs": 50,
+        "determinate_cell_rate": 1.0,
+        "expected_cell_count": 1500,
+        "global_action_delay_cell_accuracy": 0.7,
+        "lag_contraction_count": 120,
+        "lags_ms": [
+          0,
+          40,
+          80,
+          120,
+          160
+        ],
+        "observed_cell_count": 1500,
+        "row_count": 6000,
+        "state_dependent_action_lag_strata": 30
+      },
+      "next_step": "Freeze new contexts before outcomes and run one fresh held-out direct action-conditioned transition benchmark. Do not train a capacity selector.",
+      "policy_authority": "NONE",
+      "receipt_gate_required_for_execution": true,
+      "remedy_divergence_examples": [
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-00:a",
+          "context_b": "pair-00:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-00"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-01:a",
+          "context_b": "pair-01:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-01"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-02:a",
+          "context_b": "pair-02:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-02"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-03:a",
+          "context_b": "pair-03:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-03"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-04:a",
+          "context_b": "pair-04:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-04"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-05:a",
+          "context_b": "pair-05:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-05"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-06:a",
+          "context_b": "pair-06:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-06"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-07:a",
+          "context_b": "pair-07:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-07"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-08:a",
+          "context_b": "pair-08:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-08"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-09:a",
+          "context_b": "pair-09:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-09"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-10:a",
+          "context_b": "pair-10:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-10"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-11:a",
+          "context_b": "pair-11:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-11"
+        }
+      ],
+      "schema": "openline.ace.intervention-sufficiency.report.v2",
+      "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+      "transition_confirmation_authorized": true,
+      "verdict": "SUFFICIENT_FOR_FRESH_TRANSITION_CONFIRMATION"
+    },
+    "validated_model_state_specific_control": {
+      "capacity_selector_training_authorized": false,
+      "claim_boundary": "Data sufficiency only. No model performance, complete feasible set, capacity benefit, hardware transfer, or execution authority is established.",
+      "dataset_id": "is002-validated-model-state-specific-control",
+      "dataset_sha256": "42f69a4e688419f162c63308c490aacb497268757f410668d78f1d5c0acfba06",
+      "evidence_mode": "validated_dynamics_model",
+      "execution_authority": "NONE",
+      "experiment_id": "INTERVENTION-SUFFICIENCY-002",
+      "gates": {
+        "actions": {
+          "observed": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT",
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ]
+        },
+        "bidirectional_remedy_divergent_risk_pairs": {
+          "observed": 25,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "complete_context_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 1.0
+        },
+        "contexts": {
+          "observed": 50,
+          "passed": true,
+          "relation": "==",
+          "required": 50
+        },
+        "contexts_in_divergent_pairs": {
+          "observed": 50,
+          "passed": true,
+          "relation": ">=",
+          "required": 12
+        },
+        "determinate_cell_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 0.9
+        },
+        "global_action_delay_cell_accuracy": {
+          "observed": 0.7,
+          "passed": true,
+          "relation": "<=",
+          "required": 0.85
+        },
+        "lag_contractions": {
+          "observed": 120,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "lags": {
+          "observed": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ]
+        },
+        "state_dependent_action_lag_strata": {
+          "observed": 30,
+          "passed": true,
+          "relation": ">=",
+          "required": 4
+        }
+      },
+      "lag_contraction_examples": [
+        {
+          "action_id": "CONTINUE",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "LATERAL_LEFT",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "LATERAL_RIGHT",
+          "context_id": "pair-01:a",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "RETREAT",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "SLOW",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "pair-01:b",
+          "first_terminal_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "CONTINUE",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "LATERAL_LEFT",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "LATERAL_RIGHT",
+          "context_id": "pair-02:a",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "RETREAT",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "SLOW",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "STOP",
+          "context_id": "pair-02:b",
+          "first_terminal_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        }
+      ],
+      "metrics": {
+        "action_count": 6,
+        "bidirectional_remedy_divergent_risk_pairs": 25,
+        "complete_context_rate": 1.0,
+        "context_count": 50,
+        "contexts_in_divergent_pairs": 50,
+        "determinate_cell_rate": 1.0,
+        "expected_cell_count": 1500,
+        "global_action_delay_cell_accuracy": 0.7,
+        "lag_contraction_count": 120,
+        "lags_ms": [
+          0,
+          40,
+          80,
+          120,
+          160
+        ],
+        "observed_cell_count": 1500,
+        "row_count": 1500,
+        "state_dependent_action_lag_strata": 30
+      },
+      "next_step": "Freeze new contexts before outcomes and run one fresh held-out direct action-conditioned transition benchmark. Do not train a capacity selector.",
+      "policy_authority": "NONE",
+      "receipt_gate_required_for_execution": true,
+      "remedy_divergence_examples": [
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-00:a",
+          "context_b": "pair-00:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-00"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-01:a",
+          "context_b": "pair-01:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-01"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-02:a",
+          "context_b": "pair-02:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-02"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-03:a",
+          "context_b": "pair-03:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-03"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-04:a",
+          "context_b": "pair-04:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-04"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-05:a",
+          "context_b": "pair-05:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-05"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-06:a",
+          "context_b": "pair-06:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-06"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-07:a",
+          "context_b": "pair-07:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-07"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-08:a",
+          "context_b": "pair-08:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-08"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-09:a",
+          "context_b": "pair-09:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-09"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-10:a",
+          "context_b": "pair-10:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-10"
+        },
+        {
+          "a_only": [
+            "CONTINUE",
+            "LATERAL_LEFT",
+            "LATERAL_RIGHT"
+          ],
+          "b_only": [
+            "RETREAT",
+            "SLOW",
+            "STOP"
+          ],
+          "context_a": "pair-11:a",
+          "context_b": "pair-11:b",
+          "lag_ms": 0,
+          "risk_bucket": "load-11"
+        }
+      ],
+      "schema": "openline.ace.intervention-sufficiency.report.v2",
+      "scientific_standing": "RETROSPECTIVE_DIAGNOSTIC_ONLY",
+      "transition_confirmation_authorized": true,
+      "verdict": "SUFFICIENT_FOR_FRESH_TRANSITION_CONFIRMATION"
+    }
+  },
+  "schema": "openline.ace.intervention-sufficiency.reference-result.v2",
+  "status": "MECHANICS_PASS_UNITREE_EXTERNAL_FROZEN"
+}
