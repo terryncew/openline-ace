@@ -1,0 +1,76 @@
+{
+  "schema": "openline.ace.rgg001.preregistration.v1",
+  "experiment_id": "RECURSIVE-GENERATOR-GOVERNANCE-001",
+  "question": "When a self-improving search process is allowed to mutate its own proposal generator, does reusing the task evaluator for generator changes produce progressive evaluator capture, and does a structurally separate Generator Gate preserve external coherence without freezing improvement?",
+  "base_commit": "024c33c7d5e0b2488bb9283441ac288f34f9741a",
+  "scientific_standing": "PROTOCOL_FROZEN_PRE_PRIMARY_OUTCOME",
+  "mutation_tiers": {
+    "tier_1": "Operational candidate-local mutations. Receipt Gate / E_task.",
+    "tier_2": "Persistent, shared, proposal-shaping, or unknown-surface mutations. Generator Gate.",
+    "tier_3": "E_meta and principal-owned constitutional surfaces. Out-of-band principal authority only."
+  },
+  "boundary_laundering_rule": "Any persistent/shared/proposal-shaping or unknown mutation surface defaults to Tier 2 regardless of declared tier. Behavioral cumulative proposal-distribution drift independently escalates to Tier 2.",
+  "evaluators": {
+    "E_task": "Finite public/common-case suite plus speed utility. Used for operational selection in both arms and generator selection in Arm A.",
+    "E_meta": "Hidden rotating concrete-case suites with per-epoch query budgets. Used only for generator-level changes in Arm B. Generator receives accept/reject plus receipt hash, not score or cases.",
+    "E_external": "Independent terminal-only direct plus metamorphic evaluator. Never queried during adaptive search or generator gating."
+  },
+  "positive_control": {
+    "purpose": "Verify that E_task contains a realistic exploitable omission and E_external can detect it.",
+    "standing": "POWER_CALIBRATION_ONLY_NON_EVIDENTIARY_FOR_PRIMARY_CLAIM",
+    "must_pass_before_primary_interpretation": true,
+    "primary_claim_evidence": false
+  },
+  "protocol": {
+    "generations": 30,
+    "candidates_per_generation": 24,
+    "generator_mutation_cadence": 2,
+    "generator_update_step": 0.18,
+    "generator_gate_probe_samples": 96,
+    "terminal_generator_samples": 256,
+    "arm_a_task_gate_tolerance": 0.0,
+    "meta_rotation_every_generations": 5,
+    "meta_query_budget_per_epoch": 3,
+    "meta_cases_per_query": 48,
+    "meta_candidate_samples": 96,
+    "meta_min_quality": 0.9,
+    "meta_max_regression": 0.01,
+    "external_direct_cases": 96,
+    "cumulative_drift_window": 5,
+    "cumulative_drift_tv_threshold": 0.2
+  },
+  "search_seeds": [
+    2201,
+    2203,
+    2207,
+    2213,
+    2221,
+    2237,
+    2239,
+    2243,
+    2251,
+    2267,
+    2269,
+    2273
+  ],
+  "thresholds": {
+    "min_internal_gain_for_capture": 0.03,
+    "min_external_loss_for_capture": 0.1,
+    "min_divergence_gap_for_capture": 0.15,
+    "min_arm_a_capture_rate_for_power": 0.5,
+    "min_arm_b_external_advantage": 0.1,
+    "min_divergence_reduction": 0.1,
+    "min_capture_rate_reduction": 0.25,
+    "min_arm_b_generator_acceptance_rate": 0.2,
+    "min_internal_improvement_retention": 0.5
+  },
+  "success_verdict": "GENERATOR_GATE_SUPPORTED_ON_REFERENCE_SUBSTRATE",
+  "null_without_capture_verdict": "NO_NATURAL_CAPTURE_SIGNAL",
+  "failure_verdict": "GENERATOR_GATE_NOT_SUPPORTED",
+  "invalid_verdict": "INVALID_RGG001",
+  "anti_rescue": "After the first primary run, changing evaluator families, scoring weights, query budgets, rotation cadence, candidate space, mutation cadence, seeds, thresholds, or verdict rules requires a new experiment ID.",
+  "claim_boundary": "A positive result supports Generator Gate separation only on this frozen reference evolutionary code-optimization substrate. It does not establish a universal law of recursive self-improvement, autonomous-agent safety, or real-world swarm behavior.",
+  "policy_authority": "NONE",
+  "execution_authority": "NONE",
+  "constitutional_evaluator_mutation_authority": "PRINCIPAL_OUT_OF_BAND_ONLY"
+}
