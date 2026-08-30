@@ -41,53 +41,41 @@ jobs:
           python - <<'PY2'
           import json, os
           from pathlib import Path
-          r=json.loads(Path('external-artifacts/far004/result.json').read_text()); m=r['metrics']; i=r['integrity']
-          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(
-            '# FAR-004
-
-'
-            f"**Verdict:** `{r['verdict']}`
-
-"
-            f"**Standing:** `{r['scientific_standing']}`
-
-"
-            f"**Target repair coverage:** `{m['target_repair_coverage']:.3f}`
-
-"
-            f"**Opportunity-conditional admission:** `{m['opportunity_conditional_admission_rate']:.3f}`
-
-"
-            f"**Post-saturation rejection:** `{m['post_saturation_rejection_rate']:.3f}`
-
-"
-            f"**Mean terminal genuine progress:** `{m['mean_terminal_genuine_progress']:+.3f}`
-
-"
-            f"**Progress win rate:** `{m['progress_win_rate']:.3f}`
-
-"
-            f"**Raw patch commit rate (non-adjudicative):** `{m['raw_patch_commit_rate_non_adjudicative']:.3f}`
-
-"
-            f"**Generator commit rate:** `{m['generator_commit_rate']:.3f}`
-
-"
-            f"**Manufactured-authority block rate:** `{m['manufactured_authority_block_rate']:.3f}`
-
-"
-            f"**Constitutional-edit block rate:** `{m['constitutional_edit_block_rate']:.3f}`
-
-"
-            f"**FAR-003 runtime pins match:** `{i['upstream_runtime_pins_match']}`
-
-"
-            '**Progress evaluator queried during search:** `False`
-
-'
-            '**HALT_SATURATED active:** `False`
-'
-          )
+          r = json.loads(Path("external-artifacts/far004/result.json").read_text())
+          m = r["metrics"]
+          i = r["integrity"]
+          lines = [
+              "# FAR-004",
+              "",
+              f"**Verdict:** `{r['verdict']}`",
+              "",
+              f"**Standing:** `{r['scientific_standing']}`",
+              "",
+              f"**Target repair coverage:** `{m['target_repair_coverage']:.3f}`",
+              "",
+              f"**Opportunity-conditional admission:** `{m['opportunity_conditional_admission_rate']:.3f}`",
+              "",
+              f"**Post-saturation rejection:** `{m['post_saturation_rejection_rate']:.3f}`",
+              "",
+              f"**Mean terminal genuine progress:** `{m['mean_terminal_genuine_progress']:+.3f}`",
+              "",
+              f"**Progress win rate:** `{m['progress_win_rate']:.3f}`",
+              "",
+              f"**Raw patch commit rate (non-adjudicative):** `{m['raw_patch_commit_rate_non_adjudicative']:.3f}`",
+              "",
+              f"**Generator commit rate:** `{m['generator_commit_rate']:.3f}`",
+              "",
+              f"**Manufactured-authority block rate:** `{m['manufactured_authority_block_rate']:.3f}`",
+              "",
+              f"**Constitutional-edit block rate:** `{m['constitutional_edit_block_rate']:.3f}`",
+              "",
+              f"**FAR-003 runtime pins match:** `{i['upstream_runtime_pins_match']}`",
+              "",
+              "**Progress evaluator queried during search:** `False`",
+              "",
+              "**HALT_SATURATED active:** `False`",
+          ]
+          Path(os.environ["GITHUB_STEP_SUMMARY"]).write_text("\n".join(lines) + "\n")
           PY2
       - name: Upload FAR-004 receipts
         if: always()
