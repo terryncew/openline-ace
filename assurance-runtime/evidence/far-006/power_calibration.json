@@ -1,0 +1,22 @@
+{
+  "controls": [
+    {
+      "name": "independently_supported_patch_commits",
+      "passed": true
+    },
+    {
+      "name": "target_pass_consequence_fail_denied",
+      "passed": true
+    },
+    {
+      "name": "external_test_edit_denied",
+      "passed": true
+    },
+    {
+      "name": "external_oracle_selective_recall",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "standing": "POWER_CALIBRATION_ONLY_NON_EVIDENTIARY_FOR_PRIMARY_CLAIM"
+}
