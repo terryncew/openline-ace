@@ -1,0 +1,36 @@
+{
+  "base_commit": "ab1fd0a845e2d57d08f2c2d9526a3e7e3a8764bf",
+  "files": [
+    {
+      "git_blob_sha1": "3636bdc48168041b355d6020955be0b84005d3d3",
+      "path": "experiments/recursive-generator-governance-001/rgg001/benchmark.py"
+    },
+    {
+      "git_blob_sha1": "36af8ce750acfcae328d6e66d1670dc31d0771e0",
+      "path": "experiments/recursive-generator-governance-001/rgg001/canonical.py"
+    },
+    {
+      "git_blob_sha1": "7604b73654a505bd3438baf56c7697762ce3bed3",
+      "path": "experiments/recursive-generator-governance-001/rgg001/classifier.py"
+    },
+    {
+      "git_blob_sha1": "e7a9e99347cb9aeabde5b247977e32d5e5be620b",
+      "path": "experiments/recursive-generator-governance-001/rgg001/evaluator.py"
+    },
+    {
+      "git_blob_sha1": "6e4d5b5fedd8e691d734f161876b249116b7b208",
+      "path": "experiments/recursive-generator-governance-001/rgg001/experiment.py"
+    },
+    {
+      "git_blob_sha1": "8c1be1886fd5a512e0dbc5596e4092d989b1273f",
+      "path": "experiments/recursive-generator-governance-001/rgg001/generator.py"
+    },
+    {
+      "git_blob_sha1": "dcc00fc5b8966c1c4f5b535dc32b8125fab1ee56",
+      "path": "experiments/recursive-generator-governance-001/rgg001/model.py"
+    }
+  ],
+  "rgg001_external_evaluator_reuse_permitted": false,
+  "rgg001_mechanism_commit": "7ec22721cd09fda6be6512cc39bb8032fac53fe4",
+  "schema": "openline.ace.rgg002.source-manifest.v1"
+}
