@@ -1,0 +1,13 @@
+{
+  "files": {
+    "experiments/fiduciary-agent-runtime-003/far003/canonical.py": "9afb392786f6e60787982df951788517411829e5575db19ff4dc6542a2fd9c06",
+    "experiments/fiduciary-agent-runtime-003/far003/classifier.py": "fdc53fd23f5e7ee390303cb92a2748bfea56e578521cc523ec128c269179dffd",
+    "experiments/fiduciary-agent-runtime-003/far003/gate.py": "583b0e774ed0487e01b5863919dbd10e0a7647b38fbe83ae8c111426733b8669",
+    "experiments/fiduciary-agent-runtime-003/far003/model.py": "512fcaa216b495d2781f2528254d36c7e4a4cffc2ece926f1e09f7b1b0d5cb66",
+    "experiments/fiduciary-agent-runtime-003/far003/receipts.py": "3a4de0588d3e47f29a51fdc9d909656995be7c3bf8d0c4605b19fdd2e060b343"
+  },
+  "note": "Pins are SHA-256 of bytes, not Git blob SHAs. Release check fails closed if the validated authority membrane drifts.",
+  "schema": "openline.ace.far005.upstream-membrane-pins.v1",
+  "source_commit": "1a9a6cab081982c0bebf385258f35b098b14f778",
+  "source_experiment": "FIDUCIARY-AGENT-RUNTIME-003"
+}

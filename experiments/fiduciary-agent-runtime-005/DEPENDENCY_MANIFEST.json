@@ -1,0 +1,75 @@
+{
+  "agent_mutation_authority": "NONE",
+  "constitutional_prefixes": [
+    "tests/",
+    ".openline/evaluators/",
+    ".openline/policy/",
+    ".openline/mandates/",
+    ".openline/receipts/",
+    ".openline/gate/",
+    ".openline/scope/",
+    ".github/workflows/"
+  ],
+  "new_local_import_edge": "DENY_UNLESS_PRINCIPAL_MANIFEST_ALREADY_CONTAINS_EDGE",
+  "nodes": {
+    "codec": {
+      "allowed_imports": [
+        "json"
+      ],
+      "direct_consumers": [
+        "parse"
+      ],
+      "direct_dependencies": [],
+      "path": "src/core/codec.py"
+    },
+    "parse": {
+      "allowed_imports": [
+        "core.codec"
+      ],
+      "direct_consumers": [
+        "pipeline"
+      ],
+      "direct_dependencies": [
+        "codec"
+      ],
+      "path": "src/workers/parse.py"
+    },
+    "pipeline": {
+      "allowed_imports": [
+        "workers.parse",
+        "workers.transform"
+      ],
+      "direct_consumers": [],
+      "direct_dependencies": [
+        "parse",
+        "transform"
+      ],
+      "path": "src/pipeline.py"
+    },
+    "transform": {
+      "allowed_imports": [],
+      "direct_consumers": [
+        "pipeline"
+      ],
+      "direct_dependencies": [],
+      "path": "src/workers/transform.py"
+    }
+  },
+  "owner": "PRINCIPAL",
+  "schema": "openline.ace.far005.dependency-manifest.v1",
+  "scope_semantics": "candidate may not enlarge its own affected or authorized scope",
+  "transitive_consumers": {
+    "codec": [
+      "parse",
+      "pipeline"
+    ],
+    "parse": [
+      "pipeline"
+    ],
+    "pipeline": [],
+    "transform": [
+      "pipeline"
+    ]
+  },
+  "unknown_dynamic_reachability": "DENY"
+}
