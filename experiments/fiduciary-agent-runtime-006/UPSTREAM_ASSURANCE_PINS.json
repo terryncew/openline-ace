@@ -1,0 +1,16 @@
+{
+  "files": {
+    "experiments/fiduciary-agent-runtime-003/far003/canonical.py": "9afb392786f6e60787982df951788517411829e5575db19ff4dc6542a2fd9c06",
+    "experiments/fiduciary-agent-runtime-003/far003/classifier.py": "fdc53fd23f5e7ee390303cb92a2748bfea56e578521cc523ec128c269179dffd",
+    "experiments/fiduciary-agent-runtime-003/far003/gate.py": "583b0e774ed0487e01b5863919dbd10e0a7647b38fbe83ae8c111426733b8669",
+    "experiments/fiduciary-agent-runtime-003/far003/model.py": "512fcaa216b495d2781f2528254d36c7e4a4cffc2ece926f1e09f7b1b0d5cb66",
+    "experiments/fiduciary-agent-runtime-003/far003/receipts.py": "3a4de0588d3e47f29a51fdc9d909656995be7c3bf8d0c4605b19fdd2e060b343",
+    "experiments/fiduciary-agent-runtime-005/far005/claim_graph.py": "e5c254e6b7cb60761e8bc87febdc33987df2f8768769383fd3b171fd1b3589ca"
+  },
+  "note": "FAR-006 reuses the frozen FAR-003 evidence/authority membrane and FAR-005 standing graph. SHA-256 pins fail closed if either mechanism drifts.",
+  "schema": "openline.ace.far006.upstream-assurance-pins.v1",
+  "source_experiments": [
+    "FIDUCIARY-AGENT-RUNTIME-003",
+    "FIDUCIARY-AGENT-RUNTIME-005"
+  ]
+}

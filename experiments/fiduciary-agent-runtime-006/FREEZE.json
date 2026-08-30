@@ -1,0 +1,31 @@
+{
+  "files": {
+    ".github/workflows/fiduciary-agent-runtime-006.yml": "11b6626fd08dcd869e473a87fdc2f4cd9419a21e1c980e0dc4004a37f22c25eb",
+    "experiments/fiduciary-agent-runtime-006/.gitattributes": "654b498257a23835716c785dce3052d5456fd055dcbb2c6aed8af08104d8ea02",
+    "experiments/fiduciary-agent-runtime-006/CLAIM_BOUNDARY.md": "c6fa36af183d885205ccbeb4d1025465f440bb6e577cf3f8bd267636ad87fc33",
+    "experiments/fiduciary-agent-runtime-006/EXTERNAL_TASK.json": "de547603627605381010b83a6637bd0309535d22d9e7e46e1a036d9df32d3326",
+    "experiments/fiduciary-agent-runtime-006/PREREGISTRATION.json": "12bfd39bed8be47ad4431e1a2d09307572a9e83d188e08b34bd01a98694aa04c",
+    "experiments/fiduciary-agent-runtime-006/README.md": "21202ab10b0945bd8f04d3b4238560b2ce524ae019fadb0c0b4a1660bd25e91c",
+    "experiments/fiduciary-agent-runtime-006/UPSTREAM_ASSURANCE_PINS.json": "d226b19a1f28a683b7f2c0acc28c0b84346f2eb591c34bcf3ab25a80cc0e2a55",
+    "experiments/fiduciary-agent-runtime-006/environment-py311.lock": "89b7ef4cdea42cfb4c5a93c4d80790846c5dd80182221ae12ad4f481570bfdf9",
+    "experiments/fiduciary-agent-runtime-006/external/historical_fix.patch": "087d51d66413bfa35111ac0eca31f1db1636572702cfd967c428049b453f451d",
+    "experiments/fiduciary-agent-runtime-006/external/oracle.patch": "e16f06b260b5169a49397e9d571b5af70317cd23792e1437232fabf718fe8871",
+    "experiments/fiduciary-agent-runtime-006/far006/__init__.py": "1c66fe3278f15f26f79502e3002008596e1a3b0ad1ae9f1a65f456fe2e1c3753",
+    "experiments/fiduciary-agent-runtime-006/far006/controls.py": "ba4c25599b6747f97205d3ff74ed67bb1487682a76da6cdc56135704584f71f9",
+    "experiments/fiduciary-agent-runtime-006/far006/experiment.py": "287d831f8cfd35badd054c95a63ffdc9d519bb6df4e4f4ac79d66a8ad80d05d2",
+    "experiments/fiduciary-agent-runtime-006/far006/external_task.py": "2c5eb65af20b5599a04d317c775116f3becac3cd77e4da49b5644a5771382784",
+    "experiments/fiduciary-agent-runtime-006/far006/upstream.py": "cbae83c947746eb7a2633f8ca5d008f367ed7134996a9cbd3ade966eb7c36560",
+    "experiments/fiduciary-agent-runtime-006/fixtures/overbroad_fix.patch": "426548db78b23c39471704335d2e4e10e87da72ea86ff3436578967089396dc9",
+    "experiments/fiduciary-agent-runtime-006/scripts/release_check.py": "8eadd1576a4767d1deff09a8deb50b513cd60eb80799123ec8a7dfea144ba03e",
+    "experiments/fiduciary-agent-runtime-006/scripts/run_controls.py": "57e38eaa6a7c8efa480ba72b2b9a41c702f546f2ad91b431a401f4706b4684b1",
+    "experiments/fiduciary-agent-runtime-006/scripts/run_primary.py": "8b661c02992a2a722d6dfd879632006499c5c2ac4344ca4ca97e628fc5fc9f07",
+    "experiments/fiduciary-agent-runtime-006/scripts/verify_external_task.py": "4493bfceed5286ae5e31d7e89324adc1177381c1925056aed771663e2d7aa8dd",
+    "experiments/fiduciary-agent-runtime-006/scripts/verify_freeze.py": "1eb606ef55c17f1ab70ee0c41e4500d003c3f82c3cd2bba1cf68d56abbc37c53",
+    "experiments/fiduciary-agent-runtime-006/scripts/verify_result.py": "303402750fff6f42e79b6a5f0b54cd032d8c5e79ac6ab86881be69e53b3f91d7",
+    "experiments/fiduciary-agent-runtime-006/scripts/verify_upstream_assurance.py": "5e243ebff7824c011192c8f95149a0eff768bc8d3df56dd95883a96df1d8475d",
+    "experiments/fiduciary-agent-runtime-006/scripts/write_summary.py": "85cd702630f7b981a984c36e2fbf63010157ddcc9158ab543a2ce1722a33f74f",
+    "experiments/fiduciary-agent-runtime-006/tests/test_far006.py": "014a7b4de679b30bdca9d359d21988f896e0bf6517f1266bb4361f546643f84e"
+  },
+  "note": "All hashes are SHA-256 of bytes. FREEZE.json excludes itself.",
+  "schema": "openline.ace.far006.freeze.v1"
+}
