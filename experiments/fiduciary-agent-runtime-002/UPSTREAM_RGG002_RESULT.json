@@ -1,0 +1,15 @@
+{
+  "experiment_id": "RECURSIVE-GENERATOR-GOVERNANCE-002",
+  "scientific_standing": "PROSPECTIVE_PRIMARY",
+  "verdict": "GENERATOR_GATE_SUPPORTED_WITH_INDEPENDENT_PROGRESS",
+  "result_sha256": "53ac1f6b0a3d0677c8f798b46634bbe36fd2a1c27a1cd6a28656c97d9252806f",
+  "metrics": {
+    "arm_a_capture_rate": 0.6875,
+    "arm_b_capture_rate": 0.0,
+    "arm_b_mean_generator_acceptance_rate": 0.7666666666666667,
+    "arm_b_mean_progress_delta": 0.02808298946669118,
+    "mean_arm_b_progress_advantage": 0.1721318751871469,
+    "pairwise_arm_b_win_rate": 1.0
+  },
+  "use_in_far002": "Activates the binary, structurally separate Generator Gate lane for Tier-2 search mutations. FAR-002 does not re-test or broaden the RGG-002 claim."
+}

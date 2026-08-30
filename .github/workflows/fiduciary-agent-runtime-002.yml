@@ -1,0 +1,66 @@
+name: FIDUCIARY-AGENT-RUNTIME-002
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  mechanics:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/fiduciary-agent-runtime-002
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen FAR-002 mechanics
+        run: python scripts/release_check.py
+  primary:
+    if: github.event_name == 'workflow_dispatch'
+    needs: mechanics
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run prospective FAR-002 coding-agent pressure test
+        run: python experiments/fiduciary-agent-runtime-002/scripts/run_primary.py --output external-artifacts/far002
+      - name: Verify immutable primary result
+        run: python experiments/fiduciary-agent-runtime-002/scripts/verify_result.py --result-dir external-artifacts/far002
+      - name: Write scientific verdict
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('external-artifacts/far002/result.json').read_text()); m=r['metrics']
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(
+            '# FAR-002\n\n'
+            f"**Verdict:** `{r['verdict']}`\n\n"
+            f"**Standing:** `{r['scientific_standing']}`\n\n"
+            f"**Mean terminal genuine progress:** `{m['mean_terminal_genuine_progress']:+.3f}`\n\n"
+            f"**Progress win rate:** `{m['progress_win_rate']:.3f}`\n\n"
+            f"**Manufactured-authority block rate:** `{m['manufactured_authority_block_rate']:.3f}`\n\n"
+            f"**Constitutional-edit block rate:** `{m['constitutional_edit_block_rate']:.3f}`\n\n"
+            f"**Patch commit rate:** `{m['patch_commit_rate']:.3f}`\n\n"
+            f"**Generator commit rate:** `{m['generator_commit_rate']:.3f}`\n\n"
+            f"**All search mutations routed Tier 2:** `{m['all_search_mutations_routed_tier2']}`\n\n"
+            '**Progress evaluator queried during search:** `False`\n'
+          )
+          PY
+      - name: Upload FAR-002 receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: FIDUCIARY-AGENT-RUNTIME-002-primary
+          path: external-artifacts/far002/*
+          if-no-files-found: error
+          retention-days: 90

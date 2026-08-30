@@ -1,0 +1,33 @@
+{
+  "base_commit": "b82e3bdd65c3ef397f0cae7c1204124293971764",
+  "experiment_id": "FIDUCIARY-AGENT-RUNTIME-002",
+  "files": {
+    ".github/workflows/fiduciary-agent-runtime-002.yml": "99bd08ecd9618d8c25327ad5e67bd317a66805c50625312db9788a39de033346",
+    "experiments/fiduciary-agent-runtime-002/CLAIM_BOUNDARY.md": "9fc827c920a985119a9a9c334d48f6056efa11c6d6ca5562704b5225a8eaa0f8",
+    "experiments/fiduciary-agent-runtime-002/PREREGISTRATION.json": "0b7b1abe190b5f100396e881ee1c166705a68cf251162917df4db92032fd3830",
+    "experiments/fiduciary-agent-runtime-002/README.md": "97c5c2621d78035d5a61282bfbbb8153f8e3b255850f30597d64105ff68c01d2",
+    "experiments/fiduciary-agent-runtime-002/UPSTREAM_RGG002_RESULT.json": "088c619ca3051d9cf413cdcc481e760d3bb000813b7757565f84c25a982cb470",
+    "experiments/fiduciary-agent-runtime-002/far002/__init__.py": "2f448a2003646dbb23327f80b30b7027881ba1c39c7da77f575ec387bc86e87f",
+    "experiments/fiduciary-agent-runtime-002/far002/agent.py": "274423032e7452ebe8286edc99f79c97ee4f328b01b6022cef071a927871b4b1",
+    "experiments/fiduciary-agent-runtime-002/far002/canonical.py": "22f1a9bc0880fdcb9e28c26fd4d7669fb743e5362e77ab40c58565b1ed30f476",
+    "experiments/fiduciary-agent-runtime-002/far002/classifier.py": "3e859e20e8d2815afdcd112877f509872ffb149372b4d8061bdae6942ff60f13",
+    "experiments/fiduciary-agent-runtime-002/far002/evaluators.py": "9b416402a569374d94390f3b97b114e05e2392ed45f9f9e38b11692b5f81d1ec",
+    "experiments/fiduciary-agent-runtime-002/far002/experiment.py": "4d5d6b5e4d2ae52947eb67caa6e78a9b1adb4d0149b4595a39c2c950561f3cdb",
+    "experiments/fiduciary-agent-runtime-002/far002/gate.py": "42e29f0d2eb70fc02b63ecb2f8f8ed81698dbc5ff6fe31892c1e212a10d53aca",
+    "experiments/fiduciary-agent-runtime-002/far002/model.py": "d41a2714044deedfe08528543be7a0433ca0e70872c25978835cecaf643458b8",
+    "experiments/fiduciary-agent-runtime-002/far002/receipts.py": "d51832de0e45712f32989e3bbf1cac60974bff0300df0defec2bbec09438cf6f",
+    "experiments/fiduciary-agent-runtime-002/far002/target.py": "a80b813a0253353bfdac9ee56ace71ef2b1fc5c7ff12fa181f7dab6a60d61fcf",
+    "experiments/fiduciary-agent-runtime-002/fixture/.openline/evaluators/hidden.py": "296944eca161bc5590a160ea94681cee09c7a82cb3a782144597c857f2d12871",
+    "experiments/fiduciary-agent-runtime-002/fixture/agent/search/strategy.json": "f85ef09a3ff8f8ae42f6ed1d17a48540e78c8701977fc6c45f0e00013e4a98cf",
+    "experiments/fiduciary-agent-runtime-002/fixture/src/targetlib/core.py": "f5c18e0f7846983f6aa3044e8fda70403146c9a8fa2faedaad905f73bfca3ebb",
+    "experiments/fiduciary-agent-runtime-002/fixture/tests/test_public.py": "296944eca161bc5590a160ea94681cee09c7a82cb3a782144597c857f2d12871",
+    "experiments/fiduciary-agent-runtime-002/scripts/release_check.py": "cf6b8dd2612089adf87d51b0de5c062e4cc05932677509743bcd04c3aa89f461",
+    "experiments/fiduciary-agent-runtime-002/scripts/run_primary.py": "507ef08cb90356ba907486e91d194f15cc580bb728d64974314dfa1080b8b948",
+    "experiments/fiduciary-agent-runtime-002/scripts/verify_freeze.py": "58ae2904b123cc73cde6bec23f7f9c5a8eec16251e00ac4e3f55b193833c6f87",
+    "experiments/fiduciary-agent-runtime-002/scripts/verify_result.py": "4c17dae8805aadc10780024104cebfeeca9028e20f32ddcbfea214ee6e71f225",
+    "experiments/fiduciary-agent-runtime-002/tests/test_far002.py": "09e74618ed761085d3e8d0a7fd6d3c932417696427bf2253c664473a04b143ca"
+  },
+  "primary_outcomes_observed": false,
+  "schema": "openline.ace.far002.freeze.v1",
+  "scientific_standing": "PROTOCOL_FROZEN_PRE_PRIMARY_OUTCOME"
+}
