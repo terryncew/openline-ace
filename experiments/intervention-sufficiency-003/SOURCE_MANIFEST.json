@@ -1,0 +1,18 @@
+{
+  "base_commit": "7372a512312b83570218eaac5cfdccf68c8bee9c",
+  "grid_sha256": "d163cecdb806f71ec27eb11a621a203179ef0df46ae743fb90879fe701cf3aae",
+  "openline_receipt_gate": {
+    "commit": "20db896fafabe197039e567f364ec5f7a6c3d699",
+    "protocol_sha256": "63f862516fd28bc2cb9f0f3181d69933693a301a",
+    "repo": "terryncew/openline-receipt-gate"
+  },
+  "pilot_outcome_artifacts": {
+    "paths": [],
+    "permitted": false
+  },
+  "schema": "openline.ace.is003.source-manifest.v1",
+  "unitree_rl_gym": {
+    "commit": "276801e46c5d433564f24658bac64f254b7d2d4b",
+    "repo": "unitreerobotics/unitree_rl_gym"
+  }
+}
