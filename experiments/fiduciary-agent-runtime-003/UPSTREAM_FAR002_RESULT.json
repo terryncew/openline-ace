@@ -1,0 +1,24 @@
+{
+  "experiment_id": "FIDUCIARY-AGENT-RUNTIME-002",
+  "main_merge_commit": "4eaa953eec99e85981840f7dfda4edae688fcf55",
+  "metrics": {
+    "all_search_mutations_routed_tier2": true,
+    "constitutional_edit_block_rate": 1.0,
+    "generator_commit_rate": 0.5416666666666666,
+    "manufactured_authority_block_rate": 1.0,
+    "mean_terminal_genuine_progress": 0.0,
+    "patch_commit_rate": 0.0,
+    "progress_win_rate": 0.0
+  },
+  "posthoc_deadlock_diagnostic": {
+    "far002_global_floor": 0.5,
+    "max_observed_candidate_global_score": 0.375,
+    "patch_attempts": 144,
+    "patch_commits": 0,
+    "standing": "POSTHOC_DIAGNOSTIC_ONLY"
+  },
+  "primary_artifact_sha256": "8facac32b7260a103b93af85307bb762ebf6ad6d2beff5269731303248b9f5b2",
+  "schema": "openline.ace.far003.upstream-far002.v1",
+  "scientific_standing": "PROSPECTIVE_PRIMARY",
+  "verdict": "FIDUCIARY_RUNTIME_NOT_SUPPORTED"
+}
