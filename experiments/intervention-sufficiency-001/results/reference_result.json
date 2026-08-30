@@ -1,0 +1,399 @@
+{
+  "execution_authority": "NONE",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-001",
+  "external_candidate_status": "UNRUN",
+  "mechanics_passed": true,
+  "policy_authority": "NONE",
+  "reports": {
+    "global_rule_control": {
+      "capacity_selector_training_authorized": false,
+      "claim_boundary": "Data sufficiency only; no model accuracy, capacity benefit, hardware safety, or execution authority is established.",
+      "dataset_id": "global-rule-control",
+      "dataset_sha256": "55905c51a3c6ce871e2499d33ca97241cf2ae9ae8906d63630faa4d5b2e07881",
+      "execution_authority": "NONE",
+      "experiment_id": "INTERVENTION-SUFFICIENCY-001",
+      "gates": {
+        "actions": {
+          "observed": 3,
+          "passed": true,
+          "relation": ">=",
+          "required": 3
+        },
+        "complete_context_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 1.0
+        },
+        "contexts": {
+          "observed": 12,
+          "passed": true,
+          "relation": ">=",
+          "required": 12
+        },
+        "contexts_in_divergent_pairs": {
+          "observed": 0,
+          "passed": false,
+          "relation": ">=",
+          "required": 12
+        },
+        "determinate_cell_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 0.9
+        },
+        "global_action_delay_cell_accuracy": {
+          "observed": 1.0,
+          "passed": false,
+          "relation": "<=",
+          "required": 0.85
+        },
+        "lag_contractions": {
+          "observed": 12,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "remedy_divergent_risk_pairs": {
+          "observed": 0,
+          "passed": false,
+          "relation": ">=",
+          "required": 6
+        },
+        "required_lags": {
+          "observed": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ]
+        },
+        "state_dependent_action_lag_strata": {
+          "observed": 0,
+          "passed": false,
+          "relation": ">=",
+          "required": 4
+        }
+      },
+      "lag_contractions": [
+        {
+          "action_id": "hold",
+          "context_id": "severity-0:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-0:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-1:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-1:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-2:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-2:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-3:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-3:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-4:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-4:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-5:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-5:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        }
+      ],
+      "metrics": {
+        "action_count": 3,
+        "complete_context_rate": 1.0,
+        "context_count": 12,
+        "contexts_in_divergent_pairs": 0,
+        "determinate_cell_rate": 1.0,
+        "expected_cell_count": 180,
+        "global_action_delay_cell_accuracy": 1.0,
+        "lag_contraction_count": 12,
+        "lags_ms": [
+          0,
+          40,
+          80,
+          120,
+          160
+        ],
+        "observed_cell_count": 180,
+        "remedy_divergent_risk_pairs": 0,
+        "row_count": 720,
+        "state_dependent_action_lag_strata": 0
+      },
+      "next_if_passed": "Run a context-held-out tournament: action-plus-delay versus state-plus-action-plus-delay. Do not train a capacity selector yet.",
+      "policy_authority": "NONE",
+      "receipt_gate_required_for_execution": true,
+      "schema": "openline.ace.intervention-sufficiency.report.v1",
+      "verdict": "INSUFFICIENT_INTERVENTION_CONTRAST"
+    },
+    "state_specific_control": {
+      "capacity_selector_training_authorized": false,
+      "claim_boundary": "Data sufficiency only; no model accuracy, capacity benefit, hardware safety, or execution authority is established.",
+      "dataset_id": "state-specific-control",
+      "dataset_sha256": "e1b769245d700fa5f8b5820ed0b50790da4681539d345f44dee452b94f2096ab",
+      "execution_authority": "NONE",
+      "experiment_id": "INTERVENTION-SUFFICIENCY-001",
+      "gates": {
+        "actions": {
+          "observed": 3,
+          "passed": true,
+          "relation": ">=",
+          "required": 3
+        },
+        "complete_context_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 1.0
+        },
+        "contexts": {
+          "observed": 12,
+          "passed": true,
+          "relation": ">=",
+          "required": 12
+        },
+        "contexts_in_divergent_pairs": {
+          "observed": 12,
+          "passed": true,
+          "relation": ">=",
+          "required": 12
+        },
+        "determinate_cell_rate": {
+          "observed": 1.0,
+          "passed": true,
+          "relation": ">=",
+          "required": 0.9
+        },
+        "global_action_delay_cell_accuracy": {
+          "observed": 0.7222222222222222,
+          "passed": true,
+          "relation": "<=",
+          "required": 0.85
+        },
+        "lag_contractions": {
+          "observed": 16,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "remedy_divergent_risk_pairs": {
+          "observed": 6,
+          "passed": true,
+          "relation": ">=",
+          "required": 6
+        },
+        "required_lags": {
+          "observed": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ],
+          "passed": true,
+          "relation": "==",
+          "required": [
+            0,
+            40,
+            80,
+            120,
+            160
+          ]
+        },
+        "state_dependent_action_lag_strata": {
+          "observed": 10,
+          "passed": true,
+          "relation": ">=",
+          "required": 4
+        }
+      },
+      "lag_contractions": [
+        {
+          "action_id": "counter_right",
+          "context_id": "severity-0:left",
+          "first_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-0:left",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_left",
+          "context_id": "severity-0:right",
+          "first_infeasible_lag_ms": 160,
+          "last_feasible_lag_ms": 120
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-0:right",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_right",
+          "context_id": "severity-1:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-1:left",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_left",
+          "context_id": "severity-1:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "hold",
+          "context_id": "severity-1:right",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_right",
+          "context_id": "severity-2:left",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "counter_left",
+          "context_id": "severity-2:right",
+          "first_infeasible_lag_ms": 120,
+          "last_feasible_lag_ms": 80
+        },
+        {
+          "action_id": "counter_right",
+          "context_id": "severity-3:left",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_left",
+          "context_id": "severity-3:right",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_right",
+          "context_id": "severity-4:left",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_left",
+          "context_id": "severity-4:right",
+          "first_infeasible_lag_ms": 80,
+          "last_feasible_lag_ms": 40
+        },
+        {
+          "action_id": "counter_right",
+          "context_id": "severity-5:left",
+          "first_infeasible_lag_ms": 40,
+          "last_feasible_lag_ms": 0
+        },
+        {
+          "action_id": "counter_left",
+          "context_id": "severity-5:right",
+          "first_infeasible_lag_ms": 40,
+          "last_feasible_lag_ms": 0
+        }
+      ],
+      "metrics": {
+        "action_count": 3,
+        "complete_context_rate": 1.0,
+        "context_count": 12,
+        "contexts_in_divergent_pairs": 12,
+        "determinate_cell_rate": 1.0,
+        "expected_cell_count": 180,
+        "global_action_delay_cell_accuracy": 0.7222222222222222,
+        "lag_contraction_count": 16,
+        "lags_ms": [
+          0,
+          40,
+          80,
+          120,
+          160
+        ],
+        "observed_cell_count": 180,
+        "remedy_divergent_risk_pairs": 6,
+        "row_count": 720,
+        "state_dependent_action_lag_strata": 10
+      },
+      "next_if_passed": "Run a context-held-out tournament: action-plus-delay versus state-plus-action-plus-delay. Do not train a capacity selector yet.",
+      "policy_authority": "NONE",
+      "receipt_gate_required_for_execution": true,
+      "schema": "openline.ace.intervention-sufficiency.report.v1",
+      "verdict": "SUFFICIENT_FOR_STATE_CONDITIONED_TRANSITION_TEST"
+    }
+  },
+  "schema": "openline.ace.intervention-sufficiency.reference-result.v1",
+  "status": "MECHANICS_PASS_EXTERNAL_CANDIDATE_UNRUN"
+}

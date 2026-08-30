@@ -1,0 +1,71 @@
+{
+  "base_commit": "d320054a1590ef70a2c8fa1055eac3670201bc5c",
+  "experiment_id": "INTERVENTION-SUFFICIENCY-001",
+  "files": [
+    {
+      "path": "CLAIM_BOUNDARY.md",
+      "sha256": "0f431d88716c9f5a23d49d0b3af22f4a284c4dbfdb3c30c390850eaa743c41c5"
+    },
+    {
+      "path": "DATA_CONTRACT.md",
+      "sha256": "578814fbf703fcac4583e6eca8e0dc8c6a7592f19ee435ac7e20c92541c819fa"
+    },
+    {
+      "path": "PREREGISTRATION.json",
+      "sha256": "3fef67f87cf6eefac9666dd4b0daa13bfe7b0dc18934df2d643a2d97d8210318"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a6514e98f024804f3fb09b7a497bf100d3577a3262d6b9da190b801f3e0cfcf3"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "2ee3a484b25e81d1bb1ff42846f55d07dc19f30ad37f7cc0a668de6fd1ad36f3"
+    },
+    {
+      "path": "is001/__init__.py",
+      "sha256": "becfb5d7c8f7d175d7549950daac814408fe607bf33447c3842ef48a48e46069"
+    },
+    {
+      "path": "is001/core.py",
+      "sha256": "94925e62e86378690d1b8996bb5159ee94c5e1870c26c490d33d55fa50b6e51f"
+    },
+    {
+      "path": "is001/fixtures.py",
+      "sha256": "afb441ec4ece6cbf3e1bc1ef9691ea873d7c881d2fdecc0d9cccbaf8a8ea26a8"
+    },
+    {
+      "path": "results/reference_result.json",
+      "sha256": "1b24c50b6140271cecf675fa69a586cce647cfcfd8cb74cce059387b0917cc72"
+    },
+    {
+      "path": "scripts/audit_jsonl.py",
+      "sha256": "3f2d7e45a7eaa73737858d15d70eae9541976c3b243e6fa32fa848d85b23fa9d"
+    },
+    {
+      "path": "scripts/release_check.py",
+      "sha256": "052b0d163c9cb3bcd78fd9e41535e7d2382e39a94ced2deda5885bf418787c1f"
+    },
+    {
+      "path": "scripts/run_reference.py",
+      "sha256": "7790b895e26e22a8485e3c5b69ddda1972a27e059eca3b11d3e3110cd21fed08"
+    },
+    {
+      "path": "scripts/verify_freeze.py",
+      "sha256": "7c1b78f9f66aecbc80aa089e875e548a176d3646ea0fdde98f359130acf946f8"
+    },
+    {
+      "path": "scripts/verify_result.py",
+      "sha256": "aeedd5d94c0267770be5137276d268f8cc2bc3e3cde38ea00276a2edae025fde"
+    },
+    {
+      "path": "tests/test_is001.py",
+      "sha256": "e16449526fc3f48aa1edadc1f842eca84abdd75dd63f5f189f891b04d8efe7d8"
+    }
+  ],
+  "freeze_stage": "before_external_corpus_admission",
+  "policy_authority": "NONE",
+  "runtime_permission": "NONE",
+  "schema": "openline.ace.intervention_sufficiency.freeze.v1",
+  "selector_training_authorized": false
+}
