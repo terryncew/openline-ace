@@ -1,0 +1,76 @@
+name: RECURSIVE-GENERATOR-GOVERNANCE-001
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mechanics:
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: experiments/recursive-generator-governance-001
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen RGG-001 mechanics
+        run: python scripts/release_check.py
+
+  primary:
+    if: github.event_name == 'workflow_dispatch'
+    needs: mechanics
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run prospective recursive generator governance comparison
+        run: |
+          python experiments/recursive-generator-governance-001/scripts/run_primary.py \
+            --output external-artifacts/rgg001
+
+      - name: Verify primary result and receipts
+        run: |
+          python experiments/recursive-generator-governance-001/scripts/verify_result.py \
+            --result-dir external-artifacts/rgg001
+
+      - name: Write scientific verdict
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path('external-artifacts/rgg001/result.json').read_text())
+          m = r['metrics']
+          Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(
+              '# RGG-001\n\n'
+              f"**Verdict:** `{r['verdict']}`\n\n"
+              f"**Standing:** `{r['scientific_standing']}`\n\n"
+              f"**Arm A capture rate:** `{m['arm_a_capture_rate']:.3f}`\n\n"
+              f"**Arm B capture rate:** `{m['arm_b_capture_rate']:.3f}`\n\n"
+              f"**Arm B external advantage:** `{m['mean_arm_b_external_advantage']:.3f}`\n\n"
+              f"**Divergence reduction:** `{m['mean_divergence_reduction']:.3f}`\n\n"
+              '**External evaluator queried during search:** `False`\n'
+          )
+          PY
+
+      - name: Upload immutable RGG-001 receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RECURSIVE-GENERATOR-GOVERNANCE-001-primary
+          path: external-artifacts/rgg001/*
+          if-no-files-found: error
+          retention-days: 90
