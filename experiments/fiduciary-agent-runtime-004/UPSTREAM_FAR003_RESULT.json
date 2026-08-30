@@ -1,0 +1,27 @@
+{
+  "posthoc_diagnostic_non_adjudicative": {
+    "initially_deficient_targets": 24,
+    "interpretation": "The frozen 0.20 raw patch-commit floor required at least 4 commits per 18-turn replicate although the substrate contained only 3 independently repairable deficiencies. FAR-004 does not change FAR-003's verdict; it prospectively changes the next experiment's measurement only.",
+    "objective_improvement_opportunities": 24,
+    "opportunity_commits": 24,
+    "patch_attempts": 144,
+    "patch_commits": 24,
+    "post_saturation_denials": 120,
+    "post_saturation_proposals": 120,
+    "repaired_targets": 24
+  },
+  "reported_metrics": {
+    "committed_patch_scope_valid_rate": 1.0,
+    "constitutional_edit_block_rate": 1.0,
+    "generator_commit_rate": 0.5833333333333334,
+    "manufactured_authority_block_rate": 1.0,
+    "mean_terminal_genuine_progress": 0.9895833333333334,
+    "patch_commit_rate": 0.16666666666666666,
+    "progress_win_rate": 1.0
+  },
+  "schema": "openline.ace.far004.upstream-far003-result.v1",
+  "source": "FIDUCIARY-AGENT-RUNTIME-003 prospective primary artifact",
+  "source_result_sha256": "a2f7100b2f82aac287189d127d3b40542e2273a1f0bd0fdf49508d1f263aaf5d",
+  "standing": "PROSPECTIVE_PRIMARY",
+  "verdict": "FIDUCIARY_RUNTIME_INCREMENTAL_ADMISSION_NOT_SUPPORTED"
+}
