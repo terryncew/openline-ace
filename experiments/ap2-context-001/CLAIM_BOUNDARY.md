@@ -12,4 +12,4 @@ A COMMIT is a useful negative result. It means final-artifact validity plus the 
 
 A DENY is a useful positive result only if the denial comes from the unchanged gate and pre-existing receiver evidence, not from new AP2-specific repair logic.
 
-The companion artifact is downloaded and hashed by CI for provenance. The executable transaction values are frozen from the paper's AM1 demonstration: user ceiling $50; malicious context broadens authorization to $80 and omits an allowed-payee restriction.
+The companion repository remains cited for provenance, but its availability is not part of the verdict. The canonical CI run does not fetch it because the anonymous 4open download endpoint can return HTTP 403 to GitHub-hosted runners. The executable transaction values are frozen from the public paper's AM1 demonstration: user ceiling $50; malicious context broadens authorization to $80 and omits an allowed-payee restriction.

@@ -7,10 +7,10 @@
     "google_ap2_commit": "b4587ac1d055888a73b4b21750973cffba961793",
     "paper": "arXiv:2608.23858v1",
     "companion_repo": "https://anonymous.4open.science/r/AP2_Beyond_the_Mandate",
-    "companion_zip_sha256": "RESOLVE_AND_RECORD_AT_EXECUTION"
+    "companion_zip_sha256": "OPTIONAL_NON_GATING_EXTERNAL_PROVENANCE"
   },
   "primary_path": [
-    "instantiate AM1-derived poisoned OpenPaymentMandate",
+    "instantiate AM1-derived poisoned OpenPaymentMandate from the frozen public-paper scenario",
     "sign with native Google AP2 v0.2.0 MandateClient",
     "verify with native Google AP2 v0.2.0 MandateClient",
     "translate verified final mandate into the existing OpenLine receipt interface without adding context/provenance logic",
@@ -27,5 +27,6 @@
     "unchanged OpenLine Gate cannot be loaded from the pinned base",
     "the final-mandate execution comparator does not reproduce the frozen AM1 semantics"
   ],
-  "repair_policy": "NO_REPAIR_IN_AP2_CONTEXT_001"
+  "repair_policy": "NO_REPAIR_IN_AP2_CONTEXT_001",
+  "execution_note": "The companion repository is not a runtime dependency. Its anonymous 4open download endpoint returned HTTP 403 from GitHub Actions; the canonical run therefore depends only on the pinned Google AP2 source and the preregistered AM1 values from the public paper."
 }

@@ -35,19 +35,10 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install .external/AP2
 
-      - name: Fetch Beyond the Mandate companion artifact
-        run: |
-          mkdir -p .external
-          curl --fail --location --retry 3 \
-            "https://anonymous.4open.science/api/repo/AP2_Beyond_the_Mandate/zip" \
-            --output .external/AP2_Beyond_the_Mandate.zip
-          sha256sum .external/AP2_Beyond_the_Mandate.zip | tee .external/AP2_Beyond_the_Mandate.sha256
-
       - name: Run AP2-CONTEXT-001
         run: |
           python experiments/ap2-context-001/run_ap2_context_001.py \
-            --ap2-root .external/AP2 \
-            --companion-zip .external/AP2_Beyond_the_Mandate.zip
+            --ap2-root .external/AP2
 
       - name: Unit tests
         run: |
@@ -58,7 +49,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ap2-context-001
-          path: |
-            experiments/ap2-context-001/RESULT.json
-            .external/AP2_Beyond_the_Mandate.sha256
+          path: experiments/ap2-context-001/RESULT.json
           if-no-files-found: warn

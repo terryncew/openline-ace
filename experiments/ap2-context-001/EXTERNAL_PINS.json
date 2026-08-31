@@ -16,6 +16,8 @@
   "companion_artifact": {
     "browser": "https://anonymous.4open.science/r/AP2_Beyond_the_Mandate",
     "zip": "https://anonymous.4open.science/api/repo/AP2_Beyond_the_Mandate/zip",
-    "sha256": "recorded in RESULT.json at execution"
+    "sha256": "OPTIONAL_NON_GATING_EXTERNAL_PROVENANCE",
+    "runtime_dependency": false,
+    "ci_note": "Not fetched by canonical CI. The anonymous 4open endpoint returned HTTP 403 to GitHub Actions."
   }
 }

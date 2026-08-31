@@ -10,7 +10,7 @@
       "T-4"
     ],
     "companion_repo": "https://anonymous.4open.science/r/AP2_Beyond_the_Mandate",
-    "note": "The workflow downloads and hashes the companion artifact at run time; the attack values below are frozen from AM1 in the paper."
+    "note": "AM1 values are frozen from the public paper. The companion repository is cited for provenance but is not fetched by the canonical CI run because its anonymous 4open endpoint can deny GitHub-hosted runners; external artifact availability must not determine the experiment verdict."
   },
   "user_request": {
     "item": "one camera",
