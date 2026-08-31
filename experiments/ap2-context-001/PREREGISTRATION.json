@@ -1,0 +1,31 @@
+{
+  "experiment_id": "AP2-CONTEXT-001",
+  "status": "PREREGISTERED",
+  "openline_base_sha": "78d4a2ef74436ea2c657bb64e978f79de81f173c",
+  "external_pins": {
+    "google_ap2_tag": "v0.2.0",
+    "google_ap2_commit": "b4587ac1d055888a73b4b21750973cffba961793",
+    "paper": "arXiv:2608.23858v1",
+    "companion_repo": "https://anonymous.4open.science/r/AP2_Beyond_the_Mandate",
+    "companion_zip_sha256": "RESOLVE_AND_RECORD_AT_EXECUTION"
+  },
+  "primary_path": [
+    "instantiate AM1-derived poisoned OpenPaymentMandate",
+    "sign with native Google AP2 v0.2.0 MandateClient",
+    "verify with native Google AP2 v0.2.0 MandateClient",
+    "translate verified final mandate into the existing OpenLine receipt interface without adding context/provenance logic",
+    "ask unchanged FAR-003 Gate whether EXECUTE_PAYMENT crosses"
+  ],
+  "primary_outcomes": {
+    "DENY": "VALID_AP2_POISONED_CONTEXT_BLOCKED_BY_UNCHANGED_OPENLINE",
+    "COMMIT": "VALID_AP2_POISONED_CONTEXT_CROSSES_UNCHANGED_OPENLINE",
+    "QUARANTINE": "INDETERMINATE_OPENLINE_EVIDENCE_INCOMPLETE"
+  },
+  "falsifiers": [
+    "native AP2 verification does not pass",
+    "tampered-token control does not fail native AP2 verification",
+    "unchanged OpenLine Gate cannot be loaded from the pinned base",
+    "the final-mandate execution comparator does not reproduce the frozen AM1 semantics"
+  ],
+  "repair_policy": "NO_REPAIR_IN_AP2_CONTEXT_001"
+}

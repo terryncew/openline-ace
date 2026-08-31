@@ -1,0 +1,21 @@
+{
+  "openline_ace": {
+    "repo": "https://github.com/terryncew/openline-ace",
+    "commit": "78d4a2ef74436ea2c657bb64e978f79de81f173c"
+  },
+  "google_ap2": {
+    "repo": "https://github.com/google-agentic-commerce/AP2",
+    "tag": "v0.2.0",
+    "commit": "b4587ac1d055888a73b4b21750973cffba961793"
+  },
+  "paper": {
+    "arxiv": "https://arxiv.org/abs/2608.23858",
+    "version": "v1",
+    "submitted": "2026-08-24"
+  },
+  "companion_artifact": {
+    "browser": "https://anonymous.4open.science/r/AP2_Beyond_the_Mandate",
+    "zip": "https://anonymous.4open.science/api/repo/AP2_Beyond_the_Mandate/zip",
+    "sha256": "recorded in RESULT.json at execution"
+  }
+}

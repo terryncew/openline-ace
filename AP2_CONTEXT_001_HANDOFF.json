@@ -1,0 +1,17 @@
+{
+  "experiment_id": "AP2-CONTEXT-001",
+  "base_repo": "terryncew/openline-ace",
+  "base_sha": "78d4a2ef74436ea2c657bb64e978f79de81f173c",
+  "files": {
+    ".github/workflows/ap2-context-001.yml": "04751a7663a422a652c047102098747b66416bb50e358e4c20baf00b8f7d3e6b",
+    "experiments/ap2-context-001/CLAIM_BOUNDARY.md": "20985f0be7223726a9f32722ce4ee3a7ff7cfa58f994e2a9d430da21d2a88931",
+    "experiments/ap2-context-001/EXTERNAL_PINS.json": "236409ac6bfca6b707d920e1002defe4aa5a873c77d63f42127b82be2dcf698b",
+    "experiments/ap2-context-001/FROZEN_CASE.json": "bf9d163cf013e0fe90514b97751502e3667cfb7d95a6340f046f8f23bfc9ee93",
+    "experiments/ap2-context-001/PREREGISTRATION.json": "6ed52b578837d1257f07f268b498c955035ebf1f61f50a184aa523f2eaa1824b",
+    "experiments/ap2-context-001/README.md": "30a49fb9ea0e5b1be5a445e91a3ec0d3f3f2619ad001bbea56be393f99d3bd9f",
+    "experiments/ap2-context-001/ap2_context_001/__init__.py": "4b556fe0ae4f776ef580eca5530135fcbf6db8f35d6534baf18e6fe72899a2a8",
+    "experiments/ap2-context-001/ap2_context_001/core.py": "c0e906da073ecc580b232e575374bf8594f3b33217ecaf62b6d0d35b48969101",
+    "experiments/ap2-context-001/run_ap2_context_001.py": "408b93e4809731b42f3cbe2d3a38eaa5a8dba23a1c6c30f6ad809efae2ec504e",
+    "experiments/ap2-context-001/tests/test_core.py": "9af2a79b03fb65e3b98c2758b76673e97530ed3ba359781a5755f1f61cc23abd"
+  }
+}

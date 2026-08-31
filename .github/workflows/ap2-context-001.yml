@@ -1,0 +1,64 @@
+name: AP2-CONTEXT-001
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "experiments/ap2-context-001/**"
+      - ".github/workflows/ap2-context-001.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  ap2-context-001:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout OpenLine ACE
+        uses: actions/checkout@v4
+
+      - name: Checkout Google AP2 v0.2.0 pin
+        uses: actions/checkout@v4
+        with:
+          repository: google-agentic-commerce/AP2
+          ref: b4587ac1d055888a73b4b21750973cffba961793
+          path: .external/AP2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned AP2 SDK
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install .external/AP2
+
+      - name: Fetch Beyond the Mandate companion artifact
+        run: |
+          mkdir -p .external
+          curl --fail --location --retry 3 \
+            "https://anonymous.4open.science/api/repo/AP2_Beyond_the_Mandate/zip" \
+            --output .external/AP2_Beyond_the_Mandate.zip
+          sha256sum .external/AP2_Beyond_the_Mandate.zip | tee .external/AP2_Beyond_the_Mandate.sha256
+
+      - name: Run AP2-CONTEXT-001
+        run: |
+          python experiments/ap2-context-001/run_ap2_context_001.py \
+            --ap2-root .external/AP2 \
+            --companion-zip .external/AP2_Beyond_the_Mandate.zip
+
+      - name: Unit tests
+        run: |
+          python -m unittest discover -s experiments/ap2-context-001/tests -p "test_*.py" -v
+
+      - name: Upload frozen result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ap2-context-001
+          path: |
+            experiments/ap2-context-001/RESULT.json
+            .external/AP2_Beyond_the_Mandate.sha256
+          if-no-files-found: warn
